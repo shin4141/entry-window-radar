@@ -10,7 +10,7 @@ Phase 2.5 Governance audit: PASS / Patch Required now being closed
 Phase 3 Schema / Output stabilization: PASS
 Phase 3.5 Governance Re-entry Patch: PASS
 Phase 4 README minimal usage/readiness: PASS
-Phase 5 Acceptance Audit v0.2: FAIL / Reconciliation in progress
+Phase 5 Acceptance Audit v0.2: PASS WITH MINOR NOTES
 Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public readiness: HOLD
 External API: HOLD
@@ -30,8 +30,8 @@ V14 deep scoring: BLOCK
 | Phase 3 Schema / Output stabilization | PASS | `99def9d Stabilize output schema roles` |
 | Phase 3.5 Governance Re-entry Patch | PASS | This patch updates repo-carried governance and re-entry state. |
 | Phase 4 README minimal usage/readiness | PASS | `716b6cd Clarify README local MVP usage` |
-| Phase 5 Acceptance Audit v0.2 | FAIL / Reconciliation in progress | Failed only because governance state was stale after Phase 4. |
-| Phase 5.1 Governance State Reconciliation | PASS | This patch removes the stale-state blocker and requires Phase 5 audit rerun. |
+| Phase 5 Acceptance Audit v0.2 | PASS WITH MINOR NOTES | No blocking issues; local-only MVP accepted under current Launch Capsule boundaries. |
+| Phase 5.1 Governance State Reconciliation | PASS | `c9f8312 Reconcile governance state after README phase` |
 | Phase 6 Public readiness | HOLD | Requires explicit Shin GO. |
 
 ## Active Repo
@@ -44,19 +44,19 @@ V14 deep scoring: BLOCK
 
 ```text
 Current active commit before Phase 5.1 patch: 716b6cd Clarify README local MVP usage
-Current active commit after Phase 5.1 patch: latest commit on main after "Reconcile governance state after README phase" is committed
+Current active commit before Phase 5.2 patch: c9f8312 Reconcile governance state after README phase
+Current active commit after Phase 5.2 patch: latest commit on main after "Record acceptance audit result" is committed
 ```
 
-Run `git log --oneline -1` after the Phase 5.1 patch commit to read the exact active commit hash.
+Run `git log --oneline -1` after the Phase 5.2 patch commit to read the exact active commit hash.
 
 ## Completion Line
 
-Local-only MVP has CLI, worked example, stable schema/output roles, and repo governance files are updated enough for the next AI/Codex to restart without chat context.
+Local-only MVP is accepted under current Launch Capsule boundaries.
 
 ## Missing Closure
 
 ```text
-Phase 5 Acceptance Audit v0.2 rerun: unresolved and required after this reconciliation
 Phase 6 public readiness: unresolved and HOLD
 ```
 
@@ -64,7 +64,7 @@ Phase 6 public readiness: unresolved and HOLD
 
 ```text
 Current patch owner: Codex
-After this patch: Codex/AI should rerun Phase 5 Acceptance Audit v0.2
+After this patch: Codex/AI for Phase 6 only if Shin gives explicit GO
 ```
 
 ## Re-entry Notes

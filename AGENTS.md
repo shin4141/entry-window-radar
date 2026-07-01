@@ -31,7 +31,7 @@ Phase 2.5 Governance audit: PASS / Patch Required now being closed
 Phase 3 Schema / Output stabilization: PASS
 Phase 3.5 Governance Re-entry Patch: PASS
 Phase 4 README minimal usage/readiness: PASS
-Phase 5 Acceptance Audit v0.2: FAIL / Reconciliation in progress
+Phase 5 Acceptance Audit v0.2: PASS WITH MINOR NOTES
 Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public readiness: HOLD
 External API: HOLD
@@ -56,7 +56,7 @@ V14 deep scoring: BLOCK
 - Generated outputs must keep next action exactly one.
 - Re-entry Capacity must be preserved: next AI/Codex should be able to restart from repo files without hidden chat context.
 - Implementation, external posting, Delivery Scope Radar, and V14 deep scoring remain gated.
-- Phase 5 Acceptance Audit v0.2 must be rerun after Phase 5.1 reconciliation; do not represent Phase 5 as PASS until that audit passes.
+- Phase 6 Public Readiness remains HOLD until Shin gives explicit GO.
 
 ## Allowed In Current MVP
 
