@@ -1,70 +1,65 @@
-# Entry Window Report Template
+# Entry Window Report
 
 ## As-Of Judgment
 
-```text
-As-of date:
-Entry Label: FAST ENTRY | NICHE WEDGE | WAIT | SHORT CYCLE | AVOID
-```
+As-of date: 2026-07-01
+Entry Label: WAIT
+Confidence: Low
+
+As of the available evidence, this is an entry-window diagnostic, not a prediction of future success and not a command to build.
 
 ## Market Line
 
-```text
-Summary:
+Summary: Market Line is not yet supported by concrete as-of evidence in the current inputs.
+
 Signals:
+- No concrete signal provided.
+
 Open questions:
-```
+- What concrete evidence describes the current market line?
 
 ## Competition Line
 
-```text
-Summary:
+Summary: Competition Line is not yet supported by concrete as-of evidence in the current inputs.
+
 Signals:
+- No concrete signal provided.
+
 Open questions:
-```
+- What concrete evidence describes the current competition line?
 
 ## Operator Edge Line
 
-```text
-Summary:
+Summary: Operator Edge Line is not yet supported by concrete as-of evidence in the current inputs.
+
 Signals:
+- No concrete signal provided.
+
 Open questions:
-```
+- What concrete evidence describes the current operator edge line?
 
-## Biggest Bottleneck
+## Maximum Bottleneck
 
-```text
-
-```
+Competition evidence
 
 ## Missing Evidence
 
-```text
-- 
-```
+- Concrete market demand, pain, urgency, or usage evidence.
+- Named alternatives, incumbent behavior, saturation, or absorption-risk evidence.
+- Specific operator edge, artifact proof, distribution path, or proof-capacity evidence.
 
 ## Risk
 
-```text
-- 
-```
+- The judgment may shift when concrete primary evidence is added.
 
-## Recommended Next Action
+## Next Action
 
-One bounded action. Do not turn this into a full startup plan.
-
-```text
-
-```
+Collect one primary evidence item for the current competition evidence before changing the entry label.
 
 ## Recheck Condition
 
-What would justify re-running the judgment?
-
-```text
-
-```
+Re-run after adding market, competition, or operator-edge evidence that materially changes the as-of picture.
 
 ## Boundary Note
 
-This report is an as-of entry-window diagnostic, not a prediction of future success and not a command to build.
+This report describes the current entry posture from available evidence. It does not judge the operator or founder.

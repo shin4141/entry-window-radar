@@ -1,34 +1,22 @@
-# Entry Window Decision Card Template
+# Entry Window Decision Card
 
-```text
-Entry Label:
+As of the available evidence, this looks like:
 
-Market Line:
+Entry Label: WAIT
+Maximum Bottleneck: Competition evidence
+Next Action: Collect one primary evidence item for the current competition evidence before changing the entry label.
+Confidence: Low
 
-Competition Line:
-
-Operator Edge Line:
+Market Line: Market Line is not yet supported by concrete as-of evidence in the current inputs.
+Competition Line: Competition Line is not yet supported by concrete as-of evidence in the current inputs.
+Operator Edge Line: Operator Edge Line is not yet supported by concrete as-of evidence in the current inputs.
 
 Missing Evidence:
+- Concrete market demand, pain, urgency, or usage evidence.
+- Named alternatives, incumbent behavior, saturation, or absorption-risk evidence.
+- Specific operator edge, artifact proof, distribution path, or proof-capacity evidence.
 
 Risk:
+- The judgment may shift when concrete primary evidence is added.
 
-Recommended Next Action:
-
-Recheck Condition:
-```
-
-## Gate Language
-
-Use:
-
-```text
-As of the available evidence, this looks like:
-```
-
-Do not use:
-
-```text
-This will succeed.
-You should build this.
-```
+Recheck Condition: Re-run after adding market, competition, or operator-edge evidence that materially changes the as-of picture.
