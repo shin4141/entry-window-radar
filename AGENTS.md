@@ -34,7 +34,7 @@ Phase 4 README minimal usage/readiness: PASS
 Phase 5 Acceptance Audit v0.2: PASS WITH MINOR NOTES
 Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public Readiness Audit: PUBLIC READY WITH MINOR NOTES
-GitHub publishing: HOLD
+GitHub publishing: HOLD until explicit maintainer GO
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -46,7 +46,7 @@ V14 deep scoring: BLOCK
 - Completion means restartable by a future self or next AI/Codex, not merely "the command ran."
 - False completion is prohibited.
 - Before claiming PASS, make sure Current Gate, Completion Line, Missing Closure, and next action owner are visible in repo-carried files.
-- Handoff/re-entry must preserve enough context for another AI/Codex to continue without asking Shin routine cleanup questions.
+- Handoff/re-entry must preserve enough context for another AI/Codex to continue without asking the maintainer routine cleanup questions.
 - If repo state and chat state conflict, stop and reconcile before implementation.
 
 ## V13 Loop Governance
@@ -57,7 +57,7 @@ V14 deep scoring: BLOCK
 - Generated outputs must keep next action exactly one.
 - Re-entry Capacity must be preserved: next AI/Codex should be able to restart from repo files without hidden chat context.
 - Implementation, external posting, Delivery Scope Radar, and V14 deep scoring remain gated.
-- GitHub publishing and external posting remain HOLD until Shin gives explicit GO.
+- GitHub publishing and external posting remain HOLD until explicit maintainer GO.
 
 ## Allowed In Current MVP
 

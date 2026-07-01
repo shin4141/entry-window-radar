@@ -13,7 +13,7 @@ Phase 4 README minimal usage/readiness: PASS
 Phase 5 Acceptance Audit v0.2: PASS WITH MINOR NOTES
 Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public Readiness Audit: PUBLIC READY WITH MINOR NOTES
-GitHub publishing: HOLD
+GitHub publishing: HOLD until explicit maintainer GO
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -34,12 +34,12 @@ V14 deep scoring: BLOCK
 | Phase 5 Acceptance Audit v0.2 | PASS WITH MINOR NOTES | No blocking issues; local-only MVP accepted under current Launch Capsule boundaries. |
 | Phase 5.1 Governance State Reconciliation | PASS | `c9f8312 Reconcile governance state after README phase` |
 | Phase 5.2 Acceptance State Closeout | PASS | `fd9d4a3 Record acceptance audit result` |
-| Phase 6 Public Readiness Audit | PUBLIC READY WITH MINOR NOTES | No blocking issues; publishing and posting still require explicit Shin GO. |
+| Phase 6 Public Readiness Audit | PUBLIC READY WITH MINOR NOTES | No blocking issues; publishing and posting still require explicit maintainer GO. |
 
 ## Active Repo
 
 ```text
-/Users/sn/Documents/Entry Window Radar
+local repo root
 ```
 
 ## Current Active Commit
@@ -48,10 +48,9 @@ V14 deep scoring: BLOCK
 Current active commit before Phase 5.1 patch: 716b6cd Clarify README local MVP usage
 Current active commit before Phase 5.2 patch: c9f8312 Reconcile governance state after README phase
 Latest accepted MVP commit before Phase 6.1 patch: fd9d4a3 Record acceptance audit result
-Current active commit after Phase 6.1 patch: latest commit on main after "Record public readiness result" is committed
+Current active commit after Phase 6.1 patch: 4e6be09 Record public readiness result
+Accepted MVP HEAD before public hygiene patch: 4e6be09 Record public readiness result
 ```
-
-Run `git log --oneline -1` after the Phase 6.1 patch commit to read the exact active commit hash.
 
 ## Completion Line
 
@@ -60,15 +59,15 @@ Local-only MVP is accepted under current Launch Capsule boundaries.
 ## Missing Closure
 
 ```text
-GitHub publishing: unresolved and HOLD until Shin gives explicit GO
-External posting: unresolved and HOLD until Shin gives explicit GO
+GitHub publishing: unresolved and HOLD until explicit maintainer GO
+External posting: unresolved and HOLD until explicit maintainer GO
 ```
 
 ## Next Action Owner
 
 ```text
 Current patch owner: Codex
-After this patch: Codex/AI for GitHub publishing or external posting only if Shin gives explicit GO
+After this patch: Codex/AI for GitHub publishing or external posting only after explicit maintainer GO
 ```
 
 ## Re-entry Notes
