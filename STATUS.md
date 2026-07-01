@@ -9,8 +9,9 @@ Phase 2 Worked Example v0.1: PASS
 Phase 2.5 Governance audit: PASS / Patch Required now being closed
 Phase 3 Schema / Output stabilization: PASS
 Phase 3.5 Governance Re-entry Patch: PASS
-Phase 4 README minimal usage update: HOLD
-Phase 5 Acceptance audit: HOLD
+Phase 4 README minimal usage/readiness: PASS
+Phase 5 Acceptance Audit v0.2: FAIL / Reconciliation in progress
+Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public readiness: HOLD
 External API: HOLD
 External posting: HOLD
@@ -28,8 +29,9 @@ V14 deep scoring: BLOCK
 | Phase 2.5 Governance audit | PASS / Patch Required now being closed | Audit found stale governance/re-entry state. |
 | Phase 3 Schema / Output stabilization | PASS | `99def9d Stabilize output schema roles` |
 | Phase 3.5 Governance Re-entry Patch | PASS | This patch updates repo-carried governance and re-entry state. |
-| Phase 4 README minimal usage update | HOLD | Requires explicit Shin GO. |
-| Phase 5 Acceptance audit | HOLD | Requires explicit Shin GO. |
+| Phase 4 README minimal usage/readiness | PASS | `716b6cd Clarify README local MVP usage` |
+| Phase 5 Acceptance Audit v0.2 | FAIL / Reconciliation in progress | Failed only because governance state was stale after Phase 4. |
+| Phase 5.1 Governance State Reconciliation | PASS | This patch removes the stale-state blocker and requires Phase 5 audit rerun. |
 | Phase 6 Public readiness | HOLD | Requires explicit Shin GO. |
 
 ## Active Repo
@@ -41,11 +43,11 @@ V14 deep scoring: BLOCK
 ## Current Active Commit
 
 ```text
-Before Phase 3.5 patch: 99def9d Stabilize output schema roles
-After Phase 3.5 patch: latest commit on main after "Update governance re-entry state" is committed
+Current active commit before Phase 5.1 patch: 716b6cd Clarify README local MVP usage
+Current active commit after Phase 5.1 patch: latest commit on main after "Reconcile governance state after README phase" is committed
 ```
 
-Run `git log --oneline -1` after the patch commit to read the exact active commit hash.
+Run `git log --oneline -1` after the Phase 5.1 patch commit to read the exact active commit hash.
 
 ## Completion Line
 
@@ -54,8 +56,7 @@ Local-only MVP has CLI, worked example, stable schema/output roles, and repo gov
 ## Missing Closure
 
 ```text
-Phase 4 README minimal usage update: unresolved and HOLD
-Phase 5 acceptance audit: unresolved and HOLD
+Phase 5 Acceptance Audit v0.2 rerun: unresolved and required after this reconciliation
 Phase 6 public readiness: unresolved and HOLD
 ```
 
@@ -63,7 +64,7 @@ Phase 6 public readiness: unresolved and HOLD
 
 ```text
 Current patch owner: Codex
-After this patch: Codex/AI for Phase 4 only if Shin gives GO
+After this patch: Codex/AI should rerun Phase 5 Acceptance Audit v0.2
 ```
 
 ## Re-entry Notes
