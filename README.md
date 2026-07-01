@@ -2,7 +2,7 @@
 
 Is this idea early, late, crowded, or still worth a narrow entry?
 
-Entry Window Radar is a small OSS scaffold for evaluating whether a GitHub repo, README, idea, or small project currently sits inside a usable entry window.
+Entry Window Radar is a small local-only MVP for evaluating whether a GitHub repo, README, idea, or small project currently sits inside a usable entry window.
 
 It does not predict future success. It produces an as-of entry posture based on visible evidence.
 
@@ -16,8 +16,10 @@ Competition Line:
 Operator Edge Line:
 
 Missing Evidence:
+Maximum Bottleneck:
+Next Action:
+Confidence:
 Risk:
-Recommended Next Action:
 Recheck Condition:
 ```
 
@@ -59,19 +61,19 @@ Given current market, competition, absorption, and operator evidence, now is not
 
 ## MVP Scope
 
-This repo is currently scaffold-only.
+This repo currently contains a local-only MVP.
 
 Included:
 
 - input templates for an idea, evidence, and operator context
-- output templates for an Entry Window report and decision card
-- an Entry Window Chart schema placeholder
+- a local-only CLI that reads `inputs/*.md` and writes markdown outputs
+- output files for an Entry Window report and decision card
+- an Entry Window Chart schema for the MVP output shape
 - validation and Operator Edge extraction prompts
-- one worked-example placeholder
+- one worked example
 
 Not included:
 
-- full CLI logic
 - external API integrations
 - automated web research
 - Grok, X, or API research
