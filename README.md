@@ -72,6 +72,33 @@ Included:
 - validation and Operator Edge extraction prompts
 - one worked example
 
+## Local Usage
+
+Run from the repo root:
+
+```bash
+python3 -B tools/entry_window_radar.py
+```
+
+Reads:
+
+```text
+inputs/idea.md
+inputs/evidence.md
+inputs/operator.md
+```
+
+Writes:
+
+```text
+outputs/report.md
+outputs/decision.md
+```
+
+## Current Limits
+
+This is a local-only, rule/template-based MVP. It does not call external services, perform external research, or create posting materials.
+
 Not included:
 
 - external API integrations
@@ -79,11 +106,15 @@ Not included:
 - Grok, X, or API research
 - Delivery Scope Radar
 - V14 Resource Justice deep scoring
+- Pro/Advanced scoring
+- Score History
+- Entry Window Drift
+- external posting materials
 - prediction of future success
 
 ## Boundary
 
-Entry Window Radar discovers and compares possible future lines.
+Entry Window Radar describes current entry lines from available evidence.
 
 V13 remains the GO / HOLD / CAP / BLOCK gate.
 
@@ -102,6 +133,10 @@ You should build this.
 This will succeed.
 The future is predictable from this score.
 ```
+
+## Re-entry
+
+Next AI/Codex should read `STATUS.md` and `AGENTS.md` first.
 
 ## File Map
 
