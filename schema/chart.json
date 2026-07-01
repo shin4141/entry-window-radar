@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entry Window Chart",
+  "description": "Placeholder schema for a scaffold-stage Entry Window Radar chart. This file defines the intended shape only; no runtime validation is implemented yet.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "as_of",
+    "entry_label",
+    "market_line",
+    "competition_line",
+    "operator_edge_line",
+    "missing_evidence",
+    "risk",
+    "recommended_next_action",
+    "recheck_condition"
+  ],
+  "properties": {
+    "as_of": {
+      "type": "string",
+      "description": "As-of date or timestamp for the judgment."
+    },
+    "entry_label": {
+      "type": "string",
+      "enum": ["FAST ENTRY", "NICHE WEDGE", "WAIT", "SHORT CYCLE", "AVOID"]
+    },
+    "market_line": {
+      "$ref": "#/$defs/line"
+    },
+    "competition_line": {
+      "$ref": "#/$defs/line"
+    },
+    "operator_edge_line": {
+      "$ref": "#/$defs/line"
+    },
+    "missing_evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "risk": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_next_action": {
+      "type": "string"
+    },
+    "recheck_condition": {
+      "type": "string"
+    },
+    "confidence_note": {
+      "type": "string",
+      "description": "Evidence-completeness note, not prediction confidence."
+    }
+  },
+  "$defs": {
+    "line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "signals", "open_questions"],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "signals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "open_questions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
