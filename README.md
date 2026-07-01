@@ -67,6 +67,7 @@ Included:
 
 - input templates for an idea, evidence, and operator context
 - a local-only CLI that reads `inputs/*.md` and writes markdown outputs
+- an AI-assisted usage prompt for chat-first diagnosis
 - output files for an Entry Window report and decision card
 - an Entry Window Chart schema for the MVP output shape
 - validation and Operator Edge extraction prompts
@@ -81,6 +82,8 @@ python3 -B tools/entry_window_radar.py
 ```
 
 For a minimal worked example, see `examples/example_001.md`.
+
+AI-assisted route: paste `prompts/ai_assisted_entry_window_prompt.md` into Codex / GPT / Claude Code to generate an Entry Window Card before or instead of running the CLI.
 
 Reads:
 
@@ -154,5 +157,6 @@ outputs/report.md
 outputs/decision.md
 prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
+prompts/ai_assisted_entry_window_prompt.md
 examples/example_001.md
 ```

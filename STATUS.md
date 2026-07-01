@@ -14,6 +14,7 @@ Phase 5 Acceptance Audit v0.2: PASS WITH MINOR NOTES
 Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public Readiness Audit: PUBLIC READY WITH MINOR NOTES
 GitHub publishing: PASS
+Phase 7.1 AI-assisted Usage Prompt: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -36,6 +37,7 @@ V14 deep scoring: BLOCK
 | Phase 5.2 Acceptance State Closeout | PASS | `fd9d4a3 Record acceptance audit result` |
 | Phase 6 Public Readiness Audit | PUBLIC READY WITH MINOR NOTES | No blocking issues; publishing and posting still require explicit maintainer GO. |
 | GitHub Remote Creation / Push Gate | PASS | Public repo `entry-window-radar`; visibility `public`; pushed commit `28e7f47 Prepare public GitHub hygiene`. |
+| Phase 7.1 AI-assisted Usage Prompt | PASS | Adds `prompts/ai_assisted_entry_window_prompt.md` and README route for AI-first local diagnosis. |
 
 ## Active Repo
 
@@ -52,11 +54,12 @@ Latest accepted MVP commit before Phase 6.1 patch: fd9d4a3 Record acceptance aud
 Current active commit after Phase 6.1 patch: 4e6be09 Record public readiness result
 Accepted MVP HEAD before public hygiene patch: 4e6be09 Record public readiness result
 Published MVP commit: 28e7f47 Prepare public GitHub hygiene
+Latest dogfood example commit: c3dc010 Record V13 LoopKit dogfood result
 ```
 
 ## Completion Line
 
-The accepted local-only MVP is published to GitHub as public repo entry-window-radar, governance state records GitHub publishing PASS, and external posting remains HOLD.
+Entry Window Radar now has an AI-first usage route via prompts/ai_assisted_entry_window_prompt.md, README points to it, governance state records Phase 7.1, and external posting remains HOLD.
 
 ## Missing Closure
 
@@ -64,6 +67,7 @@ The accepted local-only MVP is published to GitHub as public repo entry-window-r
 GitHub publishing: resolved and PASS for public repo entry-window-radar
 External posting: unresolved and HOLD
 External API: HOLD
+Phase 7.1 AI-assisted Usage Prompt: resolved and PASS
 Delivery Scope Radar: BLOCK
 V14 deep scoring: BLOCK
 ```
@@ -83,5 +87,6 @@ After this patch: Codex/AI for external posting only after explicit maintainer G
 - External posting and advanced scopes remain gated.
 - GitHub publishing is PASS for public repo `entry-window-radar`.
 - Public repo URL: https://github.com/shin4141/entry-window-radar
+- AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.
