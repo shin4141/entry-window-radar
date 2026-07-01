@@ -10,23 +10,37 @@ Check whether it:
 1. Produces exactly one entry label from:
    FAST ENTRY, NICHE WEDGE, WAIT, SHORT CYCLE, AVOID
 
-2. Includes all required fields:
+2. Keeps output roles separated:
+
+   report.md is the detailed as-of diagnosis and includes:
    Entry Label
    Market Line
    Competition Line
    Operator Edge Line
+   Rationale
    Missing Evidence
+   Maximum Bottleneck
+   Next Action
+   Confidence
    Risk
-   Recommended Next Action
    Recheck Condition
 
-3. Uses as-of language instead of future certainty.
+   decision.md is the short decision card and includes only:
+   Entry Label
+   Maximum Bottleneck
+   Next Action
+   Confidence
+   Missing Evidence
 
-4. Avoids telling the operator "you should build this."
+3. Keeps Operator Edge as a first-class line.
 
-5. Avoids Delivery Scope Radar, V14 Resource Justice deep scoring, score history, drift tracking, external posting, and automated web research.
+4. Uses as-of language instead of future certainty.
 
-6. Keeps the next action bounded to one practical move.
+5. Avoids judging the operator or telling the operator "you should build this."
+
+6. Avoids Delivery Scope Radar, V14 Resource Justice deep scoring, score history, drift tracking, external posting, and automated web research.
+
+7. Keeps maximum bottleneck and next action bounded to exactly one each.
 
 Return:
 

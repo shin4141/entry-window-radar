@@ -21,6 +21,21 @@ OUTPUT_DECISION = ROOT / "outputs" / "decision.md"
 SCHEMA = ROOT / "schema" / "chart.json"
 
 LABELS = {"FAST ENTRY", "NICHE WEDGE", "WAIT", "SHORT CYCLE", "AVOID"}
+REQUIRED_SCHEMA_FIELDS = {
+    "as_of",
+    "entry_label",
+    "market_line",
+    "competition_line",
+    "operator_edge_line",
+    "rationale",
+    "maximum_bottleneck",
+    "next_action",
+    "confidence",
+    "missing_evidence",
+    "risk",
+    "recheck_condition",
+}
+
 
 @dataclass
 class Line:
@@ -36,6 +51,7 @@ class Diagnosis:
     market_line: Line
     competition_line: Line
     operator_edge_line: Line
+    rationale: str
     maximum_bottleneck: str
     next_action: str
     confidence: str
@@ -49,7 +65,12 @@ def read_inputs() -> dict[str, str]:
 
 
 def validate_schema_file() -> None:
-    json.loads(SCHEMA.read_text(encoding="utf-8"))
+    schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
+    schema_fields = set(schema.get("properties", {}))
+    missing_fields = REQUIRED_SCHEMA_FIELDS - schema_fields
+    if missing_fields:
+        missing = ", ".join(sorted(missing_fields))
+        raise ValueError(f"schema/chart.json is missing required MVP field(s): {missing}")
 
 
 def section(markdown: str, heading: str) -> str:
@@ -215,6 +236,18 @@ def next_action(label: str, bottleneck: str) -> str:
     return "Run one small proof target with a bounded scope and recheck the entry window afterward."
 
 
+def rationale(label: str) -> str:
+    if label == "WAIT":
+        return "The current inputs do not yet provide enough concrete as-of evidence to support a stronger entry label."
+    if label == "NICHE WEDGE":
+        return "The current inputs suggest a narrow workflow may exist, but the evidence does not support a broad or fast-entry posture yet."
+    if label == "SHORT CYCLE":
+        return "The current inputs suggest a bounded proof cycle may be more appropriate than a durable entry claim."
+    if label == "AVOID":
+        return "The current inputs show the entry posture is constrained enough that pausing is the clearest as-of diagnosis."
+    return "The current inputs show market, competition, and operator-edge signals strong enough for a small bounded proof target."
+
+
 def diagnose(inputs: dict[str, str]) -> Diagnosis:
     market = evidence_lines(inputs, "market")
     competition = evidence_lines(inputs, "competition")
@@ -229,6 +262,7 @@ def diagnose(inputs: dict[str, str]) -> Diagnosis:
         market_line=summarize_line("Market Line", market),
         competition_line=summarize_line("Competition Line", competition),
         operator_edge_line=summarize_line("Operator Edge Line", operator),
+        rationale=rationale(label),
         maximum_bottleneck=bottleneck,
         next_action=next_action(label, bottleneck),
         confidence=confidence(total),
@@ -238,6 +272,19 @@ def diagnose(inputs: dict[str, str]) -> Diagnosis:
     )
 
 
+def validate_diagnosis(diagnosis: Diagnosis) -> None:
+    if diagnosis.entry_label not in LABELS:
+        raise ValueError(f"entry_label must be one of {sorted(LABELS)}")
+    for field in ("maximum_bottleneck", "next_action", "confidence"):
+        value = getattr(diagnosis, field)
+        if not value or "\n" in value:
+            raise ValueError(f"{field} must be exactly one non-empty line")
+    if not diagnosis.missing_evidence:
+        raise ValueError("missing_evidence must be present")
+    if not diagnosis.operator_edge_line.summary:
+        raise ValueError("operator_edge_line must remain present")
+
+
 def bullet(items: list[str]) -> str:
     return "\n".join(f"- {item}" for item in items)
 
@@ -245,7 +292,7 @@ def bullet(items: list[str]) -> str:
 def render_report(diagnosis: Diagnosis) -> str:
     return f"""# Entry Window Report
 
-## As-Of Judgment
+## As-Of Diagnosis
 
 As-of date: {diagnosis.as_of}
 Entry Label: {diagnosis.entry_label}
@@ -283,6 +330,10 @@ Signals:
 Open questions:
 {bullet(diagnosis.operator_edge_line.open_questions)}
 
+## Rationale
+
+{diagnosis.rationale}
+
 ## Maximum Bottleneck
 
 {diagnosis.maximum_bottleneck}
@@ -312,30 +363,20 @@ This report describes the current entry posture from available evidence. It does
 def render_decision(diagnosis: Diagnosis) -> str:
     return f"""# Entry Window Decision Card
 
-As of the available evidence, this looks like:
-
 Entry Label: {diagnosis.entry_label}
 Maximum Bottleneck: {diagnosis.maximum_bottleneck}
 Next Action: {diagnosis.next_action}
 Confidence: {diagnosis.confidence}
 
-Market Line: {diagnosis.market_line.summary}
-Competition Line: {diagnosis.competition_line.summary}
-Operator Edge Line: {diagnosis.operator_edge_line.summary}
-
 Missing Evidence:
 {bullet(diagnosis.missing_evidence)}
-
-Risk:
-{bullet(diagnosis.risk)}
-
-Recheck Condition: {diagnosis.recheck_condition}
 """
 
 
 def main() -> int:
     validate_schema_file()
     diagnosis = diagnose(read_inputs())
+    validate_diagnosis(diagnosis)
     OUTPUT_REPORT.write_text(render_report(diagnosis), encoding="utf-8")
     OUTPUT_DECISION.write_text(render_decision(diagnosis), encoding="utf-8")
     print(f"Wrote {OUTPUT_REPORT.relative_to(ROOT)}")

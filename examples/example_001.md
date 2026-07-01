@@ -199,10 +199,13 @@ The exact wording may change as the CLI evolves, but the decision should stay sm
 Entry Label: NICHE WEDGE
 Maximum Bottleneck: Competition evidence
 Next Action: Define one narrow user/workflow wedge and gather one proof point that the operator can serve it better than a generic alternative.
-Confidence: Low-medium
+Confidence: Medium
+Missing Evidence:
+- More examples from newsletters outside the initial two operators.
+- A named comparison against the closest existing inbox or CRM workflow.
 ```
 
-Missing evidence should include the thin competition comparison and the narrow evidence base.
+The decision card should not include the full three-line rationale. That belongs in `outputs/report.md`.
 
 ## Why This Label Makes Sense
 

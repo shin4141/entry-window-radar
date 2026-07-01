@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Entry Window Chart",
-  "description": "Placeholder schema for a scaffold-stage Entry Window Radar chart. This file defines the intended shape only; no runtime validation is implemented yet.",
+  "description": "Local-only MVP schema for an as-of Entry Window Radar diagnosis.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,9 +10,12 @@
     "market_line",
     "competition_line",
     "operator_edge_line",
+    "rationale",
+    "maximum_bottleneck",
+    "next_action",
+    "confidence",
     "missing_evidence",
     "risk",
-    "recommended_next_action",
     "recheck_condition"
   ],
   "properties": {
@@ -33,23 +36,36 @@
     "operator_edge_line": {
       "$ref": "#/$defs/line"
     },
+    "rationale": {
+      "type": "string",
+      "description": "Short explanation for why the as-of entry label fits the available evidence."
+    },
+    "maximum_bottleneck": {
+      "type": "string",
+      "description": "Exactly one current bottleneck limiting the entry-window diagnosis.",
+      "minLength": 1
+    },
+    "next_action": {
+      "type": "string",
+      "description": "Exactly one bounded next action for improving or testing the as-of diagnosis.",
+      "minLength": 1
+    },
+    "confidence": {
+      "type": "string",
+      "description": "Evidence-completeness confidence, not prediction confidence.",
+      "enum": ["Low", "Low-medium", "Medium", "High"]
+    },
     "missing_evidence": {
       "type": "array",
+      "minItems": 1,
       "items": { "type": "string" }
     },
     "risk": {
       "type": "array",
       "items": { "type": "string" }
     },
-    "recommended_next_action": {
-      "type": "string"
-    },
     "recheck_condition": {
       "type": "string"
-    },
-    "confidence_note": {
-      "type": "string",
-      "description": "Evidence-completeness note, not prediction confidence."
     }
   },
   "$defs": {
@@ -63,10 +79,12 @@
         },
         "signals": {
           "type": "array",
+          "minItems": 1,
           "items": { "type": "string" }
         },
         "open_questions": {
           "type": "array",
+          "minItems": 1,
           "items": { "type": "string" }
         }
       }

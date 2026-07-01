@@ -1,6 +1,6 @@
 # Entry Window Report
 
-## As-Of Judgment
+## As-Of Diagnosis
 
 As-of date: 2026-07-01
 Entry Label: WAIT
@@ -37,6 +37,10 @@ Signals:
 
 Open questions:
 - What concrete evidence describes the current operator edge line?
+
+## Rationale
+
+The current inputs do not yet provide enough concrete as-of evidence to support a stronger entry label.
 
 ## Maximum Bottleneck
 
