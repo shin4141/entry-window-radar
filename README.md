@@ -80,6 +80,8 @@ Run from the repo root:
 python3 -B tools/entry_window_radar.py
 ```
 
+For a minimal worked example, see `examples/example_001.md`.
+
 Reads:
 
 ```text
