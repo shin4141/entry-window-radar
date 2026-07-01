@@ -32,6 +32,19 @@ Check whether it:
    Confidence
    Missing Evidence
 
+   chart_data.json is structured data for future Entry Window Map display and includes:
+   as_of
+   target
+   market_readiness
+   operator_edge
+   competition_pressure
+   entry_label
+   maximum_bottleneck
+   next_action
+   confidence
+   missing_evidence
+   interpretation_note
+
 3. Keeps Operator Edge as a first-class line.
 
 4. Uses as-of language instead of future certainty.
@@ -41,6 +54,8 @@ Check whether it:
 6. Avoids Delivery Scope Radar, V14 Resource Justice deep scoring, score history, drift tracking, external posting, and automated web research.
 
 7. Keeps maximum bottleneck and next action bounded to exactly one each.
+
+8. Keeps chart_data.json levels as display-stage 0-5 levels, not probabilities, predictions, VC scores, or investment advice.
 
 Return:
 

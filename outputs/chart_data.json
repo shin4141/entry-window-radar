@@ -1,0 +1,17 @@
+{
+  "as_of": "2026-07-02",
+  "target": "Unspecified target",
+  "market_readiness": 1,
+  "operator_edge": 1,
+  "competition_pressure": 2,
+  "entry_label": "WAIT",
+  "maximum_bottleneck": "Competition evidence",
+  "next_action": "Collect one primary evidence item for the current competition evidence before changing the entry label.",
+  "confidence": "Low",
+  "missing_evidence": [
+    "Concrete market demand, pain, urgency, or usage evidence.",
+    "Named alternatives, incumbent behavior, saturation, or absorption-risk evidence.",
+    "Specific operator edge, artifact proof, distribution path, or proof-capacity evidence."
+  ],
+  "interpretation_note": "Display-stage levels, not precise probabilities, future predictions, VC scores, or investment advice."
+}

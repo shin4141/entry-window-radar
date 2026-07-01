@@ -67,24 +67,32 @@ It may say:
 
 ## Data Model Direction
 
-Future implementation may add:
+Phase 8.2 adds data-only structured output:
 
 - `outputs/chart_data.json`
+
+Future implementation may add:
+
 - `outputs/entry_window_map.svg`
 - `outputs/entry_window_map.html`
 
-This phase must not implement them.
+This document does not implement rendering.
 
 Potential future data shape:
 
 ```text
 {
+  "as_of": "...",
+  "target": "...",
   "market_readiness": 0-5,
   "operator_edge": 0-5,
   "competition_pressure": 0-5,
   "entry_label": "...",
   "maximum_bottleneck": "...",
-  "next_action": "..."
+  "next_action": "...",
+  "confidence": "...",
+  "missing_evidence": [],
+  "interpretation_note": "Display-stage levels, not probabilities or predictions."
 }
 ```
 

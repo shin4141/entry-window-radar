@@ -18,6 +18,7 @@ INPUTS = {
 }
 OUTPUT_REPORT = ROOT / "outputs" / "report.md"
 OUTPUT_DECISION = ROOT / "outputs" / "decision.md"
+OUTPUT_CHART_DATA = ROOT / "outputs" / "chart_data.json"
 SCHEMA = ROOT / "schema" / "chart.json"
 
 LABELS = {"FAST ENTRY", "NICHE WEDGE", "WAIT", "SHORT CYCLE", "AVOID"}
@@ -58,6 +59,21 @@ class Diagnosis:
     missing_evidence: list[str]
     risk: list[str]
     recheck_condition: str
+
+
+@dataclass
+class ChartData:
+    as_of: str
+    target: str
+    market_readiness: int
+    operator_edge: int
+    competition_pressure: int
+    entry_label: str
+    maximum_bottleneck: str
+    next_action: str
+    confidence: str
+    missing_evidence: list[str]
+    interpretation_note: str
 
 
 def read_inputs() -> dict[str, str]:
@@ -167,6 +183,17 @@ def as_of_date(inputs: dict[str, str]) -> str:
         if value:
             return value
     return date.today().isoformat()
+
+
+def target_name(inputs: dict[str, str]) -> str:
+    for raw in authored_text(section(inputs["idea"], "Artifact")).splitlines():
+        line = raw.strip()
+        if not line.lower().startswith("name:"):
+            continue
+        value = line.split(":", 1)[1].strip()
+        if value:
+            return value
+    return "Unspecified target"
 
 
 def summarize_line(name: str, signals: list[str]) -> Line:
@@ -285,6 +312,54 @@ def validate_diagnosis(diagnosis: Diagnosis) -> None:
         raise ValueError("operator_edge_line must remain present")
 
 
+def display_levels(diagnosis: Diagnosis) -> tuple[int, int, int]:
+    levels = {
+        "FAST ENTRY": (4, 4, 2),
+        "NICHE WEDGE": (3, 4, 4),
+        "WAIT": (1, 1, 2),
+        "SHORT CYCLE": (4, 3, 4),
+        "AVOID": (1, 1, 5),
+    }
+    return levels[diagnosis.entry_label]
+
+
+def chart_data(diagnosis: Diagnosis, inputs: dict[str, str]) -> ChartData:
+    market_readiness, operator_edge, competition_pressure = display_levels(diagnosis)
+    return ChartData(
+        as_of=diagnosis.as_of,
+        target=target_name(inputs),
+        market_readiness=market_readiness,
+        operator_edge=operator_edge,
+        competition_pressure=competition_pressure,
+        entry_label=diagnosis.entry_label,
+        maximum_bottleneck=diagnosis.maximum_bottleneck,
+        next_action=diagnosis.next_action,
+        confidence=diagnosis.confidence,
+        missing_evidence=diagnosis.missing_evidence,
+        interpretation_note=(
+            "Display-stage levels, not precise probabilities, future predictions, "
+            "VC scores, or investment advice."
+        ),
+    )
+
+
+def validate_chart_data(data: ChartData) -> None:
+    for field in ("market_readiness", "operator_edge", "competition_pressure"):
+        value = getattr(data, field)
+        if not isinstance(value, int) or not 0 <= value <= 5:
+            raise ValueError(f"{field} must be an integer from 0 to 5")
+    if data.entry_label not in LABELS:
+        raise ValueError(f"entry_label must be one of {sorted(LABELS)}")
+    for field in ("maximum_bottleneck", "next_action", "confidence"):
+        value = getattr(data, field)
+        if not value or "\n" in value:
+            raise ValueError(f"{field} must be exactly one non-empty line")
+    if not isinstance(data.missing_evidence, list):
+        raise ValueError("missing_evidence must be a list")
+    if "not precise probabilities" not in data.interpretation_note:
+        raise ValueError("interpretation_note must preserve the display-stage boundary")
+
+
 def bullet(items: list[str]) -> str:
     return "\n".join(f"- {item}" for item in items)
 
@@ -373,14 +448,36 @@ Missing Evidence:
 """
 
 
+def render_chart_data(data: ChartData) -> str:
+    payload = {
+        "as_of": data.as_of,
+        "target": data.target,
+        "market_readiness": data.market_readiness,
+        "operator_edge": data.operator_edge,
+        "competition_pressure": data.competition_pressure,
+        "entry_label": data.entry_label,
+        "maximum_bottleneck": data.maximum_bottleneck,
+        "next_action": data.next_action,
+        "confidence": data.confidence,
+        "missing_evidence": data.missing_evidence,
+        "interpretation_note": data.interpretation_note,
+    }
+    return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+
+
 def main() -> int:
     validate_schema_file()
-    diagnosis = diagnose(read_inputs())
+    inputs = read_inputs()
+    diagnosis = diagnose(inputs)
     validate_diagnosis(diagnosis)
+    map_data = chart_data(diagnosis, inputs)
+    validate_chart_data(map_data)
     OUTPUT_REPORT.write_text(render_report(diagnosis), encoding="utf-8")
     OUTPUT_DECISION.write_text(render_decision(diagnosis), encoding="utf-8")
+    OUTPUT_CHART_DATA.write_text(render_chart_data(map_data), encoding="utf-8")
     print(f"Wrote {OUTPUT_REPORT.relative_to(ROOT)}")
     print(f"Wrote {OUTPUT_DECISION.relative_to(ROOT)}")
+    print(f"Wrote {OUTPUT_CHART_DATA.relative_to(ROOT)}")
     return 0
 
 

@@ -74,6 +74,7 @@ Included:
 - an AI-assisted usage prompt for chat-first diagnosis
 - an Entry Window Map v0.1 specification for a future view
 - output files for an Entry Window report and decision card
+- structured `outputs/chart_data.json` for future Entry Window Map use
 - an Entry Window Chart schema for the MVP output shape
 - validation and Operator Edge extraction prompts
 - one worked example
@@ -103,7 +104,10 @@ Writes:
 ```text
 outputs/report.md
 outputs/decision.md
+outputs/chart_data.json
 ```
+
+`outputs/chart_data.json` contains display-stage levels for future Entry Window Map use. It is not chart rendering and it is not a probability, VC score, prediction, or investment signal.
 
 ## Current Limits
 
@@ -161,6 +165,7 @@ inputs/operator.md
 schema/chart.json
 outputs/report.md
 outputs/decision.md
+outputs/chart_data.json
 prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
 prompts/ai_assisted_entry_window_prompt.md

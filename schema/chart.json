@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Entry Window Chart",
-  "description": "Local-only MVP schema for an as-of Entry Window Radar diagnosis.",
+  "description": "Local-only MVP schema for an as-of Entry Window Radar diagnosis, with chart_data defined for future Entry Window Map display.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -86,6 +86,72 @@
           "type": "array",
           "minItems": 1,
           "items": { "type": "string" }
+        }
+      }
+    },
+    "chart_data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of",
+        "target",
+        "market_readiness",
+        "operator_edge",
+        "competition_pressure",
+        "entry_label",
+        "maximum_bottleneck",
+        "next_action",
+        "confidence",
+        "missing_evidence",
+        "interpretation_note"
+      ],
+      "properties": {
+        "as_of": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "market_readiness": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Display-stage level, not a probability."
+        },
+        "operator_edge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Display-stage level, not a probability."
+        },
+        "competition_pressure": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Display-stage level, not a probability."
+        },
+        "entry_label": {
+          "type": "string",
+          "enum": ["FAST ENTRY", "NICHE WEDGE", "WAIT", "SHORT CYCLE", "AVOID"]
+        },
+        "maximum_bottleneck": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "type": "string"
+        },
+        "missing_evidence": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "interpretation_note": {
+          "type": "string",
+          "description": "Must say these levels are display-stage, not precise probabilities, future predictions, VC scores, or investment advice."
         }
       }
     }
