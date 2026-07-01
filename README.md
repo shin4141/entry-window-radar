@@ -23,6 +23,10 @@ Risk:
 Recheck Condition:
 ```
 
+## Planned Entry Window Map
+
+Entry Window Map v0.1 is a spec-defined future view for showing the current As-of position at a glance. The specification lives in `docs/entry_window_map_v0_1.md`; chart rendering is not implemented yet.
+
 ## Three Lines
 
 ### Market Line
@@ -68,6 +72,7 @@ Included:
 - input templates for an idea, evidence, and operator context
 - a local-only CLI that reads `inputs/*.md` and writes markdown outputs
 - an AI-assisted usage prompt for chat-first diagnosis
+- an Entry Window Map v0.1 specification for a future view
 - output files for an Entry Window report and decision card
 - an Entry Window Chart schema for the MVP output shape
 - validation and Operator Edge extraction prompts
@@ -115,6 +120,7 @@ Not included:
 - Score History
 - Entry Window Drift
 - external posting materials
+- Entry Window Map rendering
 - prediction of future success
 
 ## Boundary
@@ -158,5 +164,6 @@ outputs/decision.md
 prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
 prompts/ai_assisted_entry_window_prompt.md
+docs/entry_window_map_v0_1.md
 examples/example_001.md
 ```

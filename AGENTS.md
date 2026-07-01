@@ -36,6 +36,8 @@ Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public Readiness Audit: PUBLIC READY WITH MINOR NOTES
 GitHub publishing: PASS
 Phase 7.1 AI-assisted Usage Prompt: PASS
+Phase 7.2 AI-assisted Route Dogfood: PASS
+Phase 8.1 Entry Window Map Spec: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -60,6 +62,7 @@ V14 deep scoring: BLOCK
 - Implementation, external posting, Delivery Scope Radar, and V14 deep scoring remain gated.
 - GitHub publishing is PASS for the current public repo; external posting remains HOLD until explicit maintainer GO.
 - AI-assisted usage through `prompts/ai_assisted_entry_window_prompt.md` is allowed, but it must not be treated as permission for external APIs, automated web research, or external posting.
+- Entry Window Map v0.1 is specification-only. It does not authorize SVG, HTML, PNG, chart-data output, or visualization implementation.
 
 ## Allowed In Current MVP
 
@@ -68,6 +71,7 @@ V14 deep scoring: BLOCK
 - maintain `schema/chart.json`
 - maintain the worked example
 - maintain the AI-assisted usage prompt
+- maintain the Entry Window Map specification
 - update governance/re-entry files when phase state changes
 
 ## Not Allowed Without Explicit GO Or CAP
@@ -75,6 +79,7 @@ V14 deep scoring: BLOCK
 - do not add external API integrations
 - do not add Grok, X, or automated web research
 - do not add PNG output
+- do not implement Entry Window Map rendering
 - do not implement Delivery Scope Radar
 - do not implement V14 Resource Justice deep scoring
 - do not add Pro/Advanced scoring

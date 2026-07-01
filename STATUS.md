@@ -15,6 +15,8 @@ Phase 5.1 Governance State Reconciliation: PASS
 Phase 6 Public Readiness Audit: PUBLIC READY WITH MINOR NOTES
 GitHub publishing: PASS
 Phase 7.1 AI-assisted Usage Prompt: PASS
+Phase 7.2 AI-assisted Route Dogfood: PASS
+Phase 8.1 Entry Window Map Spec: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -38,6 +40,8 @@ V14 deep scoring: BLOCK
 | Phase 6 Public Readiness Audit | PUBLIC READY WITH MINOR NOTES | No blocking issues; publishing and posting still require explicit maintainer GO. |
 | GitHub Remote Creation / Push Gate | PASS | Public repo `entry-window-radar`; visibility `public`; pushed commit `28e7f47 Prepare public GitHub hygiene`. |
 | Phase 7.1 AI-assisted Usage Prompt | PASS | Adds `prompts/ai_assisted_entry_window_prompt.md` and README route for AI-first local diagnosis. |
+| Phase 7.2 AI-assisted Route Dogfood | PASS | `29fbd26 Record entry-window-radar dogfood result` |
+| Phase 8.1 Entry Window Map Spec | PASS | Adds `docs/entry_window_map_v0_1.md`; visualization remains unimplemented and gated. |
 
 ## Active Repo
 
@@ -55,11 +59,12 @@ Current active commit after Phase 6.1 patch: 4e6be09 Record public readiness res
 Accepted MVP HEAD before public hygiene patch: 4e6be09 Record public readiness result
 Published MVP commit: 28e7f47 Prepare public GitHub hygiene
 Latest dogfood example commit: c3dc010 Record V13 LoopKit dogfood result
+Latest AI-assisted dogfood commit: 29fbd26 Record entry-window-radar dogfood result
 ```
 
 ## Completion Line
 
-Entry Window Radar now has an AI-first usage route via prompts/ai_assisted_entry_window_prompt.md, README points to it, governance state records Phase 7.1, and external posting remains HOLD.
+Entry Window Map v0.1 has a documented meaning, axes, labels, non-goals, and future data direction, without implementing visualization or expanding scope.
 
 ## Missing Closure
 
@@ -68,6 +73,8 @@ GitHub publishing: resolved and PASS for public repo entry-window-radar
 External posting: unresolved and HOLD
 External API: HOLD
 Phase 7.1 AI-assisted Usage Prompt: resolved and PASS
+Phase 8.1 Entry Window Map Spec: resolved and PASS
+Entry Window Map rendering: HOLD
 Delivery Scope Radar: BLOCK
 V14 deep scoring: BLOCK
 ```
@@ -88,5 +95,6 @@ After this patch: Codex/AI for external posting only after explicit maintainer G
 - GitHub publishing is PASS for public repo `entry-window-radar`.
 - Public repo URL: https://github.com/shin4141/entry-window-radar
 - AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
+- Entry Window Map v0.1 is specification-only; it does not authorize SVG, HTML, PNG, or chart-data implementation yet.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.
