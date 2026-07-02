@@ -61,6 +61,7 @@ Phase 10.18 Relationship Value Coverage Spec Patch: PASS
 Phase 10.20 Relationship Damage Severity Spec Patch: PASS
 Phase 10.21 Dependency Asymmetry Spec Patch: PASS
 Phase 10.22 Seat-Owned Regret Guard Spec Patch: PASS
+Phase 10.23 Quest Snapshot / TimeTube Archive Spec: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -90,6 +91,7 @@ V14 deep scoring: BLOCK
 - Portfolio Entry Horizon is allowed as a specification plus manual dogfood templates in `inputs/projects.md` and `inputs/markets.md`. It does not authorize portfolio scoring, portfolio JSON output, portfolio SVG output, launch-order automation, ranking, or external research.
 - Market Slope inputs do not authorize web research or invented market estimates. Market data must be source-backed or marked unknown. Operator Position is a strategic posture, not investment advice. Portfolio Entry Horizon supports launch-order reasoning, not automated permission.
 - Quest Map Layer is allowed as a specification in `docs/quest_map_layer_v0_1.md`, including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, Regret Guard Note, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential. It does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
+- Quest Snapshot / TimeTube Archive is allowed only as a specification in `docs/quest_snapshot_timetube_archive_v0_1.md`. It does not authorize snapshot output files, PDF generation, screenshot automation, Quest Map rendering, CLI behavior changes, Score History, Entry Window Drift, or implementation beyond the current Gate.
 - Quest Map recommendations must not use broad parent-market charts as strong evidence. Parent-market-only or unknown reference charts should lower confidence and avoid LAUNCH or broad build recommendations.
 - Quest Map recommendations must not move from HOLD to PROOF unless Minimum Viable Edge is named. High AI Expansion Potential alone is not permission to launch.
 - Quest Map recommendations must not recommend LAUNCH when Repeat Frequency / Order Volume is unknown, or when cost compression is one-off without a repeatable proof path.
@@ -118,6 +120,7 @@ V14 deep scoring: BLOCK
 - maintain manual Portfolio Entry Horizon dogfood inputs
 - maintain Market Slope and Operator Position fields as manual inputs
 - maintain the Quest Map Layer specification
+- maintain the Quest Snapshot / TimeTube Archive specification
 - maintain data-only `outputs/chart_data.json`
 - maintain static `outputs/entry_window_map.svg`, including the simple Competition Pressure layer and screenshot-ready context card layout
 - update governance/re-entry files when phase state changes
@@ -130,6 +133,7 @@ V14 deep scoring: BLOCK
 - do not add HTML or interactive Entry Window Map rendering
 - do not implement portfolio scoring, ranking, portfolio outputs, portfolio SVG, or launch-order automation
 - do not implement Quest Map rendering, Quest Map outputs, quest scoring automation, or automated launch permission
+- do not implement Quest Snapshot outputs, PDF export, screenshot automation, or archive generation
 - do not implement Delivery Scope Radar
 - do not implement V14 Resource Justice deep scoring
 - do not add Pro/Advanced scoring
