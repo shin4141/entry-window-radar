@@ -70,6 +70,7 @@ Phase 10.28 Industry Slope Timeline Prototype: PASS
 Phase 10.29 Industry Slope Timeline Niche Meaning: PASS
 Phase 10.30 Industry Lifecycle Classification: PASS
 Phase 10.31 Codex Interpretation Note / Evidence Basis Spec: PASS
+Phase 10.32 Snapshot Trajectory / Drift Delta Spec: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -101,6 +102,7 @@ V14 deep scoring: BLOCK
 - Quest Map Layer is allowed as a specification in `docs/quest_map_layer_v0_1.md`, including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, Regret Guard Note, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential. It does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Quest Snapshot / TimeTube Archive is allowed only as a specification in `docs/quest_snapshot_timetube_archive_v0_1.md`. It does not authorize snapshot output files, PDF generation, screenshot automation, Quest Map rendering, CLI behavior changes, Score History, Entry Window Drift, or implementation beyond the current Gate.
 - Codex Interpretation Note / Evidence Basis is allowed only as a specification in `docs/codex_interpretation_note_v0_1.md`. It defines a future written evidence layer for Quest Snapshot, but does not authorize market research, source invention, new charts, scoring automation, snapshot output, CLI behavior changes, PDF generation, screenshot automation, or external posting.
+- Snapshot Trajectory / Drift Delta is allowed only as a specification in `docs/snapshot_trajectory_drift_delta_v0_1.md`. It defines future multi-snapshot comparison and drift-delta language, but does not authorize runtime comparison, automatic drift scoring, new visual output, snapshot runtime, CLI behavior changes, PDF generation, screenshot automation, or external posting.
 - Quest Position Map v0.1 is allowed only as a static/manual prototype in `outputs/quest_position_map.svg` and simplified Japanese visual variant in `outputs/quest_position_map_ja.svg`, with its spec in `docs/quest_position_map_v0_1.md`, example in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`. Future Codex/AI should read the selected card and interpretation note before modifying scope. This does not authorize full Quest Map implementation, automatic scoring, market research, runtime rendering, Quest Snapshot output, PDF generation, screenshot automation, CLI behavior changes, or external posting.
 - Industry Slope Timeline v0.1 is allowed only as a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with its spec in `docs/industry_slope_timeline_v0_1.md` and example in `examples/industry_slope_timeline_v0_1_ja.md`. Its curve represents a specific niche's entry-window lifecycle, not the whole AI industry peaking or declining. Future Codex/AI should read the lifecycle classification and concern level before assuming a project is late, early, safe, crowded, or risky. It does not authorize automatic market analysis, market research, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI behavior changes, or external posting.
 - Quest Map recommendations must not use broad parent-market charts as strong evidence. Parent-market-only or unknown reference charts should lower confidence and avoid LAUNCH or broad build recommendations.
@@ -133,6 +135,7 @@ V14 deep scoring: BLOCK
 - maintain the Quest Map Layer specification
 - maintain the Quest Snapshot / TimeTube Archive specification
 - maintain the Codex Interpretation Note / Evidence Basis specification
+- maintain the Snapshot Trajectory / Drift Delta specification
 - maintain the static/manual Quest Position Map prototype
 - maintain the Japanese static/manual Quest Position Map visual variant
 - maintain the static/manual Industry Slope Timeline visual prototype
@@ -149,6 +152,7 @@ V14 deep scoring: BLOCK
 - do not implement portfolio scoring, ranking, portfolio outputs, portfolio SVG, or launch-order automation
 - do not implement full Quest Map rendering, runtime Quest Map outputs, quest scoring automation, or automated launch permission
 - do not implement Quest Snapshot outputs, PDF export, screenshot automation, or archive generation
+- do not implement Snapshot Trajectory / Drift Delta runtime comparison, automatic drift scoring, new visual output, or trajectory automation
 - do not implement Delivery Scope Radar
 - do not implement V14 Resource Justice deep scoring
 - do not add Pro/Advanced scoring

@@ -39,6 +39,8 @@ Quest Snapshot / TimeTube Archive is a planned/spec-defined archive layer for sa
 
 Codex Interpretation Note is a planned/spec-defined evidence layer for Quest Snapshot. Its specification lives in `docs/codex_interpretation_note_v0_1.md`; it explains why visuals were placed or classified, but does not add market research, scoring automation, or snapshot generation.
 
+Snapshot Trajectory / Drift Delta is a planned/spec-defined recurring value layer for comparing saved Quest Snapshots over time. Its specification lives in `docs/snapshot_trajectory_drift_delta_v0_1.md`; runtime comparison, automatic drift scoring, and new visual output are not implemented.
+
 ## Three Lines
 
 ### Market Line
@@ -91,6 +93,7 @@ Included:
 - an Industry Slope Timeline v0.1 static/manual Japanese SVG prototype
 - a Quest Snapshot / TimeTube Archive v0.1 specification for future As-of handoff artifacts
 - a Codex Interpretation Note v0.1 specification for future evidence-basis handoff
+- a Snapshot Trajectory / Drift Delta v0.1 specification for future multi-snapshot comparison
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -148,6 +151,7 @@ Not included:
 - portfolio scoring, portfolio outputs, or launch-order automation
 - full Quest Map rendering, runtime Quest Map outputs, or quest scoring automation
 - Quest Snapshot outputs, PDF export, screenshot automation, or archive generation
+- Snapshot Trajectory / Drift Delta runtime comparison or automatic drift scoring
 - prediction of future success
 
 ## Boundary
@@ -202,6 +206,7 @@ docs/quest_position_map_v0_1.md
 docs/industry_slope_timeline_v0_1.md
 docs/quest_snapshot_timetube_archive_v0_1.md
 docs/codex_interpretation_note_v0_1.md
+docs/snapshot_trajectory_drift_delta_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
