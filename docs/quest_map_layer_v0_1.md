@@ -32,6 +32,10 @@ A small amount can be large if the buffer is small.
 Unknown ratio is not safety.
 The goal is not to force replacement.
 The goal is to make hidden survival pressure visible before it becomes regret.
+Relationship value is not zero because it is hard to measure.
+Relationship value is not infinite because it is emotionally important.
+The goal is not to replace relationships.
+The goal is to see whether the relationship value actually offsets the survival cost drag, or whether split routing is needed.
 ```
 
 ## Core Metaphor
@@ -567,6 +571,123 @@ Important rule:
 Do not reduce all relationships to money.
 
 But if the operator keeps a costly relationship, the non-monetary value should be named rather than assumed.
+
+### Relationship Value Coverage
+
+Relationship Value Coverage indicates how much of the visible cost drag is offset by the reciprocal value of the existing relationship.
+
+It answers:
+
+```text
+Does the relationship give back enough value to justify the ongoing cost drag?
+```
+
+Important framing:
+
+This is not a command to cut relationships.
+
+This is not a claim that all relationships are financial.
+
+It is an As-of check to prevent vague loyalty from hiding survival-relevant cost pressure.
+
+### Reciprocal Value Amount
+
+Reciprocal Value Amount is the visible or estimated value returned by the existing relationship.
+
+It may include:
+
+- direct returned work
+- referrals
+- emergency support
+- local trust
+- reputation protection
+- bundled or hidden services
+- useful information flow
+- introductions
+- future option value
+- personal trust or reliability
+
+Important rule:
+
+Monetary value should be named when available.
+
+Non-monetary value should be described rather than ignored.
+
+### Reciprocal Value Coverage Ratio
+
+Reciprocal Value Coverage Ratio compares visible reciprocal value against the cost drag or saving opportunity.
+
+Example:
+
+- Cost drag / saving opportunity: 84,000 yen per year
+- Returned work: about 50,000 yen per year, uncertain
+- Coverage ratio: about 60%, before switching damage risk and qualitative value
+
+This is not a precise forecast.
+
+It is a visibility tool.
+
+### Relationship Value Quality
+
+Relationship Value Quality indicates how grounded the relationship-value estimate is.
+
+Allowed levels:
+
+#### DIRECT
+
+Returned work, referrals, or support are documented or recently observed.
+
+#### ESTIMATED
+
+Value is estimated from past patterns.
+
+#### QUALITATIVE
+
+Relationship value exists but is not easily monetized.
+
+#### CLAIMED
+
+Relationship is said to matter, but the value is not named.
+
+#### UNKNOWN
+
+Relationship value is not known.
+
+### Relationship Value Coverage Band
+
+Relationship Value Coverage Band indicates whether reciprocal value offsets the visible cost drag.
+
+Allowed levels:
+
+#### FULLY OFFSETS
+
+Reciprocal value clearly covers the cost drag and switching damage risk.
+
+Keeping may be justified if Carrier Fit and survival exposure are acceptable.
+
+#### PARTIALLY OFFSETS
+
+Relationship value covers part of the cost drag.
+
+Split routing, negotiation, or offset planning may be appropriate.
+
+#### DOES NOT OFFSET
+
+Relationship value appears lower than the cost drag.
+
+Passive loyalty becomes harder to justify unless non-monetary value is strong and survivable.
+
+#### QUALITATIVE ONLY
+
+Relationship value may be real but cannot be compared directly.
+
+Name the non-monetary value and use split routing or proof rather than cold replacement.
+
+#### UNKNOWN
+
+Do not assume the relationship offsets the cost drag.
+
+Recommend naming value, measuring returned work, or running bounded split-routing proof.
 
 ### Net Switching Delta
 
@@ -1266,6 +1387,42 @@ A modest absolute amount can matter when the buffer is narrow.
 
 Unknown ratio should trigger measurement, not cold replacement.
 
+### Relationship Value Example A: Partially Offsetting Returned Work
+
+- Cost drag: 84,000 yen/year
+- Reciprocal Value Amount: old provider returns about 50,000 yen/year in uncertain work
+- Reciprocal Value Coverage Ratio: about 60%
+- Relationship Value Coverage Band: PARTIALLY OFFSETS
+- Recommended interpretation: do not cold switch; consider split routing or negotiation because relationship value exists but may not fully offset cost drag
+
+The relationship gives back real value, but the uncovered drag still needs a proof or offset plan.
+
+### Relationship Value Example B: Fully Offsetting Relationship
+
+- Cost drag: 84,000 yen/year
+- Reciprocal Value Amount: old provider reliably sends 150,000 yen/year of work plus emergency support
+- Relationship Value Coverage Band: FULLY OFFSETS
+- Recommended interpretation: keeping may be reasonable if cashflow sensitivity is low and switching damage is meaningful
+
+Strong reciprocal value can justify preserving the relationship when the cost remains survivable.
+
+### Relationship Value Example C: Claimed But Unnamed Loyalty
+
+- Cost drag: 84,000 yen/year
+- Claimed relationship value: "we have known them for years"
+- Relationship Value Quality: CLAIMED
+- Recommended interpretation: name the actual value or run bounded split-routing proof
+
+Do not let vague loyalty hide survival drag.
+
+### Relationship Value Example D: Qualitative Trust Value
+
+- Reciprocal value: local reputation protection and emergency support that cannot be monetized easily
+- Relationship Value Coverage Band: QUALITATIVE ONLY
+- Recommended interpretation: preserve relationship-heavy work, but still test standardized repeat work if cost drag is meaningful
+
+Qualitative value should be named and protected, not treated as either zero or infinite.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -1349,6 +1506,16 @@ Quest Map Layer is not:
 - If cost drag is large in absolute amount but small relative to healthy cashflow, avoid unnecessary urgency.
 - Exposure Ratio must be considered with Reciprocal Relationship Value, Switching Damage Risk, Split Routing Option, Carrier Fit, and Reference Chart Quality.
 - Do not recommend cold replacement from Exposure Ratio alone. Use it to judge urgency, offset planning, and proof priority.
+- Do not treat relationship value as zero just because it is hard to quantify.
+- Do not treat relationship value as infinite just because it is emotionally important.
+- If Relationship Value Quality is CLAIMED or UNKNOWN, do not use it to justify passive inaction under high cost drag.
+- If Relationship Value Coverage is FULLY OFFSETS and Actual Cashflow Sensitivity is LOW, keeping may be reasonable.
+- If Relationship Value Coverage is PARTIALLY OFFSETS and Exposure Ratio is MEANINGFUL or higher, prefer split routing, negotiation, or explicit offset planning.
+- If Relationship Value Coverage DOES NOT OFFSET and Survival Cost Drag is HIGH, Regret Cost of Inaction should rise.
+- If Relationship Value is QUALITATIVE ONLY, the card should name the qualitative value and avoid cold replacement.
+- Relationship Value Coverage must be considered with Switching Damage Risk, Exposure Ratio, Survival Threshold, Carrier Fit, and Split Routing Option.
+- Do not recommend full replacement from Relationship Value Coverage alone.
+- Prefer relationship-preserving decomposition when relationship value is meaningful but cost drag is also real.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -1393,6 +1560,11 @@ Potential input fields:
 - exposure_ratio_note
 - regret_cost_of_inaction
 - reciprocal_relationship_value
+- reciprocal_value_amount
+- reciprocal_value_coverage_ratio
+- relationship_value_quality
+- relationship_value_coverage_band
+- relationship_value_note
 - net_switching_delta
 - switching_damage_risk
 - split_routing_option
@@ -1455,6 +1627,11 @@ Potential output:
 - Exposure Ratio Note: one sentence explaining whether the drag is small, meaningful, large, critical, or unknown relative to the named anchor
 - Regret Cost of Inaction: LOW / MEDIUM / HIGH / UNKNOWN
 - Reciprocal Relationship Value: LOW / MEDIUM / HIGH / UNKNOWN
+- Reciprocal Value Amount: amount / qualitative value / unknown
+- Reciprocal Value Coverage Ratio: percentage / qualitative / unknown
+- Relationship Value Quality: DIRECT / ESTIMATED / QUALITATIVE / CLAIMED / UNKNOWN
+- Relationship Value Coverage Band: FULLY OFFSETS / PARTIALLY OFFSETS / DOES NOT OFFSET / QUALITATIVE ONLY / UNKNOWN
+- Relationship Value Note: one sentence explaining what the relationship gives back and whether it offsets the visible cost drag
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
 - Switching Damage Risk: LOW / MEDIUM / HIGH / UNKNOWN
 - Split Routing Option: YES / NO / UNKNOWN
@@ -1500,4 +1677,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now adds Exposure Amount, Exposure Anchor Amount, Exposure Ratio, Exposure Ratio Quality, Exposure Ratio Band, and Exposure Ratio Note, allowing cost drag to be judged relative to the actual budget, buffer, payroll, runway, or investment capacity it consumes.
+Quest Map Layer now evaluates whether reciprocal relationship value offsets visible cost drag by adding Reciprocal Value Amount, Reciprocal Value Coverage Ratio, Relationship Value Quality, Relationship Value Coverage Band, and Relationship Value Note.
