@@ -12,6 +12,8 @@ Core principle:
 The purpose is not to predict the winning market.
 The purpose is to raise the operator's starting certainty before entering a quest.
 Cost compression becomes strategically meaningful when it repeats.
+Repeat frequency shows possible habitat.
+Paid repeat shows captured habitat.
 ```
 
 ## Core Metaphor
@@ -245,6 +247,65 @@ Repeat frequency is not known.
 Do not recommend LAUNCH.
 
 Recommend PROOF or HOLD until repeat behavior is observed.
+
+### Paid Repeat Signal
+
+Paid Repeat Signal is evidence that a buyer is willing to pay again for the same or similar compressed workflow after an initial trial, proof, or first delivery.
+
+It answers:
+
+```text
+Did the buyer only try it once, or did they show that this can become repeat revenue, trust, and habitat?
+```
+
+Why it matters:
+
+Repeat Frequency / Order Volume shows that a workflow may recur.
+
+Paid Repeat Signal shows that the operator can actually capture recurring value.
+
+A workflow can have high repeat frequency but still fail if:
+
+- the buyer likes the free trial but does not pay
+- the buyer can self-serve with free tools
+- the output is not trusted enough
+- the incumbent relationship wins
+- the compressed price is attractive but not worth switching
+- the buyer only wanted a one-time experiment
+
+Allowed levels:
+
+#### NONE
+
+No paid repeat signal.
+
+Trial, curiosity, or free usage only.
+
+Usually do not recommend LAUNCH.
+
+#### WEAK
+
+Buyer expresses interest but has not paid or committed.
+
+May justify another bounded PROOF, not broad build.
+
+#### PARTIAL
+
+Buyer pays once after a free trial, or verbally commits to repeat under conditions.
+
+Supports PROOF continuation, not full LAUNCH.
+
+#### STRONG
+
+Buyer pays again for the same workflow, requests repeat delivery, or introduces a similar repeat buyer.
+
+May support SHORT CYCLE, INCUBATE, or LAUNCH depending on Window Lifespan, Carrier Fit, and Enemy Strength.
+
+#### UNKNOWN
+
+No evidence collected.
+
+Do not recommend LAUNCH.
 
 ### Output Equivalence
 
@@ -482,6 +543,43 @@ A one-time compression can create a useful case study or small salvage action, b
 
 Monthly reporting can become a real habitat when recurrence, output equivalence, switching pressure, and low trial friction are all visible.
 
+### Example H: Free Trial With Praise But No Payment
+
+- Relevant quest: AI-low-adoption manual workflow compression
+- Trial result: free first trial completed
+- Buyer response: "this is useful"
+- Paid Repeat Signal: WEAK
+- Recommended Action: PROOF, not LAUNCH
+
+Free trial satisfaction is useful evidence, but it is not the same as paid repeat.
+
+### Example I: Paid Second Job After Free Trial
+
+- Relevant quest: repeatable compressed workflow
+- Trial result: free first trial completed
+- Buyer response: pays for the second job
+- Paid Repeat Signal: PARTIAL
+- Recommended Action: continue PROOF or consider SHORT CYCLE if window lifespan is short
+
+One paid follow-up shows capture may be possible, but it is not enough by itself to justify broad build.
+
+### Example J: Repeated Payment Or Similar Buyer Referral
+
+- Relevant quest: repeatable workflow habitat
+- Buyer response: pays repeatedly or introduces similar buyers
+- Paid Repeat Signal: STRONG
+- Recommended Action: consider INCUBATE / LAUNCH / SHORT CYCLE depending on window lifespan, enemy strength, and Carrier Fit
+
+Paid repeat is stronger than stated interest because it shows the operator can capture recurring value.
+
+### Example K: One-Off Annual Workflow
+
+- Relevant quest: annual or one-time workflow compression
+- Paid Repeat Signal: weak unless the same workflow repeats or similar buyers exist
+- Recommended Action: SALVAGE / PROOF, not broad build
+
+Even if the buyer pays once, the signal remains limited when the workflow itself does not repeat.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -520,6 +618,13 @@ Quest Map Layer is not:
 - If Repeat Frequency is HIGH, Switching Pressure is high, Output Equivalence is proven, Trial Friction is low, and Carrier Fit is strong, stronger action may be considered.
 - Repeat Frequency helps distinguish SHORT CYCLE from long-term habitat: high repeat but short lifespan may be SHORT CYCLE; medium/high repeat with long lifespan may be INCUBATE or LAUNCH depending on proof.
 - Repeat Frequency must not override Reference Chart Quality. A high-repeat claim from a weak parent-market chart should lower confidence.
+- Do not recommend LAUNCH without at least PARTIAL Paid Repeat Signal.
+- Do not move from PROOF to LAUNCH unless Paid Repeat Signal, Output Equivalence, Payment / Revenue Capture, Operator Fit, and Carrier Fit are all strong enough.
+- If Repeat Frequency is HIGH but Paid Repeat Signal is NONE or UNKNOWN, remain at PROOF or HOLD.
+- If Paid Repeat Signal is STRONG but Window Lifespan is short, consider SHORT CYCLE rather than long-term habitat.
+- If Paid Repeat Signal is STRONG and Window Lifespan is long, consider INCUBATE or LAUNCH depending on Carrier Fit and Enemy Strength.
+- Paid Repeat Signal should not override Reference Chart Quality. Strong-looking repeat interest from a weak or overly broad chart must lower confidence.
+- Free trial satisfaction is not the same as Paid Repeat Signal.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -549,6 +654,8 @@ Potential input fields:
 - cost_compression_trigger
 - repeat_frequency_order_volume
 - repeat_frequency_note
+- paid_repeat_signal
+- paid_repeat_note
 - output_equivalence
 - trial_friction
 - window_lifespan
@@ -587,6 +694,8 @@ Potential output:
 - Cost Compression Trigger
 - Repeat Frequency / Order Volume
 - Repeat Frequency Note
+- Paid Repeat Signal
+- Paid Repeat Note
 - Output Equivalence
 - Trial Friction
 - Window lifespan
@@ -622,4 +731,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now distinguishes one-time cost-compression opportunities from repeatable workflow habitats by adding Repeat Frequency / Order Volume.
+Quest Map Layer now distinguishes theoretical recurrence from actual captured repeat value by adding Paid Repeat Signal.
