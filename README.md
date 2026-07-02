@@ -43,6 +43,8 @@ Snapshot Trajectory / Drift Delta is a planned/spec-defined recurring value laye
 
 Quest Snapshot Visual Design System is a planned/spec-defined design layer for making future Quest Map and Snapshot visuals more consistent, readable, Japanese-friendly, and screenshot-ready. Its specification lives in `docs/quest_snapshot_visual_design_system_v0_1.md`; existing SVGs are not redesigned by this spec.
 
+Quest Map Current Architecture is a documentation summary of the current Quest Map / Quest Snapshot layers, PASS/HOLD/BLOCK state, and next recommended audit phase. It lives in `docs/quest_map_current_architecture_v0_1.md`; it is not an implementation plan or runtime output.
+
 ## Three Lines
 
 ### Market Line
@@ -97,6 +99,7 @@ Included:
 - a Codex Interpretation Note v0.1 specification for future evidence-basis handoff
 - a Snapshot Trajectory / Drift Delta v0.1 specification and static/manual Japanese visual prototype for future multi-snapshot comparison
 - a Quest Snapshot Visual Design System v0.1 specification for future visual consistency
+- a Quest Map Current Architecture v0.1 summary for future Codex/AI re-entry
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -212,6 +215,7 @@ docs/quest_snapshot_timetube_archive_v0_1.md
 docs/codex_interpretation_note_v0_1.md
 docs/snapshot_trajectory_drift_delta_v0_1.md
 docs/quest_snapshot_visual_design_system_v0_1.md
+docs/quest_map_current_architecture_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
