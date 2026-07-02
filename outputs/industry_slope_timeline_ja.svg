@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', sans-serif">
+  <title id="title">業界勾配タイムライン v0.1</title>
+  <desc id="desc">AI低導入産業の反復業務圧縮について、過去、現在、未来または再評価ゾーンのAs-of位置を示す静的・手動の表示プロトタイプ。</desc>
+  <style>
+    .bg { fill: #f8fafc; }
+    .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+    .chart-bg { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.2; }
+    .future-zone { fill: #f1f5f9; stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 8 8; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; }
+    .axis { stroke: #334155; stroke-width: 1.7; }
+    .now-line { stroke: #2563eb; stroke-width: 2.2; stroke-dasharray: 7 7; }
+    .slope { fill: none; stroke: #2563eb; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .slope-shadow { fill: none; stroke: #bfdbfe; stroke-width: 15; stroke-linecap: round; stroke-linejoin: round; }
+    .future-path { fill: none; stroke: #94a3b8; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 9 9; }
+    .uncertainty { fill: #dbeafe; fill-opacity: 0.36; stroke: #93c5fd; stroke-width: 1; }
+    .title { fill: #0f172a; font-size: 26px; font-weight: 700; }
+    .subtitle { fill: #475569; font-size: 13px; }
+    .label { fill: #334155; font-size: 14px; font-weight: 700; }
+    .small { fill: #475569; font-size: 12px; }
+    .tiny { fill: #64748b; font-size: 11px; }
+    .phase { fill: #0f172a; font-size: 12px; font-weight: 700; }
+    .note { fill: #334155; font-size: 12px; }
+    .badge { fill: #eff6ff; stroke: #93c5fd; stroke-width: 1; }
+    .warn { fill: #fff7ed; stroke: #fdba74; stroke-width: 1; }
+    .warn-text { fill: #9a3412; font-size: 12px; font-weight: 700; }
+    .marker { fill: #2563eb; stroke: #ffffff; stroke-width: 4; }
+    .marker-ring { fill: none; stroke: #2563eb; stroke-width: 4; stroke-opacity: 0.72; }
+    .card-title { fill: #0f172a; font-size: 22px; font-weight: 700; }
+    .card-head { fill: #0f172a; font-size: 14px; font-weight: 700; }
+    .card-text { fill: #334155; font-size: 12px; }
+    .pill { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }
+    .next-box { fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
+    .boundary-box { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; }
+    .recheck-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1; }
+    .footer { fill: #475569; font-size: 12px; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="1200" height="1200"/>
+  <text x="40" y="46" class="title">業界勾配タイムライン v0.1</text>
+  <text x="40" y="70" class="subtitle">静的・手動の表示プロトタイプ。未来予測・市場規模予測・投資助言ではない。</text>
+
+  <rect class="panel" x="34" y="96" width="1132" height="642" rx="8"/>
+  <rect class="chart-bg" x="96" y="154" width="1018" height="440" rx="6"/>
+  <rect class="future-zone" x="660" y="154" width="454" height="440" rx="6"/>
+  <path class="uncertainty" d="M660 318 C780 270, 930 210, 1110 185 L1110 340 C930 312, 780 342, 660 362 Z"/>
+
+  <line x1="96" y1="506" x2="1114" y2="506" class="grid"/>
+  <line x1="96" y1="418" x2="1114" y2="418" class="grid"/>
+  <line x1="96" y1="330" x2="1114" y2="330" class="grid"/>
+  <line x1="96" y1="242" x2="1114" y2="242" class="grid"/>
+  <line x1="96" y1="154" x2="1114" y2="154" class="grid"/>
+  <line x1="270" y1="154" x2="270" y2="594" class="grid"/>
+  <line x1="458" y1="154" x2="458" y2="594" class="grid"/>
+  <line x1="660" y1="154" x2="660" y2="594" class="now-line"/>
+  <line x1="842" y1="154" x2="842" y2="594" class="grid"/>
+  <line x1="1016" y1="154" x2="1016" y2="594" class="grid"/>
+
+  <line x1="96" y1="594" x2="1114" y2="594" class="axis"/>
+  <line x1="96" y1="154" x2="96" y2="594" class="axis"/>
+  <text x="605" y="666" class="label" text-anchor="middle">時間</text>
+  <text x="96" y="636" class="tiny" text-anchor="middle">過去</text>
+  <text x="660" y="636" class="tiny" text-anchor="middle">現在</text>
+  <text x="1114" y="636" class="tiny" text-anchor="middle">未来 / 再評価</text>
+  <text transform="translate(62 374) rotate(-90)" class="label" text-anchor="middle">業界勾配 / 導入圧</text>
+  <text x="84" y="598" class="tiny" text-anchor="end">低い</text>
+  <text x="84" y="158" class="tiny" text-anchor="end">高い</text>
+
+  <text x="132" y="190" class="phase">2020-2022</text>
+  <text x="132" y="210" class="note">人作業 / 関係値</text>
+  <text x="132" y="228" class="note">高単価が維持</text>
+
+  <text x="350" y="276" class="phase">2023-2024</text>
+  <text x="350" y="296" class="note">LLM・自動化ツール</text>
+  <text x="350" y="314" class="note">一般化し始める</text>
+
+  <text x="680" y="184" class="phase">2026 現在</text>
+  <text x="680" y="204" class="note">コスト圧迫 + AI試用</text>
+  <text x="680" y="222" class="note">標準業務の置換圧</text>
+
+  <text x="824" y="440" class="phase">2027-2028</text>
+  <text x="824" y="460" class="note">有料リピート / 出力同等性で</text>
+  <text x="824" y="478" class="note">INCUBATE を再検討</text>
+
+  <text x="940" y="250" class="phase">2029-2030</text>
+  <text x="940" y="270" class="note">一部はLLM / SaaSに吸収</text>
+  <text x="940" y="288" class="note">残るのは導入摩擦に強い棲息地</text>
+
+  <path class="slope-shadow" d="M120 548 C250 538, 360 500, 470 440 C560 390, 615 352, 660 318"/>
+  <path class="slope" d="M120 548 C250 538, 360 500, 470 440 C560 390, 615 352, 660 318"/>
+  <path class="future-path" d="M660 318 C775 282, 930 260, 1100 238"/>
+
+  <circle cx="660" cy="318" r="23" class="marker-ring"/>
+  <circle cx="660" cy="318" r="10" class="marker"/>
+  <rect x="682" y="304" width="132" height="32" rx="16" class="pill"/>
+  <text x="748" y="325" class="card-head" text-anchor="middle">現在地: PROOF</text>
+  <text x="620" y="136" class="small">現在</text>
+
+  <rect x="96" y="112" width="292" height="30" rx="15" class="badge"/>
+  <text x="242" y="132" class="card-head" text-anchor="middle">参照線: AI低導入・反復業務圧縮</text>
+  <rect x="840" y="112" width="250" height="30" rx="15" class="warn"/>
+  <text x="965" y="132" class="warn-text" text-anchor="middle">AI市場全体では判断しない</text>
+
+  <text x="690" y="374" class="small">Operator position: PROOF SEEKER</text>
+  <text x="690" y="394" class="small">Recommended posture: PROOF</text>
+
+  <rect class="panel" x="34" y="766" width="1132" height="306" rx="8"/>
+  <text x="66" y="806" class="card-title">解釈カード</text>
+
+  <rect class="pill" x="66" y="834" width="156" height="36" rx="18"/>
+  <text x="144" y="857" class="card-head" text-anchor="middle">推奨: PROOF</text>
+
+  <text x="250" y="840" class="card-head">現在地</text>
+  <text x="250" y="861" class="card-text">初期導入〜勾配上昇の入口</text>
+
+  <text x="250" y="900" class="card-head">理由</text>
+  <text x="250" y="921" class="card-text">コスト圧迫とAI圧縮余地は見えるが、出力同等性と有料リピートは未証明。</text>
+
+  <rect class="next-box" x="66" y="894" width="156" height="76" rx="6"/>
+  <text x="144" y="920" class="card-head" text-anchor="middle">姿勢</text>
+  <text x="144" y="941" class="card-text" text-anchor="middle">PROOF SEEKER</text>
+
+  <rect class="next-box" x="250" y="946" width="430" height="80" rx="6"/>
+  <text x="270" y="972" class="card-head">次の一手</text>
+  <text x="270" y="993" class="card-text">1つの反復業務で比較試用を行い、</text>
+  <text x="270" y="1010" class="card-text">同等成果物と有料リピートを確認する。</text>
+
+  <rect class="boundary-box" x="704" y="834" width="410" height="86" rx="6"/>
+  <text x="724" y="861" class="card-head">広げてはいけない境界</text>
+  <text x="724" y="882" class="card-text">参照線が近くなる前に、AI市場全体や</text>
+  <text x="724" y="899" class="card-text">汎用アプリ市場で判断しない。</text>
+
+  <rect class="recheck-box" x="704" y="946" width="410" height="80" rx="6"/>
+  <text x="724" y="972" class="card-head">再評価条件</text>
+  <text x="724" y="993" class="card-text">有料リピート、出力同等性、競合増加、</text>
+  <text x="724" y="1010" class="card-text">またはLLM/SaaS吸収の兆候が出た時。</text>
+
+  <rect class="panel" x="34" y="1094" width="1132" height="64" rx="8"/>
+  <text x="62" y="1122" class="footer">表示段階のプロトタイプ。予測・投資助言・自動ローンチ許可ではない。</text>
+  <text x="62" y="1142" class="footer">完全なQuest Map実装、PDF生成、スクショ自動化、外部投稿はHOLD。</text>
+</svg>

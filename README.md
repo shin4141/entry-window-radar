@@ -33,6 +33,8 @@ Quest Map Layer is a planned/spec-defined future layer for choosing the right op
 
 Quest Position Map v0.1 is a static/manual SVG prototype for showing quest candidates by proof distance, habitat/reward potential, enemy pressure, and survival/relationship risk. Its specification lives in `docs/quest_position_map_v0_1.md`; the English prototype SVG lives at `outputs/quest_position_map.svg`, with a simplified Japanese visual variant at `outputs/quest_position_map_ja.svg` and interpretation note at `examples/quest_position_map_v0_1_ja.md`; full Quest Map scoring and automated rendering are not implemented.
 
+Industry Slope Timeline v0.1 is a static/manual Japanese SVG prototype for showing where a project or workflow sits inside a reference-market lifecycle. Its specification lives in `docs/industry_slope_timeline_v0_1.md`; the prototype SVG lives at `outputs/industry_slope_timeline_ja.svg`; automatic market analysis, forecasting, and market research are not implemented.
+
 Quest Snapshot / TimeTube Archive is a planned/spec-defined archive layer for saving Quest Map outputs as As-of handoff artifacts. Its specification lives in `docs/quest_snapshot_timetube_archive_v0_1.md`; snapshot export, PDF generation, screenshot automation, and archive generation are not implemented.
 
 ## Three Lines
@@ -84,6 +86,7 @@ Included:
 - a Portfolio Entry Horizon v0.1 specification for a future multi-project comparison layer
 - a Quest Map Layer v0.1 specification for future quest-style opportunity selection
 - a Quest Position Map v0.1 static/manual SVG prototype, including a Japanese visual variant
+- an Industry Slope Timeline v0.1 static/manual Japanese SVG prototype
 - a Quest Snapshot / TimeTube Archive v0.1 specification for future As-of handoff artifacts
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
@@ -186,14 +189,17 @@ outputs/chart_data.json
 outputs/entry_window_map.svg
 outputs/quest_position_map.svg
 outputs/quest_position_map_ja.svg
+outputs/industry_slope_timeline_ja.svg
 prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
 prompts/ai_assisted_entry_window_prompt.md
 docs/entry_window_map_v0_1.md
 docs/quest_map_layer_v0_1.md
 docs/quest_position_map_v0_1.md
+docs/industry_slope_timeline_v0_1.md
 docs/quest_snapshot_timetube_archive_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
+examples/industry_slope_timeline_v0_1_ja.md
 ```
