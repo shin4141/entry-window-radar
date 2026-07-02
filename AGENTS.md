@@ -44,6 +44,7 @@ Phase 8.4 V13 LoopKit Map Dogfood: PASS
 Phase 8.5 Competition Pressure Layer: PASS
 Phase 9.0 Portfolio Entry Horizon Spec: PASS
 Phase 9.1 Portfolio Input Templates: PASS
+Phase 9.2 Portfolio Dogfood Inputs: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -70,7 +71,7 @@ V14 deep scoring: BLOCK
 - AI-assisted usage through `prompts/ai_assisted_entry_window_prompt.md` is allowed, but it must not be treated as permission for external APIs, automated web research, or external posting.
 - Structured `outputs/chart_data.json` is allowed as data-only output. Its 0-5 levels are display-stage levels, not probabilities, predictions, VC scores, or investment advice.
 - Static `outputs/entry_window_map.svg` is allowed as local-only As-of display, including a simple Competition Pressure layer. It does not authorize PNG, HTML, interactive rendering, Score History, Entry Window Drift, or advanced scoring.
-- Portfolio Entry Horizon is allowed as a specification plus manual templates in `inputs/projects.md` and `inputs/markets.md`. It does not authorize portfolio scoring, portfolio JSON output, portfolio SVG output, launch-order automation, ranking, or external research.
+- Portfolio Entry Horizon is allowed as a specification plus manual dogfood templates in `inputs/projects.md` and `inputs/markets.md`. It does not authorize portfolio scoring, portfolio JSON output, portfolio SVG output, launch-order automation, ranking, or external research.
 
 ## Allowed In Current MVP
 
@@ -82,6 +83,7 @@ V14 deep scoring: BLOCK
 - maintain the Entry Window Map specification
 - maintain the Portfolio Entry Horizon specification
 - maintain manual Portfolio Entry Horizon input templates
+- maintain manual Portfolio Entry Horizon dogfood inputs
 - maintain data-only `outputs/chart_data.json`
 - maintain static `outputs/entry_window_map.svg`, including the simple Competition Pressure layer
 - update governance/re-entry files when phase state changes

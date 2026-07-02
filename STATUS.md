@@ -23,6 +23,7 @@ Phase 8.4 V13 LoopKit Map Dogfood: PASS
 Phase 8.5 Competition Pressure Layer: PASS
 Phase 9.0 Portfolio Entry Horizon Spec: PASS
 Phase 9.1 Portfolio Input Templates: PASS
+Phase 9.2 Portfolio Dogfood Inputs: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -54,6 +55,7 @@ V14 deep scoring: BLOCK
 | Phase 8.5 Competition Pressure Layer | PASS | `967d012 Add competition pressure layer to map`; PNG/HTML/history/drift remain HOLD or blocked. |
 | Phase 9.0 Portfolio Entry Horizon Spec | PASS | `1e2618a Add Portfolio Entry Horizon specification`; implementation remained gated at this phase. |
 | Phase 9.1 Portfolio Input Templates | PASS | Adds manual `inputs/projects.md` and `inputs/markets.md`; portfolio scoring, JSON output, SVG output, and launch-order automation remain HOLD. |
+| Phase 9.2 Portfolio Dogfood Inputs | PASS | Fills `inputs/projects.md` and `inputs/markets.md` with Shin's first manual portfolio snapshot; scoring/rendering/automation remain HOLD. |
 
 ## Active Repo
 
@@ -77,11 +79,12 @@ Latest map dogfood commit: f6da977 Record V13 LoopKit map dogfood result
 Latest competition pressure layer commit: 967d012 Add competition pressure layer to map
 Latest ring-map dogfood commit: 3426de0 Record V13 LoopKit ring map dogfood result
 Latest Portfolio Entry Horizon spec commit: 1e2618a Add Portfolio Entry Horizon specification
+Latest Portfolio input templates commit: 372f69c Add portfolio input templates
 ```
 
 ## Completion Line
 
-Portfolio Entry Horizon now has manual input templates for multiple projects and source-backed market horizons, without implementing portfolio scoring, rendering, launch-order automation, or external research.
+The portfolio templates now contain a first manual snapshot of Shin's real project candidates, enabling launch-order discussion without adding scoring, rendering, automation, or external research.
 
 ## Missing Closure
 
@@ -97,6 +100,7 @@ Phase 8.4 V13 LoopKit Map Dogfood: resolved and PASS
 Phase 8.5 Competition Pressure Layer: resolved and PASS
 Phase 9.0 Portfolio Entry Horizon Spec: resolved and PASS
 Phase 9.1 Portfolio Input Templates: resolved and PASS
+Phase 9.2 Portfolio Dogfood Inputs: resolved and PASS
 Portfolio JSON output: HOLD until separately gated
 Portfolio SVG output: HOLD until separately gated
 Launch-order automation: HOLD until separately gated
@@ -123,6 +127,6 @@ After this patch: Codex/AI for portfolio scoring/output/rendering only after exp
 - Public repo URL: https://github.com/shin4141/entry-window-radar
 - AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
 - Static `outputs/entry_window_map.svg` is allowed as local-only As-of display, including a simple Competition Pressure layer; PNG, HTML, interactive rendering, Score History, and Entry Window Drift remain gated.
-- Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, or external research.
+- Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`, now filled with a first Shin portfolio dogfood snapshot; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, or external research.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.
