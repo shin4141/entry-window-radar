@@ -36,6 +36,11 @@ Relationship value is not zero because it is hard to measure.
 Relationship value is not infinite because it is emotionally important.
 The goal is not to replace relationships.
 The goal is to see whether the relationship value actually offsets the survival cost drag, or whether split routing is needed.
+Split routing is a middle path, not a free path.
+Relationship value protects what the relationship gives.
+Relationship damage estimates what may be lost if the relationship feels displaced.
+The goal is not cold replacement.
+The goal is survival-aware routing that does not create avoidable relationship damage.
 ```
 
 ## Core Metaphor
@@ -688,6 +693,108 @@ Name the non-monetary value and use split routing or proof rather than cold repl
 Do not assume the relationship offsets the cost drag.
 
 Recommend naming value, measuring returned work, or running bounded split-routing proof.
+
+### Relationship Damage Severity
+
+Relationship Damage Severity is the expected harm if the existing provider, partner, or relationship-heavy company feels displaced, bypassed, compared, or partially replaced.
+
+It answers:
+
+```text
+If we split-route or test a cheaper provider, how bad is the downside if the old relationship is damaged?
+```
+
+Important framing:
+
+Split routing can preserve relationships, but it is not risk-free.
+
+Some relationships tolerate partial routing.
+
+Some relationships interpret partial routing as betrayal, distrust, or loss of loyalty.
+
+### Relationship Damage Channels
+
+Relationship damage may appear through:
+
+- loss of referrals
+- reduced returned work
+- reduced emergency support
+- reputational damage
+- social conflict
+- local network damage
+- worse pricing or lower priority from Company A
+- refusal to cooperate later
+- loss of hidden bundled value
+- emotional or personal conflict
+- operational disruption
+
+### Damage Severity Levels
+
+#### LOW
+
+The relationship is professional and can tolerate vendor comparison or partial routing.
+
+#### MEDIUM
+
+Some damage is possible, but it can likely be reduced through communication, scope separation, or careful trial design.
+
+#### HIGH
+
+Partial displacement may reduce referrals, trust, priority, or local reputation.
+
+Split routing must be carefully bounded or negotiated.
+
+#### CRITICAL
+
+Even partial displacement may destroy an essential relationship, trigger serious social or reputational harm, or remove support that the operator cannot replace.
+
+Do not proceed without an explicit protection plan.
+
+#### UNKNOWN
+
+Damage severity is not known.
+
+Do not assume split routing is safe.
+
+Use careful discovery, relationship-value inventory, or non-sensitive low-risk proof.
+
+### Relationship Damage Quality
+
+Relationship Damage Quality indicates how grounded the damage estimate is.
+
+Allowed levels:
+
+#### DIRECT
+
+Past behavior or explicit statements show how the relationship reacts to partial routing or comparison.
+
+#### ESTIMATED
+
+The estimate is based on relationship history, industry norms, or prior interactions.
+
+#### QUALITATIVE
+
+Risk is real but cannot be quantified easily.
+
+#### UNKNOWN
+
+No clear evidence exists.
+
+### Damage Mitigation Option
+
+Damage Mitigation Option is the available way to reduce relationship damage while still addressing cost drag.
+
+Examples:
+
+- keep Company A on trust-heavy work
+- ask Company A to match price or scope on standardized work
+- communicate that Company B is only for overflow or standardized tasks
+- use Company B only on non-overlapping work
+- run anonymous or internal comparison before external routing
+- negotiate scope rather than replacing the provider
+- create a smaller package for Company A
+- delay split routing until survival exposure is named
+- document why survival pressure requires a trial
 
 ### Net Switching Delta
 
@@ -1423,6 +1530,38 @@ Do not let vague loyalty hide survival drag.
 
 Qualitative value should be named and protected, not treated as either zero or infinite.
 
+### Relationship Damage Example A: Professional Provider
+
+- Existing provider: professional and commonly works alongside other vendors
+- Relationship Damage Severity: LOW
+- Recommended interpretation: split routing may be safe if output equivalence and cost drag justify proof
+
+Use a bounded test rather than treating split routing as automatic permission to replace the relationship.
+
+### Relationship Damage Example B: Referral-Sensitive Provider
+
+- Existing provider: sends referrals and may reduce them if they feel bypassed
+- Relationship Damage Severity: HIGH
+- Recommended interpretation: do not casually split-route
+
+Use negotiation, scope separation, or protected proof before visible routing changes.
+
+### Relationship Damage Example C: Essential Local Support
+
+- Existing provider: essential to local reputation and emergency support
+- Relationship Damage Severity: CRITICAL
+- Recommended interpretation: only consider split routing if survival exposure is serious and mitigation is named
+
+Protect relationship-heavy work unless survival pressure makes a bounded mitigation plan necessary.
+
+### Relationship Damage Example D: Unknown Reaction
+
+- Existing provider: reaction to partial routing is unknown
+- Relationship Damage Severity: UNKNOWN
+- Recommended interpretation: do not assume split routing is safe
+
+Name likely damage channels before acting.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -1516,6 +1655,14 @@ Quest Map Layer is not:
 - Relationship Value Coverage must be considered with Switching Damage Risk, Exposure Ratio, Survival Threshold, Carrier Fit, and Split Routing Option.
 - Do not recommend full replacement from Relationship Value Coverage alone.
 - Prefer relationship-preserving decomposition when relationship value is meaningful but cost drag is also real.
+- Do not treat Split Routing Option as safe if Relationship Damage Severity is HIGH, CRITICAL, or UNKNOWN.
+- If Relationship Damage Severity is LOW or MEDIUM, bounded split routing may be appropriate if cost drag is meaningful.
+- If Relationship Damage Severity is HIGH, prefer negotiation, scope separation, or carefully protected proof before split routing.
+- If Relationship Damage Severity is CRITICAL, do not recommend split routing unless Survival Threshold is NEAR/BREACHED and a damage mitigation plan exists.
+- If Relationship Damage Severity is UNKNOWN, recommend naming the damage channel before acting.
+- If Relationship Value Coverage is FULLY OFFSETS and Relationship Damage Severity is HIGH/CRITICAL, HOLD may be appropriate.
+- If Survival Cost Drag is HIGH but Relationship Damage Severity is HIGH, recommend survival-bounded negotiation or protected proof, not passive inaction and not cold replacement.
+- Relationship Damage Severity must be considered with Relationship Value Coverage, Exposure Ratio, Actual Cashflow Sensitivity, Switching Damage Risk, and Carrier Fit.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -1565,6 +1712,11 @@ Potential input fields:
 - relationship_value_quality
 - relationship_value_coverage_band
 - relationship_value_note
+- relationship_damage_severity
+- relationship_damage_quality
+- relationship_damage_channels
+- damage_mitigation_option
+- damage_mitigation_note
 - net_switching_delta
 - switching_damage_risk
 - split_routing_option
@@ -1632,6 +1784,11 @@ Potential output:
 - Relationship Value Quality: DIRECT / ESTIMATED / QUALITATIVE / CLAIMED / UNKNOWN
 - Relationship Value Coverage Band: FULLY OFFSETS / PARTIALLY OFFSETS / DOES NOT OFFSET / QUALITATIVE ONLY / UNKNOWN
 - Relationship Value Note: one sentence explaining what the relationship gives back and whether it offsets the visible cost drag
+- Relationship Damage Severity: LOW / MEDIUM / HIGH / CRITICAL / UNKNOWN
+- Relationship Damage Quality: DIRECT / ESTIMATED / QUALITATIVE / UNKNOWN
+- Relationship Damage Channels: referrals / returned work / emergency support / reputation / local network / pricing priority / cooperation / hidden services / emotional conflict / operational disruption / unknown
+- Damage Mitigation Option: YES / NO / UNKNOWN
+- Damage Mitigation Note: one sentence explaining how split routing or proof can be done without unnecessary relationship damage
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
 - Switching Damage Risk: LOW / MEDIUM / HIGH / UNKNOWN
 - Split Routing Option: YES / NO / UNKNOWN
@@ -1677,4 +1834,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now evaluates whether reciprocal relationship value offsets visible cost drag by adding Reciprocal Value Amount, Reciprocal Value Coverage Ratio, Relationship Value Quality, Relationship Value Coverage Band, and Relationship Value Note.
+Quest Map Layer now evaluates whether split routing itself may damage the existing relationship by adding Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, and Damage Mitigation Note.
