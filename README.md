@@ -31,6 +31,8 @@ Portfolio Entry Horizon is a planned/spec-defined future layer for comparing mul
 
 Quest Map Layer is a planned/spec-defined future layer for choosing the right opportunity as a game-like quest under current constraints. Its specification lives in `docs/quest_map_layer_v0_1.md`; Quest Map rendering, scoring automation, and launch permission are not implemented.
 
+Quest Position Map v0.1 is a static/manual SVG prototype for showing quest candidates by proof distance, habitat/reward potential, enemy pressure, and survival/relationship risk. Its specification lives in `docs/quest_position_map_v0_1.md`; the prototype SVG lives at `outputs/quest_position_map.svg`; full Quest Map scoring and automated rendering are not implemented.
+
 Quest Snapshot / TimeTube Archive is a planned/spec-defined archive layer for saving Quest Map outputs as As-of handoff artifacts. Its specification lives in `docs/quest_snapshot_timetube_archive_v0_1.md`; snapshot export, PDF generation, screenshot automation, and archive generation are not implemented.
 
 ## Three Lines
@@ -81,6 +83,7 @@ Included:
 - an Entry Window Map v0.1 specification for a future view
 - a Portfolio Entry Horizon v0.1 specification for a future multi-project comparison layer
 - a Quest Map Layer v0.1 specification for future quest-style opportunity selection
+- a Quest Position Map v0.1 static/manual SVG prototype
 - a Quest Snapshot / TimeTube Archive v0.1 specification for future As-of handoff artifacts
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
@@ -137,7 +140,7 @@ Not included:
 - external posting materials
 - PNG, HTML, or interactive Entry Window Map rendering
 - portfolio scoring, portfolio outputs, or launch-order automation
-- Quest Map rendering, Quest Map outputs, or quest scoring automation
+- full Quest Map rendering, runtime Quest Map outputs, or quest scoring automation
 - Quest Snapshot outputs, PDF export, screenshot automation, or archive generation
 - prediction of future success
 
@@ -181,11 +184,14 @@ outputs/report.md
 outputs/decision.md
 outputs/chart_data.json
 outputs/entry_window_map.svg
+outputs/quest_position_map.svg
 prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
 prompts/ai_assisted_entry_window_prompt.md
 docs/entry_window_map_v0_1.md
 docs/quest_map_layer_v0_1.md
+docs/quest_position_map_v0_1.md
 docs/quest_snapshot_timetube_archive_v0_1.md
 examples/example_001.md
+examples/quest_position_map_v0_1.md
 ```

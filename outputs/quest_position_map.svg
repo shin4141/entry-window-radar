@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Quest Position Map v0.1 Prototype</title>
+  <desc id="desc">A static manual prototype comparing quest candidates by proof distance, habitat potential, enemy pressure, and survival or relationship risk.</desc>
+  <style>
+    .bg { fill: #f8fafc; }
+    .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; }
+    .axis { stroke: #334155; stroke-width: 1.7; }
+    .title { fill: #0f172a; font-family: Arial, sans-serif; font-size: 25px; font-weight: 700; }
+    .subtitle { fill: #475569; font-family: Arial, sans-serif; font-size: 13px; }
+    .label { fill: #334155; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; }
+    .small { fill: #475569; font-family: Arial, sans-serif; font-size: 12px; }
+    .tiny { fill: #64748b; font-family: Arial, sans-serif; font-size: 11px; }
+    .quad { fill: #64748b; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; }
+    .ring-low { fill: none; stroke: #38bdf8; stroke-width: 2; stroke-opacity: 0.62; }
+    .ring-med { fill: none; stroke: #f59e0b; stroke-width: 3; stroke-opacity: 0.72; }
+    .ring-high { fill: none; stroke: #ef4444; stroke-width: 4; stroke-opacity: 0.72; }
+    .point { stroke: #ffffff; stroke-width: 3; }
+    .proof { fill: #2563eb; }
+    .hold { fill: #64748b; }
+    .salvage { fill: #0f766e; }
+    .tag { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+    .tag-text { fill: #0f172a; font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; }
+    .warn-med { fill: #f59e0b; stroke: #ffffff; stroke-width: 1.5; }
+    .warn-high { fill: #dc2626; stroke: #ffffff; stroke-width: 1.5; }
+    .card-title { fill: #0f172a; font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; }
+    .card-head { fill: #0f172a; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }
+    .card-text { fill: #334155; font-family: Arial, sans-serif; font-size: 12px; }
+    .action-pill { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }
+    .risk-box { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; }
+    .next-box { fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
+    .boundary { fill: #475569; font-family: Arial, sans-serif; font-size: 12px; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760"/>
+  <text x="40" y="46" class="title">Quest Position Map v0.1 Prototype</text>
+  <text x="40" y="70" class="subtitle">Static/manual illustrative dataset. Display-stage levels, not probabilities, forecasts, market scores, or launch permission.</text>
+
+  <rect class="panel" x="34" y="96" width="742" height="560" rx="8"/>
+
+  <rect x="90" y="130" width="320" height="210" fill="#f0fdf4" fill-opacity="0.36"/>
+  <rect x="410" y="130" width="320" height="210" fill="#eff6ff" fill-opacity="0.38"/>
+  <rect x="90" y="340" width="320" height="210" fill="#fefce8" fill-opacity="0.46"/>
+  <rect x="410" y="340" width="320" height="210" fill="#f1f5f9" fill-opacity="0.54"/>
+
+  <text x="108" y="152" class="quad">close + high habitat</text>
+  <text x="108" y="170" class="tiny">PROOF / LAUNCH candidate</text>
+  <text x="430" y="152" class="quad">far + high habitat</text>
+  <text x="430" y="170" class="tiny">INCUBATE / strategic build</text>
+  <text x="108" y="530" class="quad">close + low habitat</text>
+  <text x="108" y="548" class="tiny">SALVAGE / SHORT CYCLE</text>
+  <text x="430" y="530" class="quad">far + low habitat</text>
+  <text x="430" y="548" class="tiny">HOLD / AVOID</text>
+
+  <line x1="90" y1="130" x2="90" y2="550" class="grid"/>
+  <line x1="218" y1="130" x2="218" y2="550" class="grid"/>
+  <line x1="346" y1="130" x2="346" y2="550" class="grid"/>
+  <line x1="474" y1="130" x2="474" y2="550" class="grid"/>
+  <line x1="602" y1="130" x2="602" y2="550" class="grid"/>
+  <line x1="730" y1="130" x2="730" y2="550" class="grid"/>
+  <line x1="90" y1="550" x2="730" y2="550" class="grid"/>
+  <line x1="90" y1="466" x2="730" y2="466" class="grid"/>
+  <line x1="90" y1="382" x2="730" y2="382" class="grid"/>
+  <line x1="90" y1="298" x2="730" y2="298" class="grid"/>
+  <line x1="90" y1="214" x2="730" y2="214" class="grid"/>
+  <line x1="90" y1="130" x2="730" y2="130" class="grid"/>
+
+  <line x1="90" y1="550" x2="730" y2="550" class="axis"/>
+  <line x1="90" y1="130" x2="90" y2="550" class="axis"/>
+  <text x="410" y="610" class="label" text-anchor="middle">Proof / Reward Distance</text>
+  <text x="90" y="585" class="tiny" text-anchor="middle">close</text>
+  <text x="730" y="585" class="tiny" text-anchor="middle">far</text>
+  <text transform="translate(58 340) rotate(-90)" class="label" text-anchor="middle">Habitat / Reward Potential</text>
+  <text x="80" y="553" class="tiny" text-anchor="end">low</text>
+  <text x="80" y="134" class="tiny" text-anchor="end">durable</text>
+
+  <!-- E. Quest Snapshot / TimeTube Archive -->
+  <circle cx="295" cy="206" r="23" class="ring-low"/>
+  <circle cx="295" cy="206" r="8" class="point proof"/>
+  <rect x="305" y="177" width="210" height="25" rx="5" class="tag"/>
+  <text x="314" y="194" class="tag-text">E PROOF - snapshot archive</text>
+
+  <!-- A. AI-low-adoption recurring workflow compression -->
+  <circle cx="346" cy="197" r="29" class="ring-med"/>
+  <circle cx="346" cy="197" r="9" class="point proof"/>
+  <polygon points="363,180 375,202 351,202" class="warn-med"/>
+  <rect x="356" y="210" width="220" height="25" rx="5" class="tag"/>
+  <text x="365" y="227" class="tag-text">A PROOF - recurring compression</text>
+
+  <!-- D. Relationship-heavy split routing -->
+  <circle cx="423" cy="273" r="31" class="ring-med"/>
+  <circle cx="423" cy="273" r="9" class="point proof"/>
+  <polygon points="441,255 454,279 428,279" class="warn-high"/>
+  <rect x="438" y="286" width="202" height="25" rx="5" class="tag"/>
+  <text x="447" y="303" class="tag-text">D PROOF - split routing</text>
+
+  <!-- C. Solana meme BOT -->
+  <circle cx="640" cy="315" r="39" class="ring-high"/>
+  <circle cx="640" cy="315" r="9" class="point hold"/>
+  <polygon points="660,294 674,320 646,320" class="warn-high"/>
+  <rect x="485" y="326" width="143" height="25" rx="5" class="tag"/>
+  <text x="494" y="343" class="tag-text">C HOLD - meme BOT</text>
+
+  <!-- B. One-off manual workflow compression -->
+  <circle cx="205" cy="474" r="22" class="ring-low"/>
+  <circle cx="205" cy="474" r="8" class="point salvage"/>
+  <rect x="218" y="485" width="193" height="25" rx="5" class="tag"/>
+  <text x="227" y="502" class="tag-text">B SALVAGE - one-off workflow</text>
+
+  <rect class="panel" x="794" y="96" width="370" height="560" rx="8"/>
+  <text x="818" y="134" class="card-title">Selected Quest Card</text>
+  <text x="818" y="158" class="small">A. AI-low-adoption recurring workflow compression</text>
+
+  <rect class="action-pill" x="818" y="182" width="126" height="34" rx="17"/>
+  <text x="881" y="204" class="card-head" text-anchor="middle">PROOF</text>
+
+  <text x="818" y="245" class="card-head">One-line judgment</text>
+  <text x="818" y="266" class="card-text">Visible cost compression and repeat workflow</text>
+  <text x="818" y="283" class="card-text">signals make this worth one bounded proof,</text>
+  <text x="818" y="300" class="card-text">not broad launch.</text>
+
+  <text x="818" y="335" class="card-head">Reason</text>
+  <text x="818" y="356" class="card-text">Cost compression is visible, but output</text>
+  <text x="818" y="373" class="card-text">equivalence and paid repeat need proof.</text>
+
+  <rect class="risk-box" x="814" y="398" width="326" height="70" rx="6"/>
+  <text x="832" y="422" class="card-head">Risk visible</text>
+  <text x="832" y="443" class="card-text">Enemy pressure: medium</text>
+  <text x="832" y="460" class="card-text">Survival / relationship risk: medium</text>
+
+  <rect class="next-box" x="814" y="488" width="326" height="70" rx="6"/>
+  <text x="832" y="512" class="card-head">Next</text>
+  <text x="832" y="533" class="card-text">Run one bounded comparison trial.</text>
+  <text x="832" y="550" class="card-text">Stop unless output equivalence appears.</text>
+
+  <text x="818" y="590" class="card-head">Do-not-broaden boundary</text>
+  <text x="818" y="611" class="card-text">Do not build a generalized automation product</text>
+  <text x="818" y="628" class="card-text">before one paid repeat or equivalent proof.</text>
+
+  <rect class="panel" x="34" y="672" width="1130" height="50" rx="8"/>
+  <circle cx="58" cy="697" r="7" class="point proof"/>
+  <text x="72" y="701" class="small">point = quest</text>
+  <circle cx="166" cy="697" r="15" class="ring-med"/>
+  <text x="188" y="701" class="small">ring = enemy pressure</text>
+  <polygon points="330,685 341,705 319,705" class="warn-high"/>
+  <text x="352" y="701" class="small">warning = survival / relationship risk</text>
+  <text x="596" y="701" class="boundary">Display-stage prototype. Not prediction, investment advice, or automated launch permission.</text>
+</svg>
