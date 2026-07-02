@@ -54,6 +54,8 @@ Phase 10.33 Snapshot Trajectory / Drift Delta Visual Prototype: PASS
 Phase 10.34 Quest Snapshot Visual Design System Spec: PASS
 Phase 10.35 Snapshot Trajectory Visual Cleanup: PASS
 Phase 10.36 Quest Map Current Architecture Summary: PASS
+Phase 10.37 Architecture Acceptance Audit: PASS
+Phase 10.38 Minimal Runtime Cutline / Output Path Decision: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -116,6 +118,8 @@ V14 deep scoring: BLOCK
 | Phase 10.34 Quest Snapshot Visual Design System Spec | PASS | Adds `docs/quest_snapshot_visual_design_system_v0_1.md` to define shared visual rules for future Quest Map and Quest Snapshot artifacts; no existing SVGs were redesigned, and no runtime, scoring, market research, external APIs, PDF, screenshot automation, or implementation was added. |
 | Phase 10.35 Snapshot Trajectory Visual Cleanup | PASS | Cleans up `outputs/snapshot_trajectory_drift_delta_ja.svg` using the visual design system and updates its example note; no Quest Snapshot runtime, snapshot comparison, automatic drift scoring, PDF, screenshot automation, market research, external APIs, full implementation, or CLI behavior change was added. |
 | Phase 10.36 Quest Map Current Architecture Summary | PASS | Adds `docs/quest_map_current_architecture_v0_1.md` to summarize current Quest Map / Quest Snapshot layers, artifact roles, PASS/HOLD/BLOCK state, recurring value, and the next recommended architecture acceptance audit; no implementation, new chart, runtime output, scoring, market research, external APIs, PDF, screenshot automation, or CLI behavior change was added. |
+| Phase 10.37 Architecture Acceptance Audit | PASS | Audit-only result: ARCHITECTURE AUDIT PASS; no blocking issues or minor notes; no files were changed. |
+| Phase 10.38 Minimal Runtime Cutline / Output Path Decision | PASS | Adds `docs/minimal_runtime_cutline_v0_1.md` to define Markdown `outputs/quest_snapshot.md` as the first safe future runtime path; no runtime, new output, Quest Snapshot generation, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, market research, external APIs, full Quest Map implementation, or CLI behavior change was added. |
 
 ## Active Repo
 
@@ -170,11 +174,13 @@ Latest Snapshot Trajectory / Drift Delta spec commit: 75dfb33 Add Snapshot Traje
 Latest Snapshot Trajectory / Drift Delta visual prototype commit: 88574cd Add Snapshot Trajectory Drift Delta prototype
 Latest Quest Snapshot Visual Design System spec commit: 4925594 Add Quest Snapshot Visual Design System spec
 Latest Snapshot Trajectory visual cleanup commit: 55d2aba Improve Snapshot Trajectory visual layout
+Latest Quest Map Current Architecture summary commit: d4fd7cd Add Quest Map current architecture summary
+Latest Architecture Acceptance Audit result: ARCHITECTURE AUDIT PASS (audit-only, no commit)
 ```
 
 ## Completion Line
 
-Quest Map Current Architecture v0.1 records the current architecture, artifact roles, PASS/HOLD/BLOCK state, and next recommended phase so future Codex/AI sessions can resume without confusing first-use charts, evidence notes, snapshots, and recurring TimeTube trajectory.
+Minimal Runtime Cutline v0.1 defines Markdown Quest Snapshot output as the first safe runtime path, while keeping image export, PDF generation, snapshot comparison, drift scoring, market research, and full Quest Map implementation on HOLD.
 
 ## Missing Closure
 
@@ -221,8 +227,11 @@ Phase 10.33 Snapshot Trajectory / Drift Delta Visual Prototype: resolved and PAS
 Phase 10.34 Quest Snapshot Visual Design System Spec: resolved and PASS
 Phase 10.35 Snapshot Trajectory Visual Cleanup: resolved and PASS
 Phase 10.36 Quest Map Current Architecture Summary: resolved and PASS
+Phase 10.37 Architecture Acceptance Audit: resolved and PASS
+Phase 10.38 Minimal Runtime Cutline / Output Path Decision: resolved and PASS
 Industry Slope Timeline runtime/automation: HOLD until separately gated
 Survival / Relationship Risk Panel: HOLD until separately gated
+Quest Snapshot Markdown runtime output (`outputs/quest_snapshot.md`): HOLD until separately gated
 Snapshot Trajectory / Drift Delta runtime comparison, automatic drift scoring, live snapshot reading, and automated visual output: HOLD until separately gated
 Existing visual prototype redesigns: HOLD until separately gated
 Portfolio JSON output: HOLD until separately gated
@@ -240,7 +249,7 @@ V14 deep scoring: BLOCK
 
 ```text
 Current patch owner: Codex
-After this patch: Shin/Codex for Phase 10.37 Architecture Acceptance Audit / readiness check; do not jump directly to full implementation, runtime comparison, renderer work, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin/Codex for Phase 10.39 Quest Snapshot Markdown Template or V13 LoopKit Quest Snapshot Dogfood; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, snapshot comparison, drift scoring, renderer work, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
 ```
 
 ## Re-entry Notes
@@ -260,6 +269,7 @@ After this patch: Shin/Codex for Phase 10.37 Architecture Acceptance Audit / rea
 - Snapshot Trajectory / Drift Delta has a v0.1 specification in `docs/snapshot_trajectory_drift_delta_v0_1.md` and a cleaned-up static/manual Japanese prototype in `outputs/snapshot_trajectory_drift_delta_ja.svg`, with example note in `examples/snapshot_trajectory_drift_delta_v0_1_ja.md`; it defines future multi-snapshot comparison, drift delta categories, trajectory labels, and Codex handoff checks, but does not authorize runtime comparison, automatic drift scoring, live snapshot reading, Quest Snapshot runtime, PDF generation, screenshot automation, CLI changes, or external posting.
 - Quest Snapshot Visual Design System has a v0.1 specification in `docs/quest_snapshot_visual_design_system_v0_1.md`; future visual cleanup or renderer work should read it first, but it does not authorize redesigning existing SVGs, new chart logic, scoring, market research, external APIs, PDF generation, screenshot automation, CLI changes, full Quest Map implementation, or external posting.
 - Quest Map Current Architecture has a v0.1 summary in `docs/quest_map_current_architecture_v0_1.md`; future Codex/AI should use it to understand the current initial-position, evidence/explanation, archive/handoff, recurring value, and future risk layers before proposing implementation. Phase 10.37 should be architecture acceptance audit / readiness check, not direct full implementation.
+- Minimal Runtime Cutline has a v0.1 decision in `docs/minimal_runtime_cutline_v0_1.md`; it selects Markdown `outputs/quest_snapshot.md` as the first safe future runtime path, but does not authorize generating it yet. The first runtime must assemble manually provided fields only and must not infer Gate, action, lifecycle, risk, market size, relationship risk, or evidence quality.
 - Quest Position Map v0.1 has static/manual visual prototypes in `outputs/quest_position_map.svg` and `outputs/quest_position_map_ja.svg`, with specification in `docs/quest_position_map_v0_1.md`, English sample explanation in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`; these use hand-authored illustrative data and do not authorize full Quest Map implementation, automatic recommendation logic, market research, runtime rendering, PDF, screenshot automation, snapshot output, CLI changes, or external posting.
 - Industry Slope Timeline v0.1 has a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with specification in `docs/industry_slope_timeline_v0_1.md` and example note in `examples/industry_slope_timeline_v0_1_ja.md`; its curve represents a specific niche's entry-window lifecycle, not the whole AI industry, and its text lifecycle classification should be read before judging whether a project is early, late, safe, crowded, or risky. It uses hand-authored illustrative data and does not authorize automatic market analysis, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI changes, or external posting.
 - Delivery Scope Radar and V14 deep scoring remain blocked.

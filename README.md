@@ -45,6 +45,8 @@ Quest Snapshot Visual Design System is a planned/spec-defined design layer for m
 
 Quest Map Current Architecture is a documentation summary of the current Quest Map / Quest Snapshot layers, PASS/HOLD/BLOCK state, and next recommended audit phase. It lives in `docs/quest_map_current_architecture_v0_1.md`; it is not an implementation plan or runtime output.
 
+Minimal Runtime Cutline defines Markdown Quest Snapshot output as the first safe future runtime path. It lives in `docs/minimal_runtime_cutline_v0_1.md`; `outputs/quest_snapshot.md` is not implemented yet.
+
 ## Three Lines
 
 ### Market Line
@@ -100,6 +102,7 @@ Included:
 - a Snapshot Trajectory / Drift Delta v0.1 specification and static/manual Japanese visual prototype for future multi-snapshot comparison
 - a Quest Snapshot Visual Design System v0.1 specification for future visual consistency
 - a Quest Map Current Architecture v0.1 summary for future Codex/AI re-entry
+- a Minimal Runtime Cutline v0.1 decision for future Markdown Quest Snapshot output
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -157,6 +160,7 @@ Not included:
 - portfolio scoring, portfolio outputs, or launch-order automation
 - full Quest Map rendering, runtime Quest Map outputs, or quest scoring automation
 - Quest Snapshot outputs, PDF export, screenshot automation, or archive generation
+- `outputs/quest_snapshot.md` runtime generation
 - Snapshot Trajectory / Drift Delta runtime comparison or automatic drift scoring
 - prediction of future success
 
@@ -216,6 +220,7 @@ docs/codex_interpretation_note_v0_1.md
 docs/snapshot_trajectory_drift_delta_v0_1.md
 docs/quest_snapshot_visual_design_system_v0_1.md
 docs/quest_map_current_architecture_v0_1.md
+docs/minimal_runtime_cutline_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
