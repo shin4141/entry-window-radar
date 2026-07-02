@@ -25,7 +25,7 @@ Recheck Condition:
 
 ## Entry Window Map
 
-Entry Window Map is a static local SVG view for showing the current As-of position at a glance. The specification lives in `docs/entry_window_map_v0_1.md`; PNG, HTML, and interactive rendering are not implemented.
+Entry Window Map is a static local SVG view for showing the current As-of position at a glance. It includes a simple visual Competition Pressure layer; the specification lives in `docs/entry_window_map_v0_1.md`; PNG, HTML, and interactive rendering are not implemented.
 
 ## Three Lines
 

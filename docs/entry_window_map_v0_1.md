@@ -75,6 +75,11 @@ Phase 8.3 adds local-only static SVG rendering:
 
 - `outputs/entry_window_map.svg`
 
+Phase 8.5 renders Competition Pressure as a simple visual pressure layer in the SVG:
+
+- a calm scaled ring around the plotted point
+- the numeric Competition Pressure value remains a display-stage level
+
 Future implementation may add:
 
 - `outputs/entry_window_map.html`
@@ -109,4 +114,4 @@ Terminal route remains available, but star-ready value depends on making the cur
 
 ## Completion Line
 
-Entry Window Map v0.1 has a documented meaning, axes, labels, non-goals, and future data direction, without implementing visualization or expanding scope.
+Entry Window Map v0.1 has documented meaning, axes, labels, non-goals, structured data, static SVG output, and a simple Competition Pressure layer, without expanding into prediction, history, drift, PNG, HTML, or external scope.

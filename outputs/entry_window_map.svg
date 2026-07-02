@@ -10,6 +10,8 @@
     .label { fill: #334155; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }
     .small { fill: #334155; font-family: Arial, sans-serif; font-size: 13px; }
     .tick { fill: #64748b; font-family: Arial, sans-serif; font-size: 12px; }
+    .pressure-ring { fill: #e0f2fe; fill-opacity: 0.18; stroke: #64748b; stroke-width: 2; stroke-dasharray: 5 5; stroke-opacity: 0.7; }
+    .pressure-label { fill: #475569; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; }
     .point { fill: #2563eb; stroke: #ffffff; stroke-width: 3; }
     .tag { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }
     .boundary { fill: #475569; font-family: Arial, sans-serif; font-size: 12px; }
@@ -46,6 +48,8 @@
 <text x="80" y="96.0" class="tick" text-anchor="end">5</text>
   <text x="261.0" y="474" class="label" text-anchor="middle">Market Readiness</text>
   <text transform="translate(48 257.0) rotate(-90)" class="label" text-anchor="middle">Operator Edge</text>
+  <circle cx="162.0" cy="356.0" r="28" class="pressure-ring"/>
+  <text x="114" y="116" class="pressure-label">Competition pressure layer: 2/5</text>
   <circle cx="162.0" cy="356.0" r="8" class="point"/>
   <rect x="170" y="329" width="124" height="24" rx="5" class="tag"/>
   <text x="176" y="346" class="label">WAIT</text>

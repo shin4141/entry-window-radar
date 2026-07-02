@@ -505,6 +505,9 @@ def render_entry_window_map_svg(data: ChartData) -> str:
     operator_y = plot_bottom - (data.operator_edge / 5) * plot_size
     point_label_x = min(int(market_x) + 14, plot_right - 130)
     point_label_y = max(int(operator_y) - 10, plot_top + 18)
+    pressure_radius = 14 + data.competition_pressure * 7
+    pressure_label_x = plot_left + 18
+    pressure_label_y = plot_top + 24
 
     grid_lines: list[str] = []
     tick_labels: list[str] = []
@@ -533,6 +536,8 @@ def render_entry_window_map_svg(data: ChartData) -> str:
     .label {{ fill: #334155; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }}
     .small {{ fill: #334155; font-family: Arial, sans-serif; font-size: 13px; }}
     .tick {{ fill: #64748b; font-family: Arial, sans-serif; font-size: 12px; }}
+    .pressure-ring {{ fill: #e0f2fe; fill-opacity: 0.18; stroke: #64748b; stroke-width: 2; stroke-dasharray: 5 5; stroke-opacity: 0.7; }}
+    .pressure-label {{ fill: #475569; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; }}
     .point {{ fill: #2563eb; stroke: #ffffff; stroke-width: 3; }}
     .tag {{ fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }}
     .boundary {{ fill: #475569; font-family: Arial, sans-serif; font-size: 12px; }}
@@ -547,6 +552,8 @@ def render_entry_window_map_svg(data: ChartData) -> str:
   {chr(10).join(tick_labels)}
   <text x="{(plot_left + plot_right) / 2:.1f}" y="{plot_bottom + 52}" class="label" text-anchor="middle">Market Readiness</text>
   <text transform="translate(48 {(plot_top + plot_bottom) / 2:.1f}) rotate(-90)" class="label" text-anchor="middle">Operator Edge</text>
+  <circle cx="{market_x:.1f}" cy="{operator_y:.1f}" r="{pressure_radius}" class="pressure-ring"/>
+  <text x="{pressure_label_x}" y="{pressure_label_y}" class="pressure-label">Competition pressure layer: {data.competition_pressure}/5</text>
   <circle cx="{market_x:.1f}" cy="{operator_y:.1f}" r="8" class="point"/>
   <rect x="{point_label_x - 6}" y="{point_label_y - 17}" width="124" height="24" rx="5" class="tag"/>
   <text x="{point_label_x}" y="{point_label_y}" class="label">{escape(data.entry_label)}</text>

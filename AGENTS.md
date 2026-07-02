@@ -40,6 +40,8 @@ Phase 7.2 AI-assisted Route Dogfood: PASS
 Phase 8.1 Entry Window Map Spec: PASS
 Phase 8.2 Structured Output v0.2: PASS
 Phase 8.3 Entry Window Map SVG Rendering: PASS
+Phase 8.4 V13 LoopKit Map Dogfood: PASS
+Phase 8.5 Competition Pressure Layer: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -65,7 +67,7 @@ V14 deep scoring: BLOCK
 - GitHub publishing is PASS for the current public repo; external posting remains HOLD until explicit maintainer GO.
 - AI-assisted usage through `prompts/ai_assisted_entry_window_prompt.md` is allowed, but it must not be treated as permission for external APIs, automated web research, or external posting.
 - Structured `outputs/chart_data.json` is allowed as data-only output. Its 0-5 levels are display-stage levels, not probabilities, predictions, VC scores, or investment advice.
-- Static `outputs/entry_window_map.svg` is allowed as local-only As-of display. It does not authorize PNG, HTML, interactive rendering, Score History, Entry Window Drift, or advanced scoring.
+- Static `outputs/entry_window_map.svg` is allowed as local-only As-of display, including a simple Competition Pressure layer. It does not authorize PNG, HTML, interactive rendering, Score History, Entry Window Drift, or advanced scoring.
 
 ## Allowed In Current MVP
 
@@ -76,7 +78,7 @@ V14 deep scoring: BLOCK
 - maintain the AI-assisted usage prompt
 - maintain the Entry Window Map specification
 - maintain data-only `outputs/chart_data.json`
-- maintain static `outputs/entry_window_map.svg`
+- maintain static `outputs/entry_window_map.svg`, including the simple Competition Pressure layer
 - update governance/re-entry files when phase state changes
 
 ## Not Allowed Without Explicit GO Or CAP
