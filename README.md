@@ -47,6 +47,8 @@ Quest Map Current Architecture is a documentation summary of the current Quest M
 
 Minimal Runtime Cutline defines Markdown Quest Snapshot output as the first safe future runtime path. It lives in `docs/minimal_runtime_cutline_v0_1.md`; `outputs/quest_snapshot.md` is not implemented yet.
 
+Quest Snapshot Markdown Template is a reusable manual template for future As-of Quest Snapshot artifacts. It lives at `templates/quest_snapshot_template_v0_1.md`; usage notes live in `docs/quest_snapshot_template_usage_v0_1.md`; runtime generation remains HOLD.
+
 ## Three Lines
 
 ### Market Line
@@ -103,6 +105,7 @@ Included:
 - a Quest Snapshot Visual Design System v0.1 specification for future visual consistency
 - a Quest Map Current Architecture v0.1 summary for future Codex/AI re-entry
 - a Minimal Runtime Cutline v0.1 decision for future Markdown Quest Snapshot output
+- a Quest Snapshot Markdown Template v0.1 for manual As-of snapshot drafting
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -221,6 +224,8 @@ docs/snapshot_trajectory_drift_delta_v0_1.md
 docs/quest_snapshot_visual_design_system_v0_1.md
 docs/quest_map_current_architecture_v0_1.md
 docs/minimal_runtime_cutline_v0_1.md
+docs/quest_snapshot_template_usage_v0_1.md
+templates/quest_snapshot_template_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md

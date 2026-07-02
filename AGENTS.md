@@ -77,6 +77,7 @@ Phase 10.35 Snapshot Trajectory Visual Cleanup: PASS
 Phase 10.36 Quest Map Current Architecture Summary: PASS
 Phase 10.37 Architecture Acceptance Audit: PASS
 Phase 10.38 Minimal Runtime Cutline / Output Path Decision: PASS
+Phase 10.39 Quest Snapshot Markdown Template: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -112,6 +113,7 @@ V14 deep scoring: BLOCK
 - Quest Snapshot Visual Design System is allowed only as a specification in `docs/quest_snapshot_visual_design_system_v0_1.md`. It defines future visual consistency rules, but does not authorize redesigning existing SVGs, new chart logic, renderer implementation, PDF generation, screenshot automation, scoring, market research, CLI behavior changes, or external posting.
 - Quest Map Current Architecture is allowed only as a documentation summary in `docs/quest_map_current_architecture_v0_1.md`. It records current artifact roles, PASS/HOLD/BLOCK state, and the next recommended architecture acceptance audit; it does not authorize new analysis fields, runtime outputs, snapshot comparison, automatic drift scoring, renderer implementation, PDF generation, screenshot automation, market research, CLI behavior changes, full Quest Map implementation, or external posting.
 - Minimal Runtime Cutline is allowed only as a decision/spec in `docs/minimal_runtime_cutline_v0_1.md`. It selects Markdown `outputs/quest_snapshot.md` as the first safe future runtime path, but does not authorize generating that output yet. Future runtime must assemble manually provided fields only; it must not infer Gate, recommended action, lifecycle classification, risk level, evidence quality, relationship risk, market size, or paid repeat signal.
+- Quest Snapshot Markdown Template is allowed only as a reusable manual template in `templates/quest_snapshot_template_v0_1.md`, with usage notes in `docs/quest_snapshot_template_usage_v0_1.md`. It does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI behavior changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - Quest Position Map v0.1 is allowed only as a static/manual prototype in `outputs/quest_position_map.svg` and simplified Japanese visual variant in `outputs/quest_position_map_ja.svg`, with its spec in `docs/quest_position_map_v0_1.md`, example in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`. Future Codex/AI should read the selected card and interpretation note before modifying scope. This does not authorize full Quest Map implementation, automatic scoring, market research, runtime rendering, Quest Snapshot output, PDF generation, screenshot automation, CLI behavior changes, or external posting.
 - Industry Slope Timeline v0.1 is allowed only as a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with its spec in `docs/industry_slope_timeline_v0_1.md` and example in `examples/industry_slope_timeline_v0_1_ja.md`. Its curve represents a specific niche's entry-window lifecycle, not the whole AI industry peaking or declining. Future Codex/AI should read the lifecycle classification and concern level before assuming a project is late, early, safe, crowded, or risky. It does not authorize automatic market analysis, market research, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI behavior changes, or external posting.
 - Quest Map recommendations must not use broad parent-market charts as strong evidence. Parent-market-only or unknown reference charts should lower confidence and avoid LAUNCH or broad build recommendations.
@@ -149,6 +151,7 @@ V14 deep scoring: BLOCK
 - maintain the Quest Snapshot Visual Design System specification
 - maintain the Quest Map Current Architecture summary
 - maintain the Minimal Runtime Cutline decision/spec
+- maintain the Quest Snapshot Markdown Template
 - maintain the static/manual Quest Position Map prototype
 - maintain the Japanese static/manual Quest Position Map visual variant
 - maintain the static/manual Industry Slope Timeline visual prototype
