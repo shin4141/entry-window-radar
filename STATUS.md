@@ -87,7 +87,7 @@ Latest Portfolio dogfood inputs commit: ad235b3 Add Shin portfolio dogfood input
 
 ## Completion Line
 
-Portfolio Entry Horizon now models market slope and operator position, allowing future launch-order decisions to consider phase, slope evidence, capital flow, technical unlocks, deployments, FOMO risk, and whether the operator should build, invest, adopt, prove, hold, or avoid.
+Portfolio Entry Horizon now models market slope and operator position, allowing future launch-order decisions to consider phase, slope evidence, capital flow, technical unlocks, deployments, FOMO risk, and whether the operator should build, invest, adopt, prove, hold, salvage, or avoid.
 
 ## Missing Closure
 

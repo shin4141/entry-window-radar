@@ -96,6 +96,12 @@ When multiple projects exist, prefer:
 - bounded proof over broad launch
 - Carrier-preserving projects over exciting but heavy projects
 - source-backed market horizon over hype
+- rising slope with clear evidence over hype
+- operator-fit wedge over generic large market
+- proof path over broad claim
+- Carrier fit over excitement
+- early adopter/proof seeker posture when builder posture is too heavy
+- HOLD or INCUBATE when the market is rising but the operator cannot yet win
 
 ## Key Interpretation
 
@@ -154,13 +160,16 @@ Operator Position describes the operator's strategic posture relative to the mar
 - early adopter
 - proof seeker
 - late entrant
+- salvage
 - avoid
 
 A huge future market does not automatically mean launch first.
 
 A smaller wedge with stronger operator edge and faster proof path may come first.
 
-A large rising market may be invest/adopt/watch rather than build, depending on operator edge and Carrier fit.
+A large rising market may be invest/adopt/watch rather than build, depending on operator edge, build burden, and Carrier fit.
+
+The key question is not "How big is the market?" but "What is the slope, why is it rising, and where is this operator positioned?"
 
 Operator Position is a strategic posture, not investment advice.
 
@@ -257,7 +266,7 @@ Then the portfolio layer compares the cards and recommends launch order.
 
 This specification does not authorize implementation yet.
 
-Phase 9.1 must be separately gated.
+Further portfolio scoring, rendering, output, or automation phases must be separately gated.
 
 External posting remains HOLD.
 
@@ -269,4 +278,4 @@ Score History and Entry Window Drift remain BLOCK unless explicitly reopened lat
 
 ## Completion Line
 
-Portfolio Entry Horizon v0.1 defines how Entry Window Radar can compare multiple projects and support launch-order decisions without becoming prediction, VC scoring, investment advice, or uncontrolled portfolio automation.
+Portfolio Entry Horizon now models market slope and operator position, allowing future launch-order decisions to consider phase, slope evidence, capital flow, technical unlocks, deployments, FOMO risk, and whether the operator should build, invest, adopt, prove, hold, salvage, or avoid.

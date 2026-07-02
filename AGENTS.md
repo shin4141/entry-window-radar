@@ -73,7 +73,7 @@ V14 deep scoring: BLOCK
 - Structured `outputs/chart_data.json` is allowed as data-only output. Its 0-5 levels are display-stage levels, not probabilities, predictions, VC scores, or investment advice.
 - Static `outputs/entry_window_map.svg` is allowed as local-only As-of display, including a simple Competition Pressure layer. It does not authorize PNG, HTML, interactive rendering, Score History, Entry Window Drift, or advanced scoring.
 - Portfolio Entry Horizon is allowed as a specification plus manual dogfood templates in `inputs/projects.md` and `inputs/markets.md`. It does not authorize portfolio scoring, portfolio JSON output, portfolio SVG output, launch-order automation, ranking, or external research.
-- Market Slope inputs do not authorize web research or invented market estimates. Market data must be source-backed or marked unknown. Operator Position is a strategic posture, not investment advice.
+- Market Slope inputs do not authorize web research or invented market estimates. Market data must be source-backed or marked unknown. Operator Position is a strategic posture, not investment advice. Portfolio Entry Horizon supports launch-order reasoning, not automated permission.
 
 ## Allowed In Current MVP
 

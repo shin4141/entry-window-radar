@@ -36,6 +36,7 @@ Operator position values:
 - early adopter
 - proof seeker
 - late entrant
+- salvage
 - avoid
 
 ## Market Slope: AI loop governance and restartability
