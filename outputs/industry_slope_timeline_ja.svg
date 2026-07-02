@@ -116,15 +116,16 @@
   <rect class="pill" x="66" y="834" width="156" height="36" rx="18"/>
   <text x="144" y="857" class="card-head" text-anchor="middle">推奨: PROOF</text>
 
-  <text x="250" y="840" class="card-head">現在地</text>
-  <text x="250" y="861" class="card-text">初期導入〜勾配上昇の入口</text>
+  <text x="250" y="840" class="card-head">ライフサイクル分類</text>
+  <text x="250" y="861" class="card-text">初期参入 / 勾配上昇の入口</text>
 
-  <text x="250" y="900" class="card-head">理由</text>
-  <text x="250" y="921" class="card-text">AI市場全体ではなく、AI低導入・反復業務圧縮という参照線では、</text>
-  <text x="250" y="938" class="card-text">まだ比較試用と有料リピートを取る段階。</text>
+  <text x="250" y="890" class="card-head">危惧レベル</text>
+  <text x="250" y="911" class="card-text">WATCH</text>
+  <text x="250" y="928" class="card-text">今すぐ乗り遅れではない。ただし有料リピート、競合増加、</text>
+  <text x="250" y="945" class="card-text">LLM/SaaS吸収を再評価する。</text>
 
   <rect class="next-box" x="66" y="894" width="156" height="76" rx="6"/>
-  <text x="144" y="920" class="card-head" text-anchor="middle">姿勢</text>
+  <text x="144" y="920" class="card-head" text-anchor="middle">現在の姿勢</text>
   <text x="144" y="941" class="card-text" text-anchor="middle">PROOF SEEKER</text>
 
   <rect class="next-box" x="250" y="952" width="430" height="74" rx="6"/>

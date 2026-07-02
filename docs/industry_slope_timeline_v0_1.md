@@ -88,6 +88,74 @@ Use simple phase labels:
 
 These are qualitative display phases, not scored market predictions.
 
+## Industry Lifecycle Classification
+
+Industry Lifecycle Classification prevents every industry or niche from looking like the same curve.
+
+Purpose:
+
+Classify the current position of the selected reference niche without relying only on the curve shape.
+
+The curve shows timing. The lifecycle label explains what kind of timing it is.
+
+Classification labels:
+
+### PRE-WAVE
+
+Too early. Watch or incubate.
+
+### EARLY ENTRY
+
+Early enough to test. PROOF is appropriate.
+
+### STEEPENING
+
+Adoption is rising. PROOF / INCUBATE may be appropriate.
+
+### CROWDED GROWTH
+
+Market is growing, but competition is rising. Narrow niche only.
+
+### ABSORPTION RISK
+
+LLMs, SaaS, incumbents, or platforms may absorb the value. SHORT CYCLE or HOLD.
+
+### MATURE / LOCAL HABITAT
+
+Not explosive, but durable habitat may exist through local knowledge, workflow fit, trust, or relationship friction.
+
+### POST-FOMO / SALVAGE
+
+Main entry window has passed. Look for salvage, repair, infrastructure, or niche residue.
+
+### DECLINING / AVOID
+
+The reference niche is shrinking or structurally unattractive. Avoid broad build.
+
+## Concern Level
+
+Concern Level states how much the operator should worry now.
+
+### LOW
+
+No immediate concern. Continue observation or proof.
+
+### WATCH
+
+Recheck conditions matter, but no urgent threat yet.
+
+### PREPARE
+
+Competitive or absorption pressure is approaching.
+
+### URGENT
+
+Window may close soon; act only if proof path is close.
+
+### AVOID
+
+Risk/reward does not justify entry.
+
 ## Operator Position Marker
 
 The chart should mark the current operator/project position clearly.
