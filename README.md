@@ -29,6 +29,8 @@ Entry Window Map is a static local SVG view for showing the current As-of positi
 
 Portfolio Entry Horizon is a planned/spec-defined future layer for comparing multiple projects and launch order. Its specification lives in `docs/portfolio_entry_horizon_v0_1.md`; manual templates live in `inputs/projects.md` and `inputs/markets.md`, including Market Slope and Operator Position fields, but automated portfolio scoring is not implemented.
 
+Quest Map Layer is a planned/spec-defined future layer for choosing the right opportunity as a game-like quest under current constraints. Its specification lives in `docs/quest_map_layer_v0_1.md`; Quest Map rendering, scoring automation, and launch permission are not implemented.
+
 ## Three Lines
 
 ### Market Line
@@ -76,6 +78,7 @@ Included:
 - an AI-assisted usage prompt for chat-first diagnosis
 - an Entry Window Map v0.1 specification for a future view
 - a Portfolio Entry Horizon v0.1 specification for a future multi-project comparison layer
+- a Quest Map Layer v0.1 specification for future quest-style opportunity selection
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -131,6 +134,7 @@ Not included:
 - external posting materials
 - PNG, HTML, or interactive Entry Window Map rendering
 - portfolio scoring, portfolio outputs, or launch-order automation
+- Quest Map rendering, Quest Map outputs, or quest scoring automation
 - prediction of future success
 
 ## Boundary
@@ -177,5 +181,6 @@ prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
 prompts/ai_assisted_entry_window_prompt.md
 docs/entry_window_map_v0_1.md
+docs/quest_map_layer_v0_1.md
 examples/example_001.md
 ```
