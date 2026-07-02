@@ -39,6 +39,7 @@ Phase 10.16 Exposure Ratio Spec Patch: PASS
 Phase 10.18 Relationship Value Coverage Spec Patch: PASS
 Phase 10.20 Relationship Damage Severity Spec Patch: PASS
 Phase 10.21 Dependency Asymmetry Spec Patch: PASS
+Phase 10.22 Seat-Owned Regret Guard Spec Patch: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -86,6 +87,7 @@ V14 deep scoring: BLOCK
 | Phase 10.18 Relationship Value Coverage Spec Patch | PASS | Adds Reciprocal Value Amount, Reciprocal Value Coverage Ratio, Relationship Value Quality, Relationship Value Coverage Band, and Relationship Value Note to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
 | Phase 10.20 Relationship Damage Severity Spec Patch | PASS | Adds Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, and Damage Mitigation Note to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
 | Phase 10.21 Dependency Asymmetry Spec Patch | PASS | Adds Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, and Dependency / Viability Note to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
+| Phase 10.22 Seat-Owned Regret Guard Spec Patch | PASS | Adds Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, and Regret Guard Note to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
 
 ## Active Repo
 
@@ -126,11 +128,12 @@ Latest Exposure Ratio spec commit: c73919c Add Exposure Ratio to Quest Map spec
 Latest Relationship Value Coverage spec commit: 95cb2e9 Add Relationship Value Coverage to Quest Map spec
 Latest Relationship Damage Severity spec commit: 9c55fe4 Add Relationship Damage Severity to Quest Map spec
 Latest Dependency Asymmetry spec commit: 3e64459 Add Dependency Asymmetry to Quest Map spec
+Latest Inherited Relationship Inertia spec commit: c28acf3 Add inherited relationship inertia to Quest Map spec
 ```
 
 ## Completion Line
 
-Quest Map Layer now evaluates dependency asymmetry, counterparty viability, and inherited/local relationship inertia, allowing relationship-heavy cost decisions to distinguish future bridges from shared sink risks without condemning past loyalty.
+Quest Map Layer now preserves human Seat ownership and counterfactual integrity by adding Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, and Regret Guard Note.
 
 ## Missing Closure
 
@@ -162,6 +165,7 @@ Phase 10.16 Exposure Ratio Spec Patch: resolved and PASS
 Phase 10.18 Relationship Value Coverage Spec Patch: resolved and PASS
 Phase 10.20 Relationship Damage Severity Spec Patch: resolved and PASS
 Phase 10.21 Dependency Asymmetry Spec Patch: resolved and PASS
+Phase 10.22 Seat-Owned Regret Guard Spec Patch: resolved and PASS
 Portfolio JSON output: HOLD until separately gated
 Portfolio SVG output: HOLD until separately gated
 Launch-order automation: HOLD until separately gated
@@ -190,6 +194,6 @@ After this patch: Codex/AI for Quest Map implementation or portfolio scoring/out
 - AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
 - Static `outputs/entry_window_map.svg` is allowed as a local-only screenshot-ready shared human/AI context card, including a simple Competition Pressure layer; posting, PNG, HTML, interactive rendering, Score History, and Entry Window Drift remain gated.
 - Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`, now refined around Market Slope and Operator Position; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, web research, invented market data, or external research.
-- Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
+- Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, Regret Guard Note, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.

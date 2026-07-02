@@ -48,6 +48,13 @@ The question is whether staying ties the operator to a declining ship.
 Quest Map should not recommend betrayal.
 It should reveal whether the relationship is a bridge, a cost, or a shared sink risk.
 Past relationship value can be real and still become stale under new cost, speed, and AI-adaptation conditions.
+The Seat stays with the human.
+The AI shows reality; it does not own the relationship decision.
+Future regret should review the As-of record before rewriting a sound decision as a failure.
+The unchosen future is not evidence.
+Gratitude for past help and protection of current survival must both be visible.
+The goal is not to remove pain from hard decisions.
+The goal is to keep hard decisions from becoming false self-blame later.
 ```
 
 ## Core Metaphor
@@ -1082,6 +1089,184 @@ Local Reputation Constraint is the risk that changing, reducing, or split-routin
 
 When this constraint is high, the operator should prefer protected proof, negotiation, careful communication, or scope separation over abrupt switching.
 
+### Seat-Owned Regret Guard
+
+Seat-Owned Regret Guard is a record that the human decision owner saw the As-of reality, understood the protected priorities, and made the final decision from the Seat.
+
+It answers:
+
+```text
+If future regret appears, can the operator remember why this decision was reasonable at the time?
+```
+
+Important framing:
+
+The AI does not decide.
+
+The AI surfaces reality, tradeoffs, cost drag, relationship value, survival exposure, and counterfactual risk.
+
+The human remains in the Seat.
+
+### Protected Priority Stack
+
+Protected Priority Stack names what must be protected before relationship-preservation is treated as the highest value.
+
+Possible protected priorities:
+
+- company survival
+- employees
+- payroll safety
+- owner's family
+- owner's health
+- cashflow resilience
+- legal or tax obligations
+- customer continuity
+- relationship value
+- local reputation
+- historical gratitude
+
+Important rule:
+
+Relationship value may be important.
+
+But if preserving it threatens higher protected priorities, the card must make that visible.
+
+### Counterfactual Integrity
+
+Counterfactual Integrity is the discipline of not judging the chosen path by an unobservable alternate future.
+
+It answers:
+
+```text
+Are we mistakenly treating the unseen future as proof that the chosen decision was wrong?
+```
+
+Examples:
+
+- If the operator split-routed and the company survived, they may later regret hurting the old relationship.
+- But they cannot observe whether keeping the old relationship would have caused layoffs, cashflow failure, or closure.
+- The decision should be judged by As-of evidence and protected priorities, not by imagined counterfactual certainty.
+
+### Future Self-Blame Risk
+
+Future Self-Blame Risk is the risk that the operator later interprets a survival-preserving decision as betrayal, coldness, or failure.
+
+It may arise when:
+
+- the old relationship was emotionally meaningful
+- the relationship came from a prior generation
+- the local network values loyalty
+- the counterparty once helped the operator
+- the chosen action created visible pain
+- the avoided future harm remains invisible
+
+Important rule:
+
+A painful decision is not automatically a wrong decision.
+
+A regretful feeling is not automatically evidence of an As-of mistake.
+
+Allowed levels:
+
+#### LOW
+
+Future regret is unlikely to rewrite the decision as moral failure.
+
+#### MEDIUM
+
+Future regret may appear and should be named, but a full record may not be required.
+
+#### HIGH
+
+Future regret is likely enough that a Regret Guard Note should be created before action.
+
+#### UNKNOWN
+
+The risk is not known.
+
+### As-of Reality Shown
+
+As-of Reality Shown is the set of facts, risks, and constraints that the AI surfaced before the human decision.
+
+It may include:
+
+- cost drag
+- exposure ratio
+- survival threshold
+- payroll/runway exposure
+- relationship value coverage
+- relationship damage severity
+- dependency asymmetry
+- counterparty viability
+- shared sink risk
+- inherited/local relationship inertia
+- local reputation constraint
+- split routing option
+- required offset plan
+
+### Human Override / Human Commitment
+
+Human Override / Human Commitment records when the human chooses to preserve, reduce, split-route, or exit the relationship despite the AI-surfaced tradeoffs.
+
+Examples:
+
+- The human may choose to preserve the relationship despite cost drag.
+- The human may choose split routing despite relationship damage risk.
+- The human may choose exit because protected priorities are at risk.
+- All are valid if the human owns the decision from the Seat.
+
+Important rule:
+
+The card should respect the human decision, but preserve the As-of record that made the decision understandable.
+
+### Regret Guard Note
+
+Regret Guard Note is a short statement explaining why the decision was As-of reasonable, even if the future later feels emotionally painful.
+
+Example:
+
+```text
+At the time of decision, the operator knew the relationship mattered, but payroll/runway exposure and survival cost drag were visible. The choice was made to protect company survival and employees, not to deny past gratitude.
+```
+
+### Regret Guard Interpretation Levels
+
+#### Counterfactual Risk
+
+Allowed levels:
+
+- LOW
+- MEDIUM
+- HIGH
+- UNKNOWN
+
+#### Seat Clarity
+
+Allowed levels:
+
+- CLEAR
+- PARTIAL
+- UNCLEAR
+
+#### Protected Priority Conflict
+
+Allowed levels:
+
+- LOW
+- MEDIUM
+- HIGH
+- CRITICAL
+- UNKNOWN
+
+#### Regret Guard Status
+
+Allowed levels:
+
+- NOT NEEDED
+- RECORD RECOMMENDED
+- RECORD REQUIRED
+- UNKNOWN
+
 ### Net Switching Delta
 
 Net Switching Delta is the difference between the expected saving from changing or splitting the workflow and the expected value of keeping the old relationship.
@@ -1899,6 +2084,41 @@ Passive loyalty should not hide shared sink risk.
 
 Test standardized work only if cost drag is meaningful and damage mitigation exists.
 
+### Regret Guard Example A: Preserve Despite Cost Drag
+
+- Human Commitment: PRESERVE
+- Regret Guard Note: The operator chose relationship preservation knowingly and must name an offset plan if survival exposure rises.
+
+Preservation can be valid when the human owns the cost and recheck condition.
+
+### Regret Guard Example B: Split Route Standardized Work
+
+- Human Commitment: SPLIT ROUTE
+- Regret Guard Note: The operator preserved the relationship where trust mattered while protecting payroll/runway from standardized cost drag.
+
+Split routing should record both the protected relationship value and the protected survival priority.
+
+### Regret Guard Example C: Exit Inherited Relationship
+
+- Human Commitment: EXIT
+- Regret Guard Note: The operator did not deny historical gratitude; the exit was chosen because current survival exposure and counterparty viability made continued routing unsafe.
+
+An exit can be As-of reasonable without condemning the old relationship.
+
+### Regret Guard Example D: Unclear Seat
+
+- Seat Clarity: UNCLEAR
+- Recommended interpretation: HOLD
+
+Name the Seat Owner before action.
+
+### Regret Guard Example E: Invisible Avoided Collapse
+
+- Future Self-Blame Risk: HIGH
+- Recommended interpretation: record the As-of protected priorities and the counterfactual risk before acting
+
+The operator may later regret a survival-preserving cut because the avoided collapse is invisible.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -2018,6 +2238,18 @@ Quest Map Layer is not:
 - If Local Reputation Constraint is high, prefer protected proof, negotiation, or careful scope separation over abrupt switching.
 - If Legacy Trust Decay is visible and Survival Cost Drag is rising, passive loyalty should not be accepted without an offset plan.
 - The card should distinguish gratitude for past help from current survival viability.
+- The AI must not decide for the human.
+- If Protected Priority Conflict is HIGH or CRITICAL, the card must surface the conflict explicitly.
+- If Future Self-Blame Risk is HIGH, create a Regret Guard Note before action.
+- If Counterfactual Risk is HIGH, do not allow imagined alternate futures to be treated as certainty.
+- If Seat Clarity is UNCLEAR, recommend HOLD until the human decision owner is named.
+- If the human chooses to preserve a costly relationship, record the required offset plan or survival acceptance.
+- If the human chooses split routing or exit, record the protected priority that justified the decision.
+- If inherited/local relationship inertia is strong, gratitude should be acknowledged separately from current viability.
+- If the decision protects employees, family, payroll, or survival, do not later label it cold replacement without reviewing the As-of record.
+- A painful decision may still be correct As-of.
+- A kind decision may still create survival risk.
+- The card must preserve both truths.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -2082,6 +2314,16 @@ Potential input fields:
 - historical_rescue_credit
 - legacy_trust_decay
 - local_reputation_constraint
+- seat_owner
+- protected_priority_stack
+- protected_priority_conflict
+- as_of_reality_shown
+- counterfactual_risk
+- future_self_blame_risk
+- seat_clarity
+- human_override_commitment
+- regret_guard_status
+- regret_guard_note
 - net_switching_delta
 - switching_damage_risk
 - split_routing_option
@@ -2164,6 +2406,16 @@ Potential output:
 - Historical Rescue Credit: LOW / MEDIUM / HIGH / UNKNOWN
 - Legacy Trust Decay: LOW / MEDIUM / HIGH / UNKNOWN
 - Local Reputation Constraint: LOW / MEDIUM / HIGH / UNKNOWN
+- Seat Owner: human / team / owner / unknown
+- Protected Priority Stack: company / employees / family / survival / relationship / reputation / other
+- Protected Priority Conflict: LOW / MEDIUM / HIGH / CRITICAL / UNKNOWN
+- As-of Reality Shown: one short list of the key realities surfaced before decision
+- Counterfactual Risk: LOW / MEDIUM / HIGH / UNKNOWN
+- Future Self-Blame Risk: LOW / MEDIUM / HIGH / UNKNOWN
+- Seat Clarity: CLEAR / PARTIAL / UNCLEAR
+- Human Override / Commitment: PRESERVE / SPLIT ROUTE / NEGOTIATE / EXIT / HOLD / UNKNOWN
+- Regret Guard Status: NOT NEEDED / RECORD RECOMMENDED / RECORD REQUIRED / UNKNOWN
+- Regret Guard Note: one sentence explaining why the decision was As-of reasonable
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
 - Switching Damage Risk: LOW / MEDIUM / HIGH / UNKNOWN
 - Split Routing Option: YES / NO / UNKNOWN
@@ -2209,4 +2461,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now evaluates dependency asymmetry, counterparty viability, and inherited/local relationship inertia, allowing relationship-heavy cost decisions to distinguish future bridges from shared sink risks without condemning past loyalty.
+Quest Map Layer now preserves human Seat ownership and counterfactual integrity by adding Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, and Regret Guard Note.
