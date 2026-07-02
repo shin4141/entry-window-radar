@@ -26,6 +26,12 @@ The goal is to prevent invisible cost drag from becoming payroll damage, runway 
 Cost drag becomes clearer when tied to a named exposure anchor.
 Unknown exposure is not safety.
 The goal is to prevent invisible cost drag from quietly consuming payroll, runway, or future options.
+Exposure is not only what the cost is.
+Exposure is what the cost consumes.
+A small amount can be large if the buffer is small.
+Unknown ratio is not safety.
+The goal is not to force replacement.
+The goal is to make hidden survival pressure visible before it becomes regret.
 ```
 
 ## Core Metaphor
@@ -382,6 +388,109 @@ The cost drag may contribute directly to missed payments, layoffs, forced restru
 The operator has not named what the cost drag touches.
 
 Do not assume it is safe.
+
+### Exposure Amount
+
+Exposure Amount is the recurring cost drag expressed as a monthly and/or annual amount.
+
+It answers:
+
+```text
+How much cost drag are we actually talking about?
+```
+
+Examples:
+
+- 7,000 yen per month
+- 84,000 yen per year
+- 30,000 yen per month
+- unknown
+
+Important rule:
+
+If the amount is unknown, write UNKNOWN.
+
+Do not invent numbers.
+
+### Exposure Ratio
+
+Exposure Ratio is the cost drag compared with the named exposure anchor.
+
+It answers:
+
+```text
+How large is this drag relative to the thing it affects?
+```
+
+Examples:
+
+- 84,000 yen/year as a share of annual tool budget
+- 84,000 yen/year as a share of marketing test budget
+- 7,000 yen/month as a share of payroll buffer
+- 7,000 yen/month as a share of owner runway
+- 84,000 yen/year as a share of emergency buffer
+
+This is not accounting, tax advice, or a precise financial forecast.
+
+It is an As-of survival sensitivity estimate.
+
+### Exposure Ratio Quality
+
+Exposure Ratio Quality indicates whether the ratio is based on actual known amounts or rough assumptions.
+
+Allowed levels:
+
+#### DIRECT
+
+Both cost drag and exposure anchor amount are known.
+
+#### ESTIMATED
+
+Cost drag is known, anchor amount is estimated.
+
+#### PARTIAL
+
+Cost drag is known, but anchor is only qualitatively described.
+
+#### UNKNOWN
+
+Ratio cannot be estimated.
+
+### Exposure Ratio Band
+
+Exposure Ratio Band indicates how large the cost drag is relative to the exposure anchor.
+
+Allowed levels:
+
+#### NEGLIGIBLE
+
+The cost drag is too small to change the decision by itself.
+
+#### SMALL
+
+The cost drag is noticeable but usually absorbable if the relationship value is real.
+
+#### MEANINGFUL
+
+The cost drag consumes a visible share of the anchor and should require an offset plan or split-routing proof.
+
+#### LARGE
+
+The cost drag consumes a major share of the anchor and should not be left unaddressed.
+
+#### CRITICAL
+
+The cost drag is large enough to threaten payroll, runway, required obligations, or near-term survival.
+
+#### UNKNOWN
+
+The ratio is unknown.
+
+Do not assume safety.
+
+The exact threshold may vary by business type.
+
+The card should avoid pretending the bands are universal accounting rules.
 
 ### Regret Cost of Inaction
 
@@ -1118,6 +1227,45 @@ Use split routing, negotiation, scope reduction, or another survival action.
 
 Name the exposure anchor before accepting passive loyalty.
 
+### Exposure Ratio Example A: Small Share Of Tool Budget
+
+- Cost drag: 84,000 yen/year
+- Exposure Anchor Amount: tool budget is 1,000,000 yen/year
+- Exposure Ratio: 8.4%
+- Exposure Ratio Band: SMALL / MEANINGFUL depending on context
+- Recommended interpretation: relationship preservation may be acceptable if relationship value is real
+
+The cost is visible, but the ratio may not require urgency when the anchor is healthy.
+
+### Exposure Ratio Example B: Large Share Of Tool Budget
+
+- Cost drag: 84,000 yen/year
+- Exposure Anchor Amount: tool budget is 100,000 yen/year
+- Exposure Ratio: 84%
+- Exposure Ratio Band: LARGE
+- Recommended interpretation: passive loyalty needs an offset plan or split-routing proof
+
+The same absolute cost becomes much more decision-relevant when it consumes most of the anchor.
+
+### Exposure Ratio Example C: Payroll Buffer Share
+
+- Cost drag: 7,000 yen/month
+- Exposure Anchor Amount: payroll buffer is 50,000 yen/month
+- Exposure Ratio: 14%
+- Exposure Ratio Band: MEANINGFUL
+- Recommended interpretation: do not ignore; test split routing or name the offset plan
+
+A modest absolute amount can matter when the buffer is narrow.
+
+### Exposure Ratio Example D: Unknown Anchor Amount
+
+- Cost drag: known
+- Exposure Anchor Amount: unknown
+- Exposure Ratio Quality: PARTIAL / UNKNOWN
+- Recommended interpretation: name the anchor amount before treating the cost as safe
+
+Unknown ratio should trigger measurement, not cold replacement.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -1193,6 +1341,14 @@ Quest Map Layer is not:
 - If Reciprocal Relationship Value is high but Exposure Severity is SURVIVAL-RELEVANT, recommend negotiation, split routing, scope reduction, or explicit offset planning.
 - If Exposure Anchor is only vague, lower confidence.
 - Do not turn an unknown exposure into a switching recommendation. Unknown exposure should trigger measurement, not cold replacement.
+- If Exposure Ratio is UNKNOWN, do not treat the cost drag as harmless.
+- If Exposure Ratio Band is MEANINGFUL or higher, Required Offset Plan should not be NONE.
+- If Exposure Ratio Band is LARGE or CRITICAL, Regret Cost of Inaction should rise unless there is strong named reciprocal relationship value or a clear offset plan.
+- If Exposure Ratio Quality is PARTIAL or UNKNOWN, lower confidence and recommend naming the anchor amount before stronger action.
+- If cost drag is small in absolute amount but large relative to the exposure anchor, do not dismiss it.
+- If cost drag is large in absolute amount but small relative to healthy cashflow, avoid unnecessary urgency.
+- Exposure Ratio must be considered with Reciprocal Relationship Value, Switching Damage Risk, Split Routing Option, Carrier Fit, and Reference Chart Quality.
+- Do not recommend cold replacement from Exposure Ratio alone. Use it to judge urgency, offset planning, and proof priority.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -1229,6 +1385,12 @@ Potential input fields:
 - exposure_anchor
 - exposure_severity
 - exposure_note
+- exposure_amount
+- exposure_anchor_amount
+- exposure_ratio
+- exposure_ratio_quality
+- exposure_ratio_band
+- exposure_ratio_note
 - regret_cost_of_inaction
 - reciprocal_relationship_value
 - net_switching_delta
@@ -1285,6 +1447,12 @@ Potential output:
 - Quantified Runway / Payroll Exposure: NONE / MINOR / OPTION-LIMITING / SURVIVAL-RELEVANT / CRITICAL / UNKNOWN
 - Exposure Anchor: payroll / rent / tax reserve / debt / tool budget / marketing budget / hiring / owner runway / emergency buffer / investment capacity / unknown
 - Exposure Note: one sentence explaining what the cost drag actually affects
+- Exposure Amount: monthly / annual / unknown
+- Exposure Anchor Amount: known amount / estimated amount / unknown
+- Exposure Ratio: percentage or qualitative ratio / unknown
+- Exposure Ratio Quality: DIRECT / ESTIMATED / PARTIAL / UNKNOWN
+- Exposure Ratio Band: NEGLIGIBLE / SMALL / MEANINGFUL / LARGE / CRITICAL / UNKNOWN
+- Exposure Ratio Note: one sentence explaining whether the drag is small, meaningful, large, critical, or unknown relative to the named anchor
 - Regret Cost of Inaction: LOW / MEDIUM / HIGH / UNKNOWN
 - Reciprocal Relationship Value: LOW / MEDIUM / HIGH / UNKNOWN
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
@@ -1332,4 +1500,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now ties recurring cost drag to concrete survival exposure by adding Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, and Exposure Note.
+Quest Map Layer now adds Exposure Amount, Exposure Anchor Amount, Exposure Ratio, Exposure Ratio Quality, Exposure Ratio Band, and Exposure Ratio Note, allowing cost drag to be judged relative to the actual budget, buffer, payroll, runway, or investment capacity it consumes.

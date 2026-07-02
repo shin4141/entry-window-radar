@@ -56,6 +56,7 @@ Phase 10.9 Repeat Retention Reason Spec Patch: PASS
 Phase 10.10 Survival Cost Drag & Regret Cost Spec Patch: PASS
 Phase 10.12 Actual Cashflow Sensitivity Spec Patch: PASS
 Phase 10.14 Quantified Runway / Payroll Exposure Spec Patch: PASS
+Phase 10.16 Exposure Ratio Spec Patch: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -84,7 +85,7 @@ V14 deep scoring: BLOCK
 - Static `outputs/entry_window_map.svg` is allowed as local-only As-of display and screenshot-ready shared human/AI context, including a simple Competition Pressure layer. It does not authorize posting, PNG, HTML, interactive rendering, portfolio automation, Score History, Entry Window Drift, or advanced scoring.
 - Portfolio Entry Horizon is allowed as a specification plus manual dogfood templates in `inputs/projects.md` and `inputs/markets.md`. It does not authorize portfolio scoring, portfolio JSON output, portfolio SVG output, launch-order automation, ranking, or external research.
 - Market Slope inputs do not authorize web research or invented market estimates. Market data must be source-backed or marked unknown. Operator Position is a strategic posture, not investment advice. Portfolio Entry Horizon supports launch-order reasoning, not automated permission.
-- Quest Map Layer is allowed as a specification in `docs/quest_map_layer_v0_1.md`, including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential. It does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
+- Quest Map Layer is allowed as a specification in `docs/quest_map_layer_v0_1.md`, including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential. It does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Quest Map recommendations must not use broad parent-market charts as strong evidence. Parent-market-only or unknown reference charts should lower confidence and avoid LAUNCH or broad build recommendations.
 - Quest Map recommendations must not move from HOLD to PROOF unless Minimum Viable Edge is named. High AI Expansion Potential alone is not permission to launch.
 - Quest Map recommendations must not recommend LAUNCH when Repeat Frequency / Order Volume is unknown, or when cost compression is one-off without a repeatable proof path.
@@ -93,6 +94,7 @@ V14 deep scoring: BLOCK
 - Quest Map recommendations must not recommend full replacement only because a cheaper provider exists. Relationship value, survival cost drag, switching damage risk, and split routing options must be named before recommending displacement.
 - Quest Map recommendations must not treat cost drag as harmless when Actual Cashflow Sensitivity is unknown. If cashflow sensitivity is high, critical, or unknown, name the survival threshold or require a bounded proof, offset plan, negotiation, or split routing.
 - Quest Map recommendations must not treat unknown exposure as safety or as permission for cold replacement. Unknown exposure should trigger measurement, exposure-anchor naming, bounded proof, negotiation, or split routing.
+- Quest Map recommendations must not treat unknown Exposure Ratio as safety or use Exposure Ratio alone to recommend cold replacement. Use the ratio to judge urgency, offset planning, and proof priority alongside relationship value, switching damage risk, Carrier Fit, and Reference Chart Quality.
 
 ## Allowed In Current MVP
 
