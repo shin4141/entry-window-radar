@@ -41,6 +41,12 @@ Relationship value protects what the relationship gives.
 Relationship damage estimates what may be lost if the relationship feels displaced.
 The goal is not cold replacement.
 The goal is survival-aware routing that does not create avoidable relationship damage.
+Dependency is not always mutual just because the relationship is mutual.
+A relationship can be valuable and still become a survival drag.
+The question is not only whether leaving hurts.
+The question is whether staying ties the operator to a declining ship.
+Quest Map should not recommend betrayal.
+It should reveal whether the relationship is a bridge, a cost, or a shared sink risk.
 ```
 
 ## Core Metaphor
@@ -795,6 +801,245 @@ Examples:
 - create a smaller package for Company A
 - delay split routing until survival exposure is named
 - document why survival pressure requires a trial
+
+### Dependency Asymmetry
+
+Dependency Asymmetry indicates whether one side depends more heavily on the relationship than the other.
+
+It answers:
+
+```text
+Who actually needs whom, and how much?
+```
+
+Examples:
+
+- Company A sends Company B about 50,000 yen/year in work.
+- Company B pays Company A about 10,000 yen/month for recurring work.
+- Company A may continue without Company B.
+- Company B may be maintaining the relationship partly to preserve uncertain returned work.
+- The relationship may feel mutual, but the economic and survival dependency may be asymmetric.
+
+Important framing:
+
+Asymmetry does not mean betrayal.
+
+It means the decision should not assume both sides carry equal dependency, risk, or value.
+
+Allowed levels:
+
+#### BALANCED
+
+Both sides appear to depend on the relationship in a similar and meaningful way.
+
+#### OPERATOR DEPENDS MORE
+
+The operator appears more dependent on the relationship than the counterparty is.
+
+#### COUNTERPARTY DEPENDS MORE
+
+The counterparty appears more dependent on the operator than the operator is on the counterparty.
+
+#### MUTUAL BUT UNEVEN
+
+Both sides receive value, but the dependency, risk, or survival exposure is not equal.
+
+#### LOW MUTUAL DEPENDENCY
+
+Neither side appears highly dependent on the other.
+
+#### UNKNOWN
+
+The dependency pattern is not known.
+
+Do not assume mutual dependence.
+
+### Counterparty Viability
+
+Counterparty Viability is the As-of judgment of whether the existing provider, partner, or relationship-heavy counterparty is likely to remain operationally useful, financially stable, competitively relevant, or strategically valuable.
+
+It answers:
+
+```text
+Is this counterparty a future bridge or a declining ship?
+```
+
+Possible signals:
+
+- cost structure is outdated
+- delivery is slow
+- no AI or process adaptation
+- declining customer base
+- shrinking referrals
+- weak future competitiveness
+- inability to match new price or speed standards
+- overdependence on legacy relationships
+- signs of financial or operational strain
+- continued strong trust, network, or hard-to-replace capability
+
+Allowed levels:
+
+#### STRONG
+
+The counterparty appears operationally strong, adaptive, and still strategically useful.
+
+#### STABLE
+
+The counterparty appears usable and stable, though not necessarily improving.
+
+#### UNCERTAIN
+
+The counterparty's future usefulness, competitiveness, or stability is unclear.
+
+#### DECLINING
+
+Signals suggest the counterparty is losing relevance, competitiveness, referrals, speed, or future usefulness.
+
+#### STRANDED
+
+The counterparty appears stuck in an outdated cost, delivery, or market position that may not recover without major change.
+
+#### UNKNOWN
+
+No clear evidence exists.
+
+### Shared Sink Risk
+
+Shared Sink Risk is the risk that staying too tightly tied to a declining counterparty causes the operator to absorb the counterparty's decline.
+
+It answers:
+
+```text
+If the counterparty is slowly sinking, are we staying on the same ship too long?
+```
+
+Examples:
+
+- Keeping an expensive provider because of history, while AI-enabled competitors reduce cost and speed.
+- Preserving a relationship that no longer returns enough value, while the operator loses investment capacity.
+- Avoiding uncomfortable routing decisions until the operator faces layoffs, cashflow damage, or reduced competitiveness.
+
+Allowed levels:
+
+#### LOW
+
+The relationship does not appear to pull the operator into avoidable decline.
+
+#### MEDIUM
+
+The relationship may limit options or slow adaptation, but survival damage is not yet clear.
+
+#### HIGH
+
+The relationship may meaningfully consume options, cashflow, speed, or competitiveness.
+
+#### CRITICAL
+
+Staying too tightly tied may contribute to survival damage, serious cashflow harm, or loss of necessary options.
+
+#### UNKNOWN
+
+The sink risk is not known.
+
+### Exit Timing Pressure
+
+Exit Timing Pressure is the pressure to define when the relationship must be renegotiated, split-routed, reduced, or exited.
+
+It answers:
+
+```text
+If we do not act now, when must we re-evaluate before the cost becomes survival damage?
+```
+
+Possible recheck triggers:
+
+- returned work drops below a named threshold
+- cost drag exceeds exposure ratio threshold
+- cashflow sensitivity becomes HIGH or CRITICAL
+- AI-enabled competitor proves output equivalence
+- paid repeat appears for the new route
+- counterparty refuses negotiation
+- counterparty viability worsens
+- relationship damage risk remains high but survival threshold approaches
+
+Allowed levels:
+
+#### LOW
+
+No urgent exit or renegotiation timing is visible.
+
+#### MEDIUM
+
+A recheck threshold should be named, but immediate action may not be required.
+
+#### HIGH
+
+The operator should define a near-term recheck date, threshold, or proof path.
+
+#### IMMEDIATE
+
+The operator needs an immediate bounded action, negotiation, or survival-relevant plan.
+
+#### UNKNOWN
+
+Timing pressure is not known.
+
+### Relationship Optionality
+
+Relationship Optionality is whether preserving the relationship increases or decreases future options.
+
+It answers:
+
+```text
+Does keeping this relationship give us future routes, or does it trap us?
+```
+
+Positive optionality:
+
+- referrals
+- emergency support
+- reputation
+- local network
+- hard-to-replace trust
+- future collaboration
+- knowledge access
+- strategic bridge
+
+Negative optionality:
+
+- prevents cost compression
+- blocks AI adoption
+- consumes budget needed for survival
+- discourages experimentation
+- creates guilt-based inertia
+- keeps the operator tied to a declining partner
+- delays necessary restructuring
+
+Allowed levels:
+
+#### EXPANDS OPTIONS
+
+The relationship creates future routes that would be hard to replace.
+
+#### PRESERVES OPTIONS
+
+The relationship protects useful options, even if it does not expand them.
+
+#### NEUTRAL
+
+The relationship neither clearly expands nor reduces options.
+
+#### REDUCES OPTIONS
+
+The relationship consumes budget, speed, or adaptation capacity enough to reduce future routes.
+
+#### TRAPS OPERATOR
+
+The relationship keeps the operator tied to a declining or damaging path.
+
+#### UNKNOWN
+
+The optionality effect is not known.
 
 ### Net Switching Delta
 
@@ -1562,6 +1807,57 @@ Protect relationship-heavy work unless survival pressure makes a bounded mitigat
 
 Name likely damage channels before acting.
 
+### Dependency Example A: Strong Counterparty Bridge
+
+- Company A returns more work than the cost drag and remains operationally strong
+- Dependency Asymmetry: BALANCED or OPERATOR DEPENDS MORE
+- Counterparty Viability: STABLE / STRONG
+- Relationship Optionality: EXPANDS OPTIONS
+- Recommended interpretation: keeping may be reasonable
+
+Recheck if returned work drops below a named threshold.
+
+### Dependency Example B: Uneven Relationship Cost
+
+- Company A returns small uncertain work
+- Company B pays recurring costs mainly to preserve the relationship
+- Dependency Asymmetry: OPERATOR DEPENDS MORE or MUTUAL BUT UNEVEN
+- Counterparty Viability: UNCERTAIN
+- Relationship Optionality: PRESERVES OPTIONS / NEUTRAL
+- Recommended interpretation: use split routing or negotiation
+
+Do not assume the relationship fully offsets cost drag.
+
+### Dependency Example C: Fear Of Losing Uncertain Work
+
+- Company A can survive without Company B
+- Company B is preserving Company A out of fear of losing uncertain future work
+- Dependency Asymmetry: OPERATOR DEPENDS MORE
+- Shared Sink Risk: MEDIUM / HIGH if Company A is not adapting
+- Recommended interpretation: name the dependency clearly and set recheck thresholds
+
+The decision should not treat emotional difficulty as the same thing as strategic necessity.
+
+### Dependency Example D: Declining Counterparty
+
+- Company A is declining, costly, slow, and not adapting
+- Company B keeps paying due to history while losing investment capacity
+- Counterparty Viability: DECLINING / STRANDED
+- Shared Sink Risk: HIGH
+- Relationship Optionality: TRAPS OPERATOR
+- Recommended interpretation: do not remain on the same ship without split routing, negotiation, or survival-bounded exit plan
+
+Passive loyalty should not hide shared sink risk.
+
+### Dependency Example E: Non-Monetary Trust Bridge
+
+- Company A provides non-monetary trust, emergency support, and local reputation
+- Counterparty Viability: STABLE
+- Relationship Optionality: EXPANDS OPTIONS
+- Recommended interpretation: preserve relationship-heavy work
+
+Test standardized work only if cost drag is meaningful and damage mitigation exists.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -1663,6 +1959,17 @@ Quest Map Layer is not:
 - If Relationship Value Coverage is FULLY OFFSETS and Relationship Damage Severity is HIGH/CRITICAL, HOLD may be appropriate.
 - If Survival Cost Drag is HIGH but Relationship Damage Severity is HIGH, recommend survival-bounded negotiation or protected proof, not passive inaction and not cold replacement.
 - Relationship Damage Severity must be considered with Relationship Value Coverage, Exposure Ratio, Actual Cashflow Sensitivity, Switching Damage Risk, and Carrier Fit.
+- Do not assume a long relationship is strategically valuable if Counterparty Viability is DECLINING or STRANDED.
+- Do not assume a declining counterparty should be cut immediately if Relationship Damage Severity is HIGH or Reciprocal Relationship Value is strong.
+- If Dependency Asymmetry is OPERATOR DEPENDS MORE and Counterparty Viability is STRONG/STABLE, HOLD or careful PROOF may be reasonable.
+- If Dependency Asymmetry is OPERATOR DEPENDS MORE but Counterparty Viability is DECLINING, Exit Timing Pressure should rise.
+- If Dependency Asymmetry is LOW MUTUAL DEPENDENCY and cost drag is meaningful, split routing or negotiation may be more justified.
+- If Dependency Asymmetry is COUNTERPARTY DEPENDS MORE, be careful with abrupt displacement, but do not allow guilt to hide survival cost drag.
+- If Shared Sink Risk is HIGH or CRITICAL, passive loyalty should not be accepted without an offset plan or recheck condition.
+- If Relationship Optionality is REDUCES OPTIONS or TRAPS OPERATOR, Regret Cost of Inaction should rise.
+- If Relationship Optionality is EXPANDS OPTIONS and cost drag is survivable, keeping may be justified.
+- If Exit Timing Pressure is HIGH or IMMEDIATE, require a recheck date, threshold, or bounded proof.
+- Dependency Asymmetry must be evaluated with Relationship Value Coverage, Relationship Damage Severity, Actual Cashflow Sensitivity, Exposure Ratio, Survival Threshold, Split Routing Option, and Carrier Fit.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -1717,6 +2024,12 @@ Potential input fields:
 - relationship_damage_channels
 - damage_mitigation_option
 - damage_mitigation_note
+- dependency_asymmetry
+- counterparty_viability
+- shared_sink_risk
+- exit_timing_pressure
+- relationship_optionality
+- dependency_viability_note
 - net_switching_delta
 - switching_damage_risk
 - split_routing_option
@@ -1789,6 +2102,12 @@ Potential output:
 - Relationship Damage Channels: referrals / returned work / emergency support / reputation / local network / pricing priority / cooperation / hidden services / emotional conflict / operational disruption / unknown
 - Damage Mitigation Option: YES / NO / UNKNOWN
 - Damage Mitigation Note: one sentence explaining how split routing or proof can be done without unnecessary relationship damage
+- Dependency Asymmetry: BALANCED / OPERATOR DEPENDS MORE / COUNTERPARTY DEPENDS MORE / MUTUAL BUT UNEVEN / LOW MUTUAL DEPENDENCY / UNKNOWN
+- Counterparty Viability: STRONG / STABLE / UNCERTAIN / DECLINING / STRANDED / UNKNOWN
+- Shared Sink Risk: LOW / MEDIUM / HIGH / CRITICAL / UNKNOWN
+- Exit Timing Pressure: LOW / MEDIUM / HIGH / IMMEDIATE / UNKNOWN
+- Relationship Optionality: EXPANDS OPTIONS / PRESERVES OPTIONS / NEUTRAL / REDUCES OPTIONS / TRAPS OPERATOR / UNKNOWN
+- Dependency / Viability Note: one sentence explaining whether the relationship is a future bridge, a survivable cost, or a shared sink risk
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
 - Switching Damage Risk: LOW / MEDIUM / HIGH / UNKNOWN
 - Split Routing Option: YES / NO / UNKNOWN
@@ -1834,4 +2153,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now evaluates whether split routing itself may damage the existing relationship by adding Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, and Damage Mitigation Note.
+Quest Map Layer now evaluates dependency asymmetry and counterparty viability, allowing relationship-heavy cost decisions to distinguish future bridges from shared sink risks.
