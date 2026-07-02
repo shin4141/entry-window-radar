@@ -6,6 +6,24 @@
 
 ここで使っている Snapshot 1-3 は固定サンプルであり、実プロジェクトの自動比較結果ではありません。
 
+## Phase 10.35 Visual Cleanup
+
+このビジュアルは `docs/quest_snapshot_visual_design_system_v0_1.md` に沿って整理されています。
+
+主な整理点:
+
+- 右端のクリッピングを避けるため、広いタイムライン向けキャンバスを使う
+- Snapshot card は短い状態表示に絞る
+- 長い説明を図の中に詰め込まない
+- Drift Delta Panel と Codex handoff card を分ける
+- 日本語ラベルを主にし、固定トークンだけ英語を残す
+
+この図は trajectory を見せるためのものです。
+
+Codex Interpretation Note の代わりではありません。
+
+Future Codex は、この trajectory を読んだあと、最新の Quest Snapshot と Codex Interpretation Note を確認してから続行します。
+
 ## 何を見る図か
 
 初回の図は、現在位置を示します。
