@@ -42,6 +42,7 @@ Phase 8.2 Structured Output v0.2: PASS
 Phase 8.3 Entry Window Map SVG Rendering: PASS
 Phase 8.4 V13 LoopKit Map Dogfood: PASS
 Phase 8.5 Competition Pressure Layer: PASS
+Phase 9.0 Portfolio Entry Horizon Spec: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -68,6 +69,7 @@ V14 deep scoring: BLOCK
 - AI-assisted usage through `prompts/ai_assisted_entry_window_prompt.md` is allowed, but it must not be treated as permission for external APIs, automated web research, or external posting.
 - Structured `outputs/chart_data.json` is allowed as data-only output. Its 0-5 levels are display-stage levels, not probabilities, predictions, VC scores, or investment advice.
 - Static `outputs/entry_window_map.svg` is allowed as local-only As-of display, including a simple Competition Pressure layer. It does not authorize PNG, HTML, interactive rendering, Score History, Entry Window Drift, or advanced scoring.
+- Portfolio Entry Horizon is allowed as `docs/portfolio_entry_horizon_v0_1.md` specification only. It does not authorize portfolio inputs, portfolio JSON output, portfolio SVG output, launch-order automation, or external research.
 
 ## Allowed In Current MVP
 
@@ -77,6 +79,7 @@ V14 deep scoring: BLOCK
 - maintain the worked example
 - maintain the AI-assisted usage prompt
 - maintain the Entry Window Map specification
+- maintain the Portfolio Entry Horizon specification
 - maintain data-only `outputs/chart_data.json`
 - maintain static `outputs/entry_window_map.svg`, including the simple Competition Pressure layer
 - update governance/re-entry files when phase state changes
@@ -87,6 +90,7 @@ V14 deep scoring: BLOCK
 - do not add Grok, X, or automated web research
 - do not add PNG output
 - do not add HTML or interactive Entry Window Map rendering
+- do not implement portfolio inputs, portfolio outputs, portfolio SVG, or launch-order automation
 - do not implement Delivery Scope Radar
 - do not implement V14 Resource Justice deep scoring
 - do not add Pro/Advanced scoring
