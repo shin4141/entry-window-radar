@@ -39,7 +39,7 @@ Quest Snapshot / TimeTube Archive is a planned/spec-defined archive layer for sa
 
 Codex Interpretation Note is a planned/spec-defined evidence layer for Quest Snapshot. Its specification lives in `docs/codex_interpretation_note_v0_1.md`; it explains why visuals were placed or classified, but does not add market research, scoring automation, or snapshot generation.
 
-Snapshot Trajectory / Drift Delta is a planned/spec-defined recurring value layer for comparing saved Quest Snapshots over time. Its specification lives in `docs/snapshot_trajectory_drift_delta_v0_1.md`; runtime comparison, automatic drift scoring, and new visual output are not implemented.
+Snapshot Trajectory / Drift Delta is a planned/spec-defined recurring value layer for comparing saved Quest Snapshots over time. Its specification lives in `docs/snapshot_trajectory_drift_delta_v0_1.md`; a static/manual Japanese visual prototype lives at `outputs/snapshot_trajectory_drift_delta_ja.svg`, with an example note at `examples/snapshot_trajectory_drift_delta_v0_1_ja.md`; runtime comparison and automatic drift scoring are not implemented.
 
 ## Three Lines
 
@@ -93,7 +93,7 @@ Included:
 - an Industry Slope Timeline v0.1 static/manual Japanese SVG prototype
 - a Quest Snapshot / TimeTube Archive v0.1 specification for future As-of handoff artifacts
 - a Codex Interpretation Note v0.1 specification for future evidence-basis handoff
-- a Snapshot Trajectory / Drift Delta v0.1 specification for future multi-snapshot comparison
+- a Snapshot Trajectory / Drift Delta v0.1 specification and static/manual Japanese visual prototype for future multi-snapshot comparison
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -197,6 +197,7 @@ outputs/entry_window_map.svg
 outputs/quest_position_map.svg
 outputs/quest_position_map_ja.svg
 outputs/industry_slope_timeline_ja.svg
+outputs/snapshot_trajectory_drift_delta_ja.svg
 prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
 prompts/ai_assisted_entry_window_prompt.md
@@ -211,4 +212,5 @@ examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
 examples/industry_slope_timeline_v0_1_ja.md
+examples/snapshot_trajectory_drift_delta_v0_1_ja.md
 ```
