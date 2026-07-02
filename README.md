@@ -23,9 +23,9 @@ Risk:
 Recheck Condition:
 ```
 
-## Planned Entry Window Map
+## Entry Window Map
 
-Entry Window Map v0.1 is a spec-defined future view for showing the current As-of position at a glance. The specification lives in `docs/entry_window_map_v0_1.md`; chart rendering is not implemented yet.
+Entry Window Map is a static local SVG view for showing the current As-of position at a glance. The specification lives in `docs/entry_window_map_v0_1.md`; PNG, HTML, and interactive rendering are not implemented.
 
 ## Three Lines
 
@@ -74,22 +74,22 @@ Included:
 - an AI-assisted usage prompt for chat-first diagnosis
 - an Entry Window Map v0.1 specification for a future view
 - output files for an Entry Window report and decision card
-- structured `outputs/chart_data.json` for future Entry Window Map use
+- structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
 - an Entry Window Chart schema for the MVP output shape
 - validation and Operator Edge extraction prompts
 - one worked example
 
 ## Local Usage
 
-Run from the repo root:
+AI-assisted route: paste `prompts/ai_assisted_entry_window_prompt.md` into Codex / GPT / Claude Code to generate an Entry Window Card before or instead of running the CLI.
+
+For terminal/local output generation, run from the repo root:
 
 ```bash
 python3 -B tools/entry_window_radar.py
 ```
 
 For a minimal worked example, see `examples/example_001.md`.
-
-AI-assisted route: paste `prompts/ai_assisted_entry_window_prompt.md` into Codex / GPT / Claude Code to generate an Entry Window Card before or instead of running the CLI.
 
 Reads:
 
@@ -105,9 +105,10 @@ Writes:
 outputs/report.md
 outputs/decision.md
 outputs/chart_data.json
+outputs/entry_window_map.svg
 ```
 
-`outputs/chart_data.json` contains display-stage levels for future Entry Window Map use. It is not chart rendering and it is not a probability, VC score, prediction, or investment signal.
+`outputs/chart_data.json` contains display-stage levels for Entry Window Map use. `outputs/entry_window_map.svg` is a static As-of display, not a probability, VC score, prediction, or investment signal.
 
 ## Current Limits
 
@@ -124,7 +125,7 @@ Not included:
 - Score History
 - Entry Window Drift
 - external posting materials
-- Entry Window Map rendering
+- PNG, HTML, or interactive Entry Window Map rendering
 - prediction of future success
 
 ## Boundary
@@ -166,6 +167,7 @@ schema/chart.json
 outputs/report.md
 outputs/decision.md
 outputs/chart_data.json
+outputs/entry_window_map.svg
 prompts/validate_prompt.md
 prompts/operator_edge_extraction_prompt_v0_2.md
 prompts/ai_assisted_entry_window_prompt.md

@@ -71,12 +71,15 @@ Phase 8.2 adds data-only structured output:
 
 - `outputs/chart_data.json`
 
-Future implementation may add:
+Phase 8.3 adds local-only static SVG rendering:
 
 - `outputs/entry_window_map.svg`
+
+Future implementation may add:
+
 - `outputs/entry_window_map.html`
 
-This document does not implement rendering.
+PNG, HTML, interactive rendering, history, and drift remain out of scope.
 
 Potential future data shape:
 

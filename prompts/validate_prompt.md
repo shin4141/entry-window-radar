@@ -45,6 +45,8 @@ Check whether it:
    missing_evidence
    interpretation_note
 
+   entry_window_map.svg is a static local-only As-of display generated from chart_data.json.
+
 3. Keeps Operator Edge as a first-class line.
 
 4. Uses as-of language instead of future certainty.
@@ -56,6 +58,8 @@ Check whether it:
 7. Keeps maximum bottleneck and next action bounded to exactly one each.
 
 8. Keeps chart_data.json levels as display-stage 0-5 levels, not probabilities, predictions, VC scores, or investment advice.
+
+9. Keeps entry_window_map.svg static and local-only, without PNG, HTML, history, drift, external research, or posting scope.
 
 Return:
 

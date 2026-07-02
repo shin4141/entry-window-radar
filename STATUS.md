@@ -18,6 +18,7 @@ Phase 7.1 AI-assisted Usage Prompt: PASS
 Phase 7.2 AI-assisted Route Dogfood: PASS
 Phase 8.1 Entry Window Map Spec: PASS
 Phase 8.2 Structured Output v0.2: PASS
+Phase 8.3 Entry Window Map SVG Rendering: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -44,6 +45,7 @@ V14 deep scoring: BLOCK
 | Phase 7.2 AI-assisted Route Dogfood | PASS | `29fbd26 Record entry-window-radar dogfood result` |
 | Phase 8.1 Entry Window Map Spec | PASS | Adds `docs/entry_window_map_v0_1.md`; visualization remains unimplemented and gated. |
 | Phase 8.2 Structured Output v0.2 | PASS | Adds `outputs/chart_data.json` as data-only output; chart rendering remains HOLD. |
+| Phase 8.3 Entry Window Map SVG Rendering | PASS | Adds static local-only `outputs/entry_window_map.svg`; PNG/HTML rendering remains HOLD. |
 
 ## Active Repo
 
@@ -62,11 +64,12 @@ Accepted MVP HEAD before public hygiene patch: 4e6be09 Record public readiness r
 Published MVP commit: 28e7f47 Prepare public GitHub hygiene
 Latest dogfood example commit: c3dc010 Record V13 LoopKit dogfood result
 Latest AI-assisted dogfood commit: 29fbd26 Record entry-window-radar dogfood result
+Latest structured chart data commit: d3df6ef Add structured chart data output
 ```
 
 ## Completion Line
 
-Entry Window Radar now writes outputs/chart_data.json with display-stage Market Readiness, Operator Edge, and Competition Pressure levels for future Entry Window Map rendering, while chart rendering remains HOLD.
+Entry Window Radar now generates a local-only static Entry Window Map SVG from chart_data.json, showing the As-of position without adding prediction, external research, advanced scoring, or posting scope.
 
 ## Missing Closure
 
@@ -77,7 +80,8 @@ External API: HOLD
 Phase 7.1 AI-assisted Usage Prompt: resolved and PASS
 Phase 8.1 Entry Window Map Spec: resolved and PASS
 Phase 8.2 Structured Output v0.2: resolved and PASS
-Entry Window Map rendering: HOLD
+Phase 8.3 Entry Window Map SVG Rendering: resolved and PASS
+Entry Window Map PNG/HTML rendering: HOLD
 Delivery Scope Radar: BLOCK
 V14 deep scoring: BLOCK
 ```
@@ -98,6 +102,6 @@ After this patch: Codex/AI for external posting only after explicit maintainer G
 - GitHub publishing is PASS for public repo `entry-window-radar`.
 - Public repo URL: https://github.com/shin4141/entry-window-radar
 - AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
-- Structured `outputs/chart_data.json` is allowed as data-only output; SVG, HTML, PNG, and chart rendering remain HOLD.
+- Static `outputs/entry_window_map.svg` is allowed as local-only As-of display; PNG, HTML, interactive rendering, Score History, and Entry Window Drift remain gated.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.

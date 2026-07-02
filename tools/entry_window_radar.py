@@ -7,7 +7,9 @@ import json
 import re
 from dataclasses import dataclass
 from datetime import date
+from html import escape
 from pathlib import Path
+from textwrap import wrap
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +21,7 @@ INPUTS = {
 OUTPUT_REPORT = ROOT / "outputs" / "report.md"
 OUTPUT_DECISION = ROOT / "outputs" / "decision.md"
 OUTPUT_CHART_DATA = ROOT / "outputs" / "chart_data.json"
+OUTPUT_MAP_SVG = ROOT / "outputs" / "entry_window_map.svg"
 SCHEMA = ROOT / "schema" / "chart.json"
 
 LABELS = {"FAST ENTRY", "NICHE WEDGE", "WAIT", "SHORT CYCLE", "AVOID"}
@@ -465,6 +468,102 @@ def render_chart_data(data: ChartData) -> str:
     return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
 
 
+def read_chart_data_output() -> ChartData:
+    payload = json.loads(OUTPUT_CHART_DATA.read_text(encoding="utf-8"))
+    return ChartData(
+        as_of=str(payload["as_of"]),
+        target=str(payload["target"]),
+        market_readiness=int(payload["market_readiness"]),
+        operator_edge=int(payload["operator_edge"]),
+        competition_pressure=int(payload["competition_pressure"]),
+        entry_label=str(payload["entry_label"]),
+        maximum_bottleneck=str(payload["maximum_bottleneck"]),
+        next_action=str(payload["next_action"]),
+        confidence=str(payload["confidence"]),
+        missing_evidence=list(payload["missing_evidence"]),
+        interpretation_note=str(payload["interpretation_note"]),
+    )
+
+
+def svg_text_block(text: str, x: int, y: int, width: int, line_height: int = 16) -> str:
+    lines = wrap(text, width=width)
+    return "\n".join(
+        f'<text x="{x}" y="{y + index * line_height}" class="small">{escape(line)}</text>'
+        for index, line in enumerate(lines)
+    )
+
+
+def render_entry_window_map_svg(data: ChartData) -> str:
+    width = 760
+    height = 560
+    plot_left = 96
+    plot_top = 92
+    plot_size = 330
+    plot_bottom = plot_top + plot_size
+    plot_right = plot_left + plot_size
+    market_x = plot_left + (data.market_readiness / 5) * plot_size
+    operator_y = plot_bottom - (data.operator_edge / 5) * plot_size
+    point_label_x = min(int(market_x) + 14, plot_right - 130)
+    point_label_y = max(int(operator_y) - 10, plot_top + 18)
+
+    grid_lines: list[str] = []
+    tick_labels: list[str] = []
+    for value in range(6):
+        x = plot_left + value * plot_size / 5
+        y = plot_bottom - value * plot_size / 5
+        grid_lines.append(f'<line x1="{x:.1f}" y1="{plot_top}" x2="{x:.1f}" y2="{plot_bottom}" class="grid"/>')
+        grid_lines.append(f'<line x1="{plot_left}" y1="{y:.1f}" x2="{plot_right}" y2="{y:.1f}" class="grid"/>')
+        tick_labels.append(f'<text x="{x:.1f}" y="{plot_bottom + 22}" class="tick" text-anchor="middle">{value}</text>')
+        tick_labels.append(f'<text x="{plot_left - 16}" y="{y + 4:.1f}" class="tick" text-anchor="end">{value}</text>')
+
+    note_x = 510
+    note_y = 122
+    bottleneck = svg_text_block(f"Bottleneck: {data.maximum_bottleneck}", note_x, note_y + 116, 34)
+    next_action = svg_text_block(f"Next action: {data.next_action}", note_x, note_y + 170, 34)
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
+  <title id="title">Entry Window Map</title>
+  <desc id="desc">A local-only As-of display of Market Readiness, Operator Edge, and Competition Pressure.</desc>
+  <style>
+    .bg {{ fill: #f8fafc; }}
+    .panel {{ fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }}
+    .grid {{ stroke: #e2e8f0; stroke-width: 1; }}
+    .axis {{ stroke: #334155; stroke-width: 1.6; }}
+    .title {{ fill: #0f172a; font-family: Arial, sans-serif; font-size: 24px; font-weight: 700; }}
+    .label {{ fill: #334155; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }}
+    .small {{ fill: #334155; font-family: Arial, sans-serif; font-size: 13px; }}
+    .tick {{ fill: #64748b; font-family: Arial, sans-serif; font-size: 12px; }}
+    .point {{ fill: #2563eb; stroke: #ffffff; stroke-width: 3; }}
+    .tag {{ fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }}
+    .boundary {{ fill: #475569; font-family: Arial, sans-serif; font-size: 12px; }}
+  </style>
+  <rect class="bg" x="0" y="0" width="{width}" height="{height}"/>
+  <text x="40" y="48" class="title">Entry Window Map</text>
+  <text x="40" y="72" class="small">Target: {escape(data.target)} | As-of: {escape(data.as_of)}</text>
+  <rect class="panel" x="32" y="82" width="430" height="400" rx="6"/>
+  {chr(10).join(grid_lines)}
+  <line x1="{plot_left}" y1="{plot_bottom}" x2="{plot_right}" y2="{plot_bottom}" class="axis"/>
+  <line x1="{plot_left}" y1="{plot_top}" x2="{plot_left}" y2="{plot_bottom}" class="axis"/>
+  {chr(10).join(tick_labels)}
+  <text x="{(plot_left + plot_right) / 2:.1f}" y="{plot_bottom + 52}" class="label" text-anchor="middle">Market Readiness</text>
+  <text transform="translate(48 {(plot_top + plot_bottom) / 2:.1f}) rotate(-90)" class="label" text-anchor="middle">Operator Edge</text>
+  <circle cx="{market_x:.1f}" cy="{operator_y:.1f}" r="8" class="point"/>
+  <rect x="{point_label_x - 6}" y="{point_label_y - 17}" width="124" height="24" rx="5" class="tag"/>
+  <text x="{point_label_x}" y="{point_label_y}" class="label">{escape(data.entry_label)}</text>
+  <rect class="panel" x="490" y="82" width="230" height="400" rx="6"/>
+  <text x="{note_x}" y="{note_y}" class="label">As-of Position</text>
+  <text x="{note_x}" y="{note_y + 28}" class="small">Market Readiness: {data.market_readiness}/5</text>
+  <text x="{note_x}" y="{note_y + 50}" class="small">Operator Edge: {data.operator_edge}/5</text>
+  <text x="{note_x}" y="{note_y + 72}" class="small">Competition Pressure: {data.competition_pressure}/5</text>
+  <text x="{note_x}" y="{note_y + 94}" class="small">Confidence: {escape(data.confidence)}</text>
+  {bottleneck}
+  {next_action}
+  <text x="40" y="518" class="boundary">As-of display levels, not probabilities or predictions.</text>
+  <text x="40" y="538" class="boundary">This is not investment advice, VC scoring, or automated launch permission.</text>
+</svg>
+"""
+
+
 def main() -> int:
     validate_schema_file()
     inputs = read_inputs()
@@ -475,9 +574,13 @@ def main() -> int:
     OUTPUT_REPORT.write_text(render_report(diagnosis), encoding="utf-8")
     OUTPUT_DECISION.write_text(render_decision(diagnosis), encoding="utf-8")
     OUTPUT_CHART_DATA.write_text(render_chart_data(map_data), encoding="utf-8")
+    svg_data = read_chart_data_output()
+    validate_chart_data(svg_data)
+    OUTPUT_MAP_SVG.write_text(render_entry_window_map_svg(svg_data), encoding="utf-8")
     print(f"Wrote {OUTPUT_REPORT.relative_to(ROOT)}")
     print(f"Wrote {OUTPUT_DECISION.relative_to(ROOT)}")
     print(f"Wrote {OUTPUT_CHART_DATA.relative_to(ROOT)}")
+    print(f"Wrote {OUTPUT_MAP_SVG.relative_to(ROOT)}")
     return 0
 
 
