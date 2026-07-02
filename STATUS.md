@@ -34,6 +34,7 @@ Phase 10.7 Paid Repeat Signal Spec Patch: PASS
 Phase 10.9 Repeat Retention Reason Spec Patch: PASS
 Phase 10.10 Survival Cost Drag & Regret Cost Spec Patch: PASS
 Phase 10.12 Actual Cashflow Sensitivity Spec Patch: PASS
+Phase 10.14 Quantified Runway / Payroll Exposure Spec Patch: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -76,6 +77,7 @@ V14 deep scoring: BLOCK
 | Phase 10.9 Repeat Retention Reason Spec Patch | PASS | Adds Repeat Retention Reason to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
 | Phase 10.10 Survival Cost Drag & Regret Cost Spec Patch | PASS | Adds Survival Cost Drag, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, and Split Routing Option to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
 | Phase 10.12 Actual Cashflow Sensitivity Spec Patch | PASS | Adds Actual Cashflow Sensitivity, Survival Threshold, Cashflow Sensitivity Note, and Required Offset Plan to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
+| Phase 10.14 Quantified Runway / Payroll Exposure Spec Patch | PASS | Adds Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, and Exposure Note to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
 
 ## Active Repo
 
@@ -110,11 +112,12 @@ Latest Repeat Frequency spec commit: 63c2570 Add Repeat Frequency to Quest Map s
 Latest Paid Repeat Signal spec commit: e668f91 Add Paid Repeat Signal to Quest Map spec
 Latest Repeat Retention Reason spec commit: 18eed50 Add Repeat Retention Reason to Quest Map spec
 Latest Survival Cost Drag spec commit: 99bc775 Add Survival Cost Drag to Quest Map spec
+Latest Actual Cashflow Sensitivity spec commit: 2efdee9 Add Cashflow Sensitivity to Quest Map spec
 ```
 
 ## Completion Line
 
-Quest Map Layer now distinguishes cost drag from actual survival sensitivity by adding Actual Cashflow Sensitivity, Survival Threshold, Cashflow Sensitivity Note, and Required Offset Plan.
+Quest Map Layer now ties recurring cost drag to concrete survival exposure by adding Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, and Exposure Note.
 
 ## Missing Closure
 
@@ -141,6 +144,7 @@ Phase 10.7 Paid Repeat Signal Spec Patch: resolved and PASS
 Phase 10.9 Repeat Retention Reason Spec Patch: resolved and PASS
 Phase 10.10 Survival Cost Drag & Regret Cost Spec Patch: resolved and PASS
 Phase 10.12 Actual Cashflow Sensitivity Spec Patch: resolved and PASS
+Phase 10.14 Quantified Runway / Payroll Exposure Spec Patch: resolved and PASS
 Portfolio JSON output: HOLD until separately gated
 Portfolio SVG output: HOLD until separately gated
 Launch-order automation: HOLD until separately gated
@@ -169,6 +173,6 @@ After this patch: Codex/AI for Quest Map implementation or portfolio scoring/out
 - AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
 - Static `outputs/entry_window_map.svg` is allowed as a local-only screenshot-ready shared human/AI context card, including a simple Competition Pressure layer; posting, PNG, HTML, interactive rendering, Score History, and Entry Window Drift remain gated.
 - Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`, now refined around Market Slope and Operator Position; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, web research, invented market data, or external research.
-- Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
+- Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.

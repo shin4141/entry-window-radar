@@ -23,6 +23,9 @@ Cost drag matters differently depending on survival sensitivity.
 A relationship cost can be valid, but only if the operator can survive it or offset it.
 The goal is not to force switching.
 The goal is to prevent invisible cost drag from becoming payroll damage, runway loss, or future regret.
+Cost drag becomes clearer when tied to a named exposure anchor.
+Unknown exposure is not safety.
+The goal is to prevent invisible cost drag from quietly consuming payroll, runway, or future options.
 ```
 
 ## Core Metaphor
@@ -311,6 +314,74 @@ Examples:
 - If monthly savings are small compared to stable profit, Survival Cost Drag may be LOW.
 - If monthly savings equal a meaningful part of payroll, rent, tax reserve, debt payment, or owner runway, Survival Cost Drag may be HIGH.
 - If ignoring the drag could force layoffs, missed payments, or business closure, Regret Cost of Inaction should rise.
+
+### Quantified Runway / Payroll Exposure
+
+Quantified Runway / Payroll Exposure is a simple As-of estimate of what the recurring cost drag means in operational survival terms.
+
+It answers:
+
+```text
+What concrete runway, payroll, investment, or obligation does this cost drag affect?
+```
+
+Important framing:
+
+This is not accounting, tax advice, or a precise financial forecast.
+
+It is a bounded survival check.
+
+If the exposure cannot be quantified, mark UNKNOWN and do not treat the cost drag as harmless.
+
+### Exposure Anchor
+
+Exposure Anchor is the named obligation, buffer, or option affected by the cost drag.
+
+Examples:
+
+- one month of software/tool budget
+- part of a tax reserve
+- part of rent
+- part of payroll buffer
+- marketing/test budget
+- emergency cash buffer
+- owner runway
+- one small AI automation experiment
+- one contractor payment
+
+A cost drag is more decision-relevant when it can be tied to a real exposure anchor.
+
+### Exposure Severity
+
+Exposure Severity indicates how strongly the cost drag affects the named exposure anchor.
+
+Allowed levels:
+
+#### NONE
+
+The cost drag does not materially affect runway, payroll, obligations, or investment capacity.
+
+#### MINOR
+
+The cost drag is noticeable but does not change near-term decisions.
+
+#### OPTION-LIMITING
+
+The cost drag limits marketing, tools, experiments, hiring, or investment capacity.
+
+#### SURVIVAL-RELEVANT
+
+The cost drag affects payroll safety, rent/tax/debt capacity, owner runway, or business resilience.
+
+#### CRITICAL
+
+The cost drag may contribute directly to missed payments, layoffs, forced restructuring, owner burnout, or closure.
+
+#### UNKNOWN
+
+The operator has not named what the cost drag touches.
+
+Do not assume it is safe.
 
 ### Regret Cost of Inaction
 
@@ -1010,6 +1081,43 @@ A survival action is required before cost drag becomes payroll damage, runway lo
 
 Do not assume the cost is harmless when sensitivity is unknown.
 
+### Exposure Example A: Minor Tool Budget Exposure
+
+- Annual cost drag: 84,000 yen
+- Company condition: strong profit and cash buffer
+- Exposure Severity: MINOR
+- Exposure Anchor: tool budget or general overhead
+- Recommended interpretation: relationship preservation may be acceptable if relationship value is real
+
+The exposure is named, but it does not force a survival action.
+
+### Exposure Example B: Option-Limiting Budget Exposure
+
+- Annual cost drag: 84,000 yen
+- Company condition: thin-margin and unable to fund marketing or AI tools
+- Exposure Severity: OPTION-LIMITING
+- Exposure Anchor: marketing budget / tool budget / investment capacity
+- Recommended interpretation: passive loyalty requires an offset plan
+
+The cost drag matters because it consumes future options.
+
+### Exposure Example C: Survival-Relevant Obligation Exposure
+
+- Annual cost drag contributes to payroll, rent, or tax stress
+- Exposure Severity: SURVIVAL-RELEVANT or CRITICAL
+- Exposure Anchor: payroll / rent / tax reserve / owner runway
+- Recommended interpretation: Regret Cost of Inaction is HIGH
+
+Use split routing, negotiation, scope reduction, or another survival action.
+
+### Exposure Example D: Unknown Exposure
+
+- Relationship value is claimed, but exposure is unknown
+- Exposure Severity: UNKNOWN
+- Recommended interpretation: do not assume the cost is harmless
+
+Name the exposure anchor before accepting passive loyalty.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -1078,6 +1186,13 @@ Quest Map Layer is not:
 - If Reciprocal Relationship Value is high but Actual Cashflow Sensitivity is HIGH, recommend negotiation, split routing, scope reduction, or explicit offset planning.
 - If Net Switching Delta favors keeping but Actual Cashflow Sensitivity is HIGH, require a named offset plan.
 - If cost drag threatens payroll, runway, or survival, the decision becomes survival-relevant, not merely preference-relevant.
+- If Actual Cashflow Sensitivity is HIGH or CRITICAL, Quantified Runway / Payroll Exposure should be named before passive loyalty is accepted.
+- If Exposure Severity is UNKNOWN, recommend naming the exposure anchor, split routing, negotiation, or bounded proof.
+- If Exposure Severity is OPTION-LIMITING, require a Required Offset Plan before maintaining the old cost unchanged.
+- If Exposure Severity is SURVIVAL-RELEVANT or CRITICAL, Regret Cost of Inaction should be HIGH unless there is a named offset or strong reciprocal relationship value.
+- If Reciprocal Relationship Value is high but Exposure Severity is SURVIVAL-RELEVANT, recommend negotiation, split routing, scope reduction, or explicit offset planning.
+- If Exposure Anchor is only vague, lower confidence.
+- Do not turn an unknown exposure into a switching recommendation. Unknown exposure should trigger measurement, not cold replacement.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -1110,6 +1225,10 @@ Potential input fields:
 - survival_threshold
 - cashflow_sensitivity_note
 - required_offset_plan
+- quantified_runway_payroll_exposure
+- exposure_anchor
+- exposure_severity
+- exposure_note
 - regret_cost_of_inaction
 - reciprocal_relationship_value
 - net_switching_delta
@@ -1163,6 +1282,9 @@ Potential output:
 - Survival Threshold: NOT NEAR / APPROACHING / NEAR / BREACHED / UNKNOWN
 - Cashflow Sensitivity Note: one sentence explaining whether the cost drag is absorbable, painful, survival-relevant, or unknown
 - Required Offset Plan: NONE / NEGOTIATE / SPLIT ROUTING / INCREASE SALES / CUT OTHER COSTS / NAME RELATIONSHIP VALUE / UNKNOWN
+- Quantified Runway / Payroll Exposure: NONE / MINOR / OPTION-LIMITING / SURVIVAL-RELEVANT / CRITICAL / UNKNOWN
+- Exposure Anchor: payroll / rent / tax reserve / debt / tool budget / marketing budget / hiring / owner runway / emergency buffer / investment capacity / unknown
+- Exposure Note: one sentence explaining what the cost drag actually affects
 - Regret Cost of Inaction: LOW / MEDIUM / HIGH / UNKNOWN
 - Reciprocal Relationship Value: LOW / MEDIUM / HIGH / UNKNOWN
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
@@ -1210,4 +1332,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now distinguishes cost drag from actual survival sensitivity by adding Actual Cashflow Sensitivity, Survival Threshold, Cashflow Sensitivity Note, and Required Offset Plan.
+Quest Map Layer now ties recurring cost drag to concrete survival exposure by adding Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, and Exposure Note.
