@@ -105,6 +105,65 @@ A smaller project with stronger operator edge and faster proof path may be strat
 
 Long-horizon projects may be incubated rather than abandoned.
 
+## Market Slope & Operator Position
+
+Portfolio Entry Horizon should consider market slope and operator position, not only static future market size.
+
+### Market Phase
+
+Market Phase describes where the market appears to be as of the available evidence:
+
+- pre-infrastructure
+- early adoption
+- scaling
+- crowded
+- post-FOMO
+- unclear
+
+### Slope Direction
+
+Slope Direction describes the current apparent direction of market movement:
+
+- flat
+- slowly rising
+- steepening
+- hype spike
+- rollover
+- unclear
+
+### Slope Evidence
+
+Slope Evidence may include:
+
+- capital entering
+- major-player entry
+- technical unlocks
+- real deployments
+- user urgency
+- regulation/policy
+- distribution changes
+- cost declines
+- repeated adoption signals
+
+### Operator Position
+
+Operator Position describes the operator's strategic posture relative to the market:
+
+- investor
+- builder
+- early adopter
+- proof seeker
+- late entrant
+- avoid
+
+A huge future market does not automatically mean launch first.
+
+A smaller wedge with stronger operator edge and faster proof path may come first.
+
+A large rising market may be invest/adopt/watch rather than build, depending on operator edge and Carrier fit.
+
+Operator Position is a strategic posture, not investment advice.
+
 ## Non-Goals
 
 Portfolio Entry Horizon is not:
@@ -120,7 +179,7 @@ Portfolio Entry Horizon is not:
 
 ## Input Direction
 
-Phase 9.1 adds manual input templates:
+Phase 9.1 added manual input templates, and Phase 9.3 refines `inputs/markets.md` around Market Slope & Operator Position:
 
 - `inputs/projects.md`
 - `inputs/markets.md`
@@ -141,13 +200,26 @@ Potential `projects.md` shape:
 
 Potential `markets.md` shape:
 
-- market_name
-- horizon_year
-- market_size_estimate
+- market_slope_name
+- market_started
+- current_phase
+- slope_direction
+- why_slope_is_changing
+- capital_entering
+- major_players
+- technical_unlock
+- real_deployments
+- user_urgency
+- regulation_policy
+- bottlenecks
+- fomo_risk
+- operator_position
+- relevance_to_projects
+- evidence_quality
+- recheck_condition
+- optional_market_size_estimate
 - source
 - source_confidence
-- adjacent_markets
-- timing_signal
 - notes
 
 ## Future Output Direction
