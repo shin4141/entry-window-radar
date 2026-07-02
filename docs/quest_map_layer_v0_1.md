@@ -47,6 +47,7 @@ The question is not only whether leaving hurts.
 The question is whether staying ties the operator to a declining ship.
 Quest Map should not recommend betrayal.
 It should reveal whether the relationship is a bridge, a cost, or a shared sink risk.
+Past relationship value can be real and still become stale under new cost, speed, and AI-adaptation conditions.
 ```
 
 ## Core Metaphor
@@ -1041,6 +1042,46 @@ The relationship keeps the operator tied to a declining or damaging path.
 
 The optionality effect is not known.
 
+### Inherited / Local Relationship Inertia
+
+Inherited / Local Relationship Inertia is the pressure to preserve a relationship because it was inherited from a prior generation, embedded in a local network, or historically valuable during earlier business conditions.
+
+It answers:
+
+```text
+Are we preserving this relationship because it is still a future bridge, or because past value and local norms make it emotionally or reputationally hard to re-evaluate?
+```
+
+Important framing:
+
+This does not mean the old relationship was wrong.
+
+In the past, the counterparty may have been strong, helpful, protective, and strategically valuable.
+
+The question is whether that historical value still exists under current AI-era cost, speed, and competitiveness conditions.
+
+### Historical Rescue Credit
+
+Historical Rescue Credit is past evidence that the counterparty helped, referred work, protected reputation, or supported the operator during earlier conditions.
+
+This should be respected.
+
+It should not automatically be treated as infinite future value.
+
+### Legacy Trust Decay
+
+Legacy Trust Decay is the risk that a historically valuable relationship loses current strategic value because the counterparty becomes slow, expensive, non-adaptive, or competitively weak.
+
+This does not erase past help.
+
+It names the gap between past value and current viability.
+
+### Local Reputation Constraint
+
+Local Reputation Constraint is the risk that changing, reducing, or split-routing the relationship creates local reputation damage, especially in regional or inherited business networks.
+
+When this constraint is high, the operator should prefer protected proof, negotiation, careful communication, or scope separation over abrupt switching.
+
 ### Net Switching Delta
 
 Net Switching Delta is the difference between the expected saving from changing or splitting the workflow and the expected value of keeping the old relationship.
@@ -1970,6 +2011,13 @@ Quest Map Layer is not:
 - If Relationship Optionality is EXPANDS OPTIONS and cost drag is survivable, keeping may be justified.
 - If Exit Timing Pressure is HIGH or IMMEDIATE, require a recheck date, threshold, or bounded proof.
 - Dependency Asymmetry must be evaluated with Relationship Value Coverage, Relationship Damage Severity, Actual Cashflow Sensitivity, Exposure Ratio, Survival Threshold, Split Routing Option, and Carrier Fit.
+- Do not condemn past loyalty using current AI-era conditions.
+- Do not treat inherited relationship value as zero.
+- Do not treat inherited relationship value as infinite.
+- If Historical Rescue Credit is strong but Counterparty Viability is declining, require a recheck condition.
+- If Local Reputation Constraint is high, prefer protected proof, negotiation, or careful scope separation over abrupt switching.
+- If Legacy Trust Decay is visible and Survival Cost Drag is rising, passive loyalty should not be accepted without an offset plan.
+- The card should distinguish gratitude for past help from current survival viability.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -2030,6 +2078,10 @@ Potential input fields:
 - exit_timing_pressure
 - relationship_optionality
 - dependency_viability_note
+- inherited_local_relationship_inertia
+- historical_rescue_credit
+- legacy_trust_decay
+- local_reputation_constraint
 - net_switching_delta
 - switching_damage_risk
 - split_routing_option
@@ -2108,6 +2160,10 @@ Potential output:
 - Exit Timing Pressure: LOW / MEDIUM / HIGH / IMMEDIATE / UNKNOWN
 - Relationship Optionality: EXPANDS OPTIONS / PRESERVES OPTIONS / NEUTRAL / REDUCES OPTIONS / TRAPS OPERATOR / UNKNOWN
 - Dependency / Viability Note: one sentence explaining whether the relationship is a future bridge, a survivable cost, or a shared sink risk
+- Inherited / Local Relationship Inertia: LOW / MEDIUM / HIGH / UNKNOWN
+- Historical Rescue Credit: LOW / MEDIUM / HIGH / UNKNOWN
+- Legacy Trust Decay: LOW / MEDIUM / HIGH / UNKNOWN
+- Local Reputation Constraint: LOW / MEDIUM / HIGH / UNKNOWN
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
 - Switching Damage Risk: LOW / MEDIUM / HIGH / UNKNOWN
 - Split Routing Option: YES / NO / UNKNOWN
@@ -2153,4 +2209,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now evaluates dependency asymmetry and counterparty viability, allowing relationship-heavy cost decisions to distinguish future bridges from shared sink risks.
+Quest Map Layer now evaluates dependency asymmetry, counterparty viability, and inherited/local relationship inertia, allowing relationship-heavy cost decisions to distinguish future bridges from shared sink risks without condemning past loyalty.
