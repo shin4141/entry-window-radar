@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Noto Sans CJK JP', sans-serif">
+  <title id="title">クエスト位置マップ v0.1 プロトタイプ</title>
+  <desc id="desc">証拠までの距離、棲息地と回収可能性、敵または競争圧、生存または関係リスクでクエスト候補を比較する静的・手動の表示プロトタイプ。</desc>
+  <style>
+    .bg { fill: #f8fafc; }
+    .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+    .selected-panel { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; }
+    .axis { stroke: #334155; stroke-width: 1.7; }
+    .midline { stroke: #94a3b8; stroke-width: 1.2; stroke-dasharray: 5 5; }
+    .title { fill: #0f172a; font-size: 25px; font-weight: 700; }
+    .subtitle { fill: #475569; font-size: 13px; }
+    .label { fill: #334155; font-size: 13px; font-weight: 700; }
+    .small { fill: #475569; font-size: 12px; }
+    .tiny { fill: #64748b; font-size: 11px; }
+    .quad { fill: #64748b; font-size: 12px; font-weight: 700; }
+    .ring-low { fill: none; stroke: #38bdf8; stroke-width: 2; stroke-opacity: 0.62; }
+    .ring-med { fill: none; stroke: #f59e0b; stroke-width: 3; stroke-opacity: 0.72; }
+    .ring-high { fill: none; stroke: #ef4444; stroke-width: 4; stroke-opacity: 0.72; }
+    .selected-halo { fill: none; stroke: #2563eb; stroke-width: 5; stroke-opacity: 0.78; }
+    .selected-glow { fill: #dbeafe; fill-opacity: 0.5; stroke: #60a5fa; stroke-width: 1.5; }
+    .point { stroke: #ffffff; stroke-width: 3; }
+    .proof { fill: #2563eb; }
+    .hold { fill: #64748b; }
+    .salvage { fill: #0f766e; }
+    .tag { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+    .tag-selected { fill: #1d4ed8; stroke: #1e40af; stroke-width: 1; }
+    .tag-text { fill: #0f172a; font-size: 11px; font-weight: 700; }
+    .tag-selected-text { fill: #ffffff; font-size: 11px; font-weight: 700; }
+    .warn-med { fill: #f59e0b; stroke: #ffffff; stroke-width: 1.5; }
+    .warn-high { fill: #dc2626; stroke: #ffffff; stroke-width: 1.5; }
+    .card-title { fill: #0f172a; font-size: 22px; font-weight: 700; }
+    .card-head { fill: #0f172a; font-size: 14px; font-weight: 700; }
+    .card-text { fill: #334155; font-size: 12px; }
+    .card-muted { fill: #64748b; font-size: 11px; }
+    .action-pill { fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }
+    .risk-box { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; }
+    .next-box { fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }
+    .boundary { fill: #475569; font-size: 12px; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="1200" height="1200"/>
+  <text x="40" y="46" class="title">クエスト位置マップ v0.1 プロトタイプ</text>
+  <text x="40" y="70" class="subtitle">静的・手動の表示プロトタイプ。確率・予測・市場スコア・ローンチ許可ではない。</text>
+
+  <rect class="panel" x="34" y="96" width="1132" height="640" rx="8"/>
+
+  <rect x="112" y="155" width="500" height="235" fill="#f0fdf4" fill-opacity="0.38"/>
+  <rect x="612" y="155" width="500" height="235" fill="#eff6ff" fill-opacity="0.4"/>
+  <rect x="112" y="390" width="500" height="235" fill="#fefce8" fill-opacity="0.46"/>
+  <rect x="612" y="390" width="500" height="235" fill="#f1f5f9" fill-opacity="0.54"/>
+
+  <text x="134" y="178" class="quad">近い + 高い棲息地</text>
+  <text x="134" y="196" class="tiny">PROOF / LAUNCH 候補</text>
+  <text x="634" y="178" class="quad">遠い + 高い棲息地</text>
+  <text x="634" y="196" class="tiny">INCUBATE / 戦略育成</text>
+  <text x="134" y="605" class="quad">近い + 低い棲息地</text>
+  <text x="134" y="623" class="tiny">SALVAGE / SHORT CYCLE</text>
+  <text x="634" y="605" class="quad">遠い + 低い棲息地</text>
+  <text x="634" y="623" class="tiny">HOLD / AVOID</text>
+
+  <line x1="112" y1="155" x2="112" y2="625" class="grid"/>
+  <line x1="312" y1="155" x2="312" y2="625" class="grid"/>
+  <line x1="512" y1="155" x2="512" y2="625" class="grid"/>
+  <line x1="712" y1="155" x2="712" y2="625" class="grid"/>
+  <line x1="912" y1="155" x2="912" y2="625" class="grid"/>
+  <line x1="1112" y1="155" x2="1112" y2="625" class="grid"/>
+  <line x1="112" y1="625" x2="1112" y2="625" class="grid"/>
+  <line x1="112" y1="531" x2="1112" y2="531" class="grid"/>
+  <line x1="112" y1="437" x2="1112" y2="437" class="grid"/>
+  <line x1="112" y1="343" x2="1112" y2="343" class="grid"/>
+  <line x1="112" y1="249" x2="1112" y2="249" class="grid"/>
+  <line x1="112" y1="155" x2="1112" y2="155" class="grid"/>
+  <line x1="612" y1="155" x2="612" y2="625" class="midline"/>
+  <line x1="112" y1="390" x2="1112" y2="390" class="midline"/>
+
+  <line x1="112" y1="625" x2="1112" y2="625" class="axis"/>
+  <line x1="112" y1="155" x2="112" y2="625" class="axis"/>
+  <text x="612" y="695" class="label" text-anchor="middle">証拠 / 報酬までの距離</text>
+  <text x="112" y="666" class="tiny" text-anchor="middle">近い</text>
+  <text x="1112" y="666" class="tiny" text-anchor="middle">遠い</text>
+  <text transform="translate(78 390) rotate(-90)" class="label" text-anchor="middle">棲息地 / 回収可能性</text>
+  <text x="102" y="628" class="tiny" text-anchor="end">低い</text>
+  <text x="102" y="159" class="tiny" text-anchor="end">長く棲める</text>
+
+  <!-- E. Quest Snapshot / TimeTube Archive -->
+  <circle cx="310" cy="274" r="23" class="ring-low"/>
+  <circle cx="310" cy="274" r="8" class="point proof"/>
+  <rect x="150" y="238" width="188" height="25" rx="5" class="tag"/>
+  <text x="162" y="255" class="tag-text">E PROOF - Snapshot保存</text>
+
+  <!-- A. AI-low-adoption recurring workflow compression -->
+  <circle cx="462" cy="255" r="47" class="selected-glow"/>
+  <circle cx="462" cy="255" r="38" class="selected-halo"/>
+  <circle cx="462" cy="255" r="29" class="ring-med"/>
+  <circle cx="462" cy="255" r="10" class="point proof"/>
+  <polygon points="496,224 510,250 482,250" class="warn-med"/>
+  <rect x="492" y="272" width="224" height="26" rx="6" class="tag-selected"/>
+  <text x="504" y="289" class="tag-selected-text">選択中 A PROOF - 反復業務圧縮</text>
+  <rect x="394" y="200" width="78" height="24" rx="12" class="action-pill"/>
+  <text x="433" y="216" class="tag-text" text-anchor="middle">選択中</text>
+
+  <!-- D. Relationship-heavy split routing -->
+  <circle cx="645" cy="348" r="31" class="ring-med"/>
+  <circle cx="645" cy="348" r="9" class="point proof"/>
+  <polygon points="674,318 689,345 659,345" class="warn-high"/>
+  <rect x="664" y="366" width="158" height="25" rx="5" class="tag"/>
+  <text x="676" y="383" class="tag-text">D PROOF - 分岐発注</text>
+
+  <!-- C. Solana meme BOT -->
+  <circle cx="918" cy="377" r="39" class="ring-high"/>
+  <circle cx="918" cy="377" r="9" class="point hold"/>
+  <polygon points="958,337 974,366 942,366" class="warn-high"/>
+  <rect x="746" y="317" width="128" height="25" rx="5" class="tag"/>
+  <text x="758" y="334" class="tag-text">C HOLD - ミームBOT</text>
+
+  <!-- B. One-off manual workflow compression -->
+  <circle cx="300" cy="558" r="22" class="ring-low"/>
+  <circle cx="300" cy="558" r="8" class="point salvage"/>
+  <rect x="318" y="570" width="148" height="25" rx="5" class="tag"/>
+  <text x="330" y="587" class="tag-text">B SALVAGE - 単発業務</text>
+
+  <rect class="selected-panel" x="34" y="766" width="1132" height="254" rx="8"/>
+  <text x="66" y="806" class="card-title">選択中のクエストカード</text>
+  <text x="66" y="832" class="small">A. AI低導入・反復業務圧縮</text>
+  <text x="66" y="852" class="card-muted">青いハロー、選択タグ、青ラベルで地図上に表示。</text>
+
+  <rect class="action-pill" x="66" y="878" width="128" height="36" rx="18"/>
+  <text x="130" y="901" class="card-head" text-anchor="middle">PROOF</text>
+
+  <text x="230" y="884" class="card-head">一言判断</text>
+  <text x="230" y="905" class="card-text">コスト圧縮と反復業務の兆候は見える。</text>
+  <text x="230" y="922" class="card-text">広く作らず、まず比較試用で証拠を取る。</text>
+
+  <text x="230" y="958" class="card-head">理由</text>
+  <text x="230" y="979" class="card-text">コスト圧縮は見えるが、成果物の同等性と有料リピートは未証明。</text>
+
+  <rect class="risk-box" x="66" y="938" width="128" height="56" rx="6"/>
+  <text x="130" y="961" class="card-head" text-anchor="middle">リスク</text>
+  <text x="130" y="980" class="card-text" text-anchor="middle">中</text>
+
+  <rect class="next-box" x="732" y="878" width="388" height="80" rx="6"/>
+  <text x="750" y="904" class="card-head">次の一手</text>
+  <text x="750" y="925" class="card-text">小さな比較試用を1回行う。</text>
+  <text x="750" y="942" class="card-text">成果物の同等性が出るまで止める。</text>
+
+  <text x="732" y="976" class="card-head">広げてはいけない境界</text>
+  <text x="732" y="997" class="card-text">有料リピートまたは同等証拠が出る前に、</text>
+  <text x="732" y="1014" class="card-text">汎用自動化プロダクトを作らない。</text>
+
+  <rect class="panel" x="34" y="1046" width="1132" height="108" rx="8"/>
+  <circle cx="62" cy="1080" r="7" class="point proof"/>
+  <text x="78" y="1084" class="small">点 = クエスト</text>
+  <circle cx="188" cy="1080" r="15" class="ring-med"/>
+  <text x="212" y="1084" class="small">リング = 敵 / 競争圧</text>
+  <polygon points="398,1067 411,1091 385,1091" class="warn-high"/>
+  <text x="425" y="1084" class="small">警告 = 生存 / 関係リスク</text>
+  <rect x="730" y="1066" width="128" height="26" rx="13" class="action-pill"/>
+  <text x="794" y="1083" class="tag-text" text-anchor="middle">選択中のクエスト</text>
+  <text x="62" y="1121" class="boundary">表示段階のプロトタイプ。予測・投資助言・自動ローンチ許可ではない。</text>
+  <text x="62" y="1140" class="boundary">完全なQuest Map実装、PDF生成、スクショ自動化、外部投稿はHOLD。</text>
+</svg>

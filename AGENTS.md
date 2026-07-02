@@ -63,6 +63,8 @@ Phase 10.21 Dependency Asymmetry Spec Patch: PASS
 Phase 10.22 Seat-Owned Regret Guard Spec Patch: PASS
 Phase 10.23 Quest Snapshot / TimeTube Archive Spec: PASS
 Phase 10.24 Quest Position Map Prototype: PASS
+Phase 10.25 Quest Position Map Visual Cleanup: PASS
+Phase 10.26 Japanese Quest Position Map Visual: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -93,7 +95,7 @@ V14 deep scoring: BLOCK
 - Market Slope inputs do not authorize web research or invented market estimates. Market data must be source-backed or marked unknown. Operator Position is a strategic posture, not investment advice. Portfolio Entry Horizon supports launch-order reasoning, not automated permission.
 - Quest Map Layer is allowed as a specification in `docs/quest_map_layer_v0_1.md`, including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, Regret Guard Note, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential. It does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Quest Snapshot / TimeTube Archive is allowed only as a specification in `docs/quest_snapshot_timetube_archive_v0_1.md`. It does not authorize snapshot output files, PDF generation, screenshot automation, Quest Map rendering, CLI behavior changes, Score History, Entry Window Drift, or implementation beyond the current Gate.
-- Quest Position Map v0.1 is allowed only as a static/manual prototype in `outputs/quest_position_map.svg`, with its spec in `docs/quest_position_map_v0_1.md` and example in `examples/quest_position_map_v0_1.md`. It does not authorize full Quest Map implementation, automatic scoring, market research, runtime rendering, Quest Snapshot output, PDF generation, screenshot automation, CLI behavior changes, or external posting.
+- Quest Position Map v0.1 is allowed only as a static/manual prototype in `outputs/quest_position_map.svg` and Japanese visual variant in `outputs/quest_position_map_ja.svg`, with its spec in `docs/quest_position_map_v0_1.md` and example in `examples/quest_position_map_v0_1.md`. It does not authorize full Quest Map implementation, automatic scoring, market research, runtime rendering, Quest Snapshot output, PDF generation, screenshot automation, CLI behavior changes, or external posting.
 - Quest Map recommendations must not use broad parent-market charts as strong evidence. Parent-market-only or unknown reference charts should lower confidence and avoid LAUNCH or broad build recommendations.
 - Quest Map recommendations must not move from HOLD to PROOF unless Minimum Viable Edge is named. High AI Expansion Potential alone is not permission to launch.
 - Quest Map recommendations must not recommend LAUNCH when Repeat Frequency / Order Volume is unknown, or when cost compression is one-off without a repeatable proof path.
@@ -124,6 +126,7 @@ V14 deep scoring: BLOCK
 - maintain the Quest Map Layer specification
 - maintain the Quest Snapshot / TimeTube Archive specification
 - maintain the static/manual Quest Position Map prototype
+- maintain the Japanese static/manual Quest Position Map visual variant
 - maintain data-only `outputs/chart_data.json`
 - maintain static `outputs/entry_window_map.svg`, including the simple Competition Pressure layer and screenshot-ready context card layout
 - update governance/re-entry files when phase state changes
