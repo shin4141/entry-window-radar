@@ -19,6 +19,10 @@ Relationship preservation is valid, but it must remain survivable.
 AI displacement may begin by splitting standardized work away from relationship-heavy work.
 The goal is not to replace people coldly.
 The goal is to prevent hidden cost drag from becoming future regret.
+Cost drag matters differently depending on survival sensitivity.
+A relationship cost can be valid, but only if the operator can survive it or offset it.
+The goal is not to force switching.
+The goal is to prevent invisible cost drag from becoming payroll damage, runway loss, or future regret.
 ```
 
 ## Core Metaphor
@@ -243,6 +247,70 @@ If Company A returns only about 50,000 yen per year in uncertain work, the opera
 - Can the company absorb the difference?
 - Does keeping A force cuts elsewhere?
 - Does the relationship value justify the survival drag?
+
+### Actual Cashflow Sensitivity
+
+Actual Cashflow Sensitivity indicates how strongly a visible cost drag affects the operator's real cashflow, payroll safety, runway, investment capacity, or survival.
+
+It answers:
+
+```text
+Can this operator absorb the cost drag without damaging survival or future options?
+```
+
+Important framing:
+
+This is not a moral judgment against loyalty or relationships.
+
+It is a survival check.
+
+The same cost drag can be:
+
+- acceptable for a cash-rich company
+- painful for a thin-margin company
+- dangerous for a company near payroll, tax, rent, debt, or runway limits
+
+Allowed levels:
+
+#### LOW
+
+The operator can absorb the cost drag without harming payroll, runway, investment capacity, or resilience.
+
+#### MEDIUM
+
+The cost drag affects budget choices, investment capacity, or margin, but does not immediately threaten survival.
+
+#### HIGH
+
+The cost drag meaningfully pressures payroll, runway, tax/rent/debt capacity, hiring, or ability to compete.
+
+#### CRITICAL
+
+The cost drag may directly contribute to layoffs, cashflow failure, owner burnout, or business closure if left unaddressed.
+
+#### UNKNOWN
+
+Cashflow sensitivity is not known.
+
+Do not treat cost drag as harmless.
+
+Recommend naming the sensitivity or using bounded proof / split routing.
+
+### Survival Threshold
+
+Survival Threshold is the point where a recurring cost drag stops being a preference or relationship cost and starts threatening survival, payroll, hiring, investment, resilience, or business continuity.
+
+It answers:
+
+```text
+At what point does inaction become survival-relevant?
+```
+
+Examples:
+
+- If monthly savings are small compared to stable profit, Survival Cost Drag may be LOW.
+- If monthly savings equal a meaningful part of payroll, rent, tax reserve, debt payment, or owner runway, Survival Cost Drag may be HIGH.
+- If ignoring the drag could force layoffs, missed payments, or business closure, Regret Cost of Inaction should rise.
 
 ### Regret Cost of Inaction
 
@@ -908,6 +976,40 @@ The operator should test the cheaper/faster route without treating it as automat
 
 The Quest Map should make survival pressure visible before the operator loses options.
 
+### Cashflow Sensitivity Example A: Absorbable Relationship Cost
+
+- Annual saving: 84,000 yen
+- Company condition: profitable with enough buffer
+- Actual Cashflow Sensitivity: LOW
+- Recommended interpretation: relationship preservation may be acceptable if relationship value is real
+
+The cost drag still should be named, but it does not force a survival action.
+
+### Cashflow Sensitivity Example B: Thin-Margin Constraint
+
+- Annual saving: 84,000 yen
+- Company condition: thin-margin and unable to invest in necessary tools or marketing
+- Actual Cashflow Sensitivity: MEDIUM / HIGH
+- Recommended interpretation: do not ignore cost drag; consider split routing or negotiation
+
+The same cost difference matters more when it blocks future options.
+
+### Cashflow Sensitivity Example C: Survival-Relevant Drag
+
+- Cost drag contributes to inability to pay staff, tax, rent, or debt
+- Actual Cashflow Sensitivity: CRITICAL
+- Recommended interpretation: Regret Cost of Inaction is HIGH; passive loyalty is not enough
+
+A survival action is required before cost drag becomes payroll damage, runway loss, or closure.
+
+### Cashflow Sensitivity Example D: Claimed Relationship Value
+
+- Relationship value is claimed but not named
+- Actual Cashflow Sensitivity: UNKNOWN
+- Recommended interpretation: name the relationship value or test split routing
+
+Do not assume the cost is harmless when sensitivity is unknown.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -970,6 +1072,12 @@ Quest Map Layer is not:
 - If a company keeps the old relationship despite clear cost drag, the card should name what must offset that cost: increased sales, reciprocal work, price negotiation, scope reduction, or other cost savings.
 - If the operator cannot offset the cost drag, recommend PROOF / HOLD / split routing rather than passive inaction.
 - Relationship preservation is valid only when the cost remains survivable or is offset by named value.
+- Do not treat Survival Cost Drag as LOW unless Actual Cashflow Sensitivity is LOW or directly named.
+- If Actual Cashflow Sensitivity is UNKNOWN, avoid passive inaction. Recommend naming the cashflow sensitivity, running a bounded proof, or split routing.
+- If Actual Cashflow Sensitivity is HIGH or CRITICAL, Regret Cost of Inaction should increase unless the relationship value clearly offsets the cost.
+- If Reciprocal Relationship Value is high but Actual Cashflow Sensitivity is HIGH, recommend negotiation, split routing, scope reduction, or explicit offset planning.
+- If Net Switching Delta favors keeping but Actual Cashflow Sensitivity is HIGH, require a named offset plan.
+- If cost drag threatens payroll, runway, or survival, the decision becomes survival-relevant, not merely preference-relevant.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -998,6 +1106,10 @@ Potential input fields:
 - switching_pressure
 - cost_compression_trigger
 - survival_cost_drag
+- actual_cashflow_sensitivity
+- survival_threshold
+- cashflow_sensitivity_note
+- required_offset_plan
 - regret_cost_of_inaction
 - reciprocal_relationship_value
 - net_switching_delta
@@ -1047,6 +1159,10 @@ Potential output:
 - Switching Pressure
 - Cost Compression Trigger
 - Survival Cost Drag: LOW / MEDIUM / HIGH / UNKNOWN
+- Actual Cashflow Sensitivity: LOW / MEDIUM / HIGH / CRITICAL / UNKNOWN
+- Survival Threshold: NOT NEAR / APPROACHING / NEAR / BREACHED / UNKNOWN
+- Cashflow Sensitivity Note: one sentence explaining whether the cost drag is absorbable, painful, survival-relevant, or unknown
+- Required Offset Plan: NONE / NEGOTIATE / SPLIT ROUTING / INCREASE SALES / CUT OTHER COSTS / NAME RELATIONSHIP VALUE / UNKNOWN
 - Regret Cost of Inaction: LOW / MEDIUM / HIGH / UNKNOWN
 - Reciprocal Relationship Value: LOW / MEDIUM / HIGH / UNKNOWN
 - Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
@@ -1094,4 +1210,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now includes Survival Cost Drag, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, and Split Routing Option, allowing it to evaluate AI-enabled cost compression without reducing human relationships to simple replacement decisions.
+Quest Map Layer now distinguishes cost drag from actual survival sensitivity by adding Actual Cashflow Sensitivity, Survival Threshold, Cashflow Sensitivity Note, and Required Offset Plan.
