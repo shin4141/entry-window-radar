@@ -15,6 +15,10 @@ Cost compression becomes strategically meaningful when it repeats.
 Repeat frequency shows possible habitat.
 Paid repeat shows capture.
 Retention reason shows whether capture can survive.
+Relationship preservation is valid, but it must remain survivable.
+AI displacement may begin by splitting standardized work away from relationship-heavy work.
+The goal is not to replace people coldly.
+The goal is to prevent hidden cost drag from becoming future regret.
 ```
 
 ## Core Metaphor
@@ -194,6 +198,195 @@ from:
 ```text
 the buyer can no longer justify paying the old cost
 ```
+
+### Survival Cost Drag
+
+Survival Cost Drag is the ongoing cost burden created by preserving an existing provider, workflow, relationship, or manual process when a cheaper/faster equivalent option may exist.
+
+It answers:
+
+```text
+If we keep paying the old cost, does that cost begin to threaten survival, hiring, payroll, runway, or operational resilience?
+```
+
+Important framing:
+
+Relationship preservation is not wrong.
+
+The question is whether the relationship-maintenance cost remains survivable.
+
+Example:
+
+Company A:
+
+- long-term relationship
+- human/manual work
+- 10,000 yen per job
+- normal or slow delivery
+- sometimes sends work back to the customer
+
+Company B:
+
+- similar perceived output
+- faster delivery
+- 3,000 yen per job
+- first trial free
+
+If the job repeats monthly:
+
+- cost saving from B may be 7,000 yen per month
+- annual saving may be 84,000 yen
+
+If Company A returns only about 50,000 yen per year in uncertain work, the operator must ask:
+
+- Is preserving Company A worth the net cost?
+- Can the company absorb the difference?
+- Does keeping A force cuts elsewhere?
+- Does the relationship value justify the survival drag?
+
+### Regret Cost of Inaction
+
+Regret Cost of Inaction is the future regret created when the operator fails to act on visible cost pressure early enough.
+
+It answers:
+
+```text
+If we ignore this cost pressure now, what future harm may we regret?
+```
+
+Potential future harms:
+
+- employee layoffs
+- cashflow deterioration
+- owner burnout
+- inability to invest
+- inability to compete with AI-enabled providers
+- business closure
+- delayed but harsher restructuring
+- loss of options because the decision was postponed too long
+
+Important framing:
+
+The purpose is not to blame the operator for loyalty.
+
+The purpose is to make the future cost of inaction visible before survival is damaged.
+
+### Relationship-Preserving Displacement
+
+Relationship-Preserving Displacement is when a buyer does not fully cut an old provider, but shifts standardized or repeatable work to a cheaper/faster AI-enabled provider.
+
+It answers:
+
+```text
+Can the operator preserve the human relationship while routing standard repeat work elsewhere?
+```
+
+Possible routing:
+
+- Trust-heavy work stays with Company A.
+- Relationship-sensitive work stays with Company A.
+- Standardized repeat work moves to Company B.
+- Speed-sensitive or low-risk comparison work moves to Company B.
+- Trial work is used to test equivalence before deeper switching.
+
+This is not "replace all relationships."
+
+It is "separate the parts of the relationship that require trust from the parts that are standardized and cost-compressible."
+
+### Reciprocal Relationship Value
+
+Reciprocal Relationship Value is the value returned by the existing relationship, such as referrals, work sent back, emergency help, local trust, goodwill, information flow, introductions, or reputation.
+
+It answers:
+
+```text
+What does the old relationship give back, and is that value greater than the cost drag?
+```
+
+Types:
+
+- direct returned revenue
+- referrals
+- emergency support
+- reputation protection
+- local network access
+- future option value
+- personal trust
+- non-monetary stability
+
+Important rule:
+
+Do not reduce all relationships to money.
+
+But if the operator keeps a costly relationship, the non-monetary value should be named rather than assumed.
+
+### Net Switching Delta
+
+Net Switching Delta is the difference between the expected saving from changing or splitting the workflow and the expected value of keeping the old relationship.
+
+Formula-like framing:
+
+```text
+Net Switching Delta =
+expected cost saving
+minus expected reciprocal relationship value
+minus switching damage risk
+```
+
+This is not a precise financial forecast.
+
+It is an As-of reasoning tool.
+
+Example:
+
+- Cost saving: 84,000 yen per year
+- Expected reciprocal work: 50,000 yen per year, uncertain
+- Switching damage risk: unknown
+
+Interpretation:
+
+The operator should not automatically switch.
+
+But the operator must not ignore that preserving the old relationship has a real cost that must be justified, offset, or split-routed.
+
+### Switching Damage Risk
+
+Switching Damage Risk is the harm created by reducing or replacing the old provider.
+
+It may include:
+
+- loss of referrals
+- reputational damage
+- emergency support loss
+- social conflict
+- reduced trust in the local network
+- loss of bundled or hidden services
+- lower quality in edge cases
+- legal or operational risk
+- relationship damage that exceeds direct cost savings
+
+Important rule:
+
+If Switching Damage Risk is high, prefer split routing or negotiation over full replacement.
+
+### Split Routing Option
+
+Split Routing Option is a strategy where the operator does not fully switch providers, but divides work by risk, trust, standardization, and cost compression.
+
+Examples:
+
+- keep relationship-heavy work with the incumbent
+- move standardized repeat work to the AI-enabled provider
+- test low-risk tasks first
+- negotiate scope or price with the incumbent
+- use the new provider as a benchmark before switching
+- keep both providers while measuring actual outcomes
+
+Core principle:
+
+The best action may be neither loyalty nor replacement.
+
+It may be controlled decomposition.
 
 ### Repeat Frequency / Order Volume
 
@@ -681,6 +874,40 @@ Trust can support a durable habitat only if delivery remains repeatable and Carr
 
 Goodwill can be useful socially, but it should not be mistaken for durable market demand.
 
+### Relationship Cost Example A: Visible Survival Cost Drag
+
+- Old provider: 10,000 yen per repeated job
+- New AI-enabled provider: equivalent output for 3,000 yen
+- Reciprocal relationship value: old provider occasionally sends 50,000 yen/year of work
+- Expected saving: 84,000 yen/year if the job repeats monthly
+- Recommended interpretation: do not automatically switch; the old relationship now has visible Survival Cost Drag
+
+Consider split routing, negotiation, or a proof trial before full replacement.
+
+### Relationship Cost Example B: High Switching Damage Risk
+
+- Old provider: deep trust, emergency support, and high referral value
+- Switching Damage Risk: HIGH
+- Recommended action: PROOF with split routing or negotiation, not full switch
+
+Relationship value may justify keeping trust-heavy work with the incumbent while testing standardized work elsewhere.
+
+### Relationship Cost Example C: Weak Reciprocal Value And Standardized Output
+
+- Old provider: weak reciprocal value, high cost, slow delivery, and standardized output
+- New provider: low trial friction and output equivalence
+- Recommended action: PROOF or SHORT CYCLE depending on paid repeat and window lifespan
+
+The operator should test the cheaper/faster route without treating it as automatic permission for broad replacement.
+
+### Relationship Cost Example D: Regret Cost of Inaction
+
+- Operator response: refuses to address cost drag until layoffs or closure become necessary
+- Interpretation: this is Regret Cost of Inaction
+- Recommended action: surface the risk early, name offsets, and avoid passive inaction
+
+The Quest Map should make survival pressure visible before the operator loses options.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -735,6 +962,14 @@ Quest Map Layer is not:
 - UNKNOWN should keep the quest at PROOF or HOLD.
 - Do not move from PROOF to LAUNCH only because a buyer paid again; require a retention reason that can repeat beyond one buyer.
 - Repeat Retention Reason must be considered with Repeat Frequency, Paid Repeat Signal, Carrier Fit, Enemy Strength, and Reference Chart Quality.
+- Do not recommend full switching only because a cheaper provider exists.
+- If Reciprocal Relationship Value is high, consider split routing or negotiation before replacement.
+- If Survival Cost Drag is high and Regret Cost of Inaction is high, do not allow "relationship" to hide the survival risk.
+- If Net Switching Delta favors switching but Switching Damage Risk is high, recommend split routing or bounded trial.
+- If Split Routing Option exists, prefer it before full replacement when relationship value is meaningful.
+- If a company keeps the old relationship despite clear cost drag, the card should name what must offset that cost: increased sales, reciprocal work, price negotiation, scope reduction, or other cost savings.
+- If the operator cannot offset the cost drag, recommend PROOF / HOLD / split routing rather than passive inaction.
+- Relationship preservation is valid only when the cost remains survivable or is offset by named value.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -762,6 +997,13 @@ Potential input fields:
 - reward_potential
 - switching_pressure
 - cost_compression_trigger
+- survival_cost_drag
+- regret_cost_of_inaction
+- reciprocal_relationship_value
+- net_switching_delta
+- switching_damage_risk
+- split_routing_option
+- relationship_preserving_displacement_note
 - repeat_frequency_order_volume
 - repeat_frequency_note
 - paid_repeat_signal
@@ -804,6 +1046,13 @@ Potential output:
 - Reward potential
 - Switching Pressure
 - Cost Compression Trigger
+- Survival Cost Drag: LOW / MEDIUM / HIGH / UNKNOWN
+- Regret Cost of Inaction: LOW / MEDIUM / HIGH / UNKNOWN
+- Reciprocal Relationship Value: LOW / MEDIUM / HIGH / UNKNOWN
+- Net Switching Delta: FAVOR KEEPING / FAVOR SPLIT ROUTING / FAVOR SWITCHING / UNKNOWN
+- Switching Damage Risk: LOW / MEDIUM / HIGH / UNKNOWN
+- Split Routing Option: YES / NO / UNKNOWN
+- Relationship-Preserving Displacement Note: one sentence explaining whether the old relationship can be preserved while standardized work is partially moved
 - Repeat Frequency / Order Volume
 - Repeat Frequency Note
 - Paid Repeat Signal
@@ -845,4 +1094,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now distinguishes paid repeat as a signal from the reason behind repeat retention, preventing one-off goodwill or discount-only repeats from being mistaken for durable habitat.
+Quest Map Layer now includes Survival Cost Drag, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, and Split Routing Option, allowing it to evaluate AI-enabled cost compression without reducing human relationships to simple replacement decisions.
