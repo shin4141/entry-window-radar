@@ -485,19 +485,30 @@ def read_chart_data_output() -> ChartData:
     )
 
 
-def svg_text_block(text: str, x: int, y: int, width: int, line_height: int = 16) -> str:
+def svg_text_block(text: str, x: int, y: int, width: int, line_height: int = 16, css_class: str = "small") -> str:
     lines = wrap(text, width=width)
     return "\n".join(
-        f'<text x="{x}" y="{y + index * line_height}" class="small">{escape(line)}</text>'
+        f'<text x="{x}" y="{y + index * line_height}" class="{css_class}">{escape(line)}</text>'
         for index, line in enumerate(lines)
     )
 
 
+def entry_label_reason(label: str) -> str:
+    reasons = {
+        "FAST ENTRY": "Strong timing and edge. Enter small with one bounded proof.",
+        "NICHE WEDGE": "Strong edge, crowded space. Enter through one narrow proof wedge.",
+        "WAIT": "Evidence is thin or timing unclear. Gather one proof point first.",
+        "SHORT CYCLE": "Usable now, but holding risk is high. Keep the cycle short.",
+        "AVOID": "Pressure is high and edge is weak. Do not enter without a new signal.",
+    }
+    return reasons[label]
+
+
 def render_entry_window_map_svg(data: ChartData) -> str:
-    width = 760
-    height = 560
+    width = 960
+    height = 640
     plot_left = 96
-    plot_top = 92
+    plot_top = 122
     plot_size = 330
     plot_bottom = plot_top + plot_size
     plot_right = plot_left + plot_size
@@ -519,10 +530,19 @@ def render_entry_window_map_svg(data: ChartData) -> str:
         tick_labels.append(f'<text x="{x:.1f}" y="{plot_bottom + 22}" class="tick" text-anchor="middle">{value}</text>')
         tick_labels.append(f'<text x="{plot_left - 16}" y="{y + 4:.1f}" class="tick" text-anchor="end">{value}</text>')
 
-    note_x = 510
-    note_y = 122
-    bottleneck = svg_text_block(f"Bottleneck: {data.maximum_bottleneck}", note_x, note_y + 116, 34)
-    next_action = svg_text_block(f"Next action: {data.next_action}", note_x, note_y + 170, 34)
+    note_x = 515
+    note_y = 124
+    label_reason = svg_text_block(entry_label_reason(data.entry_label), note_x, note_y + 88, 52, 17, "reason")
+    bottleneck = svg_text_block(f"Bottleneck: {data.maximum_bottleneck}", note_x + 12, note_y + 226, 52, 16, "callout")
+    next_action = svg_text_block(f"Next: {data.next_action}", note_x + 12, note_y + 302, 52, 16, "callout")
+    ai_guidance = svg_text_block(
+        "AI/Codex posture: use this as context; do not broaden scope without a new gate.",
+        note_x,
+        note_y + 386,
+        58,
+        15,
+        "ai",
+    )
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
   <title id="title">Entry Window Map</title>
@@ -535,17 +555,24 @@ def render_entry_window_map_svg(data: ChartData) -> str:
     .title {{ fill: #0f172a; font-family: Arial, sans-serif; font-size: 24px; font-weight: 700; }}
     .label {{ fill: #334155; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }}
     .small {{ fill: #334155; font-family: Arial, sans-serif; font-size: 13px; }}
+    .entry-label {{ fill: #0f172a; font-family: Arial, sans-serif; font-size: 28px; font-weight: 700; }}
+    .reason {{ fill: #334155; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }}
+    .callout {{ fill: #0f172a; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; }}
+    .ai {{ fill: #475569; font-family: Arial, sans-serif; font-size: 12px; }}
     .tick {{ fill: #64748b; font-family: Arial, sans-serif; font-size: 12px; }}
     .pressure-ring {{ fill: #e0f2fe; fill-opacity: 0.18; stroke: #64748b; stroke-width: 2; stroke-dasharray: 5 5; stroke-opacity: 0.7; }}
     .pressure-label {{ fill: #475569; font-family: Arial, sans-serif; font-size: 12px; font-weight: 700; }}
     .point {{ fill: #2563eb; stroke: #ffffff; stroke-width: 3; }}
     .tag {{ fill: #dbeafe; stroke: #93c5fd; stroke-width: 1; }}
+    .label-banner {{ fill: #e0f2fe; stroke: #7dd3fc; stroke-width: 1; }}
+    .bottleneck-box {{ fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; }}
+    .next-box {{ fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 1; }}
     .boundary {{ fill: #475569; font-family: Arial, sans-serif; font-size: 12px; }}
   </style>
   <rect class="bg" x="0" y="0" width="{width}" height="{height}"/>
   <text x="40" y="48" class="title">Entry Window Map</text>
   <text x="40" y="72" class="small">Target: {escape(data.target)} | As-of: {escape(data.as_of)}</text>
-  <rect class="panel" x="32" y="82" width="430" height="400" rx="6"/>
+  <rect class="panel" x="32" y="104" width="430" height="440" rx="6"/>
   {chr(10).join(grid_lines)}
   <line x1="{plot_left}" y1="{plot_bottom}" x2="{plot_right}" y2="{plot_bottom}" class="axis"/>
   <line x1="{plot_left}" y1="{plot_top}" x2="{plot_left}" y2="{plot_bottom}" class="axis"/>
@@ -557,16 +584,21 @@ def render_entry_window_map_svg(data: ChartData) -> str:
   <circle cx="{market_x:.1f}" cy="{operator_y:.1f}" r="8" class="point"/>
   <rect x="{point_label_x - 6}" y="{point_label_y - 17}" width="124" height="24" rx="5" class="tag"/>
   <text x="{point_label_x}" y="{point_label_y}" class="label">{escape(data.entry_label)}</text>
-  <rect class="panel" x="490" y="82" width="230" height="400" rx="6"/>
-  <text x="{note_x}" y="{note_y}" class="label">As-of Position</text>
-  <text x="{note_x}" y="{note_y + 28}" class="small">Market Readiness: {data.market_readiness}/5</text>
-  <text x="{note_x}" y="{note_y + 50}" class="small">Operator Edge: {data.operator_edge}/5</text>
-  <text x="{note_x}" y="{note_y + 72}" class="small">Competition Pressure: {data.competition_pressure}/5</text>
-  <text x="{note_x}" y="{note_y + 94}" class="small">Confidence: {escape(data.confidence)}</text>
+  <rect class="panel" x="490" y="104" width="430" height="440" rx="6"/>
+  <rect class="label-banner" x="510" y="124" width="390" height="58" rx="6"/>
+  <text x="{note_x}" y="{note_y + 38}" class="entry-label">{escape(data.entry_label)}</text>
+  {label_reason}
+  <text x="{note_x}" y="{note_y + 150}" class="small">Market Readiness: {data.market_readiness}/5</text>
+  <text x="{note_x}" y="{note_y + 172}" class="small">Operator Edge: {data.operator_edge}/5</text>
+  <text x="{note_x}" y="{note_y + 194}" class="small">Competition Pressure: {data.competition_pressure}/5</text>
+  <text x="{note_x + 210}" y="{note_y + 150}" class="small">Confidence: {escape(data.confidence)}</text>
+  <rect class="bottleneck-box" x="510" y="{note_y + 205}" width="390" height="54" rx="6"/>
   {bottleneck}
+  <rect class="next-box" x="510" y="{note_y + 281}" width="390" height="76" rx="6"/>
   {next_action}
-  <text x="40" y="518" class="boundary">As-of display levels, not probabilities or predictions.</text>
-  <text x="40" y="538" class="boundary">This is not investment advice, VC scoring, or automated launch permission.</text>
+  {ai_guidance}
+  <text x="40" y="588" class="boundary">As-of display levels, not probabilities or predictions.</text>
+  <text x="40" y="608" class="boundary">This is not investment advice, VC scoring, or automated launch permission.</text>
 </svg>
 """
 

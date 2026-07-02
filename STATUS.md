@@ -21,6 +21,7 @@ Phase 8.2 Structured Output v0.2: PASS
 Phase 8.3 Entry Window Map SVG Rendering: PASS
 Phase 8.4 V13 LoopKit Map Dogfood: PASS
 Phase 8.5 Competition Pressure Layer: PASS
+Phase 8.7 Single Target Screenshot-Ready Map: PASS
 Phase 9.0 Portfolio Entry Horizon Spec: PASS
 Phase 9.1 Portfolio Input Templates: PASS
 Phase 9.2 Portfolio Dogfood Inputs: PASS
@@ -54,6 +55,7 @@ V14 deep scoring: BLOCK
 | Phase 8.3 Entry Window Map SVG Rendering | PASS | Adds static local-only `outputs/entry_window_map.svg`; PNG/HTML rendering remains HOLD. |
 | Phase 8.4 V13 LoopKit Map Dogfood | PASS | `f6da977 Record V13 LoopKit map dogfood result` |
 | Phase 8.5 Competition Pressure Layer | PASS | `967d012 Add competition pressure layer to map`; PNG/HTML/history/drift remain HOLD or blocked. |
+| Phase 8.7 Single Target Screenshot-Ready Map | PASS | Refines static `outputs/entry_window_map.svg` as a shared human/AI context card; posting, PNG/HTML, portfolio automation, and advanced scoring remain HOLD or blocked. |
 | Phase 9.0 Portfolio Entry Horizon Spec | PASS | `1e2618a Add Portfolio Entry Horizon specification`; implementation remained gated at this phase. |
 | Phase 9.1 Portfolio Input Templates | PASS | Adds manual `inputs/projects.md` and `inputs/markets.md`; portfolio scoring, JSON output, SVG output, and launch-order automation remain HOLD. |
 | Phase 9.2 Portfolio Dogfood Inputs | PASS | Fills `inputs/projects.md` and `inputs/markets.md` with Shin's first manual portfolio snapshot; scoring/rendering/automation remain HOLD. |
@@ -83,11 +85,12 @@ Latest ring-map dogfood commit: 3426de0 Record V13 LoopKit ring map dogfood resu
 Latest Portfolio Entry Horizon spec commit: 1e2618a Add Portfolio Entry Horizon specification
 Latest Portfolio input templates commit: 372f69c Add portfolio input templates
 Latest Portfolio dogfood inputs commit: ad235b3 Add Shin portfolio dogfood inputs
+Latest market slope position commit: 0146355 Add market slope position layer
 ```
 
 ## Completion Line
 
-Portfolio Entry Horizon now models market slope and operator position, allowing future launch-order decisions to consider phase, slope evidence, capital flow, technical unlocks, deployments, FOMO risk, and whether the operator should build, invest, adopt, prove, hold, salvage, or avoid.
+The single-target Entry Window Map now works as a screenshot-ready shared context card for both the user and Codex/AI, showing current position, label reason, bottleneck, and one next action without adding posting, portfolio automation, or advanced scoring.
 
 ## Missing Closure
 
@@ -101,6 +104,7 @@ Phase 8.2 Structured Output v0.2: resolved and PASS
 Phase 8.3 Entry Window Map SVG Rendering: resolved and PASS
 Phase 8.4 V13 LoopKit Map Dogfood: resolved and PASS
 Phase 8.5 Competition Pressure Layer: resolved and PASS
+Phase 8.7 Single Target Screenshot-Ready Map: resolved and PASS
 Phase 9.0 Portfolio Entry Horizon Spec: resolved and PASS
 Phase 9.1 Portfolio Input Templates: resolved and PASS
 Phase 9.2 Portfolio Dogfood Inputs: resolved and PASS
@@ -130,7 +134,7 @@ After this patch: Codex/AI for portfolio scoring/output/rendering only after exp
 - GitHub publishing is PASS for public repo `entry-window-radar`.
 - Public repo URL: https://github.com/shin4141/entry-window-radar
 - AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
-- Static `outputs/entry_window_map.svg` is allowed as local-only As-of display, including a simple Competition Pressure layer; PNG, HTML, interactive rendering, Score History, and Entry Window Drift remain gated.
+- Static `outputs/entry_window_map.svg` is allowed as a local-only screenshot-ready shared human/AI context card, including a simple Competition Pressure layer; posting, PNG, HTML, interactive rendering, Score History, and Entry Window Drift remain gated.
 - Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`, now refined around Market Slope and Operator Position; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, web research, invented market data, or external research.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.

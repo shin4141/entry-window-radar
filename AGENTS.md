@@ -42,6 +42,7 @@ Phase 8.2 Structured Output v0.2: PASS
 Phase 8.3 Entry Window Map SVG Rendering: PASS
 Phase 8.4 V13 LoopKit Map Dogfood: PASS
 Phase 8.5 Competition Pressure Layer: PASS
+Phase 8.7 Single Target Screenshot-Ready Map: PASS
 Phase 9.0 Portfolio Entry Horizon Spec: PASS
 Phase 9.1 Portfolio Input Templates: PASS
 Phase 9.2 Portfolio Dogfood Inputs: PASS
@@ -71,7 +72,7 @@ V14 deep scoring: BLOCK
 - GitHub publishing is PASS for the current public repo; external posting remains HOLD until explicit maintainer GO.
 - AI-assisted usage through `prompts/ai_assisted_entry_window_prompt.md` is allowed, but it must not be treated as permission for external APIs, automated web research, or external posting.
 - Structured `outputs/chart_data.json` is allowed as data-only output. Its 0-5 levels are display-stage levels, not probabilities, predictions, VC scores, or investment advice.
-- Static `outputs/entry_window_map.svg` is allowed as local-only As-of display, including a simple Competition Pressure layer. It does not authorize PNG, HTML, interactive rendering, Score History, Entry Window Drift, or advanced scoring.
+- Static `outputs/entry_window_map.svg` is allowed as local-only As-of display and screenshot-ready shared human/AI context, including a simple Competition Pressure layer. It does not authorize posting, PNG, HTML, interactive rendering, portfolio automation, Score History, Entry Window Drift, or advanced scoring.
 - Portfolio Entry Horizon is allowed as a specification plus manual dogfood templates in `inputs/projects.md` and `inputs/markets.md`. It does not authorize portfolio scoring, portfolio JSON output, portfolio SVG output, launch-order automation, ranking, or external research.
 - Market Slope inputs do not authorize web research or invented market estimates. Market data must be source-backed or marked unknown. Operator Position is a strategic posture, not investment advice. Portfolio Entry Horizon supports launch-order reasoning, not automated permission.
 
@@ -88,7 +89,7 @@ V14 deep scoring: BLOCK
 - maintain manual Portfolio Entry Horizon dogfood inputs
 - maintain Market Slope and Operator Position fields as manual inputs
 - maintain data-only `outputs/chart_data.json`
-- maintain static `outputs/entry_window_map.svg`, including the simple Competition Pressure layer
+- maintain static `outputs/entry_window_map.svg`, including the simple Competition Pressure layer and screenshot-ready context card layout
 - update governance/re-entry files when phase state changes
 
 ## Not Allowed Without Explicit GO Or CAP

@@ -80,6 +80,12 @@ Phase 8.5 renders Competition Pressure as a simple visual pressure layer in the 
 - a calm scaled ring around the plotted point
 - the numeric Competition Pressure value remains a display-stage level
 
+Phase 8.7 makes the single-target SVG screenshot-ready as a shared human/AI context card:
+
+- Entry Label is visually primary
+- label reason, bottleneck, and one next action are visible in the SVG
+- AI/Codex posture is shown so the map can be used as shared context without broadening scope
+
 Future implementation may add:
 
 - `outputs/entry_window_map.html`
@@ -114,4 +120,4 @@ Terminal route remains available, but star-ready value depends on making the cur
 
 ## Completion Line
 
-Entry Window Map v0.1 has documented meaning, axes, labels, non-goals, structured data, static SVG output, and a simple Competition Pressure layer, without expanding into prediction, history, drift, PNG, HTML, or external scope.
+Entry Window Map v0.1 has documented meaning, axes, labels, non-goals, structured data, static SVG output, a simple Competition Pressure layer, and screenshot-ready shared human/AI context, without expanding into prediction, history, drift, PNG, HTML, posting, or external scope.
