@@ -11,6 +11,7 @@ Core principle:
 ```text
 The purpose is not to predict the winning market.
 The purpose is to raise the operator's starting certainty before entering a quest.
+Cost compression becomes strategically meaningful when it repeats.
 ```
 
 ## Core Metaphor
@@ -190,6 +191,60 @@ from:
 ```text
 the buyer can no longer justify paying the old cost
 ```
+
+### Repeat Frequency / Order Volume
+
+Repeat Frequency / Order Volume indicates how often the target workflow repeats and whether enough orders exist to create revenue, learning, trust, distribution proof, or a durable habitat.
+
+It answers:
+
+```text
+Is this a one-off compression, or a repeatable quest worth building around?
+```
+
+Why it matters:
+
+A 10,000 yen -> 3,000 yen compression is not equally valuable in every workflow.
+
+If the workflow happens once per year, the entry window may be weak.
+
+If it repeats weekly, monthly, or across many similar buyers, it may become a real proof path or habitat.
+
+Allowed levels:
+
+#### ONE-OFF
+
+The workflow occurs rarely or only once.
+
+Usually not enough for LAUNCH.
+
+May support a small proof, case study, or salvage action.
+
+#### LOW REPEAT
+
+The workflow repeats occasionally.
+
+PROOF may be valid, but long-term habitat is uncertain.
+
+#### MEDIUM REPEAT
+
+The workflow repeats enough to test paid recurrence, improve delivery, and build trust.
+
+PROOF or SHORT CYCLE may be valid depending on window lifespan and enemy strength.
+
+#### HIGH REPEAT
+
+The workflow repeats often or exists across many similar buyers.
+
+If output equivalence, switching pressure, and revenue capture are also strong, this can support LAUNCH or habitat-building.
+
+#### UNKNOWN
+
+Repeat frequency is not known.
+
+Do not recommend LAUNCH.
+
+Recommend PROOF or HOLD until repeat behavior is observed.
 
 ### Output Equivalence
 
@@ -393,8 +448,11 @@ National ramen demand may be useful background, but the quest is controlled by l
 - Parent market: AI / automation
 - Relevant quest: replace or compress one expensive manual workflow
 - Minimum Viable Edge: known repeated workflow + current price + buyer access + output equivalence + low-friction trial
+- Repeat Frequency / Order Volume: HIGH REPEAT if the buyer orders weekly/monthly or many similar buyers have the same workflow
 - Switching Pressure: high if the buyer is under cost pressure and the current provider is expensive or slow
-- Recommended Action: PROOF
+- Current price: 10,000 yen per job
+- Compressed price: 3,000 yen per job
+- Recommended Action: PROOF first; LAUNCH only after output equivalence and paid repeat are proven
 
 This is not an "AI is growing" quest. It becomes real only when an existing paid workflow can be compressed while preserving perceived output value.
 
@@ -406,6 +464,23 @@ This is not an "AI is growing" quest. It becomes real only when an existing paid
 - Recommended Action: PROOF, not broad LAUNCH
 
 The operator should avoid building a generic app from hype. The first quest is to prove that one buyer/workflow has enough pain and payment willingness.
+
+### Example F: One-Time Document Cleanup
+
+- Relevant quest: compress one document cleanup task
+- Cost Compression Trigger: may be real
+- Repeat Frequency / Order Volume: ONE-OFF
+- Recommended Action: PROOF / SALVAGE, not broad build
+
+A one-time compression can create a useful case study or small salvage action, but it does not by itself justify a durable quest.
+
+### Example G: Monthly Reporting Workflow
+
+- Relevant quest: compress a recurring monthly report
+- Repeat Frequency / Order Volume: MEDIUM REPEAT or HIGH REPEAT
+- Recommended Action: PROOF first; durable habitat may be possible if buyer cost pressure and output equivalence are strong
+
+Monthly reporting can become a real habitat when recurrence, output equivalence, switching pressure, and low trial friction are all visible.
 
 ## Non-Goals
 
@@ -439,6 +514,12 @@ Quest Map Layer is not:
 - If As-of Starting Advantage is weak, do not recommend broad build from hype alone.
 - If AI Expansion Potential is high but Reference Chart Quality is weak, recommend research/proof, not launch.
 - Prefer early small position + AI expansion over broad speculative build.
+- Do not recommend LAUNCH if Repeat Frequency / Order Volume is UNKNOWN.
+- If Cost Compression Trigger is strong but Repeat Frequency is ONE-OFF, prefer PROOF or SALVAGE, not broad build.
+- If Repeat Frequency is HIGH but Output Equivalence is unproven, recommend PROOF.
+- If Repeat Frequency is HIGH, Switching Pressure is high, Output Equivalence is proven, Trial Friction is low, and Carrier Fit is strong, stronger action may be considered.
+- Repeat Frequency helps distinguish SHORT CYCLE from long-term habitat: high repeat but short lifespan may be SHORT CYCLE; medium/high repeat with long lifespan may be INCUBATE or LAUNCH depending on proof.
+- Repeat Frequency must not override Reference Chart Quality. A high-repeat claim from a weak parent-market chart should lower confidence.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -466,6 +547,8 @@ Potential input fields:
 - reward_potential
 - switching_pressure
 - cost_compression_trigger
+- repeat_frequency_order_volume
+- repeat_frequency_note
 - output_equivalence
 - trial_friction
 - window_lifespan
@@ -502,6 +585,8 @@ Potential output:
 - Reward potential
 - Switching Pressure
 - Cost Compression Trigger
+- Repeat Frequency / Order Volume
+- Repeat Frequency Note
 - Output Equivalence
 - Trial Friction
 - Window lifespan
@@ -537,4 +622,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now includes Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential, allowing it to judge whether an operator has a better-than-hype starting position before entering a quest.
+Quest Map Layer now distinguishes one-time cost-compression opportunities from repeatable workflow habitats by adding Repeat Frequency / Order Volume.
