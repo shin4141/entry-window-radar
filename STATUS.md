@@ -48,6 +48,7 @@ Phase 10.27 Japanese Quest Position Map Clarity: PASS
 Phase 10.28 Industry Slope Timeline Prototype: PASS
 Phase 10.29 Industry Slope Timeline Niche Meaning: PASS
 Phase 10.30 Industry Lifecycle Classification: PASS
+Phase 10.31 Codex Interpretation Note / Evidence Basis Spec: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -104,6 +105,7 @@ V14 deep scoring: BLOCK
 | Phase 10.28 Industry Slope Timeline Prototype | PASS | Adds `docs/industry_slope_timeline_v0_1.md`, `outputs/industry_slope_timeline_ja.svg`, and `examples/industry_slope_timeline_v0_1_ja.md` as static/manual lifecycle context; automatic market analysis, forecasting, market research, scoring automation, and full Quest Map implementation remain HOLD. |
 | Phase 10.29 Industry Slope Timeline Niche Meaning | PASS | Clarifies that the timeline curve shows the entry-window lifecycle for a specific niche, not the whole AI industry peaking or declining; no new market data, scoring, or implementation was added. |
 | Phase 10.30 Industry Lifecycle Classification | PASS | Adds text lifecycle classification and concern level to Industry Slope Timeline so the selected reference niche is interpreted by current lifecycle position, not curve shape alone; no new chart, scoring, market research, or implementation was added. |
+| Phase 10.31 Codex Interpretation Note / Evidence Basis Spec | PASS | Adds `docs/codex_interpretation_note_v0_1.md` to define the future written evidence layer behind Quest Position Map, Industry Slope Timeline, and Quest Snapshot; no new charts, scoring, market research, external APIs, or implementation were added. |
 
 ## Active Repo
 
@@ -150,11 +152,14 @@ Latest Quest Snapshot / TimeTube Archive spec commit: 97f24c3 Add Quest Snapshot
 Latest Quest Position Map visual cleanup commit: 85c8f1e Improve Quest Position Map visual layout
 Latest Japanese Quest Position Map visual commit: bfadb8f Add Japanese Quest Position Map visual
 Latest Japanese Quest Position Map clarity commit: b66c40b Improve Japanese Quest Position Map clarity
+Latest Industry Slope Timeline prototype commit: ed8f349 Add Industry Slope Timeline prototype
+Latest Industry Slope Timeline niche meaning commit: 35eb87c Clarify Industry Slope Timeline niche meaning
+Latest Industry Lifecycle Classification commit: 1d9d47c Add Industry Lifecycle Classification
 ```
 
 ## Completion Line
 
-Industry Slope Timeline now includes a text lifecycle classification so each reference niche can be interpreted by its current lifecycle position rather than forcing every industry into the same curve.
+Codex Interpretation Note now defines how Quest Snapshot can preserve the evidence, counterarguments, assumptions, and missing proof behind the visuals without making the visuals themselves overly complex.
 
 ## Missing Closure
 
@@ -195,6 +200,7 @@ Phase 10.27 Japanese Quest Position Map Clarity: resolved and PASS
 Phase 10.28 Industry Slope Timeline Prototype: resolved and PASS
 Phase 10.29 Industry Slope Timeline Niche Meaning: resolved and PASS
 Phase 10.30 Industry Lifecycle Classification: resolved and PASS
+Phase 10.31 Codex Interpretation Note / Evidence Basis Spec: resolved and PASS
 Industry Slope Timeline runtime/automation: HOLD until separately gated
 Survival / Relationship Risk Panel: HOLD until separately gated
 Portfolio JSON output: HOLD until separately gated
@@ -212,7 +218,7 @@ V14 deep scoring: BLOCK
 
 ```text
 Current patch owner: Codex
-After this patch: Shin for Industry Lifecycle Classification visual review; Codex/AI for further visual/spec work only after explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin for Codex Interpretation Note review; Codex/AI for further visual/spec work only after explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
 ```
 
 ## Re-entry Notes
@@ -228,6 +234,7 @@ After this patch: Shin for Industry Lifecycle Classification visual review; Code
 - Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`, now refined around Market Slope and Operator Position; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, web research, invented market data, or external research.
 - Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, Regret Guard Note, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Quest Snapshot / TimeTube Archive has a v0.1 specification in `docs/quest_snapshot_timetube_archive_v0_1.md`; it defines future As-of snapshot purpose, storage formats, lifecycle, and Codex reuse path, but does not authorize PDF generation, screenshot automation, runtime snapshot outputs, Quest Map rendering, CLI changes, or implementation beyond the current Gate.
+- Codex Interpretation Note / Evidence Basis has a v0.1 specification in `docs/codex_interpretation_note_v0_1.md`; it defines the future written evidence layer that should accompany Quest Position Map, Industry Slope Timeline, and Quest Snapshot, but does not authorize market research, source invention, new charts, scoring automation, snapshot output, PDF generation, screenshot automation, CLI changes, or external posting.
 - Quest Position Map v0.1 has static/manual visual prototypes in `outputs/quest_position_map.svg` and `outputs/quest_position_map_ja.svg`, with specification in `docs/quest_position_map_v0_1.md`, English sample explanation in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`; these use hand-authored illustrative data and do not authorize full Quest Map implementation, automatic recommendation logic, market research, runtime rendering, PDF, screenshot automation, snapshot output, CLI changes, or external posting.
 - Industry Slope Timeline v0.1 has a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with specification in `docs/industry_slope_timeline_v0_1.md` and example note in `examples/industry_slope_timeline_v0_1_ja.md`; its curve represents a specific niche's entry-window lifecycle, not the whole AI industry, and its text lifecycle classification should be read before judging whether a project is early, late, safe, crowded, or risky. It uses hand-authored illustrative data and does not authorize automatic market analysis, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI changes, or external posting.
 - Delivery Scope Radar and V14 deep scoring remain blocked.

@@ -37,6 +37,8 @@ Industry Slope Timeline v0.1 is a static/manual Japanese SVG prototype for showi
 
 Quest Snapshot / TimeTube Archive is a planned/spec-defined archive layer for saving Quest Map outputs as As-of handoff artifacts. Its specification lives in `docs/quest_snapshot_timetube_archive_v0_1.md`; snapshot export, PDF generation, screenshot automation, and archive generation are not implemented.
 
+Codex Interpretation Note is a planned/spec-defined evidence layer for Quest Snapshot. Its specification lives in `docs/codex_interpretation_note_v0_1.md`; it explains why visuals were placed or classified, but does not add market research, scoring automation, or snapshot generation.
+
 ## Three Lines
 
 ### Market Line
@@ -88,6 +90,7 @@ Included:
 - a Quest Position Map v0.1 static/manual SVG prototype, including a Japanese visual variant
 - an Industry Slope Timeline v0.1 static/manual Japanese SVG prototype
 - a Quest Snapshot / TimeTube Archive v0.1 specification for future As-of handoff artifacts
+- a Codex Interpretation Note v0.1 specification for future evidence-basis handoff
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -198,6 +201,7 @@ docs/quest_map_layer_v0_1.md
 docs/quest_position_map_v0_1.md
 docs/industry_slope_timeline_v0_1.md
 docs/quest_snapshot_timetube_archive_v0_1.md
+docs/codex_interpretation_note_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
