@@ -12,6 +12,8 @@
     .slope { fill: none; stroke: #2563eb; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
     .slope-shadow { fill: none; stroke: #bfdbfe; stroke-width: 15; stroke-linecap: round; stroke-linejoin: round; }
     .future-path { fill: none; stroke: #94a3b8; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 9 9; }
+    .branch-line { fill: none; stroke: #0f766e; stroke-width: 3; stroke-linecap: round; }
+    .branch-label { fill: #0f766e; font-size: 12px; font-weight: 700; }
     .uncertainty { fill: #dbeafe; fill-opacity: 0.36; stroke: #93c5fd; stroke-width: 1; }
     .title { fill: #0f172a; font-size: 26px; font-weight: 700; }
     .subtitle { fill: #475569; font-size: 13px; }
@@ -61,7 +63,7 @@
   <text x="96" y="636" class="tiny" text-anchor="middle">過去</text>
   <text x="660" y="636" class="tiny" text-anchor="middle">現在</text>
   <text x="1114" y="636" class="tiny" text-anchor="middle">未来 / 再評価</text>
-  <text transform="translate(62 374) rotate(-90)" class="label" text-anchor="middle">業界勾配 / 導入圧</text>
+  <text transform="translate(62 374) rotate(-90)" class="label" text-anchor="middle">このニッチの参入余地</text>
   <text x="84" y="598" class="tiny" text-anchor="end">低い</text>
   <text x="84" y="158" class="tiny" text-anchor="end">高い</text>
 
@@ -82,12 +84,15 @@
   <text x="824" y="478" class="note">INCUBATE を再検討</text>
 
   <text x="940" y="250" class="phase">2029-2030</text>
-  <text x="940" y="270" class="note">一部はLLM / SaaSに吸収</text>
-  <text x="940" y="288" class="note">残るのは導入摩擦に強い棲息地</text>
+  <text x="940" y="270" class="note">このニッチは成熟 / 分岐</text>
+  <text x="940" y="288" class="note">次のAI活用領域へ波及</text>
 
   <path class="slope-shadow" d="M120 548 C250 538, 360 500, 470 440 C560 390, 615 352, 660 318"/>
   <path class="slope" d="M120 548 C250 538, 360 500, 470 440 C560 390, 615 352, 660 318"/>
   <path class="future-path" d="M660 318 C775 282, 930 260, 1100 238"/>
+  <path class="branch-line" d="M1060 218 C1086 194, 1102 174, 1122 146"/>
+  <polygon points="1124,143 1117,163 1108,154" fill="#0f766e"/>
+  <text x="1032" y="176" class="branch-label">次のニッチへ</text>
 
   <circle cx="660" cy="318" r="23" class="marker-ring"/>
   <circle cx="660" cy="318" r="10" class="marker"/>
@@ -99,6 +104,8 @@
   <text x="242" y="132" class="card-head" text-anchor="middle">参照線: AI低導入・反復業務圧縮</text>
   <rect x="840" y="112" width="250" height="30" rx="15" class="warn"/>
   <text x="965" y="132" class="warn-text" text-anchor="middle">AI市場全体では判断しない</text>
+  <text x="412" y="121" class="small">AI産業全体は継続成長中。</text>
+  <text x="412" y="139" class="small">この線は「反復業務圧縮」ニッチの参入タイミングのみを示す。</text>
 
   <text x="690" y="374" class="small">Operator position: PROOF SEEKER</text>
   <text x="690" y="394" class="small">Recommended posture: PROOF</text>
@@ -113,26 +120,27 @@
   <text x="250" y="861" class="card-text">初期導入〜勾配上昇の入口</text>
 
   <text x="250" y="900" class="card-head">理由</text>
-  <text x="250" y="921" class="card-text">コスト圧迫とAI圧縮余地は見えるが、出力同等性と有料リピートは未証明。</text>
+  <text x="250" y="921" class="card-text">AI市場全体ではなく、AI低導入・反復業務圧縮という参照線では、</text>
+  <text x="250" y="938" class="card-text">まだ比較試用と有料リピートを取る段階。</text>
 
   <rect class="next-box" x="66" y="894" width="156" height="76" rx="6"/>
   <text x="144" y="920" class="card-head" text-anchor="middle">姿勢</text>
   <text x="144" y="941" class="card-text" text-anchor="middle">PROOF SEEKER</text>
 
-  <rect class="next-box" x="250" y="946" width="430" height="80" rx="6"/>
-  <text x="270" y="972" class="card-head">次の一手</text>
-  <text x="270" y="993" class="card-text">1つの反復業務で比較試用を行い、</text>
-  <text x="270" y="1010" class="card-text">同等成果物と有料リピートを確認する。</text>
+  <rect class="next-box" x="250" y="952" width="430" height="74" rx="6"/>
+  <text x="270" y="977" class="card-head">次の一手</text>
+  <text x="270" y="998" class="card-text">1つの反復業務で比較試用を行い、</text>
+  <text x="270" y="1015" class="card-text">同等成果物と有料リピートを確認する。</text>
 
   <rect class="boundary-box" x="704" y="834" width="410" height="86" rx="6"/>
   <text x="724" y="861" class="card-head">広げてはいけない境界</text>
-  <text x="724" y="882" class="card-text">参照線が近くなる前に、AI市場全体や</text>
-  <text x="724" y="899" class="card-text">汎用アプリ市場で判断しない。</text>
+  <text x="724" y="882" class="card-text">AI産業全体の成長線と、このニッチの参入余地を混同しない。</text>
+  <text x="724" y="899" class="card-text">AI市場全体のブーム感だけで汎用アプリ化しない。</text>
 
   <rect class="recheck-box" x="704" y="946" width="410" height="80" rx="6"/>
   <text x="724" y="972" class="card-head">再評価条件</text>
-  <text x="724" y="993" class="card-text">有料リピート、出力同等性、競合増加、</text>
-  <text x="724" y="1010" class="card-text">またはLLM/SaaS吸収の兆候が出た時。</text>
+  <text x="724" y="993" class="card-text">有料リピート、出力同等性、競合増加、LLM/SaaS吸収、</text>
+  <text x="724" y="1010" class="card-text">または次のニッチへの移行兆候が出た時。</text>
 
   <rect class="panel" x="34" y="1094" width="1132" height="64" rx="8"/>
   <text x="62" y="1122" class="footer">表示段階のプロトタイプ。予測・投資助言・自動ローンチ許可ではない。</text>

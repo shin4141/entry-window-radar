@@ -19,6 +19,26 @@ Industry Slope Timeline adds the reference-market time layer behind that map:
 
 The timeline does not replace Quest Position Map. It provides a companion Figure 2 for Quest Snapshot / TimeTube Archive use.
 
+## Reference Niche, Not The Whole AI Market
+
+The curve must not be read as the whole AI industry.
+
+It is the entry-window line for one specific reference niche or workflow. A niche can mature, narrow, branch, or become absorbed while the wider AI industry continues rising into other areas.
+
+For example, an "AI-low-adoption recurring workflow compression" curve only describes the current entry timing for that niche. It does not mean "AI is ending" or that the overall AI market is peaking.
+
+Read the chart as:
+
+```text
+Where does this quest sit in this niche's lifecycle?
+```
+
+Do not read it as:
+
+```text
+What will happen to the entire AI industry?
+```
+
 ## Relationship To Reference Chart Quality
 
 The timeline must name the reference line being used.
@@ -43,14 +63,15 @@ If the reference chart is broad, weak, unknown, or borrowed from an adjacent mar
 
 The left side shows prior conditions. The center shows current As-of position. The right side is a recheck zone, not a guaranteed future.
 
-### Y-Axis: Industry Slope / Adoption Momentum / Opportunity Pressure
+### Y-Axis: Entry Room For This Niche
 
 - low
 - rising
 - steepening
-- crowded / saturated / absorbed
+- mature / branching
+- crowded / saturated / absorbed within this niche
 
-Higher position means the reference line appears to have more adoption pressure, urgency, or competitive movement. It does not mean guaranteed success.
+Higher position means this specific niche appears to have more entry pressure, adoption timing, or urgency. It does not mean guaranteed success, and it does not describe the entire AI industry.
 
 ## Timeline Phases
 
@@ -60,8 +81,9 @@ Use simple phase labels:
 - early adoption
 - steepening
 - crowded
+- mature / branching
 - post-FOMO
-- declining
+- declining for this specific niche
 - unclear
 
 These are qualitative display phases, not scored market predictions.
@@ -108,6 +130,7 @@ It can also help answer:
 
 This chart does not answer:
 
+- whether the whole AI industry is peaking or ending
 - the exact future market size
 - guaranteed growth
 - investment timing

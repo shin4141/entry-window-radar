@@ -46,6 +46,7 @@ Phase 10.25 Quest Position Map Visual Cleanup: PASS
 Phase 10.26 Japanese Quest Position Map Visual: PASS
 Phase 10.27 Japanese Quest Position Map Clarity: PASS
 Phase 10.28 Industry Slope Timeline Prototype: PASS
+Phase 10.29 Industry Slope Timeline Niche Meaning: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -100,6 +101,7 @@ V14 deep scoring: BLOCK
 | Phase 10.26 Japanese Quest Position Map Visual | PASS | Adds `outputs/quest_position_map_ja.svg` as a Japanese visual variant for direct Shin review; full Quest Map implementation, runtime rendering, PDF, screenshot automation, and posting remain HOLD. |
 | Phase 10.27 Japanese Quest Position Map Clarity | PASS | Simplifies the Japanese plot labels and adds `examples/quest_position_map_v0_1_ja.md` so future Codex/AI reads the selected card and snapshot text before changing scope. |
 | Phase 10.28 Industry Slope Timeline Prototype | PASS | Adds `docs/industry_slope_timeline_v0_1.md`, `outputs/industry_slope_timeline_ja.svg`, and `examples/industry_slope_timeline_v0_1_ja.md` as static/manual lifecycle context; automatic market analysis, forecasting, market research, scoring automation, and full Quest Map implementation remain HOLD. |
+| Phase 10.29 Industry Slope Timeline Niche Meaning | PASS | Clarifies that the timeline curve shows the entry-window lifecycle for a specific niche, not the whole AI industry peaking or declining; no new market data, scoring, or implementation was added. |
 
 ## Active Repo
 
@@ -150,7 +152,7 @@ Latest Japanese Quest Position Map clarity commit: b66c40b Improve Japanese Ques
 
 ## Completion Line
 
-Industry Slope Timeline v0.1 provides the first Japanese static visual prototype for showing where the operator/project sits inside an industry or reference-market lifecycle without becoming prediction, market sizing, scoring automation, or launch permission.
+Industry Slope Timeline now clearly shows a specific niche's entry-window lifecycle, not the whole AI industry's peak or decline.
 
 ## Missing Closure
 
@@ -189,6 +191,7 @@ Phase 10.25 Quest Position Map Visual Cleanup: resolved and PASS
 Phase 10.26 Japanese Quest Position Map Visual: resolved and PASS
 Phase 10.27 Japanese Quest Position Map Clarity: resolved and PASS
 Phase 10.28 Industry Slope Timeline Prototype: resolved and PASS
+Phase 10.29 Industry Slope Timeline Niche Meaning: resolved and PASS
 Industry Slope Timeline runtime/automation: HOLD until separately gated
 Survival / Relationship Risk Panel: HOLD until separately gated
 Portfolio JSON output: HOLD until separately gated
@@ -206,7 +209,7 @@ V14 deep scoring: BLOCK
 
 ```text
 Current patch owner: Codex
-After this patch: Shin for Industry Slope Timeline visual review; Codex/AI for further visual/spec work only after explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin for corrected Industry Slope Timeline visual review; Codex/AI for further visual/spec work only after explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
 ```
 
 ## Re-entry Notes
@@ -223,6 +226,6 @@ After this patch: Shin for Industry Slope Timeline visual review; Codex/AI for f
 - Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, Regret Guard Note, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Quest Snapshot / TimeTube Archive has a v0.1 specification in `docs/quest_snapshot_timetube_archive_v0_1.md`; it defines future As-of snapshot purpose, storage formats, lifecycle, and Codex reuse path, but does not authorize PDF generation, screenshot automation, runtime snapshot outputs, Quest Map rendering, CLI changes, or implementation beyond the current Gate.
 - Quest Position Map v0.1 has static/manual visual prototypes in `outputs/quest_position_map.svg` and `outputs/quest_position_map_ja.svg`, with specification in `docs/quest_position_map_v0_1.md`, English sample explanation in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`; these use hand-authored illustrative data and do not authorize full Quest Map implementation, automatic recommendation logic, market research, runtime rendering, PDF, screenshot automation, snapshot output, CLI changes, or external posting.
-- Industry Slope Timeline v0.1 has a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with specification in `docs/industry_slope_timeline_v0_1.md` and example note in `examples/industry_slope_timeline_v0_1_ja.md`; it uses hand-authored illustrative data and does not authorize automatic market analysis, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI changes, or external posting.
+- Industry Slope Timeline v0.1 has a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with specification in `docs/industry_slope_timeline_v0_1.md` and example note in `examples/industry_slope_timeline_v0_1_ja.md`; its curve represents a specific niche's entry-window lifecycle, not the whole AI industry. It uses hand-authored illustrative data and does not authorize automatic market analysis, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI changes, or external posting.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.
