@@ -41,6 +41,8 @@ Codex Interpretation Note is a planned/spec-defined evidence layer for Quest Sna
 
 Snapshot Trajectory / Drift Delta is a planned/spec-defined recurring value layer for comparing saved Quest Snapshots over time. Its specification lives in `docs/snapshot_trajectory_drift_delta_v0_1.md`; a static/manual Japanese visual prototype lives at `outputs/snapshot_trajectory_drift_delta_ja.svg`, with an example note at `examples/snapshot_trajectory_drift_delta_v0_1_ja.md`; runtime comparison and automatic drift scoring are not implemented.
 
+Quest Snapshot Visual Design System is a planned/spec-defined design layer for making future Quest Map and Snapshot visuals more consistent, readable, Japanese-friendly, and screenshot-ready. Its specification lives in `docs/quest_snapshot_visual_design_system_v0_1.md`; existing SVGs are not redesigned by this spec.
+
 ## Three Lines
 
 ### Market Line
@@ -94,6 +96,7 @@ Included:
 - a Quest Snapshot / TimeTube Archive v0.1 specification for future As-of handoff artifacts
 - a Codex Interpretation Note v0.1 specification for future evidence-basis handoff
 - a Snapshot Trajectory / Drift Delta v0.1 specification and static/manual Japanese visual prototype for future multi-snapshot comparison
+- a Quest Snapshot Visual Design System v0.1 specification for future visual consistency
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -208,6 +211,7 @@ docs/industry_slope_timeline_v0_1.md
 docs/quest_snapshot_timetube_archive_v0_1.md
 docs/codex_interpretation_note_v0_1.md
 docs/snapshot_trajectory_drift_delta_v0_1.md
+docs/quest_snapshot_visual_design_system_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
