@@ -13,7 +13,8 @@ The purpose is not to predict the winning market.
 The purpose is to raise the operator's starting certainty before entering a quest.
 Cost compression becomes strategically meaningful when it repeats.
 Repeat frequency shows possible habitat.
-Paid repeat shows captured habitat.
+Paid repeat shows capture.
+Retention reason shows whether capture can survive.
 ```
 
 ## Core Metaphor
@@ -307,6 +308,70 @@ No evidence collected.
 
 Do not recommend LAUNCH.
 
+### Repeat Retention Reason
+
+Repeat Retention Reason is the reason a buyer pays again, requests repeat delivery, or introduces a similar buyer after an initial trial or first paid proof.
+
+It answers:
+
+```text
+Was the repeat payment caused by a durable advantage, or by a temporary/fragile reason?
+```
+
+Why it matters:
+
+Paid Repeat Signal shows that repeat value was captured.
+
+Repeat Retention Reason explains whether that value can persist, compound, or spread.
+
+Allowed categories:
+
+#### PRICE
+
+Buyer repeats because the compressed price is meaningfully lower.
+
+#### SPEED
+
+Buyer repeats because delivery is faster.
+
+#### OUTPUT EQUIVALENCE
+
+Buyer repeats because the output is good enough compared with the old provider/workflow.
+
+#### TRUST
+
+Buyer repeats because the operator or delivery process became trusted.
+
+#### URGENCY
+
+Buyer repeats because the buyer has recurring time pressure or operational urgency.
+
+#### NO BETTER ALTERNATIVE
+
+Buyer repeats because alternatives are worse, slower, too expensive, or too hard to use.
+
+#### WORKFLOW FIT
+
+Buyer repeats because the solution fits the buyer's actual workflow with low friction.
+
+#### RELATIONSHIP / FAVOR
+
+Buyer repeats mainly because of personal relationship, courtesy, or one-off goodwill.
+
+This is weaker than durable retention.
+
+#### DISCOUNT-ONLY
+
+Buyer repeats only while the offer is unusually cheap or free-like.
+
+This is fragile and should lower confidence.
+
+#### UNKNOWN
+
+The reason for repeat is not known.
+
+Do not treat repeat payment as durable habitat evidence.
+
 ### Output Equivalence
 
 Output Equivalence means the buyer perceives the new output as good enough compared with the existing paid output.
@@ -580,6 +645,42 @@ Paid repeat is stronger than stated interest because it shows the operator can c
 
 Even if the buyer pays once, the signal remains limited when the workflow itself does not repeat.
 
+### Example L: Repeat Because It Is Faster And Cheaper Enough
+
+- Relevant quest: repeatable compressed workflow
+- Buyer response: pays again because output was good enough, faster, and cheaper
+- Repeat Retention Reason: PRICE + SPEED + OUTPUT EQUIVALENCE
+- Recommended Action: continue PROOF; consider INCUBATE if repeat frequency and Carrier Fit are strong
+
+The repeat is more durable when the buyer returns for reasons that can survive beyond novelty.
+
+### Example M: Repeat Because It Is Discounted
+
+- Relevant quest: repeatable workflow trial
+- Buyer response: pays again only because of a large discount
+- Repeat Retention Reason: DISCOUNT-ONLY
+- Recommended Action: PROOF / HOLD, not LAUNCH
+
+Discount-only retention may reveal weak Payment / Revenue Capture.
+
+### Example N: Repeat Because Trust And Workflow Fit Improved
+
+- Relevant quest: monthly compressed workflow
+- Buyer response: pays again because they trust the operator and the workflow fits their monthly process
+- Repeat Retention Reason: TRUST + WORKFLOW FIT
+- Recommended Action: INCUBATE may be considered if repeat frequency and paid repeat remain strong
+
+Trust can support a durable habitat only if delivery remains repeatable and Carrier Fit stays healthy.
+
+### Example O: Repeat As A Favor
+
+- Relevant quest: one buyer repeat after trial
+- Buyer response: pays again as a personal favor or courtesy
+- Repeat Retention Reason: RELATIONSHIP-FAVOR
+- Recommended Action: do not treat as market proof
+
+Goodwill can be useful socially, but it should not be mistaken for durable market demand.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -625,6 +726,15 @@ Quest Map Layer is not:
 - If Paid Repeat Signal is STRONG and Window Lifespan is long, consider INCUBATE or LAUNCH depending on Carrier Fit and Enemy Strength.
 - Paid Repeat Signal should not override Reference Chart Quality. Strong-looking repeat interest from a weak or overly broad chart must lower confidence.
 - Free trial satisfaction is not the same as Paid Repeat Signal.
+- Paid Repeat Signal is stronger when the Repeat Retention Reason is PRICE + SPEED + OUTPUT EQUIVALENCE + WORKFLOW FIT.
+- TRUST strengthens long-term habitat only if delivery remains repeatable and Carrier Fit is healthy.
+- URGENCY can justify SHORT CYCLE if the window is short, or INCUBATE if the workflow repeats long-term.
+- NO BETTER ALTERNATIVE can support PROOF or INCUBATE, but should be rechecked because alternatives may appear.
+- RELATIONSHIP / FAVOR should not justify LAUNCH.
+- DISCOUNT-ONLY should not justify LAUNCH and may indicate weak Payment / Revenue Capture.
+- UNKNOWN should keep the quest at PROOF or HOLD.
+- Do not move from PROOF to LAUNCH only because a buyer paid again; require a retention reason that can repeat beyond one buyer.
+- Repeat Retention Reason must be considered with Repeat Frequency, Paid Repeat Signal, Carrier Fit, Enemy Strength, and Reference Chart Quality.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -656,6 +766,8 @@ Potential input fields:
 - repeat_frequency_note
 - paid_repeat_signal
 - paid_repeat_note
+- repeat_retention_reason
+- repeat_retention_note
 - output_equivalence
 - trial_friction
 - window_lifespan
@@ -696,6 +808,8 @@ Potential output:
 - Repeat Frequency Note
 - Paid Repeat Signal
 - Paid Repeat Note
+- Repeat Retention Reason: PRICE / SPEED / OUTPUT EQUIVALENCE / TRUST / URGENCY / NO BETTER ALTERNATIVE / WORKFLOW FIT / RELATIONSHIP-FAVOR / DISCOUNT-ONLY / UNKNOWN
+- Repeat Retention Note: one sentence explaining why the buyer repeated and whether that reason can generalize
 - Output Equivalence
 - Trial Friction
 - Window lifespan
@@ -731,4 +845,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer now distinguishes theoretical recurrence from actual captured repeat value by adding Paid Repeat Signal.
+Quest Map Layer now distinguishes paid repeat as a signal from the reason behind repeat retention, preventing one-off goodwill or discount-only repeats from being mistaken for durable habitat.
