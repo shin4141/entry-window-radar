@@ -27,7 +27,7 @@ Recheck Condition:
 
 Entry Window Map is a static local SVG view for showing the current As-of position at a glance. It includes a simple visual Competition Pressure layer; the specification lives in `docs/entry_window_map_v0_1.md`; PNG, HTML, and interactive rendering are not implemented.
 
-Portfolio Entry Horizon is a planned/spec-defined future layer for comparing multiple projects and launch order; the specification lives in `docs/portfolio_entry_horizon_v0_1.md`, and no portfolio implementation is included yet.
+Portfolio Entry Horizon is a planned/spec-defined future layer for comparing multiple projects and launch order. Its specification lives in `docs/portfolio_entry_horizon_v0_1.md`; manual templates live in `inputs/projects.md` and `inputs/markets.md`, but automated portfolio scoring is not implemented.
 
 ## Three Lines
 
@@ -76,6 +76,7 @@ Included:
 - an AI-assisted usage prompt for chat-first diagnosis
 - an Entry Window Map v0.1 specification for a future view
 - a Portfolio Entry Horizon v0.1 specification for a future multi-project comparison layer
+- manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
 - an Entry Window Chart schema for the MVP output shape
@@ -129,7 +130,7 @@ Not included:
 - Entry Window Drift
 - external posting materials
 - PNG, HTML, or interactive Entry Window Map rendering
-- portfolio inputs, portfolio outputs, or launch-order automation
+- portfolio scoring, portfolio outputs, or launch-order automation
 - prediction of future success
 
 ## Boundary

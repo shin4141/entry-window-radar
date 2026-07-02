@@ -118,12 +118,14 @@ Portfolio Entry Horizon is not:
 - external research automation
 - portfolio management for financial assets
 
-## Future Input Direction
+## Input Direction
 
-Future implementation may add:
+Phase 9.1 adds manual input templates:
 
 - `inputs/projects.md`
 - `inputs/markets.md`
+
+These templates make multi-project and source-backed market-horizon inputs visible, but they do not authorize portfolio scoring, JSON output, SVG output, or launch-order automation.
 
 Potential `projects.md` shape:
 
