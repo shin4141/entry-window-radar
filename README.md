@@ -31,7 +31,7 @@ Portfolio Entry Horizon is a planned/spec-defined future layer for comparing mul
 
 Quest Map Layer is a planned/spec-defined future layer for choosing the right opportunity as a game-like quest under current constraints. Its specification lives in `docs/quest_map_layer_v0_1.md`; Quest Map rendering, scoring automation, and launch permission are not implemented.
 
-Quest Position Map v0.1 is a static/manual SVG prototype for showing quest candidates by proof distance, habitat/reward potential, enemy pressure, and survival/relationship risk. Its specification lives in `docs/quest_position_map_v0_1.md`; the English prototype SVG lives at `outputs/quest_position_map.svg`, with a Japanese visual variant at `outputs/quest_position_map_ja.svg`; full Quest Map scoring and automated rendering are not implemented.
+Quest Position Map v0.1 is a static/manual SVG prototype for showing quest candidates by proof distance, habitat/reward potential, enemy pressure, and survival/relationship risk. Its specification lives in `docs/quest_position_map_v0_1.md`; the English prototype SVG lives at `outputs/quest_position_map.svg`, with a simplified Japanese visual variant at `outputs/quest_position_map_ja.svg` and interpretation note at `examples/quest_position_map_v0_1_ja.md`; full Quest Map scoring and automated rendering are not implemented.
 
 Quest Snapshot / TimeTube Archive is a planned/spec-defined archive layer for saving Quest Map outputs as As-of handoff artifacts. Its specification lives in `docs/quest_snapshot_timetube_archive_v0_1.md`; snapshot export, PDF generation, screenshot automation, and archive generation are not implemented.
 
@@ -195,4 +195,5 @@ docs/quest_position_map_v0_1.md
 docs/quest_snapshot_timetube_archive_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
+examples/quest_position_map_v0_1_ja.md
 ```

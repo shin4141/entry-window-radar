@@ -44,6 +44,7 @@ Phase 10.23 Quest Snapshot / TimeTube Archive Spec: PASS
 Phase 10.24 Quest Position Map Prototype: PASS
 Phase 10.25 Quest Position Map Visual Cleanup: PASS
 Phase 10.26 Japanese Quest Position Map Visual: PASS
+Phase 10.27 Japanese Quest Position Map Clarity: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -96,6 +97,7 @@ V14 deep scoring: BLOCK
 | Phase 10.24 Quest Position Map Prototype | PASS | Adds `docs/quest_position_map_v0_1.md`, `outputs/quest_position_map.svg`, and `examples/quest_position_map_v0_1.md` as a static/manual visual prototype; full Quest Map implementation, automatic scoring, market research, runtime rendering, PDF, screenshot automation, snapshot output, and CLI changes remain HOLD. |
 | Phase 10.25 Quest Position Map Visual Cleanup | PASS | `85c8f1e Improve Quest Position Map visual layout`; keeps the prototype static/manual while improving selected quest visibility, card placement, label spacing, and footer fit. |
 | Phase 10.26 Japanese Quest Position Map Visual | PASS | Adds `outputs/quest_position_map_ja.svg` as a Japanese visual variant for direct Shin review; full Quest Map implementation, runtime rendering, PDF, screenshot automation, and posting remain HOLD. |
+| Phase 10.27 Japanese Quest Position Map Clarity | PASS | Simplifies the Japanese plot labels and adds `examples/quest_position_map_v0_1_ja.md` so future Codex/AI reads the selected card and snapshot text before changing scope. |
 
 ## Active Repo
 
@@ -144,7 +146,7 @@ Latest Quest Position Map visual cleanup commit: 85c8f1e Improve Quest Position 
 
 ## Completion Line
 
-Quest Position Map v0.1 now has English and Japanese static visual prototypes for choosing quests by proof distance, habitat/reward potential, enemy pressure, and survival/relationship risk without becoming prediction, scoring automation, runtime rendering, or launch permission.
+The Japanese Quest Position Map now works as a compact visual anchor, with interpretation carried by the selected Quest Card and snapshot text rather than forcing the graph to explain everything alone.
 
 ## Missing Closure
 
@@ -181,6 +183,7 @@ Phase 10.23 Quest Snapshot / TimeTube Archive Spec: resolved and PASS
 Phase 10.24 Quest Position Map Prototype: resolved and PASS
 Phase 10.25 Quest Position Map Visual Cleanup: resolved and PASS
 Phase 10.26 Japanese Quest Position Map Visual: resolved and PASS
+Phase 10.27 Japanese Quest Position Map Clarity: resolved and PASS
 Industry Slope Timeline: HOLD until Japanese Quest Position Map is reviewed
 Portfolio JSON output: HOLD until separately gated
 Portfolio SVG output: HOLD until separately gated
@@ -213,6 +216,6 @@ After this patch: Shin for Japanese Quest Position Map SHIN-VISUAL PASS / PARTIA
 - Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`, now refined around Market Slope and Operator Position; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, web research, invented market data, or external research.
 - Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality, Minimum Viable Edge, Switching Pressure, Cost Compression Trigger, Survival Cost Drag, Actual Cashflow Sensitivity, Survival Threshold, Quantified Runway / Payroll Exposure, Exposure Anchor, Exposure Severity, Exposure Amount, Exposure Ratio, Reciprocal Value Coverage Ratio, Relationship Value Coverage Band, Relationship Damage Severity, Relationship Damage Quality, Relationship Damage Channels, Damage Mitigation Option, Damage Mitigation Note, Dependency Asymmetry, Counterparty Viability, Shared Sink Risk, Exit Timing Pressure, Relationship Optionality, Inherited / Local Relationship Inertia, Historical Rescue Credit, Legacy Trust Decay, Local Reputation Constraint, Seat-Owned Regret Guard, Protected Priority Stack, Counterfactual Integrity, Future Self-Blame Risk, As-of Reality Shown, Human Override / Commitment, Regret Guard Note, Dependency / Viability Note, Regret Cost of Inaction, Reciprocal Relationship Value, Net Switching Delta, Switching Damage Risk, Split Routing Option, Repeat Frequency / Order Volume, Paid Repeat Signal, Repeat Retention Reason, Output Equivalence, Trial Friction, As-of Starting Advantage, and AI Expansion Potential; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Quest Snapshot / TimeTube Archive has a v0.1 specification in `docs/quest_snapshot_timetube_archive_v0_1.md`; it defines future As-of snapshot purpose, storage formats, lifecycle, and Codex reuse path, but does not authorize PDF generation, screenshot automation, runtime snapshot outputs, Quest Map rendering, CLI changes, or implementation beyond the current Gate.
-- Quest Position Map v0.1 has static/manual visual prototypes in `outputs/quest_position_map.svg` and `outputs/quest_position_map_ja.svg`, with specification in `docs/quest_position_map_v0_1.md` and sample explanation in `examples/quest_position_map_v0_1.md`; these use hand-authored illustrative data and do not authorize full Quest Map implementation, automatic recommendation logic, market research, runtime rendering, PDF, screenshot automation, snapshot output, CLI changes, or external posting.
+- Quest Position Map v0.1 has static/manual visual prototypes in `outputs/quest_position_map.svg` and `outputs/quest_position_map_ja.svg`, with specification in `docs/quest_position_map_v0_1.md`, English sample explanation in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`; these use hand-authored illustrative data and do not authorize full Quest Map implementation, automatic recommendation logic, market research, runtime rendering, PDF, screenshot automation, snapshot output, CLI changes, or external posting.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.
