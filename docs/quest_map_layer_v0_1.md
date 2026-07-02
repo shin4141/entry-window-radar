@@ -37,6 +37,58 @@ Examples:
 
 If the direct local or segment chart is unavailable, use the closest proxy and lower confidence.
 
+### Reference Chart Quality
+
+Reference Chart Quality indicates how close the selected chart is to the actual factor that controls the quest's win/loss condition.
+
+The point is to prevent a broad parent-market chart from creating false confidence when the real opportunity depends on a narrower segment, proxy, local chart, payment behavior, or execution layer.
+
+Allowed levels:
+
+#### DIRECT
+
+The chart directly measures the relevant segment or local market.
+
+Examples:
+
+- A Yokohama ramen shop judged by Yokohama or local-area ramen demand, rent, competition, foot traffic, and price behavior.
+- A Solana meme BOT judged by Solana DEX/meme volume, bot competition, API depth, latency, capital requirements, and top-bot concentration.
+
+#### CLOSE PROXY
+
+Direct chart is unavailable, but a close proxy exists.
+
+Examples:
+
+- Kanagawa ramen data used to infer Yokohama when Yokohama-specific data is unavailable.
+- Solana DEX volume and wallet activity used as a proxy for meme BOT opportunity.
+
+#### SEGMENT PROXY
+
+The chart measures the right category but not the exact local/workflow layer.
+
+Examples:
+
+- AI developer tools used as a proxy for AI handoff audit tools.
+- Consumer productivity apps used as a proxy for a specific habit app.
+
+#### PARENT MARKET ONLY
+
+Only broad market data exists.
+
+Examples:
+
+- AI market growth used to judge a specific AI app.
+- Crypto market growth used to judge a Solana meme BOT.
+
+This is allowed only as a weak starting point and must lower confidence.
+
+#### UNKNOWN / UNGROUNDED
+
+No usable chart or proxy is available.
+
+The system must mark confidence low and recommend HOLD or PROOF before stronger action.
+
 ### Market Slope
 
 Market Slope describes whether the relevant market/map is flat, slowly rising, steepening, hype-spiking, rolling over, post-FOMO, or unclear.
@@ -137,6 +189,35 @@ Small reward does not automatically mean AVOID.
 
 A quest with strong operator fit, short proof distance, and low Carrier cost may be chosen before a larger but less enterable quest.
 
+## Examples
+
+### Example A: AI App
+
+- Parent market: AI market
+- Relevant chart: payment willingness by app category and workflow urgency
+- Reference Chart Quality: SEGMENT PROXY or CLOSE PROXY depending on evidence
+- Recommended Action: PROOF
+
+The broad AI market is not enough to support LAUNCH. The quest should first prove a narrower workflow, buyer, and payment behavior.
+
+### Example B: Solana Meme BOT
+
+- Parent market: crypto market
+- Relevant chart: Solana meme trading + BOT competition layer
+- Reference Chart Quality: PARENT MARKET ONLY if only BTC/SOL price is used
+- Recommended Action: HOLD / PROOF / AVOID until deeper BOT-layer evidence exists
+
+Crypto market growth does not prove a specific bot opportunity. The controlling chart is closer to liquidity, DEX volume, latency, API depth, capital requirements, bot concentration, and substitute pressure.
+
+### Example C: Yokohama Ramen Shop
+
+- Parent market: national ramen market
+- Relevant chart: Yokohama/local area ramen demand, rent, competition, foot traffic, and price behavior
+- Reference Chart Quality: CLOSE PROXY if only Kanagawa data is available
+- Recommended Action: depends on local proxy quality, not national market size
+
+National ramen demand may be useful background, but the quest is controlled by local foot traffic, rent, competition, pricing, and operator fit.
+
 ## Non-Goals
 
 Quest Map Layer is not:
@@ -155,6 +236,12 @@ Quest Map Layer is not:
 - If market size or capital flow is used, it must be source-backed or marked unknown.
 - If direct local/reference chart is unavailable, use the closest proxy and lower confidence.
 - Do not judge by the parent market alone when the opportunity depends on a narrower segment.
+- Do not recommend LAUNCH from PARENT MARKET ONLY.
+- Do not recommend broad build from UNKNOWN / UNGROUNDED.
+- If Reference Chart Quality is PARENT MARKET ONLY, allowed actions are usually PROOF, HOLD, INCUBATE, or AVOID.
+- If Reference Chart Quality is DIRECT or CLOSE PROXY, stronger action may be considered only if Operator Fit, Payment Willingness, Reward Distance, and Carrier Fit also support it.
+- If the chosen chart is too broad, the card must say: "Reference chart too broad."
+- Prefer a lower but more relevant chart over a higher but generic chart.
 - Do not recommend broad build when the operator only has proof-level edge.
 - Do not turn SHORT CYCLE into long-term habitat.
 - Do not turn INCUBATE into immediate launch.
@@ -173,6 +260,8 @@ Potential input fields:
 - quest_name
 - parent_market
 - relevant_reference_chart
+- reference_chart_quality
+- reference_chart_warning
 - proxy_chart_used
 - market_slope
 - reward_distance
@@ -201,6 +290,8 @@ Potential output:
 
 - Quest label
 - Map / reference chart used
+- Reference Chart Quality
+- Reference Chart Warning
 - Current operator position
 - Reward distance
 - Reward potential
@@ -235,4 +326,4 @@ Quest Map Layer should preserve Entry Window Radar's as-of language. It should n
 
 ## Completion Line
 
-Quest Map Layer v0.1 defines how Entry Window Radar can represent opportunities as game-like quest choices, helping the operator choose LAUNCH / PROOF / SHORT CYCLE / INCUBATE / HOLD / AVOID / SALVAGE without becoming prediction, investment advice, or automated launch permission.
+Quest Map Layer now explicitly grades whether the chosen reference chart is close enough to the actual win/loss condition, preventing broad parent-market charts from producing false confidence.

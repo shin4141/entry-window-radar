@@ -48,6 +48,7 @@ Phase 9.1 Portfolio Input Templates: PASS
 Phase 9.2 Portfolio Dogfood Inputs: PASS
 Phase 9.3 Market Slope & Operator Position: PASS
 Phase 9.4 Quest Map Layer v0.1 Spec: PASS
+Phase 10.1 Reference Chart Quality Spec Patch: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -76,7 +77,8 @@ V14 deep scoring: BLOCK
 - Static `outputs/entry_window_map.svg` is allowed as local-only As-of display and screenshot-ready shared human/AI context, including a simple Competition Pressure layer. It does not authorize posting, PNG, HTML, interactive rendering, portfolio automation, Score History, Entry Window Drift, or advanced scoring.
 - Portfolio Entry Horizon is allowed as a specification plus manual dogfood templates in `inputs/projects.md` and `inputs/markets.md`. It does not authorize portfolio scoring, portfolio JSON output, portfolio SVG output, launch-order automation, ranking, or external research.
 - Market Slope inputs do not authorize web research or invented market estimates. Market data must be source-backed or marked unknown. Operator Position is a strategic posture, not investment advice. Portfolio Entry Horizon supports launch-order reasoning, not automated permission.
-- Quest Map Layer is allowed as a specification in `docs/quest_map_layer_v0_1.md`. It does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
+- Quest Map Layer is allowed as a specification in `docs/quest_map_layer_v0_1.md`, including Reference Chart Quality. It does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
+- Quest Map recommendations must not use broad parent-market charts as strong evidence. Parent-market-only or unknown reference charts should lower confidence and avoid LAUNCH or broad build recommendations.
 
 ## Allowed In Current MVP
 

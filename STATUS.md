@@ -27,6 +27,7 @@ Phase 9.1 Portfolio Input Templates: PASS
 Phase 9.2 Portfolio Dogfood Inputs: PASS
 Phase 9.3 Market Slope & Operator Position: PASS
 Phase 9.4 Quest Map Layer v0.1 Spec: PASS
+Phase 10.1 Reference Chart Quality Spec Patch: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -62,6 +63,7 @@ V14 deep scoring: BLOCK
 | Phase 9.2 Portfolio Dogfood Inputs | PASS | Fills `inputs/projects.md` and `inputs/markets.md` with Shin's first manual portfolio snapshot; scoring/rendering/automation remain HOLD. |
 | Phase 9.3 Market Slope & Operator Position | PASS | Refines `inputs/markets.md` and Portfolio Entry Horizon spec from static market-size focus to market phase, slope evidence, and operator posture; scoring/rendering/automation remain HOLD. |
 | Phase 9.4 Quest Map Layer v0.1 Spec | PASS | Adds `docs/quest_map_layer_v0_1.md`; Quest Map rendering, outputs, scoring automation, and launch permission remain HOLD. |
+| Phase 10.1 Reference Chart Quality Spec Patch | PASS | Adds Reference Chart Quality to Quest Map Layer; implementation, outputs, rendering, scoring automation, and launch permission remain HOLD. |
 
 ## Active Repo
 
@@ -89,11 +91,12 @@ Latest Portfolio input templates commit: 372f69c Add portfolio input templates
 Latest Portfolio dogfood inputs commit: ad235b3 Add Shin portfolio dogfood inputs
 Latest market slope position commit: 0146355 Add market slope position layer
 Latest screenshot-ready map commit: 0ec9b47 Make Entry Window Map screenshot-ready
+Latest Quest Map Layer spec commit: 9780fdb Add Quest Map Layer specification
 ```
 
 ## Completion Line
 
-Quest Map Layer v0.1 defines how Entry Window Radar can represent opportunities as game-like quest choices, helping the operator choose LAUNCH / PROOF / SHORT CYCLE / INCUBATE / HOLD / AVOID / SALVAGE without becoming prediction, investment advice, or automated launch permission.
+Quest Map Layer now explicitly grades whether the chosen reference chart is close enough to the actual win/loss condition, preventing broad parent-market charts from producing false confidence.
 
 ## Missing Closure
 
@@ -113,6 +116,7 @@ Phase 9.1 Portfolio Input Templates: resolved and PASS
 Phase 9.2 Portfolio Dogfood Inputs: resolved and PASS
 Phase 9.3 Market Slope & Operator Position: resolved and PASS
 Phase 9.4 Quest Map Layer v0.1 Spec: resolved and PASS
+Phase 10.1 Reference Chart Quality Spec Patch: resolved and PASS
 Portfolio JSON output: HOLD until separately gated
 Portfolio SVG output: HOLD until separately gated
 Launch-order automation: HOLD until separately gated
@@ -141,6 +145,6 @@ After this patch: Codex/AI for Quest Map implementation or portfolio scoring/out
 - AI-assisted usage is allowed through `prompts/ai_assisted_entry_window_prompt.md`; it does not permit external API use, web research, or posting unless separately gated.
 - Static `outputs/entry_window_map.svg` is allowed as a local-only screenshot-ready shared human/AI context card, including a simple Competition Pressure layer; posting, PNG, HTML, interactive rendering, Score History, and Entry Window Drift remain gated.
 - Portfolio Entry Horizon has manual templates in `inputs/projects.md` and `inputs/markets.md`, now refined around Market Slope and Operator Position; these do not authorize portfolio scoring, portfolio JSON, portfolio SVG, launch-order automation, web research, invented market data, or external research.
-- Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
+- Quest Map Layer has a v0.1 specification in `docs/quest_map_layer_v0_1.md`, now including Reference Chart Quality; it does not authorize Quest Map rendering, Quest Map JSON/SVG outputs, quest scoring automation, external research, posting, or automated launch permission.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
 - Completion means restartable by a future self or next AI, not merely that a command ran.
