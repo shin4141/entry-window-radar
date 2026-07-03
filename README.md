@@ -123,7 +123,13 @@ UNKNOWN is where the next decision becomes sharper.
 
 ## Future Command Direction
 
-A future `save_session_snapshot` command is being specified as a V12-style restart checkpoint. It is not implemented yet, does not replace the Quest Snapshot Generator Prompt, and full Quest Snapshot auto-generation remains HOLD.
+Minimal `save_session_snapshot` command is available:
+
+```bash
+python3 -B tools/save_session_snapshot.py --note "End of session checkpoint"
+```
+
+It creates `outputs/session_snapshot.md` as a V12-style restart checkpoint. It does not generate Quest Snapshot automatically and does not call AI or external APIs.
 
 ## Community / Contributions
 
