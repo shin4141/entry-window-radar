@@ -49,6 +49,8 @@ Minimal Runtime Cutline defines Markdown Quest Snapshot output as the first safe
 
 Quest Snapshot Markdown Template is a reusable manual template for future As-of Quest Snapshot artifacts. It lives at `templates/quest_snapshot_template_v0_1.md`; usage notes live in `docs/quest_snapshot_template_usage_v0_1.md`; runtime generation remains HOLD.
 
+Quest Snapshot Storage Modes / User Flow defines Codex memory / project context as the default low-friction storage mode, Markdown/local file as optional portable storage, and target repo storage as an advanced route. It lives in `docs/quest_snapshot_storage_modes_user_flow_v0_1.md`; runtime generation remains HOLD.
+
 ## Three Lines
 
 ### Market Line
@@ -106,6 +108,7 @@ Included:
 - a Quest Map Current Architecture v0.1 summary for future Codex/AI re-entry
 - a Minimal Runtime Cutline v0.1 decision for future Markdown Quest Snapshot output
 - a Quest Snapshot Markdown Template v0.1 for manual As-of snapshot drafting
+- a Quest Snapshot Storage Modes / User Flow v0.1 specification for low-friction re-entry
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
@@ -225,6 +228,7 @@ docs/quest_snapshot_visual_design_system_v0_1.md
 docs/quest_map_current_architecture_v0_1.md
 docs/minimal_runtime_cutline_v0_1.md
 docs/quest_snapshot_template_usage_v0_1.md
+docs/quest_snapshot_storage_modes_user_flow_v0_1.md
 templates/quest_snapshot_template_v0_1.md
 examples/example_001.md
 examples/quest_position_map_v0_1.md
