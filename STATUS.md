@@ -77,6 +77,7 @@ Phase 10.55 Session Snapshot Command Acceptance Audit: PASS
 Phase 10.56 Current State Closeout / Star-ready Re-audit: USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT HOLD / EXTERNAL POSTING HOLD
 Phase 10.57 Non-Decision-OS Public-Safe Example: PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
+Phase 10.59 GitHub Traffic Signal Receipt: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -162,6 +163,7 @@ V14 deep scoring: BLOCK
 | Phase 10.56 Current State Closeout / Star-ready Re-audit | PASS / SOFT HOLD | Audit/governance result: Use-ready `USE-READY PASS`; minimal command-ready `COMMAND-READY PASS`; star-ready `STAR-READY SOFT HOLD`; external posting `EXTERNAL POSTING HOLD`. The repo is usable today as prompt-first Quest Snapshot workflow plus V12-style session checkpoint command. Smallest remaining closure before broader external attention: one public-safe non-Decision-OS example showing the first-time flow. This does not authorize new implementation, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, scoring, visual export, snapshot comparison, or external posting. |
 | Phase 10.57 Non-Decision-OS Public-Safe Example | PASS | Adds `examples/local_markdown_task_tracker_quest_snapshot_example_v0_1.md` to show a normal small-project Quest Snapshot flow plus optional V12-style session checkpoint command. This is documentation/example only and does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, scoring, PDF/PNG export, screenshot automation, snapshot comparison, market research, new runtime behavior, or external posting. Star-ready remains SOFT HOLD until separately re-audited. |
 | Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example | PASS / SOFT GO | Audit/governance result: Use-ready `USE-READY PASS`; command-ready `COMMAND-READY PASS`; star-ready `STAR-READY SOFT GO`; external posting `EXTERNAL POSTING HOLD`. Soft-go wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no `outputs/quest_snapshot.md`; no AI/API calls; no visual export; Human keeps the Seat. This does not authorize external posting, runtime expansion, scoring, snapshot comparison, market research, PDF/PNG/screenshot automation, or new implementation. |
+| Phase 10.59 GitHub Traffic Signal Receipt | PASS | Adds `docs/github_traffic_signal_receipt_v0_1.md` to record GitHub Traffic as of 2026-07-03 JST: clones 452, unique cloners 169, total views 12, unique visitors 1 in the last 14 days. Interpretation boundary: this is early external residue / traffic anomaly worth tracking, not proof of human adoption, product-market fit, correctness, stars, usage, or posting permission. External posting and runtime expansion remain HOLD. |
 
 ## Active Repo
 
@@ -236,12 +238,13 @@ Latest minimal V12-style Session Snapshot command commit: 43cd9df Add V12-style 
 Latest Session Snapshot command acceptance audit commit: 52c0e8e Audit Session Snapshot command acceptance
 Latest current-state closeout / star-ready re-audit commit: 4d9601c Record current state closeout
 Latest non-Decision-OS public-safe example commit: 4aecdfc Add non-Decision-OS Quest Snapshot example
-Latest star-ready re-audit commit: this patch
+Latest star-ready re-audit commit: 95762e0 Record star-ready re-audit
+Latest GitHub traffic signal receipt commit: this patch
 ```
 
 ## Completion Line
 
-We know Entry Window Radar has crossed into star-ready SOFT GO for bounded GitHub star-oriented attention, while runtime expansion and external posting remain separately gated and HOLD.
+Entry Window Radar now records the first GitHub Traffic signal as bounded external residue, without treating clones/views as adoption proof or authorization for external posting/runtime expansion.
 
 ## Missing Closure
 
@@ -311,11 +314,15 @@ Phase 10.55 Session Snapshot Command Acceptance Audit: resolved and PASS
 Phase 10.56 Current State Closeout / Star-ready Re-audit: resolved with USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT HOLD / EXTERNAL POSTING HOLD
 Phase 10.57 Non-Decision-OS Public-Safe Example: resolved and PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: resolved with USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
+Phase 10.59 GitHub Traffic Signal Receipt: resolved and PASS
 Use-ready: PASS
 Command-ready: PASS for minimal V12-style session checkpoint
 Star-ready: SOFT GO for bounded GitHub star-oriented attention using the allowed wording boundary
 Allowed wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no AI/API calls; no visual export; Human keeps the Seat
 External posting: HOLD until explicit maintainer GO
+GitHub Traffic signal as of 2026-07-03 JST: clones 452, unique cloners 169, total views 12, unique visitors 1 in last 14 days
+Traffic interpretation boundary: early external residue / traffic anomaly worth tracking, not proof of human adoption, usage, product-market fit, correctness, market validation, or posting permission
+Traffic recheck condition: 7 days, a new star, repeated unique visitors, issue/PR activity, external mention, or manual user trial
 LICENSE: present and unchanged
 V12-style Session Snapshot command implementation: resolved and PASS for minimal local checkpoint only
 Session Snapshot output (`outputs/session_snapshot.md`): allowed only when generated by `tools/save_session_snapshot.py`
@@ -340,7 +347,7 @@ V14 deep scoring: BLOCK
 
 ```text
 Current patch owner: Codex
-After this patch: Shin/Codex for a separately gated external-posting decision or next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
 ```
 
 ## Re-entry Notes
@@ -372,6 +379,7 @@ After this patch: Shin/Codex for a separately gated external-posting decision or
 - Session Snapshot command placement has a v0.1 spec in `docs/session_snapshot_command_placement_v0_1.md`. First command direction is V12-style restart checkpoint, not full Quest Snapshot auto-generation. Minimal `tools/save_session_snapshot.py` implementation is PASS only for local checkpoint generation; full Quest Snapshot runtime and `outputs/quest_snapshot.md` generation remain HOLD.
 - Minimal V12-style Session Snapshot command exists at `tools/save_session_snapshot.py`. It writes `outputs/session_snapshot.md` only when run and is limited to local restart checkpoint generation from bounded governance excerpts and git metadata. It is not Quest Snapshot auto-generation and does not authorize AI calls, external APIs, market research, scoring, drift scoring, snapshot comparison, visual export, target repo modification, auto-commit, Gate upgrades, or external posting.
 - Phase 10.57 adds a public-safe non-Decision-OS example at `examples/local_markdown_task_tracker_quest_snapshot_example_v0_1.md`, showing a normal small-project Quest Snapshot flow and optional V12-style session checkpoint command. Phase 10.58 re-audited star-readiness as SOFT GO under this wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no `outputs/quest_snapshot.md`; no AI/API calls; no visual export; Human keeps the Seat. External posting remains HOLD. This does not authorize Quest Snapshot auto-generation, PDF/PNG/screenshot automation, snapshot comparison, scoring or drift scoring, market research, visual export, target repo modification, auto-commit behavior, or external posting.
+- Phase 10.59 records GitHub Traffic as bounded external residue in `docs/github_traffic_signal_receipt_v0_1.md`: clones 452, unique cloners 169, total views 12, unique visitors 1 in the last 14 days as of 2026-07-03 JST. Clone count is much higher than view count, so automation, bots, indexing, GitHub tooling, or non-human clone activity may be involved. Treat this as early external-contact residue / traffic anomaly worth tracking, not proof of human adoption, usage, product-market fit, correctness, stars, market validation, or external posting GO. Recheck after 7 days, a new star, repeated unique visitors, issue/PR activity, external mention, or manual user trial.
 - V13 LoopKit re-entry dogfood status: local actual repo dogfood was BLOCKED because the local repo path was unavailable; do not claim the local V13 repo was inspected. Remote-source re-entry dogfood using a public GitHub clone of `https://github.com/shin4141/decision-os-v13-loopkit` at commit `2f52572` passed with result `V13 REMOTE-SOURCE RE-ENTRY DOGFOOD PASS`; report is `examples/v13_remote_source_reentry_dogfood_v0_1.md`. Meaning: a future Codex can resume V13 LoopKit from actual remote repo evidence and Quest Snapshot state without Shin re-explaining Gate, Next Action, Do-Not-Do Boundary, Recheck Condition, and Completion Line. Boundary: this PASS does not authorize runtime, scoring, snapshot comparison, automation, or external posting.
 - Quest Position Map v0.1 has static/manual visual prototypes in `outputs/quest_position_map.svg` and `outputs/quest_position_map_ja.svg`, with specification in `docs/quest_position_map_v0_1.md`, English sample explanation in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`; these use hand-authored illustrative data and do not authorize full Quest Map implementation, automatic recommendation logic, market research, runtime rendering, PDF, screenshot automation, snapshot output, CLI changes, or external posting.
 - Industry Slope Timeline v0.1 has a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with specification in `docs/industry_slope_timeline_v0_1.md` and example note in `examples/industry_slope_timeline_v0_1_ja.md`; its curve represents a specific niche's entry-window lifecycle, not the whole AI industry, and its text lifecycle classification should be read before judging whether a project is early, late, safe, crowded, or risky. It uses hand-authored illustrative data and does not authorize automatic market analysis, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI changes, or external posting.
