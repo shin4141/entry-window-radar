@@ -104,6 +104,26 @@ def first_matching_line(text: str, terms: list[str]) -> str:
     return "UNKNOWN"
 
 
+def matching_lines(text: str, terms: list[str], limit: int = 6) -> list[str]:
+    lowered_terms = [term.lower() for term in terms]
+    matches: list[str] = []
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or line.startswith("```"):
+            continue
+        lowered = line.lower()
+        if any(term in lowered for term in lowered_terms):
+            matches.append(line.lstrip("- ").strip())
+        if len(matches) >= limit:
+            break
+    return matches
+
+
+def joined_matches(text: str, terms: list[str], fallback: str = "UNKNOWN", limit: int = 6) -> str:
+    matches = matching_lines(text, terms, limit=limit)
+    return "; ".join(matches) if matches else fallback
+
+
 def bullet_block(text: str) -> str:
     if not text:
         return "- UNKNOWN"
@@ -187,8 +207,19 @@ def build_snapshot(note: str | None) -> str:
         ["must not", "not authorize", "not allowed", "do-not-do", "external posting"],
     )
     recheck_condition = "UNKNOWN"
-    runtime_state = first_matching_line(status_text, ["runtime", "outputs/quest_snapshot.md"])
-    external_posting = first_matching_line(status_text, ["external posting"])
+    runtime_state = joined_matches(
+        missing_closure,
+        [
+            "v12-style session snapshot command implementation",
+            "session snapshot output",
+            "quest snapshot markdown runtime output",
+            "snapshot trajectory / drift delta runtime comparison",
+            "full quest map rendering/output/scoring automation",
+            "quest snapshot outputs/pdf/screenshot/archive generation",
+            "entry window map png/html rendering",
+        ],
+    )
+    external_posting = joined_matches(missing_closure, ["external posting"], limit=2)
 
     files_read: list[str] = []
     if status_read:
