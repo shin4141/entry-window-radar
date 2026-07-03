@@ -121,6 +121,10 @@ UNKNOWN is where the next decision becomes sharper.
 - Snapshot comparison: HOLD
 - External posting: HOLD
 
+## Future Command Direction
+
+A future `save_session_snapshot` command is being specified as a V12-style restart checkpoint. It is not implemented yet, does not replace the Quest Snapshot Generator Prompt, and full Quest Snapshot auto-generation remains HOLD.
+
 ## Community / Contributions
 
 - Contributing: `CONTRIBUTING.md`
