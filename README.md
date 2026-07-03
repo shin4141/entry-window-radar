@@ -115,6 +115,7 @@ UNKNOWN is where the next decision becomes sharper.
 - Visual prototypes: available
 - Dogfood status: Quest Snapshot Generator Prompt PASS; V13 LoopKit remote-source re-entry dogfood PASS using actual GitHub repo evidence at commit `2f52572`; local V13 repo dogfood was blocked only because the local repo path was unavailable.
 - Cold-user prompt-only trial: PASS; the README first screen plus Generator Prompt produced a useful Quest Snapshot draft without extra Decision-OS explanation.
+- V13 integration validation receipt: Quest Snapshot PASS; Quest Position Map PASS as the first supporting figure; minimum recommended configuration is Quest Snapshot + 1 figure.
 - Runtime generation: HOLD
 - PDF / PNG / screenshot automation: HOLD
 - Snapshot comparison: HOLD
