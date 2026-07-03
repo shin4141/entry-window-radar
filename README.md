@@ -113,6 +113,7 @@ UNKNOWN is where the next decision becomes sharper.
 - Generator Prompt: available
 - Markdown Template: available
 - Visual prototypes: available
+- Dogfood status: Quest Snapshot Generator Prompt PASS; V13 LoopKit remote-source re-entry dogfood PASS using actual GitHub repo evidence at commit `2f52572`; local V13 repo dogfood was blocked only because the local repo path was unavailable.
 - Runtime generation: HOLD
 - PDF / PNG / screenshot automation: HOLD
 - Snapshot comparison: HOLD
