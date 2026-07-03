@@ -1,12 +1,153 @@
 # Entry Window Radar
 
-Is this idea early, late, crowded, or still worth a narrow entry?
+AI-built projects drift when every AI session starts from scratch.
 
-Entry Window Radar is a small local-only MVP for evaluating whether a GitHub repo, README, idea, or small project currently sits inside a usable entry window.
+Quest Snapshot preserves the current Gate, next action, and do-not-do boundary.
 
-It does not predict future success. It produces an as-of entry posture based on visible evidence.
+AIで作った作品を伸ばしたいなら、
+現在地を可視化し、判断を残し、次のAIに引き継げ。
 
-## Entry Window Card
+If you want your AI-built project to survive and improve,
+visualize where it is, save the decision, and hand it to the next AI.
+
+Entry Window Radar is a Quest Snapshot system for AI-built apps, OSS, and long-running projects.
+
+It helps Codex/AI remember:
+
+- where the project is
+- what the next action is
+- what not to build yet
+- what evidence is still missing
+- when the project should be rechecked
+
+This is not a market predictor, startup scorer, launch permission system, or automatic decision-maker.
+
+The human keeps the Seat.
+
+## What It Does
+
+Entry Window Radar helps you create a Quest Snapshot for a repo, app, OSS project, product idea, or workflow.
+
+A Quest Snapshot records:
+
+- Current Gate
+- Recommended Action
+- One Next Action
+- Do-Not-Do Boundary
+- Recheck Condition
+- UNKNOWN fields
+- Optional questions for the Decision Owner
+- Completion Line for the next Codex/AI session
+
+## Start Here
+
+1. Open:
+   `prompts/quest_snapshot_generator_prompt_v0_1.md`
+
+2. Paste it into Codex / Claude Code / Cursor / ChatGPT.
+
+3. Give the AI your repo, README, product idea, or current project question.
+
+4. Ask it to create a Quest Snapshot.
+
+5. Save the result in Codex memory / project context.
+
+Optional:
+Export it as Markdown if you want portability.
+
+Advanced:
+Save it into your target repo only if you want version-controlled project-state history.
+
+## Default Storage
+
+Default:
+Codex memory / project context
+
+Optional:
+Markdown / local file
+
+Advanced:
+Target repo storage
+
+Important:
+The Entry Window Radar repo is the rule/template source.
+Your live project state usually belongs in Codex memory, local notes, or your target repo, not here.
+
+## Why UNKNOWN Matters
+
+The generator should not fake certainty.
+
+If a field cannot be filled, it marks it UNKNOWN and explains why it matters.
+
+This helps the Decision Owner notice:
+
+- unpaid proof is missing
+- the reference chart is too broad
+- the next action is vague
+- Codex may broaden too early
+- the Gate should remain HOLD / PROOF / CAP
+
+UNKNOWN is not failure.
+
+UNKNOWN is where the next decision becomes sharper.
+
+## Core Artifacts
+
+- Quest Position Map:
+  first-position chart
+
+- Industry Slope Timeline:
+  niche lifecycle chart
+
+- Codex Interpretation Note:
+  evidence, counterarguments, source state, unknowns
+
+- Quest Snapshot:
+  As-of handoff artifact
+
+- Snapshot Trajectory / Drift Delta:
+  recurring TimeTube layer
+
+## Current State
+
+- Generator Prompt: available
+- Markdown Template: available
+- Visual prototypes: available
+- Runtime generation: HOLD
+- PDF / PNG / screenshot automation: HOLD
+- Snapshot comparison: HOLD
+- External posting: HOLD
+
+## What This Is Not
+
+This is not:
+
+- a market prediction tool
+- investment advice
+- an automatic launch permission system
+- a VC score
+- a full project manager
+- an execution engine
+- a replacement for the human Decision Owner
+
+## For Codex / AI Agents
+
+When resuming from a Quest Snapshot, Codex/AI must state:
+
+- what it now owns
+- current Gate
+- next action
+- do-not-do boundary
+- recheck condition
+- Completion Line
+
+Handoff is not complete until the receiving AI knows what it now owns.
+
+Codex/AI must not broaden runtime, posting, scoring, rendering, PDF/PNG/screenshot automation, snapshot comparison, market research, or external API scope without a new Gate.
+
+## Deeper Docs
+
+Entry Window Card is the original single-target diagnosis shape:
 
 ```text
 Entry Label: FAST ENTRY | NICHE WEDGE | WAIT | SHORT CYCLE | AVOID
@@ -22,8 +163,6 @@ Confidence:
 Risk:
 Recheck Condition:
 ```
-
-## Entry Window Map
 
 Entry Window Map is a static local SVG view for showing the current As-of position at a glance. It is screenshot-ready as a shared human/AI Entry Window Card and includes a simple visual Competition Pressure layer; the specification lives in `docs/entry_window_map_v0_1.md`; PNG, HTML, and interactive rendering are not implemented.
 
@@ -121,7 +260,9 @@ Included:
 
 ## Local Usage
 
-AI-assisted route: paste `prompts/ai_assisted_entry_window_prompt.md` into Codex / GPT / Claude Code to generate an Entry Window Card before or instead of running the CLI.
+Quest Snapshot route: paste `prompts/quest_snapshot_generator_prompt_v0_1.md` into Codex / Claude Code / Cursor / ChatGPT to draft a Quest Snapshot.
+
+Entry Window Card route: paste `prompts/ai_assisted_entry_window_prompt.md` into Codex / GPT / Claude Code to generate an Entry Window Card before or instead of running the CLI.
 
 For terminal/local output generation, run from the repo root:
 
@@ -240,4 +381,6 @@ examples/quest_position_map_v0_1.md
 examples/quest_position_map_v0_1_ja.md
 examples/industry_slope_timeline_v0_1_ja.md
 examples/snapshot_trajectory_drift_delta_v0_1_ja.md
+examples/v13_loopkit_manual_quest_snapshot_v0_1.md
+examples/quest_snapshot_generator_dogfood_v13_loopkit_v0_1.md
 ```
