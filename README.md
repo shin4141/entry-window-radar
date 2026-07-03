@@ -135,6 +135,7 @@ python3 -B tools/save_session_snapshot.py --note "End of session checkpoint"
 ```
 
 It creates `outputs/session_snapshot.md` as a V12-style restart checkpoint. It does not generate Quest Snapshot automatically and does not call AI or external APIs.
+`save_session_snapshot.py` creates a restartable checkpoint, not a full handoff. For project-level handoff, pair it with a Quest Snapshot or a short Handoff Header that states what the receiving AI now owns.
 
 ## Community / Contributions
 

@@ -13,6 +13,16 @@ ROOT = Path.cwd()
 DEFAULT_OUTPUT = ROOT / "outputs" / "session_snapshot.md"
 WARNING_EN = "This is a restartable checkpoint, not a completion claim."
 WARNING_JA = "これは再開可能な途中保存であり、完了宣言ではない。"
+HANDOFF_WARNING_EN = (
+    "This is not a full handoff.\n"
+    "A receiving AI must still state what it now owns before continuing.\n"
+    "For project-level handoff, use a Quest Snapshot or add a Handoff Header."
+)
+HANDOFF_WARNING_JA = (
+    "これは完全な引き継ぎではありません。\n"
+    "受け側AIは、続行前に「自分が今なにを引き受けたか」を明示する必要があります。\n"
+    "プロジェクト単位の引き継ぎには、Quest Snapshot または Handoff Header を併用してください。"
+)
 
 
 def run_git(args: list[str]) -> str:
@@ -238,6 +248,8 @@ def build_snapshot(note: str | None) -> str:
 
 {WARNING_EN}
 {WARNING_JA}
+{HANDOFF_WARNING_EN}
+{HANDOFF_WARNING_JA}
 
 ## As-of Timestamp
 
