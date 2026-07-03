@@ -1,0 +1,41 @@
+name: Boundary or docs issue
+description: Report unclear documentation or boundary language.
+title: "[Boundary/docs]: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: document
+    attributes:
+      label: What document or section?
+      description: Name the file, heading, or prompt section.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: What boundary is unclear?
+      description: Explain the ambiguity in current Gate, Do-Not-Do Boundary, UNKNOWN handling, Human Seat, or handoff language.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope_risk
+    attributes:
+      label: Scope risk
+      options:
+        - label: This may imply runtime, automation, scoring, snapshot comparison, or external posting.
+          required: false
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested minimal fix
+      description: Propose the smallest wording change that would reduce confusion.
+    validations:
+      required: false
+  - type: checkboxes
+    id: sensitive_confirm
+    attributes:
+      label: Sensitive data check
+      options:
+        - label: I confirm this issue does not include private/sensitive data, secrets, credentials, local paths, unpublished strategy, or private repo content.
+          required: true

@@ -121,6 +121,14 @@ UNKNOWN is where the next decision becomes sharper.
 - Snapshot comparison: HOLD
 - External posting: HOLD
 
+## Community / Contributions
+
+- Contributing: `CONTRIBUTING.md`
+- Code of conduct: `CODE_OF_CONDUCT.md`
+- Security: `SECURITY.md`
+- Support: `SUPPORT.md`
+- Issue templates: `.github/ISSUE_TEMPLATE/`
+
 ## What This Is Not
 
 This is not:

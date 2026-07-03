@@ -1,0 +1,48 @@
+name: Quest Snapshot question
+description: Ask about using the Generator Prompt or interpreting a Quest Snapshot.
+title: "[Quest Snapshot question]: "
+labels:
+  - question
+body:
+  - type: textarea
+    id: target
+    attributes:
+      label: What are you trying to snapshot?
+      description: Describe the repo, app, OSS project, product idea, or workflow at a high level. Do not include private data.
+    validations:
+      required: true
+  - type: textarea
+    id: prompt_input
+    attributes:
+      label: What did you provide to the Generator Prompt?
+      description: Summarize the input material. Do not paste secrets, private repo content, local paths, or unpublished strategy.
+    validations:
+      required: true
+  - type: textarea
+    id: unclear
+    attributes:
+      label: What part was unclear?
+      description: Name the specific field, boundary, or instruction that was confusing.
+    validations:
+      required: true
+  - type: textarea
+    id: unknown_handling
+    attributes:
+      label: Did UNKNOWN handling work?
+      description: Say whether UNKNOWN fields helped reveal missing evidence, or where the prompt felt too vague.
+    validations:
+      required: false
+  - type: textarea
+    id: human_seat
+    attributes:
+      label: Did Codex/AI preserve Human Seat?
+      description: Note whether the AI preserved the Decision Owner's authority and avoided automatic launch permission.
+    validations:
+      required: false
+  - type: checkboxes
+    id: sensitive_confirm
+    attributes:
+      label: Sensitive data check
+      options:
+        - label: I confirm this issue does not include private/sensitive data, secrets, credentials, local paths, unpublished strategy, or private repo content.
+          required: true
