@@ -78,6 +78,9 @@ Phase 10.56 Current State Closeout / Star-ready Re-audit: USE-READY PASS / COMMA
 Phase 10.57 Non-Decision-OS Public-Safe Example: PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
 Phase 10.59 GitHub Traffic Signal Receipt: PASS
+Phase 10.60 GitHub Surface Metadata Audit: PARTIAL / PATCH RECOMMENDED
+Phase 10.61 GitHub Surface Metadata Patch: PASS
+Phase 10.62 Current Public Surface Closeout: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -164,6 +167,9 @@ V14 deep scoring: BLOCK
 | Phase 10.57 Non-Decision-OS Public-Safe Example | PASS | Adds `examples/local_markdown_task_tracker_quest_snapshot_example_v0_1.md` to show a normal small-project Quest Snapshot flow plus optional V12-style session checkpoint command. This is documentation/example only and does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, scoring, PDF/PNG export, screenshot automation, snapshot comparison, market research, new runtime behavior, or external posting. Star-ready remains SOFT HOLD until separately re-audited. |
 | Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example | PASS / SOFT GO | Audit/governance result: Use-ready `USE-READY PASS`; command-ready `COMMAND-READY PASS`; star-ready `STAR-READY SOFT GO`; external posting `EXTERNAL POSTING HOLD`. Soft-go wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no `outputs/quest_snapshot.md`; no AI/API calls; no visual export; Human keeps the Seat. This does not authorize external posting, runtime expansion, scoring, snapshot comparison, market research, PDF/PNG/screenshot automation, or new implementation. |
 | Phase 10.59 GitHub Traffic Signal Receipt | PASS | Adds `docs/github_traffic_signal_receipt_v0_1.md` to record GitHub Traffic as of 2026-07-03 JST: clones 452, unique cloners 169, total views 12, unique visitors 1 in the last 14 days. Interpretation boundary: this is early external residue / traffic anomaly worth tracking, not proof of human adoption, product-market fit, correctness, stars, usage, or posting permission. External posting and runtime expansion remain HOLD. |
+| Phase 10.60 GitHub Surface Metadata Audit | PARTIAL / PATCH RECOMMENDED | Audit found GitHub About metadata still used the older local-only As-of diagnosis description and had no topics. Recommendation: update GitHub surface metadata to describe the prompt-first Quest Snapshot workflow plus local V12-style checkpoint command. Audit-only; no files changed. |
+| Phase 10.61 GitHub Surface Metadata Patch | PASS | GitHub metadata was updated without local file changes. Description: `Prompt-first Quest Snapshot workflow for Codex/AI project re-entry, plus a local V12-style checkpoint command. Human keeps the Seat.` Topics: `ai-workflow`, `checkpoint`, `codex`, `developer-tools`, `local-first`, `markdown`, `project-handoff`, `quest-snapshot`. Homepage remains empty; visibility remains PUBLIC. |
+| Phase 10.62 Current Public Surface Closeout | PASS | This patch records Phase 10.61 metadata state in repo-carried governance. GitHub surface metadata now matches current posture: prompt-first Quest Snapshot workflow, local V12-style checkpoint command, Star-ready `SOFT GO`, External posting `HOLD`. This closeout does not authorize runtime expansion, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, snapshot comparison, scoring, market claims, or external posting. |
 
 ## Active Repo
 
@@ -239,12 +245,14 @@ Latest Session Snapshot command acceptance audit commit: 52c0e8e Audit Session S
 Latest current-state closeout / star-ready re-audit commit: 4d9601c Record current state closeout
 Latest non-Decision-OS public-safe example commit: 4aecdfc Add non-Decision-OS Quest Snapshot example
 Latest star-ready re-audit commit: 95762e0 Record star-ready re-audit
-Latest GitHub traffic signal receipt commit: this patch
+Latest GitHub traffic signal receipt commit: 6375355 Record GitHub traffic signal receipt
+Latest GitHub surface metadata patch: Phase 10.61, GitHub-only metadata update, no local commit
+Latest current public surface closeout commit: this patch
 ```
 
 ## Completion Line
 
-Entry Window Radar now records the first GitHub Traffic signal as bounded external residue, without treating clones/views as adoption proof or authorization for external posting/runtime expansion.
+Entry Window Radar repo-carried governance now records that GitHub surface metadata matches the current public posture: prompt-first Quest Snapshot workflow, local V12-style checkpoint command, Star-ready SOFT GO, and External posting HOLD.
 
 ## Missing Closure
 
@@ -315,10 +323,14 @@ Phase 10.56 Current State Closeout / Star-ready Re-audit: resolved with USE-READ
 Phase 10.57 Non-Decision-OS Public-Safe Example: resolved and PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: resolved with USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
 Phase 10.59 GitHub Traffic Signal Receipt: resolved and PASS
+Phase 10.60 GitHub Surface Metadata Audit: resolved with PARTIAL / PATCH RECOMMENDED
+Phase 10.61 GitHub Surface Metadata Patch: resolved and PASS; GitHub-only metadata update, no local file changes
+Phase 10.62 Current Public Surface Closeout: resolved and PASS
 Use-ready: PASS
 Command-ready: PASS for minimal V12-style session checkpoint
 Star-ready: SOFT GO for bounded GitHub star-oriented attention using the allowed wording boundary
 Allowed wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no AI/API calls; no visual export; Human keeps the Seat
+GitHub surface metadata: description and topics now match prompt-first Quest Snapshot workflow plus local V12-style checkpoint command; homepage empty; visibility PUBLIC
 External posting: HOLD until explicit maintainer GO
 GitHub Traffic signal as of 2026-07-03 JST: clones 452, unique cloners 169, total views 12, unique visitors 1 in last 14 days
 Traffic interpretation boundary: early external residue / traffic anomaly worth tracking, not proof of human adoption, usage, product-market fit, correctness, market validation, or posting permission
@@ -347,7 +359,7 @@ V14 deep scoring: BLOCK
 
 ```text
 Current patch owner: Codex
-After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; GitHub surface metadata and Star-ready SOFT GO do not authorize external posting; external posting remains HOLD until explicit maintainer GO
 ```
 
 ## Re-entry Notes
@@ -374,6 +386,7 @@ After this patch: Shin/Codex for traffic observation or a separately gated exter
 - README first screen is now the public navigation entry for Quest Snapshot: it explains the purpose, start path, storage modes, UNKNOWN handling, core artifacts, current HOLD boundaries, and what Codex/AI must state when resuming from a snapshot. This navigation cleanup does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - Cold-user prompt-only trial status: PASS. The trial used only the README first screen and `prompts/quest_snapshot_generator_prompt_v0_1.md` and produced a useful Quest Snapshot draft without extra Decision-OS explanation. Meaning: it supports prompt-first Use-ready. Boundary: it does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI changes, PDF/PNG/screenshot automation, snapshot comparison, scoring or drift scoring, market research, external APIs, Star-ready promotion, or external posting.
 - Current public posture: Use-ready PASS; command-ready PASS; Star-ready SOFT GO under bounded wording; External posting HOLD.
+- Phase 10.61 updated GitHub surface metadata without local file changes. Description now reads: `Prompt-first Quest Snapshot workflow for Codex/AI project re-entry, plus a local V12-style checkpoint command. Human keeps the Seat.` Topics are `ai-workflow`, `checkpoint`, `codex`, `developer-tools`, `local-first`, `markdown`, `project-handoff`, and `quest-snapshot`; homepage remains empty and visibility remains PUBLIC. This metadata patch does not authorize runtime expansion, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, snapshot comparison, scoring, market claims, or external posting.
 - V13 integration validation receipt: V13-side read-only validation was received from `field_notes/110_quest_snapshot_as_v13_reconnection_surface.md` at commit `2e12fec Record Quest Snapshot reconnection validation`. Result: Quest Snapshot `PASS`; Quest Position Map `PASS` as first supporting figure; Industry Slope Timeline `PARTIAL`; Snapshot Trajectory / Drift Delta `PARTIAL`; minimum recommended configuration `Quest Snapshot + 1 figure`; first figure `Quest Position Map`. Meaning: Quest Snapshot + Quest Position Map is useful for V13 reconnection, handoff, and next-action clarity. Boundary: this receipt does not authorize runtime, `outputs/quest_snapshot.md`, automation, visual export, snapshot comparison, scoring or drift scoring, hooks/MCP/pluginization/execution engine work, implementation expansion, or external posting.
 - Community standards status: `LICENSE` is present and unchanged; `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `.github/ISSUE_TEMPLATE/`, and `.github/PULL_REQUEST_TEMPLATE.md` exist for community hygiene. Issue templates and the PR template are not a feature roadmap and do not authorize runtime, `outputs/quest_snapshot.md`, automation, visual export, snapshot comparison, scoring or drift scoring, hooks/MCP/pluginization/execution engine work, implementation expansion, or external posting.
 - Session Snapshot command placement has a v0.1 spec in `docs/session_snapshot_command_placement_v0_1.md`. First command direction is V12-style restart checkpoint, not full Quest Snapshot auto-generation. Minimal `tools/save_session_snapshot.py` implementation is PASS only for local checkpoint generation; full Quest Snapshot runtime and `outputs/quest_snapshot.md` generation remain HOLD.

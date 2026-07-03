@@ -7,22 +7,22 @@ This is a restartable checkpoint, not a completion claim.
 
 ## As-of Timestamp
 
-2026-07-03T23:42:15+09:00
+2026-07-03T23:55:32+09:00
 
 ## Repository State
 
 - Repo path: ~/Documents/Entry Window Radar
 - Branch: main
-- Latest commit short hash: 95762e0
-- Latest commit subject: Record star-ready re-audit
+- Latest commit short hash: 6375355
+- Latest commit subject: Record GitHub traffic signal receipt
 - Git status summary:
 
 ~~~text
 ## main...origin/main
  M AGENTS.md
+ M README.md
  M STATUS.md
  M outputs/session_snapshot.md
-?? docs/github_traffic_signal_receipt_v0_1.md
 ~~~
 
 ## Current Governance State
@@ -108,6 +108,9 @@ Phase 10.56 Current State Closeout / Star-ready Re-audit: USE-READY PASS / COMMA
 Phase 10.57 Non-Decision-OS Public-Safe Example: PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
 Phase 10.59 GitHub Traffic Signal Receipt: PASS
+Phase 10.60 GitHub Surface Metadata Audit: PARTIAL / PATCH RECOMMENDED
+Phase 10.61 GitHub Surface Metadata Patch: PASS
+Phase 10.62 Current Public Surface Closeout: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -116,7 +119,7 @@ V14 deep scoring: BLOCK
 
 ## Completion Line
 
-Entry Window Radar now records the first GitHub Traffic signal as bounded external residue, without treating clones/views as adoption proof or authorization for external posting/runtime expansion.
+Entry Window Radar repo-carried governance now records that GitHub surface metadata matches the current public posture: prompt-first Quest Snapshot workflow, local V12-style checkpoint command, Star-ready SOFT GO, and External posting HOLD.
 
 External posting: unresolved and HOLD
 External API: HOLD
@@ -144,6 +147,7 @@ Phase 10.57 Non-Decision-OS Public-Safe Example: resolved and PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: resolved with USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
 Phase 10.59 GitHub Traffic Signal Receipt: resolved and PASS
 Allowed wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no AI/API calls; no visual export; Human keeps the Seat
+GitHub surface metadata: description and topics now match prompt-first Quest Snapshot workflow plus local V12-style checkpoint command; homepage empty; visibility PUBLIC
 External posting: HOLD until explicit maintainer GO
 GitHub Traffic signal as of 2026-07-03 JST: clones 452, unique cloners 169, total views 12, unique visitors 1 in last 14 days
 V12-style Session Snapshot command implementation: resolved and PASS for minimal local checkpoint only
@@ -157,14 +161,13 @@ Existing visual prototype redesigns: HOLD until separately gated
 Portfolio JSON output: HOLD until separately gated
 Portfolio SVG output: HOLD until separately gated
 Launch-order automation: HOLD until separately gated
-Full Quest Map rendering/output/scoring automation: HOLD until separately gated
-... (6 line(s) omitted by local checkpoint command)
+... (7 line(s) omitted by local checkpoint command)
 
 ## Next Action Owner
 
 ```text
 Current patch owner: Codex
-After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; GitHub surface metadata and Star-ready SOFT GO do not authorize external posting; external posting remains HOLD until explicit maintainer GO
 ```
 ~~~
 
@@ -200,6 +203,9 @@ Phase 10.56 Current State Closeout / Star-ready Re-audit: USE-READY PASS / COMMA
 Phase 10.57 Non-Decision-OS Public-Safe Example: PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
 Phase 10.59 GitHub Traffic Signal Receipt: PASS
+Phase 10.60 GitHub Surface Metadata Audit: PARTIAL / PATCH RECOMMENDED
+Phase 10.61 GitHub Surface Metadata Patch: PASS
+Phase 10.62 Current Public Surface Closeout: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -230,14 +236,11 @@ V14 deep scoring: BLOCK
 - Codex Interpretation Note / Evidence Basis is allowed only as a specification in `docs/codex_interpretation_note_v0_1.md`. It defines a future written evidence layer for Quest Snapshot, but does not authorize market research, source invention, new charts, scoring automation, snapshot output, CLI behavior changes, PDF generation, screenshot automation, or external posting.
 - Snapshot Trajectory / Drift Delta is allowed as a specification in `docs/snapshot_trajectory_drift_delta_v0_1.md` and as a cleaned-up static/manual Japanese visual prototype in `outputs/snapshot_trajectory_drift_delta_ja.svg`, with example note in `examples/snapshot_trajectory_drift_delta_v0_1_ja.md`. It does not authorize runtime comparison, automatic drift scoring, live snapshot reading, Quest Snapshot runtime, CLI behavior changes, PDF generation, screenshot automation, or external posting.
 - Quest Snapshot Visual Design System is allowed only as a specification in `docs/quest_snapshot_visual_design_system_v0_1.md`. It defines future visual consistency rules, but does not authorize redesigning existing SVGs, new chart logic, renderer implementation, PDF generation, screenshot automation, scoring, market research, CLI behavior changes, or external posting.
-- Quest Map Current Architecture is allowed only as a documentation summary in `docs/quest_map_current_architecture_v0_1.md`. It records current artifact roles, PASS/HOLD/BLOCK state, and the next recommended architecture acceptance audit; it does not authorize new analysis fields, runtime outputs, snapshot comparison, automatic drift scoring, renderer implementation, PDF generation, screenshot automation, market research, CLI behavior changes, full Quest Map implementation, or external posting.
-- Minimal Runtime Cutline is allowed only as a decision/spec in `docs/minimal_runtime_cutline_v0_1.md`. It selects Markdown `outputs/quest_snapshot.md` as the first safe future runtime path, but does not authorize generating that output yet. Future runtime must assemble manually provided fields only; it must not infer Gate, recommended action, lifecycle classification, risk level, evidence quality, relationship risk, market size, or paid repeat signal.
-- Quest Snapshot Markdown Template is allowed only as a reusable manual template in `templates/quest_snapshot_template_v0_1.md`, with usage notes in `docs/quest_snapshot_template_usage_v0_1.md`. It does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI behavior changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 ~~~
 
 ## Session Note
 
-Phase 10.59 GitHub traffic signal receipt checkpoint
+Phase 10.62 current public surface closeout checkpoint
 
 ## Restart Card
 
@@ -319,6 +322,9 @@ Phase 10.56 Current State Closeout / Star-ready Re-audit: USE-READY PASS / COMMA
 Phase 10.57 Non-Decision-OS Public-Safe Example: PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
 Phase 10.59 GitHub Traffic Signal Receipt: PASS
+Phase 10.60 GitHub Surface Metadata Audit: PARTIAL / PATCH RECOMMENDED
+Phase 10.61 GitHub Surface Metadata Patch: PASS
+Phase 10.62 Current Public Surface Closeout: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -327,7 +333,7 @@ V14 deep scoring: BLOCK
 
 - What changed: Not inferred by local command.
 - What remains unfinished: Not inferred by local command.
-- Next Action: After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+- Next Action: After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; GitHub surface metadata and Star-ready SOFT GO do not authorize external posting; external posting remains HOLD until explicit maintainer GO
 - Do-Not-Do Boundary: Entry Window Radar is an as-of diagnosis tool. It is not a future prediction tool and must not judge the operator or founder.
 - Recheck Condition: UNKNOWN
 - Completion Line:
@@ -335,7 +341,7 @@ V14 deep scoring: BLOCK
 ~~~text
 ## Completion Line
 
-Entry Window Radar now records the first GitHub Traffic signal as bounded external residue, without treating clones/views as adoption proof or authorization for external posting/runtime expansion.
+Entry Window Radar repo-carried governance now records that GitHub surface metadata matches the current public posture: prompt-first Quest Snapshot workflow, local V12-style checkpoint command, Star-ready SOFT GO, and External posting HOLD.
 ~~~
 
 - UNKNOWN / Missing Closure:
@@ -367,6 +373,7 @@ Phase 10.57 Non-Decision-OS Public-Safe Example: resolved and PASS
 Phase 10.58 Star-ready Re-audit after Non-Decision-OS Example: resolved with USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT GO / EXTERNAL POSTING HOLD
 Phase 10.59 GitHub Traffic Signal Receipt: resolved and PASS
 Allowed wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no AI/API calls; no visual export; Human keeps the Seat
+GitHub surface metadata: description and topics now match prompt-first Quest Snapshot workflow plus local V12-style checkpoint command; homepage empty; visibility PUBLIC
 External posting: HOLD until explicit maintainer GO
 GitHub Traffic signal as of 2026-07-03 JST: clones 452, unique cloners 169, total views 12, unique visitors 1 in last 14 days
 V12-style Session Snapshot command implementation: resolved and PASS for minimal local checkpoint only
