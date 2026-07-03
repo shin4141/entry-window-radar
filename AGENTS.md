@@ -96,6 +96,7 @@ Phase 10.53 Session Snapshot Command Placement Spec: PASS
 Phase 10.54 Minimal V12-style Session Snapshot Command: PASS
 Phase 10.55 Session Snapshot Command Acceptance Audit: PASS
 Phase 10.56 Current State Closeout / Star-ready Re-audit: USE-READY PASS / COMMAND-READY PASS / STAR-READY SOFT HOLD / EXTERNAL POSTING HOLD
+Phase 10.57 Non-Decision-OS Public-Safe Example: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -133,7 +134,7 @@ V14 deep scoring: BLOCK
 - Minimal Runtime Cutline is allowed only as a decision/spec in `docs/minimal_runtime_cutline_v0_1.md`. It selects Markdown `outputs/quest_snapshot.md` as the first safe future runtime path, but does not authorize generating that output yet. Future runtime must assemble manually provided fields only; it must not infer Gate, recommended action, lifecycle classification, risk level, evidence quality, relationship risk, market size, or paid repeat signal.
 - Quest Snapshot Markdown Template is allowed only as a reusable manual template in `templates/quest_snapshot_template_v0_1.md`, with usage notes in `docs/quest_snapshot_template_usage_v0_1.md`. It does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI behavior changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - Session Snapshot Command Placement is recorded in `docs/session_snapshot_command_placement_v0_1.md`. The minimal `tools/save_session_snapshot.py` command is allowed only as a V12-style restart checkpoint command that writes `outputs/session_snapshot.md` when run. It must not be treated as Quest Snapshot auto-generation and must not be extended into AI calls, scoring, drift scoring, snapshot comparison, market research, visual export, target repo modification, auto-commit, external APIs, Gate upgrades, or external posting without a future Gate.
-- Current closeout posture is Use-ready PASS and command-ready PASS, but star-ready remains SOFT HOLD pending one public-safe non-Decision-OS example. External posting remains HOLD. Do not treat SOFT HOLD as permission for announcements, posting materials, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, scoring, snapshot comparison, market research, target repo modification, or auto-commit behavior.
+- Current closeout posture is Use-ready PASS and command-ready PASS. Phase 10.57 added a public-safe non-Decision-OS documentation example at `examples/local_markdown_task_tracker_quest_snapshot_example_v0_1.md`, but star-ready remains SOFT HOLD until separately re-audited and external posting remains HOLD. Do not treat this example as permission for announcements, posting materials, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, scoring, snapshot comparison, market research, target repo modification, or auto-commit behavior.
 - Quest Snapshot Storage Modes / User Flow is allowed only as a specification in `docs/quest_snapshot_storage_modes_user_flow_v0_1.md`. It defines Codex memory/project context as the default, Markdown/local export as optional, and target repo storage as advanced; it does not authorize a generator prompt, runtime generation, `outputs/quest_snapshot.md`, CLI behavior changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - Quest Snapshot Generator Prompt is allowed only as a pasteable prompt in `prompts/quest_snapshot_generator_prompt_v0_1.md`, with usage notes in `docs/quest_snapshot_generator_prompt_usage_v0_1.md`. It does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI behavior changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - README First-Screen / Use Path Rewrite is allowed only as navigation and public-readiness cleanup. It does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI behavior changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
@@ -182,6 +183,7 @@ V14 deep scoring: BLOCK
 - maintain the Quest Snapshot Storage Modes / User Flow specification
 - maintain the Quest Snapshot Generator Prompt
 - maintain README first-screen navigation for Quest Snapshot use
+- maintain public-safe documentation examples, including the non-Decision-OS Local Markdown Task Tracker example
 - maintain the static/manual Quest Position Map prototype
 - maintain the Japanese static/manual Quest Position Map visual variant
 - maintain the static/manual Industry Slope Timeline visual prototype
