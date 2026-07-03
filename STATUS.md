@@ -83,6 +83,7 @@ Phase 10.61 GitHub Surface Metadata Patch: PASS
 Phase 10.62 Current Public Surface Closeout: PASS
 Phase 10.63 Session Snapshot Misuse Guard: PASS
 Phase 10.64 Quest Snapshot vs Session Snapshot Explainer: PASS
+Phase 10.65 Spec Shelf Boundary Audit: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -174,6 +175,7 @@ V14 deep scoring: BLOCK
 | Phase 10.62 Current Public Surface Closeout | PASS | This patch records Phase 10.61 metadata state in repo-carried governance. GitHub surface metadata now matches current posture: prompt-first Quest Snapshot workflow, local V12-style checkpoint command, Star-ready `SOFT GO`, External posting `HOLD`. This closeout does not authorize runtime expansion, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, snapshot comparison, scoring, market claims, or external posting. |
 | Phase 10.63 Session Snapshot Misuse Guard | PASS | Adds full-handoff misuse warning to `tools/save_session_snapshot.py` and regenerated `outputs/session_snapshot.md`. Session Snapshot remains a V12-style restart checkpoint only; it is not full handoff, not Quest Snapshot auto-generation, and does not authorize runtime expansion or external posting. |
 | Phase 10.64 Quest Snapshot vs Session Snapshot Explainer | PASS | Adds `docs/quest_snapshot_vs_session_snapshot_explainer_v0_1.md` and README navigation so readers can distinguish V12 Session Snapshot, Entry Quest Snapshot, and Full Handoff / Handoff Header. Documentation-only; no `outputs/quest_snapshot.md`, Quest Snapshot auto-generation, runtime expansion, AI/API calls, scoring, snapshot comparison, hooks/MCP/plugins, visual export, or external posting was added. |
+| Phase 10.65 Spec Shelf Boundary Audit | PASS | Requested as Phase 10.64, but recorded as Phase 10.65 to avoid duplicate phase ownership. Adds `docs/spec_shelf_boundary_audit_v0_1.md` and a README Deeper Docs Spec Shelf Boundary so planned/spec-defined future layers are clearly non-implemented, non-runtime, non-permission-giving documentation / field-note material only and require a future explicit Gate before implementation. No `outputs/quest_snapshot.md`, runtime generation, Quest Snapshot auto-generation, AI/API calls, scoring, snapshot comparison, visual export, hooks/MCP/plugins, execution engine, or external posting was added. |
 
 ## Active Repo
 
@@ -253,12 +255,13 @@ Latest GitHub traffic signal receipt commit: 6375355 Record GitHub traffic signa
 Latest GitHub surface metadata patch: Phase 10.61, GitHub-only metadata update, no local commit
 Latest current public surface closeout commit: d3fa833 Record current public surface closeout
 Latest Session Snapshot misuse guard commit: ad15c24 Add Session Snapshot misuse guard
-Latest Quest Snapshot vs Session Snapshot explainer commit: this patch
+Latest Quest Snapshot vs Session Snapshot explainer commit: a16066f Add snapshot distinction explainer
+Latest Spec Shelf Boundary Audit commit: this patch
 ```
 
 ## Completion Line
 
-Entry Window Radar now gives first-time users and future AI agents a short public-safe explainer for when to use V12 Session Snapshot, Entry Quest Snapshot, or Full Handoff / Handoff Header, without implying project-level handoffs are auto-generated.
+Entry Window Radar now carries an explicit README Spec Shelf Boundary and audit receipt so a future reader or Codex cannot confuse Deeper Docs specifications with implemented repo capability.
 
 ## Missing Closure
 
@@ -334,6 +337,7 @@ Phase 10.61 GitHub Surface Metadata Patch: resolved and PASS; GitHub-only metada
 Phase 10.62 Current Public Surface Closeout: resolved and PASS
 Phase 10.63 Session Snapshot Misuse Guard: resolved and PASS; `outputs/session_snapshot.md` is checkpoint only, not full handoff; receiving AI must state what it now owns; project-level handoff still requires Quest Snapshot or Handoff Header
 Phase 10.64 Quest Snapshot vs Session Snapshot Explainer: resolved and PASS; adds a documentation-only distinction between V12 Session Snapshot, Entry Quest Snapshot, and Full Handoff / Handoff Header; no `outputs/quest_snapshot.md`, Quest Snapshot auto-generation, runtime expansion, AI/API calls, scoring, snapshot comparison, hooks/MCP/plugins, visual export, or external posting
+Phase 10.65 Spec Shelf Boundary Audit: resolved and PASS; requested as Phase 10.64 but renumbered to avoid duplicate phase ownership; README Deeper Docs and `docs/spec_shelf_boundary_audit_v0_1.md` now state that planned/spec-defined future layers are non-implemented, non-runtime, non-permission-giving documentation / field-note material only and require a future explicit Gate before implementation
 Use-ready: PASS
 Command-ready: PASS for minimal V12-style session checkpoint
 Star-ready: SOFT GO for bounded GitHub star-oriented attention using the allowed wording boundary
@@ -368,7 +372,7 @@ V14 deep scoring: BLOCK
 
 ```text
 Current patch owner: Codex
-After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not treat `outputs/session_snapshot.md` as completion, full handoff, or Quest Snapshot auto-generation; receiving AI must state what it now owns before continuing; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, hooks/MCP/plugins, market research, external APIs, or new analysis fields without explicit maintainer GO; GitHub surface metadata and Star-ready SOFT GO do not authorize external posting; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin/Codex for traffic observation or a separately gated external-posting decision / next phase; do not treat Deeper Docs specs, `outputs/session_snapshot.md`, or spec shelf audit receipts as runtime permission, completion, full handoff, Quest Snapshot auto-generation, or Gate change; receiving AI must state what it now owns before continuing; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, hooks/MCP/plugins, execution-engine work, market research, external APIs, or new analysis fields without explicit maintainer GO; GitHub surface metadata and Star-ready SOFT GO do not authorize external posting; external posting remains HOLD until explicit maintainer GO
 ```
 
 ## Re-entry Notes
@@ -402,6 +406,7 @@ After this patch: Shin/Codex for traffic observation or a separately gated exter
 - Minimal V12-style Session Snapshot command exists at `tools/save_session_snapshot.py`. It writes `outputs/session_snapshot.md` only when run and is limited to local restart checkpoint generation from bounded governance excerpts and git metadata. It is not Quest Snapshot auto-generation and does not authorize AI calls, external APIs, market research, scoring, drift scoring, snapshot comparison, visual export, target repo modification, auto-commit, Gate upgrades, or external posting.
 - Phase 10.63 adds Session Snapshot Misuse Guard. `outputs/session_snapshot.md` is a V12-style restart checkpoint, not a full handoff or Quest Snapshot. A receiving AI must state what it now owns before continuing. For project-level handoff, use a Quest Snapshot or Handoff Header. This does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, runtime expansion, AI/API calls, visual export, snapshot comparison, scoring, or external posting.
 - Phase 10.64 adds `docs/quest_snapshot_vs_session_snapshot_explainer_v0_1.md`, a short public-safe explainer distinguishing V12 Session Snapshot, Entry Quest Snapshot, and Full Handoff / Handoff Header. This is documentation-only and does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, runtime expansion, AI/API calls, visual export, snapshot comparison, scoring, hooks/MCP/plugins, or external posting.
+- Phase 10.65 adds `docs/spec_shelf_boundary_audit_v0_1.md` and a README Deeper Docs Spec Shelf Boundary. It was requested as Phase 10.64 but recorded as Phase 10.65 to avoid duplicate phase ownership. Planned/spec-defined future layers remain parked documentation / field-note material only: they are non-implemented as runtime capability, do not grant runtime permission, do not change the current Gate, and require a future explicit Gate before implementation. This does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, runtime expansion, AI/API calls, scoring, snapshot comparison, visual export, hooks/MCP/plugins, execution-engine work, or external posting.
 - Phase 10.57 adds a public-safe non-Decision-OS example at `examples/local_markdown_task_tracker_quest_snapshot_example_v0_1.md`, showing a normal small-project Quest Snapshot flow and optional V12-style session checkpoint command. Phase 10.58 re-audited star-readiness as SOFT GO under this wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no `outputs/quest_snapshot.md`; no AI/API calls; no visual export; Human keeps the Seat. External posting remains HOLD. This does not authorize Quest Snapshot auto-generation, PDF/PNG/screenshot automation, snapshot comparison, scoring or drift scoring, market research, visual export, target repo modification, auto-commit behavior, or external posting.
 - Phase 10.59 records GitHub Traffic as bounded external residue in `docs/github_traffic_signal_receipt_v0_1.md`: clones 452, unique cloners 169, total views 12, unique visitors 1 in the last 14 days as of 2026-07-03 JST. Clone count is much higher than view count, so automation, bots, indexing, GitHub tooling, or non-human clone activity may be involved. Treat this as early external-contact residue / traffic anomaly worth tracking, not proof of human adoption, usage, product-market fit, correctness, stars, market validation, or external posting GO. Recheck after 7 days, a new star, repeated unique visitors, issue/PR activity, external mention, or manual user trial.
 - V13 LoopKit re-entry dogfood status: local actual repo dogfood was BLOCKED because the local repo path was unavailable; do not claim the local V13 repo was inspected. Remote-source re-entry dogfood using a public GitHub clone of `https://github.com/shin4141/decision-os-v13-loopkit` at commit `2f52572` passed with result `V13 REMOTE-SOURCE RE-ENTRY DOGFOOD PASS`; report is `examples/v13_remote_source_reentry_dogfood_v0_1.md`. Meaning: a future Codex can resume V13 LoopKit from actual remote repo evidence and Quest Snapshot state without Shin re-explaining Gate, Next Action, Do-Not-Do Boundary, Recheck Condition, and Completion Line. Boundary: this PASS does not authorize runtime, scoring, snapshot comparison, automation, or external posting.

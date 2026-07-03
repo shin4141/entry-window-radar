@@ -176,6 +176,20 @@ Codex/AI must not broaden runtime, posting, scoring, rendering, PDF/PNG/screensh
 
 ## Deeper Docs
 
+### Spec Shelf Boundary
+
+Unless this README explicitly says a local command or output is available, Deeper Docs entries are parked documentation / field-note material only.
+
+For every planned/spec-defined future layer referenced below:
+
+- it is not implemented as runtime capability
+- it does not grant runtime permission
+- it does not change the current Gate
+- it remains documentation / field-note material only
+- it requires a future explicit Gate before implementation
+
+The audit receipt lives in `docs/spec_shelf_boundary_audit_v0_1.md`.
+
 Entry Window Card is the original single-target diagnosis shape:
 
 ```text
@@ -280,6 +294,7 @@ Included:
 - a Quest Snapshot Markdown Template v0.1 for manual As-of snapshot drafting
 - a Quest Snapshot Storage Modes / User Flow v0.1 specification for low-friction re-entry
 - a Quest Snapshot Generator Prompt v0.1 for pasteable AI-assisted snapshot drafting
+- a Spec Shelf Boundary Audit v0.1 for keeping planned/spec-defined future layers non-runtime
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
