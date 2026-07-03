@@ -103,6 +103,7 @@ Phase 10.60 GitHub Surface Metadata Audit: PARTIAL / PATCH RECOMMENDED
 Phase 10.61 GitHub Surface Metadata Patch: PASS
 Phase 10.62 Current Public Surface Closeout: PASS
 Phase 10.63 Session Snapshot Misuse Guard: PASS
+Phase 10.64 Quest Snapshot vs Session Snapshot Explainer: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -141,6 +142,7 @@ V14 deep scoring: BLOCK
 - Quest Snapshot Markdown Template is allowed only as a reusable manual template in `templates/quest_snapshot_template_v0_1.md`, with usage notes in `docs/quest_snapshot_template_usage_v0_1.md`. It does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI behavior changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - Session Snapshot Command Placement is recorded in `docs/session_snapshot_command_placement_v0_1.md`. The minimal `tools/save_session_snapshot.py` command is allowed only as a V12-style restart checkpoint command that writes `outputs/session_snapshot.md` when run. It must not be treated as Quest Snapshot auto-generation and must not be extended into AI calls, scoring, drift scoring, snapshot comparison, market research, visual export, target repo modification, auto-commit, external APIs, Gate upgrades, or external posting without a future Gate.
 - `outputs/session_snapshot.md` must not be treated as a full handoff by itself. A receiving AI must state what it now owns before continuing. For project-level handoff, use a Quest Snapshot or Handoff Header. This guard does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, runtime expansion, AI/API calls, scoring, snapshot comparison, visual export, or external posting.
+- Quest Snapshot vs Session Snapshot Explainer is allowed only as documentation in `docs/quest_snapshot_vs_session_snapshot_explainer_v0_1.md`. It clarifies V12 Session Snapshot, Entry Quest Snapshot, and Full Handoff / Handoff Header, but does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, runtime expansion, AI/API calls, scoring, snapshot comparison, hooks/MCP/plugins, visual export, or external posting.
 - Current closeout posture is Use-ready PASS, command-ready PASS, and star-ready SOFT GO under bounded wording. Allowed wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no `outputs/quest_snapshot.md`; no AI/API calls; no visual export; Human keeps the Seat. External posting remains HOLD. Do not treat SOFT GO as permission for announcements, posting materials, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, scoring, snapshot comparison, market research, target repo modification, or auto-commit behavior.
 - GitHub surface metadata now describes the repo as a prompt-first Quest Snapshot workflow plus local V12-style checkpoint command. This metadata state and Star-ready SOFT GO do not authorize external posting, announcement text, runtime expansion, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, snapshot comparison, scoring, market claims, or implementation expansion. External posting remains a separate Gate.
 - GitHub traffic metrics may be recorded as external signals, as in `docs/github_traffic_signal_receipt_v0_1.md`, but must not be used to claim adoption, usage, product-market fit, correctness, star growth, market validation, or external posting GO. Clone/view mismatches should be treated cautiously because automation, bots, indexing, GitHub tooling, or non-human clone activity may be involved.
@@ -191,6 +193,7 @@ V14 deep scoring: BLOCK
 - maintain the Quest Snapshot Markdown Template
 - maintain the Quest Snapshot Storage Modes / User Flow specification
 - maintain the Quest Snapshot Generator Prompt
+- maintain the Quest Snapshot vs Session Snapshot explainer
 - maintain README first-screen navigation for Quest Snapshot use
 - maintain public-safe documentation examples, including the non-Decision-OS Local Markdown Task Tracker example
 - maintain the static/manual Quest Position Map prototype
