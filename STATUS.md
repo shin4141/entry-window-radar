@@ -59,6 +59,7 @@ Phase 10.38 Minimal Runtime Cutline / Output Path Decision: PASS
 Phase 10.39 Quest Snapshot Markdown Template: PASS
 Phase 10.40 V13 LoopKit Manual Quest Snapshot Example: PASS
 Phase 10.41 Quest Snapshot Storage Modes / User Flow: PASS
+Phase 10.42 Quest Snapshot Generator Prompt: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -126,6 +127,7 @@ V14 deep scoring: BLOCK
 | Phase 10.39 Quest Snapshot Markdown Template | PASS | Adds `templates/quest_snapshot_template_v0_1.md` and `docs/quest_snapshot_template_usage_v0_1.md` for manual As-of Quest Snapshot drafting; no runtime, `outputs/quest_snapshot.md`, CLI behavior change, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, market research, external APIs, full Quest Map implementation, or external posting was added. |
 | Phase 10.40 V13 LoopKit Manual Quest Snapshot Example | PASS | Adds public-safe example `examples/v13_loopkit_manual_quest_snapshot_v0_1.md`; no V13 LoopKit repo modification, runtime, `outputs/quest_snapshot.md`, CLI behavior change, PDF/PNG/screenshot automation, snapshot comparison, scoring, market research, external APIs, or external posting was added. |
 | Phase 10.41 Quest Snapshot Storage Modes / User Flow | PASS | Adds `docs/quest_snapshot_storage_modes_user_flow_v0_1.md` to define Codex memory/project context as default storage, Markdown/local file as optional portable storage, and target repo storage as an advanced route; no runtime, `outputs/quest_snapshot.md`, CLI behavior change, PDF/PNG/screenshot automation, snapshot comparison, scoring, market research, external APIs, full Quest Map implementation, or external posting was added. |
+| Phase 10.42 Quest Snapshot Generator Prompt | PASS | Adds `prompts/quest_snapshot_generator_prompt_v0_1.md` and `docs/quest_snapshot_generator_prompt_usage_v0_1.md` so normal users can paste a self-contained prompt into Codex/AI to draft Quest Snapshots with UNKNOWN handling and human Seat preserved; no runtime, `outputs/quest_snapshot.md`, CLI behavior change, PDF/PNG/screenshot automation, snapshot comparison, scoring, market research, external APIs, full Quest Map implementation, or external posting was added. |
 
 ## Active Repo
 
@@ -185,11 +187,12 @@ Latest Architecture Acceptance Audit result: ARCHITECTURE AUDIT PASS (audit-only
 Latest Minimal Runtime Cutline commit: 25dbb55 Add Minimal Runtime Cutline
 Latest Quest Snapshot Markdown Template commit: 93ce8e8 Add Quest Snapshot Markdown Template
 Latest V13 LoopKit manual Quest Snapshot example commit: f95ad88 Add V13 LoopKit manual Quest Snapshot example
+Latest Quest Snapshot Storage Modes commit: 16aa767 Add Quest Snapshot Storage Modes User Flow
 ```
 
 ## Completion Line
 
-Quest Snapshot Storage Modes / User Flow v0.1 defines Codex memory / project context as the default low-friction storage mode, Markdown/local file as optional portable storage, and target repo storage as an advanced route, so users can benefit from Quest Snapshot without being forced into repo commits or public/private disclosure decisions.
+Quest Snapshot Generator Prompt v0.1 gives normal users a pasteable, self-contained way to generate a Quest Snapshot while preserving UNKNOWN fields, optional Decision Owner questions, and human Seat without requiring repo storage or runtime implementation.
 
 ## Missing Closure
 
@@ -241,10 +244,11 @@ Phase 10.38 Minimal Runtime Cutline / Output Path Decision: resolved and PASS
 Phase 10.39 Quest Snapshot Markdown Template: resolved and PASS
 Phase 10.40 V13 LoopKit Manual Quest Snapshot Example: resolved and PASS
 Phase 10.41 Quest Snapshot Storage Modes / User Flow: resolved and PASS
+Phase 10.42 Quest Snapshot Generator Prompt: resolved and PASS
 Industry Slope Timeline runtime/automation: HOLD until separately gated
 Survival / Relationship Risk Panel: HOLD until separately gated
 Quest Snapshot Markdown runtime output (`outputs/quest_snapshot.md`): HOLD until separately gated
-Quest Snapshot Generator Prompt: HOLD until separately gated
+Quest Snapshot Generator Prompt: resolved and PASS
 Snapshot Trajectory / Drift Delta runtime comparison, automatic drift scoring, live snapshot reading, and automated visual output: HOLD until separately gated
 Existing visual prototype redesigns: HOLD until separately gated
 Portfolio JSON output: HOLD until separately gated
@@ -262,7 +266,7 @@ V14 deep scoring: BLOCK
 
 ```text
 Current patch owner: Codex
-After this patch: Shin/Codex for Quest Snapshot Generator Prompt with UNKNOWN handling, if explicitly gated; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
+After this patch: Shin/Codex for generator prompt dogfood or a separately gated review; do not implement runtime, `outputs/quest_snapshot.md`, PDF/PNG export, screenshot automation, snapshot comparison, drift scoring, renderer work, market research, external APIs, or new analysis fields without explicit maintainer GO; external posting remains HOLD until explicit maintainer GO
 ```
 
 ## Re-entry Notes
@@ -285,6 +289,7 @@ After this patch: Shin/Codex for Quest Snapshot Generator Prompt with UNKNOWN ha
 - Minimal Runtime Cutline has a v0.1 decision in `docs/minimal_runtime_cutline_v0_1.md`; it selects Markdown `outputs/quest_snapshot.md` as the first safe future runtime path, but does not authorize generating it yet. The first runtime must assemble manually provided fields only and must not infer Gate, action, lifecycle, risk, market size, relationship risk, or evidence quality.
 - Quest Snapshot Markdown Template has a v0.1 template in `templates/quest_snapshot_template_v0_1.md` and usage note in `docs/quest_snapshot_template_usage_v0_1.md`; future Codex/AI may fill it manually when explicitly gated, but this does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - Quest Snapshot Storage Modes / User Flow has a v0.1 specification in `docs/quest_snapshot_storage_modes_user_flow_v0_1.md`; normal users should default to Codex memory / project context, optionally export Markdown/local files, and treat target repo storage as advanced. Entry Window Radar examples are for public-safe dogfood, not the user's live project state.
+- Quest Snapshot Generator Prompt has a v0.1 prompt in `prompts/quest_snapshot_generator_prompt_v0_1.md` and usage note in `docs/quest_snapshot_generator_prompt_usage_v0_1.md`; it is a pasteable prompt for normal users and does not authorize runtime generation, `outputs/quest_snapshot.md`, CLI changes, PDF/PNG/screenshot automation, snapshot comparison, automatic scoring, drift scoring, market research, external APIs, full Quest Map implementation, or external posting.
 - Quest Position Map v0.1 has static/manual visual prototypes in `outputs/quest_position_map.svg` and `outputs/quest_position_map_ja.svg`, with specification in `docs/quest_position_map_v0_1.md`, English sample explanation in `examples/quest_position_map_v0_1.md`, and Japanese interpretation note in `examples/quest_position_map_v0_1_ja.md`; these use hand-authored illustrative data and do not authorize full Quest Map implementation, automatic recommendation logic, market research, runtime rendering, PDF, screenshot automation, snapshot output, CLI changes, or external posting.
 - Industry Slope Timeline v0.1 has a static/manual Japanese visual prototype in `outputs/industry_slope_timeline_ja.svg`, with specification in `docs/industry_slope_timeline_v0_1.md` and example note in `examples/industry_slope_timeline_v0_1_ja.md`; its curve represents a specific niche's entry-window lifecycle, not the whole AI industry, and its text lifecycle classification should be read before judging whether a project is early, late, safe, crowded, or risky. It uses hand-authored illustrative data and does not authorize automatic market analysis, web research, forecasting logic, scoring automation, full Quest Map implementation, PDF generation, screenshot automation, CLI changes, or external posting.
 - Delivery Scope Radar and V14 deep scoring remain blocked.
