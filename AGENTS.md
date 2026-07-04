@@ -106,6 +106,7 @@ Phase 10.63 Session Snapshot Misuse Guard: PASS
 Phase 10.64 Quest Snapshot vs Session Snapshot Explainer: PASS
 Phase 10.65 Spec Shelf Boundary Audit: PASS
 Phase 10.66 Star-ready SOFT GO Rationale Closeout: PASS
+Phase 10.67 Handoff Horizon Recession Field Note: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -147,6 +148,7 @@ V14 deep scoring: BLOCK
 - Quest Snapshot vs Session Snapshot Explainer is allowed only as documentation in `docs/quest_snapshot_vs_session_snapshot_explainer_v0_1.md`. It clarifies V12 Session Snapshot, Entry Quest Snapshot, and Full Handoff / Handoff Header, but does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, runtime expansion, AI/API calls, scoring, snapshot comparison, hooks/MCP/plugins, visual export, or external posting.
 - Spec Shelf Boundary Audit is allowed only as documentation in `docs/spec_shelf_boundary_audit_v0_1.md` and README boundary wording. It clarifies that planned/spec-defined future layers are non-implemented, non-runtime, non-permission-giving documentation / field-note material only and require a future explicit Gate before implementation. It does not authorize runtime generation, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, scoring, snapshot comparison, hooks/MCP/plugins, visual export, execution-engine work, or external posting.
 - Star-ready SOFT GO Rationale Closeout is documentation-only. SOFT GO means the public repo surface is durable enough to be seen without likely breaking the project boundary; it is not FULL GO, external posting permission, active promotion permission, runtime expansion, or automatic launch permission. Promotion beyond SOFT GO requires repeated external signal, manual user trial, issue/PR activity, a new star, or explicit External Posting Gate review.
+- Handoff Horizon Recession Field Note is allowed only as documentation in `docs/handoff_horizon_recession_field_note_v0_1.md`. It records the structural observation that long-context AI delays visible handoff risk and can accumulate Context Debt before a visible handoff accident. It is not a product pitch, active promotion, external posting material, runtime permission, launch permission, or implementation scope, and it does not authorize Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, runtime expansion, AI/API calls, scoring, snapshot comparison, visual export, hooks/MCP/plugins, execution-engine work, or external posting.
 - Current closeout posture is Use-ready PASS, command-ready PASS, and star-ready SOFT GO under bounded wording. Allowed wording boundary: prompt-first Quest Snapshot workflow; local V12-style checkpoint command available; no full Quest Snapshot runtime; no `outputs/quest_snapshot.md`; no AI/API calls; no visual export; Human keeps the Seat. External posting remains HOLD. Do not treat SOFT GO as permission for announcements, posting materials, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, scoring, snapshot comparison, market research, target repo modification, or auto-commit behavior.
 - GitHub surface metadata now describes the repo as a prompt-first Quest Snapshot workflow plus local V12-style checkpoint command. This metadata state and Star-ready SOFT GO do not authorize external posting, announcement text, runtime expansion, Quest Snapshot auto-generation, `outputs/quest_snapshot.md`, AI/API calls, visual export, snapshot comparison, scoring, market claims, or implementation expansion. External posting remains a separate Gate.
 - GitHub traffic metrics may be recorded as external signals, as in `docs/github_traffic_signal_receipt_v0_1.md`, but must not be used to claim adoption, usage, product-market fit, correctness, star growth, market validation, or external posting GO. Clone/view mismatches should be treated cautiously because automation, bots, indexing, GitHub tooling, or non-human clone activity may be involved.
@@ -199,6 +201,7 @@ V14 deep scoring: BLOCK
 - maintain the Quest Snapshot Generator Prompt
 - maintain the Quest Snapshot vs Session Snapshot explainer
 - maintain the Spec Shelf Boundary Audit
+- maintain the Handoff Horizon Recession Field Note
 - maintain README first-screen navigation for Quest Snapshot use
 - maintain public-safe documentation examples, including the non-Decision-OS Local Markdown Task Tracker example
 - maintain the static/manual Quest Position Map prototype

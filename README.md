@@ -236,6 +236,8 @@ Quest Snapshot Storage Modes / User Flow defines Codex memory / project context 
 
 Quest Snapshot Generator Prompt is a pasteable prompt for normal users to draft Quest Snapshots in Codex / Claude Code / Cursor / ChatGPT while preserving UNKNOWN fields and human Seat. It lives at `prompts/quest_snapshot_generator_prompt_v0_1.md`; usage notes live in `docs/quest_snapshot_generator_prompt_usage_v0_1.md`; runtime generation remains HOLD.
 
+Handoff Horizon Recession Field Note records the structural observation that long-context AI makes handoff failure less visible, not less important. It lives at `docs/handoff_horizon_recession_field_note_v0_1.md`; it is documentation-only and does not authorize external posting, runtime expansion, Quest Snapshot auto-generation, scoring, snapshot comparison, visual export, hooks/MCP/plugins, or execution-engine work.
+
 ## Three Lines
 
 ### Market Line
@@ -296,6 +298,7 @@ Included:
 - a Quest Snapshot Storage Modes / User Flow v0.1 specification for low-friction re-entry
 - a Quest Snapshot Generator Prompt v0.1 for pasteable AI-assisted snapshot drafting
 - a Spec Shelf Boundary Audit v0.1 for keeping planned/spec-defined future layers non-runtime
+- a Handoff Horizon Recession Field Note v0.1 for documenting long-context handoff risk and context debt
 - manual Portfolio Entry Horizon input templates in `inputs/projects.md` and `inputs/markets.md`
 - output files for an Entry Window report and decision card
 - structured `outputs/chart_data.json` and static `outputs/entry_window_map.svg`
