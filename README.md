@@ -1,5 +1,12 @@
 # Entry Window Radar
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+![Status: FULL GO](https://img.shields.io/badge/status-FULL%20GO-brightgreen)
+![Automation: none](https://img.shields.io/badge/automation-none-lightgrey)
+![Local-first: yes](https://img.shields.io/badge/local--first-yes-blue)
+![Human Seat: required](https://img.shields.io/badge/human%20Seat-required-orange)
+![External posting: HOLD](https://img.shields.io/badge/external%20posting-HOLD-red)
+
 A save point for long AI/Codex work.
 
 AI-built projects drift when every AI session starts from scratch.

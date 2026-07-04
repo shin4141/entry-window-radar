@@ -88,6 +88,7 @@ Phase 10.66 Star-ready SOFT GO Rationale Closeout: PASS
 Phase 10.67 Handoff Horizon Recession Field Note: PASS
 Phase 10.68 First-Contact Clarity Audit: PASS
 Phase 10.69 Star-ready FULL GO Review: STAR-READY FULL GO / EXTERNAL POSTING HOLD
+Phase 10.71 README Status Badge Clarity: PASS
 External API: HOLD
 External posting: HOLD
 Delivery Scope Radar: BLOCK
@@ -184,6 +185,7 @@ V14 deep scoring: BLOCK
 | Phase 10.67 Handoff Horizon Recession Field Note | PASS | Adds `docs/handoff_horizon_recession_field_note_v0_1.md` and README navigation. The note records Handoff Horizon Recession as a timestamped structural observation: long-context AI makes handoff failure less visible, not less important, and can let Context Debt accumulate before a visible handoff accident. Documentation-only; not a product pitch, not active promotion, not external posting, and no `outputs/quest_snapshot.md`, runtime generation, Quest Snapshot auto-generation, AI/API calls, scoring, snapshot comparison, visual export, hooks/MCP/plugins, execution engine, or Gate promotion was added. |
 | Phase 10.68 First-Contact Clarity Audit | PASS | Adds a short README `In One Minute` section so a cold reader can understand the simple restart-boundary value, the `save_session_snapshot.py` command, the Session Snapshot vs Quest Snapshot distinction, long-context AI relevance, non-implemented visual/diff automation, and the non-execution-engine boundary before deeper V12/V13/V14 language. Documentation/readability only; no new docs, features, images, visual export, snapshot comparison, runtime expansion, Quest Snapshot auto-generation, external posting, `outputs/quest_snapshot.md`, AI/API calls, scoring, hooks/MCP/plugins, or execution engine was added. |
 | Phase 10.69 Star-ready FULL GO Review | STAR-READY FULL GO / EXTERNAL POSTING HOLD | Readiness review result: all 10 criteria PASS. A cold reader can understand the repo in one minute; the first command is visible and works; Session Snapshot vs Quest Snapshot is clear; the repo does not imply Quest Snapshot auto-generation, runtime, AI/API, visual/diff, scoring, or snapshot-comparison automation; Human keeps the Seat; UNKNOWN is not failure; Deeper Docs are parked/spec/field-note material; External posting remains a separate HOLD Gate; and routine cleanup was closed by Codex. Star-ready is promoted to `FULL GO` for organic discovery, stars, casual reading, and cold-reader inspection only. This does not authorize active promotion, external posting, runtime expansion, automatic launch permission, productization, or implementation expansion. |
+| Phase 10.71 README Status Badge Clarity | PASS | Adds compact README badges for MIT license, FULL GO status, no automation, local-first, human Seat required, and external posting HOLD. Documentation-only; no `outputs/quest_snapshot.md`, runtime generation, Quest Snapshot auto-generation, AI/API calls, scoring, snapshot comparison, visual export, hooks/MCP/plugins, execution engine, or external posting was added. |
 
 ## Active Repo
 
@@ -268,12 +270,13 @@ Latest Spec Shelf Boundary Audit commit: b56fb35 Audit spec shelf boundaries
 Latest Star-ready SOFT GO rationale closeout commit: 16a1111 docs: clarify star-ready soft go boundary
 Latest Handoff Horizon Recession field note commit: b34b1eb docs: add handoff horizon recession field note
 Latest First-Contact Clarity Audit commit: 10ba928 docs: clarify first-contact value
-Latest Star-ready FULL GO review commit: this patch
+Latest Star-ready FULL GO review commit: 28a93ac docs: promote star-ready full go
+Latest README status badge clarity commit: this patch
 ```
 
 ## Completion Line
 
-Entry Window Radar is promoted to Star-ready FULL GO as public-surface durable for organic discovery, stars, casual reading, and cold-reader inspection. Use-ready PASS, Command-ready PASS, Community-ready PASS, and External posting HOLD remain unchanged.
+Entry Window Radar remains Use-ready PASS, Command-ready PASS, Community-ready PASS, Star-ready FULL GO, and External posting HOLD. Phase 10.71 adds README status badges to make the repo's public-surface status and non-automation boundaries visible at first contact.
 
 ## Missing Closure
 
