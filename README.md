@@ -139,7 +139,7 @@ UNKNOWN is where the next decision becomes sharper.
 - Dogfood status: Quest Snapshot Generator Prompt PASS; V13 LoopKit remote-source re-entry dogfood PASS using actual GitHub repo evidence at commit `2f52572`; local V13 repo dogfood was blocked only because the local repo path was unavailable.
 - Cold-user prompt-only trial: PASS; the README first screen plus Generator Prompt produced a useful Quest Snapshot draft without extra Decision-OS explanation.
 - V13 integration validation receipt: Quest Snapshot PASS; Quest Position Map PASS as the first supporting figure; minimum recommended configuration is Quest Snapshot + 1 figure.
-- Star-ready: SOFT GO. This means the public repo surface is durable enough to be seen without likely breaking the project boundary. It is not FULL GO, external posting permission, active promotion permission, runtime expansion, or automatic launch permission. Promotion beyond SOFT GO requires repeated external signal, manual user trial, issue/PR activity, a new star, or an explicit External Posting Gate review.
+- Star-ready: FULL GO. This means the public repo surface is durable enough for organic discovery, stars, casual reading, and cold-reader inspection. It is not external posting permission, active promotion permission, runtime expansion, productization, or automatic launch permission.
 - Runtime generation: HOLD
 - PDF / PNG / screenshot automation: HOLD
 - Snapshot comparison: HOLD
