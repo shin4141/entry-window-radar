@@ -24,6 +24,24 @@ This is not a market predictor, startup scorer, launch permission system, or aut
 
 The human keeps the Seat.
 
+## In One Minute
+
+Entry Window Radar helps you save a restart point so future Codex/AI can understand where the work is, what changed, and what not to do next.
+
+For a quick session checkpoint:
+
+```bash
+python3 -B tools/save_session_snapshot.py --note "End of session checkpoint"
+```
+
+This writes `outputs/session_snapshot.md`. It is a restart checkpoint, not a completion claim, full handoff, or Quest Snapshot generator.
+
+For a project-level Quest Snapshot, use `prompts/quest_snapshot_generator_prompt_v0_1.md` in Codex/AI and save the result in project context or local notes.
+
+Long-context AI can keep a chat going longer, but it can also hide context debt. Entry Window Radar is a restart-boundary tool, not an execution engine.
+
+Not implemented: Quest Snapshot runtime generation, `outputs/quest_snapshot.md`, image/visual/diff automation, scoring, snapshot comparison, AI/API calls, and external posting.
+
 ## What It Does
 
 Entry Window Radar helps you create a Quest Snapshot for a repo, app, OSS project, product idea, or workflow.
