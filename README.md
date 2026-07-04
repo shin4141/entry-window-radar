@@ -1,5 +1,7 @@
 # Entry Window Radar
 
+A save point for long AI/Codex work.
+
 AI-built projects drift when every AI session starts from scratch.
 
 Quest Snapshot preserves the current Gate, next action, and do-not-do boundary.
