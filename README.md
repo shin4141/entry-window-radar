@@ -1,7 +1,7 @@
 # Entry Window Radar
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-![Status: FULL GO](https://img.shields.io/badge/status-FULL%20GO-brightgreen)
+![Public surface: SOFT GO](https://img.shields.io/badge/public%20surface-SOFT%20GO-yellow)
 ![Automation: none](https://img.shields.io/badge/automation-none-lightgrey)
 ![Local-first: yes](https://img.shields.io/badge/local--first-yes-blue)
 ![Decision Owner: human](https://img.shields.io/badge/decision%20owner-human-orange)
