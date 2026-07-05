@@ -88,6 +88,13 @@ Save it into your target repo only if you want version-controlled project-state 
 Example:
 `examples/local_markdown_task_tracker_quest_snapshot_example_v0_1.md` shows a public-safe non-Decision-OS Quest Snapshot flow.
 
+## 41-second walkthrough
+
+A short visual walkthrough showing where to start:
+README → Quest Snapshot Generator Prompt → AI assistant → Quest Snapshot structure.
+
+[Watch the 41-second walkthrough](docs/assets/videos/entry-window-radar-screen-demo-v0-2.mp4)
+
 ## Default Storage
 
 Default:
