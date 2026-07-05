@@ -93,9 +93,7 @@ Example:
 A short visual walkthrough showing where to start:
 README → Quest Snapshot Generator Prompt → AI assistant → Quest Snapshot structure.
 
-[![Entry Window Radar 41-second walkthrough](docs/assets/images/entry-window-radar-screen-demo-v0-2-thumbnail.jpg)](docs/assets/videos/entry-window-radar-screen-demo-v0-2.mp4)
-
-[Watch / download the 41-second walkthrough](docs/assets/videos/entry-window-radar-screen-demo-v0-2.mp4)
+https://github.com/user-attachments/assets/2b60b396-8108-4b2a-a99a-8ea3c789cb50
 
 ## Default Storage
 
