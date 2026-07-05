@@ -4,12 +4,12 @@
 ![Status: FULL GO](https://img.shields.io/badge/status-FULL%20GO-brightgreen)
 ![Automation: none](https://img.shields.io/badge/automation-none-lightgrey)
 ![Local-first: yes](https://img.shields.io/badge/local--first-yes-blue)
-![Human Seat: required](https://img.shields.io/badge/human%20Seat-required-orange)
+![Decision Owner: human](https://img.shields.io/badge/decision%20owner-human-orange)
 ![External posting: HOLD](https://img.shields.io/badge/external%20posting-HOLD-red)
 
-A save point for long AI/Codex work.
+AI project re-entry and handoff readiness radar.
 
-AI-built projects drift when every AI session starts from scratch.
+AI-assisted projects drift when every assistant session starts from scratch.
 
 Quest Snapshot preserves the current Gate, next action, and do-not-do boundary.
 
@@ -19,9 +19,13 @@ AIで作った作品を伸ばしたいなら、
 If you want your AI-built project to survive and improve,
 visualize where it is, save the decision, and hand it to the next AI.
 
-Entry Window Radar is a Quest Snapshot system for AI-built apps, OSS, and long-running projects.
+Entry Window Radar is a small OSS pattern for AI project re-entry and handoff readiness.
 
-It helps Codex/AI remember:
+It helps a human Decision Owner and an AI assistant see where to restart, what context is missing, and what should stay held before the next work loop begins.
+
+Use it with Codex, Claude Code, Cursor, ChatGPT, Gemini, or another AI assistant.
+
+It helps the human and AI assistant remember:
 
 - where the project is
 - what the next action is
@@ -29,13 +33,13 @@ It helps Codex/AI remember:
 - what evidence is still missing
 - when the project should be rechecked
 
-This is not a market predictor, startup scorer, launch permission system, or automatic decision-maker.
+This is not a market predictor, startup scorer, execution engine, launch permission system, or automatic decision-maker.
 
-The human keeps the Seat.
+The human remains the Decision Owner.
 
 ## In One Minute
 
-Entry Window Radar helps you save a restart point so future Codex/AI can understand where the work is, what changed, and what not to do next.
+Entry Window Radar helps you save a restart point so a future AI assistant or coding agent can understand where the work is, what changed, and what not to reopen next.
 
 For a quick session checkpoint:
 
@@ -45,7 +49,7 @@ python3 -B tools/save_session_snapshot.py --note "End of session checkpoint"
 
 This writes `outputs/session_snapshot.md`. It is a restart checkpoint, not a completion claim, full handoff, or Quest Snapshot generator.
 
-For a project-level Quest Snapshot, use `prompts/quest_snapshot_generator_prompt_v0_1.md` in Codex/AI and save the result in project context or local notes.
+For a project-level Quest Snapshot, use `prompts/quest_snapshot_generator_prompt_v0_1.md` in Codex, Claude Code, Cursor, ChatGPT, Gemini, or another AI assistant, then save the result in project context or local notes.
 
 Long-context AI can keep a chat going longer, but it can also hide context debt. Entry Window Radar is a restart-boundary tool, not an execution engine.
 
@@ -64,20 +68,20 @@ A Quest Snapshot records:
 - Recheck Condition
 - UNKNOWN fields
 - Optional questions for the Decision Owner
-- Completion Line for the next Codex/AI session
+- Completion Line for the next AI assistant or coding-agent session
 
 ## Start Here
 
 1. Open:
    `prompts/quest_snapshot_generator_prompt_v0_1.md`
 
-2. Paste it into Codex / Claude Code / Cursor / ChatGPT.
+2. Paste it into Codex / Claude Code / Cursor / ChatGPT / Gemini / another AI assistant.
 
 3. Give the AI your repo, README, product idea, or current project question.
 
 4. Ask it to create a Quest Snapshot.
 
-5. Save the result in Codex memory / project context.
+5. Save the result in AI assistant memory, project context, or local notes.
 
 Optional:
 Export it as Markdown if you want portability.
@@ -98,7 +102,7 @@ https://github.com/user-attachments/assets/2b60b396-8108-4b2a-a99a-8ea3c789cb50
 ## Default Storage
 
 Default:
-Codex memory / project context
+AI assistant memory / project context
 
 Optional:
 Markdown / local file
@@ -108,7 +112,7 @@ Target repo storage
 
 Important:
 The Entry Window Radar repo is the rule/template source.
-Your live project state usually belongs in Codex memory, local notes, or your target repo, not here.
+Your live project state usually belongs in AI assistant memory, project context, local notes, or your target repo, not here.
 
 ## Why UNKNOWN Matters
 
@@ -121,7 +125,7 @@ This helps the Decision Owner notice:
 - unpaid proof is missing
 - the reference chart is too broad
 - the next action is vague
-- Codex may broaden too early
+- an AI assistant may broaden too early
 - the Gate should remain HOLD / PROOF / CAP
 
 UNKNOWN is not failure.
@@ -194,9 +198,9 @@ This is not:
 - an execution engine
 - a replacement for the human Decision Owner
 
-## For Codex / AI Agents
+## For AI Assistants / Coding Agents
 
-When resuming from a Quest Snapshot, Codex/AI must state:
+When resuming from a Quest Snapshot, the receiving AI assistant or coding agent must state:
 
 - what it now owns
 - current Gate
@@ -207,7 +211,7 @@ When resuming from a Quest Snapshot, Codex/AI must state:
 
 Handoff is not complete until the receiving AI knows what it now owns.
 
-Codex/AI must not broaden runtime, posting, scoring, rendering, PDF/PNG/screenshot automation, snapshot comparison, market research, or external API scope without a new Gate.
+The AI assistant or coding agent must not broaden runtime, posting, scoring, rendering, PDF/PNG/screenshot automation, snapshot comparison, market research, or external API scope without a new Gate.
 
 ## Deeper Docs
 
@@ -266,9 +270,9 @@ Minimal Runtime Cutline defines Markdown Quest Snapshot output as the first safe
 
 Quest Snapshot Markdown Template is a reusable manual template for future As-of Quest Snapshot artifacts. It lives at `templates/quest_snapshot_template_v0_1.md`; usage notes live in `docs/quest_snapshot_template_usage_v0_1.md`; runtime generation remains HOLD.
 
-Quest Snapshot Storage Modes / User Flow defines Codex memory / project context as the default low-friction storage mode, Markdown/local file as optional portable storage, and target repo storage as an advanced route. It lives in `docs/quest_snapshot_storage_modes_user_flow_v0_1.md`; runtime generation remains HOLD.
+Quest Snapshot Storage Modes / User Flow defines AI assistant memory / project context as the default low-friction storage mode, Markdown/local file as optional portable storage, and target repo storage as an advanced route. It lives in `docs/quest_snapshot_storage_modes_user_flow_v0_1.md`; runtime generation remains HOLD.
 
-Quest Snapshot Generator Prompt is a pasteable prompt for normal users to draft Quest Snapshots in Codex / Claude Code / Cursor / ChatGPT while preserving UNKNOWN fields and human Seat. It lives at `prompts/quest_snapshot_generator_prompt_v0_1.md`; usage notes live in `docs/quest_snapshot_generator_prompt_usage_v0_1.md`; runtime generation remains HOLD.
+Quest Snapshot Generator Prompt is a pasteable prompt for normal users to draft Quest Snapshots in Codex, Claude Code, Cursor, ChatGPT, Gemini, or another AI assistant while preserving UNKNOWN fields and the human Decision Owner. It lives at `prompts/quest_snapshot_generator_prompt_v0_1.md`; usage notes live in `docs/quest_snapshot_generator_prompt_usage_v0_1.md`; runtime generation remains HOLD.
 
 Handoff Horizon Recession Field Note records the structural observation that long-context AI makes handoff failure less visible, not less important. It lives at `docs/handoff_horizon_recession_field_note_v0_1.md`; it is documentation-only and does not authorize external posting, runtime expansion, Quest Snapshot auto-generation, scoring, snapshot comparison, visual export, hooks/MCP/plugins, or execution-engine work.
 
@@ -326,7 +330,7 @@ Included:
 - a Codex Interpretation Note v0.1 specification for future evidence-basis handoff
 - a Snapshot Trajectory / Drift Delta v0.1 specification and static/manual Japanese visual prototype for future multi-snapshot comparison
 - a Quest Snapshot Visual Design System v0.1 specification for future visual consistency
-- a Quest Map Current Architecture v0.1 summary for future Codex/AI re-entry
+- a Quest Map Current Architecture v0.1 summary for future AI assistant / coding-agent re-entry
 - a Minimal Runtime Cutline v0.1 decision for future Markdown Quest Snapshot output
 - a Quest Snapshot Markdown Template v0.1 for manual As-of snapshot drafting
 - a Quest Snapshot Storage Modes / User Flow v0.1 specification for low-friction re-entry
@@ -342,9 +346,9 @@ Included:
 
 ## Local Usage
 
-Quest Snapshot route: paste `prompts/quest_snapshot_generator_prompt_v0_1.md` into Codex / Claude Code / Cursor / ChatGPT to draft a Quest Snapshot.
+Quest Snapshot route: paste `prompts/quest_snapshot_generator_prompt_v0_1.md` into Codex / Claude Code / Cursor / ChatGPT / Gemini / another AI assistant to draft a Quest Snapshot.
 
-Entry Window Card route: paste `prompts/ai_assisted_entry_window_prompt.md` into Codex / GPT / Claude Code to generate an Entry Window Card before or instead of running the CLI.
+Entry Window Card route: paste `prompts/ai_assisted_entry_window_prompt.md` into Codex / Claude Code / Cursor / ChatGPT / Gemini / another AI assistant to generate an Entry Window Card before or instead of running the CLI.
 
 For terminal/local output generation, run from the repo root:
 
@@ -420,7 +424,7 @@ The future is predictable from this score.
 
 ## Re-entry
 
-Next AI/Codex should read `STATUS.md` and `AGENTS.md` first.
+Next AI assistant or coding agent should read `STATUS.md` and `AGENTS.md` first.
 
 ## File Map
 
