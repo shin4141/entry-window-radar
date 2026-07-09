@@ -37,6 +37,20 @@ This is not a market predictor, startup scorer, execution engine, launch permiss
 
 The human remains the Decision Owner.
 
+## 1-Minute Entry Check
+
+Before you hand work to an AI assistant, ask:
+
+1. Is this the right time to enter?
+2. Is the gate GO, SOFT GO, HOLD, or BLOCK?
+3. If something feels off, is it opportunity loss, wasted work, or an accident signal?
+4. If this is interrupted work, can it be safely resumed?
+5. What is the smallest next action?
+
+Use this check before starting a new AI work loop, restarting a paused task, or handing a repo to another AI assistant.
+
+See `docs/one_minute_entry_check.md`.
+
 ## In One Minute
 
 Entry Window Radar helps you save a restart point so a future AI assistant or coding agent can understand where the work is, what changed, and what not to reopen next.
