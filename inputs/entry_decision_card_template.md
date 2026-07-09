@@ -1,0 +1,38 @@
+# Entry Decision Card Template
+
+- Pain ID:
+- Pain Name:
+- Input Source:
+- Source Package:
+- Entry Gate:
+  - GO / SOFT GO / PREPARE / WATCH / HOLD / BLOCK
+- Reason:
+- Entry Window:
+  - Now / 1M / 3M / 6M / 12M / Not open
+- Best Entry Mode:
+  - Build / Sell-test / Manual offer / Research / Prepare / Watch / Avoid
+- Pain Market Signal:
+- Timing Curve Summary:
+- User Fit:
+- Avoidance Conflict:
+- Cost / Expense Check:
+  - Low / Medium / High / Unknown
+- Build Burden:
+  - Low / Medium / High / Unknown
+- Sales Friction:
+  - Low / Medium / High / Unknown
+- Time-to-Cash:
+  - Immediate / 30 days / 3 months / Long / Unknown
+- Commercial Recovery:
+  - Strong / Medium / Weak / Unknown
+- LLM Absorption Risk:
+  - Low / Medium / High / Unknown
+- Existing Alternatives:
+- Differentiation Need:
+- Main Risk:
+- Smallest Next Action:
+- Do Not Do:
+- Recheck Condition:
+- Decision Owner:
+- Responsibility Boundary:
+- Remaining Unknowns:

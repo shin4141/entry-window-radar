@@ -99,6 +99,17 @@ README → Quest Snapshot Generator Prompt → AI assistant → Quest Snapshot s
 
 https://github.com/user-attachments/assets/2b60b396-8108-4b2a-a99a-8ea3c789cb50
 
+## Pain-to-Entry Use
+
+Entry Window Radar can receive a Pain Signal Package / Entry Intake Pack from Pain Timing Map and convert it into an Entry Decision Card.
+
+This does not decide what to build.
+It helps evaluate whether the user should enter now, enter softly, prepare, watch, hold, or block.
+
+- Receiver: `docs/entry_intake_receiver.md`
+- Template: `inputs/entry_decision_card_template.md`
+- Example: `examples/public_entry_decision_card_example.md`
+
 ## Default Storage
 
 Default:
