@@ -123,6 +123,7 @@ It helps evaluate whether the user should enter now, enter softly, prepare, watc
 - Receiver: `docs/entry_intake_receiver.md`
 - Template: `inputs/entry_decision_card_template.md`
 - Example: `examples/public_entry_decision_card_example.md`
+- Dogfood: `examples/pre_execution_clarification_entry_dogfood_v0_1.md` shows why a validated pain can still receive an Entry `WAIT` label.
 
 ## Default Storage
 
